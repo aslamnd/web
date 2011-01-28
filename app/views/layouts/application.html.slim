@@ -1,0 +1,15 @@
+! doctype html
+html
+  head
+    title Slim Examples
+    meta name="keywords" content="template language"
+    = include_stylesheets :common, :media => 'all'
+    = include_stylesheets :print, :media => 'print'
+
+  body
+    #container
+      #header
+        h1 :codegram
+      #content
+        = yield
+      #footer

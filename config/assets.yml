@@ -1,0 +1,11 @@
+embed_assets: on
+javascripts:
+  workspace:
+    - public/javascripts/vendor/jquery.js
+    - public/javascripts/
+stylesheets:
+  common:
+    - public/stylesheets/screen.css
+  print:
+    - public/stylesheets/print.css
+
