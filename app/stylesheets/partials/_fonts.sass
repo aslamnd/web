@@ -2,13 +2,13 @@
 
 @font-face
   font-family: Klavika
-  src: url("/fonts/klavika-regular-webfont.eot")
-  src: local('☺'), url('/fonts/klavika-regular.otf') format("opentype"), url('/fonts/klavika-regular-webfont.ttf') format("truetype")
+  src: url("/fonts/klavika-light-webfont.eot")
+  src: local('☺'), url('/fonts/klavika-light-webfont.ttf') format("truetype")
 
 @font-face
   font-family: Klavika
-  src: url("/fonts/klavika-medium-webfont.eot")
-  src: local('☺'), url('/fonts/klavika-medium.otf') format("opentype"), url('/fonts/klavika-medium-webfont.ttf') format("truetype")
+  src: url("/fonts/klavika-regular-webfont.eot")
+  src: local('☺'), url('/fonts/klavika-medium-webfont.ttf') format("truetype")
   font-weight: bold
 
 html body
@@ -16,3 +16,13 @@ html body
     font-family: Klavika, "Helvetica Neue", Arial
     font-weight: bold
     color: $codegram-color
+  h2
+    font-size: 26px
+    margin-top: 0.3em
+  h3
+    &.tagline
+      margin-top: -15px
+      font-size: 26px
+      color: #7a7a7a
+      font-weight: normal
+      padding-right: 50px
