@@ -16,7 +16,7 @@
   $inset-shadow-color: #e35b60
   $hover-inset-shadow-color: $inset-shadow-color - #222
   $active-inset-shadow-color: $inset-shadow-color - #555
-  $text-shadow-color: #e35b60 - #888
+  $text-shadow-color: $default-text-shadow-color
   +button-base
   +inline-block
   text-decoration: none
@@ -37,7 +37,7 @@
   line-height: 1
   padding: 8px 15px 
   text-align: center
-  text-shadow: 0 -1px 0 $text-shadow-color 
+  +text-shadow
   &:hover
     background: $gradient-down-color
     background: -moz-linear-gradient(0% 100% 90deg,$gradient-hover-down-color,$gradient-hover-up-color)

@@ -541,13 +541,13 @@ body #content {
 
 @font-face {
   font-family: Klavika;
-  src: url("/fonts/klavika-light-webfont.eot");
-  src: local("☺"), url("/fonts/klavika-light-webfont.ttf") format("truetype");
+  src: url("/fonts/klavika-regular-webfont.eot");
+  src: local("☺"), url("/fonts/klavika-regular-webfont.ttf") format("truetype");
 }
 
 @font-face {
   font-family: Klavika;
-  src: url("/fonts/klavika-regular-webfont.eot");
+  src: url("/fonts/klavika-medium-webfont.eot");
   src: local("☺"), url("/fonts/klavika-medium-webfont.ttf") format("truetype");
   font-weight: bold;
 }
@@ -607,29 +607,30 @@ html body h3.tagline {
 
 /* line 1, ../../app/stylesheets/partials/_menu.sass */
 #sidebar {
+  text-shadow: #170000 0 -1px 0;
   color: white;
 }
-/* line 2, ../../app/stylesheets/partials/_menu.sass */
+/* line 3, ../../app/stylesheets/partials/_menu.sass */
 #sidebar h1, #sidebar h2, #sidebar h3, #sidebar h4, #sidebar a {
   color: white;
   font-weight: bold;
 }
-/* line 6, ../../app/stylesheets/partials/_menu.sass */
+/* line 7, ../../app/stylesheets/partials/_menu.sass */
 #sidebar aside {
   padding-left: 25px;
   font-size: 0.9em;
   margin-bottom: 20px;
 }
-/* line 9, ../../app/stylesheets/partials/_menu.sass */
+/* line 10, ../../app/stylesheets/partials/_menu.sass */
 #sidebar aside h4 {
   margin-bottom: 0px;
 }
-/* line 12, ../../app/stylesheets/partials/_menu.sass */
+/* line 13, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav {
   padding-left: 20px;
   padding-bottom: 60px;
 }
-/* line 15, ../../app/stylesheets/partials/_menu.sass */
+/* line 16, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul {
   list-style: none;
   padding: 0px;
@@ -640,16 +641,21 @@ html body h3.tagline {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 18, ../../app/stylesheets/partials/_menu.sass */
+/* line 19, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul li {
   line-height: 2.3em;
 }
-/* line 21, ../../app/stylesheets/partials/_menu.sass */
+/* line 22, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul li.current a {
   background-color: white;
   color: #e5342e;
+  text-shadow: none;
+  -moz-box-shadow: #c1aaaa 1px -1px 0 0;
+  -webkit-box-shadow: #c1aaaa 1px -1px 0 0;
+  -o-box-shadow: #c1aaaa 1px -1px 0 0;
+  box-shadow: #c1aaaa 1px -1px 0 0;
 }
-/* line 24, ../../app/stylesheets/partials/_menu.sass */
+/* line 27, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul a {
   padding: 0px 5px;
   font-family: Klavika, "Helvetica Neue", Arial;
@@ -735,7 +741,7 @@ aside#slideshow {
   line-height: 1;
   padding: 8px 15px;
   text-align: center;
-  text-shadow: 0 -1px 0 #5b0000;
+  text-shadow: #170000 0 -1px 0;
 }
 /* line 2, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a:hover {
