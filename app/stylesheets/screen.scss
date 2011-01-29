@@ -33,14 +33,12 @@ form {
   @include blueprint-form; }
 
 html, body{
-  height: 100%;
 }
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body {
   #container {
     @include container; 
-    height: 100%;
   }
   // #header, #footer {
   //   @include column($blueprint-grid-columns); }
@@ -48,7 +46,6 @@ body {
     // One third of the grid columns, rounding down. With 24 cols, this is 8.
     $sidebar-columns: 4;
     @include column($sidebar-columns); 
-    height: 100%;
   }
   #content {
     // Two thirds of the grid columns, rounding up.
@@ -61,3 +58,5 @@ body {
 @import "partials/header";
 @import "partials/menu";
 @import "partials/slideshow";
+@import "partials/other";
+@import "partials/common";
