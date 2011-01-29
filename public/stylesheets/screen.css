@@ -650,12 +650,8 @@ html body h3.tagline {
   background-color: white;
   color: #e5342e;
   text-shadow: none;
-  -moz-box-shadow: #c1aaaa 1px -1px 0 0;
-  -webkit-box-shadow: #c1aaaa 1px -1px 0 0;
-  -o-box-shadow: #c1aaaa 1px -1px 0 0;
-  box-shadow: #c1aaaa 1px -1px 0 0;
 }
-/* line 27, ../../app/stylesheets/partials/_menu.sass */
+/* line 26, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul a {
   padding: 0px 5px;
   font-family: Klavika, "Helvetica Neue", Arial;
