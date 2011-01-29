@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+var update_sidebar_height  = function(){
   var content_height = $("#slideshow").height() + $("#content").height();
   var window_height = $(window).height();
   var total_height = 0;
@@ -12,4 +11,4 @@ $(document).ready(function(){
   if($("#sidebar-inner").height() < total_height){
     $("#sidebar-inner").css('height',total_height);
   }
-});
+}();

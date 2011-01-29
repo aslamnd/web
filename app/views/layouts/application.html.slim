@@ -5,7 +5,6 @@ html
     meta name="keywords" content="template language"
     = include_stylesheets :common, :media => 'all'
     = include_stylesheets :print, :media => 'print'
-    = include_javascripts :workspace
 
   body
     #container
@@ -45,3 +44,4 @@ html
       #content
         = yield
       footer#footer
+    = include_javascripts :workspace
