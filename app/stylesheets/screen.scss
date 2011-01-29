@@ -54,6 +54,7 @@ body {
     // true means it's the last column in the row
     @include column($content-columns, true); } }
 
+@import "partials/buttons";
 @import "partials/fonts";
 @import "partials/header";
 @import "partials/menu";

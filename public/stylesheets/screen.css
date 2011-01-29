@@ -669,8 +669,13 @@ html body h3.tagline {
 }
 
 /* line 1, ../../app/stylesheets/partials/_slideshow.sass */
+body {
+  background: url(../images/slide.jpg) top center no-repeat;
+}
+
+/* line 3, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow {
-  background: #aaaaaa;
+  background: transparent;
   height: 280px;
 }
 
@@ -701,8 +706,69 @@ aside#slideshow {
 * html #content #boxes section.right {
   overflow-x: hidden;
 }
+/* line 10, ../../app/stylesheets/partials/_common.sass */
+#content #boxes section aside.more {
+  margin-top: 10px;
+}
+/* line 12, ../../app/stylesheets/partials/_common.sass */
+#content #boxes section aside.more a {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  background: #dd373d;
+  background: -moz-linear-gradient(0% 100% 90deg, #a82328, #dd373d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dd373d), to(#a82328));
+  border: 1px solid #b6262b;
+  border-bottom: 1px solid #a82328;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #e35b60;
+  -webkit-box-shadow: inset 0 1px 0 0 #e35b60;
+  box-shadow: inset 0 1px 0 0 #e35b60;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 15px;
+  text-align: center;
+  text-shadow: 0 -1px 0 #5b0000;
+}
+/* line 2, ../../app/stylesheets/partials/_buttons.sass */
+#content #boxes section aside.more a:hover {
+  cursor: pointer;
+}
+/* line 4, ../../app/stylesheets/partials/_buttons.sass */
+#content #boxes section aside.more a::-moz-focus-inner {
+  border: 0;
+}
+/* line 7, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+#content #boxes section aside.more a {
+  *display: inline;
+}
+/* line 41, ../../app/stylesheets/partials/_buttons.sass */
+#content #boxes section aside.more a:hover {
+  background: #a82328;
+  background: -moz-linear-gradient(0% 100% 90deg, #860106, #cc262c);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cc262c), to(#860106));
+  -moz-box-shadow: inset 0 1px 0 0 #c1393e;
+  -webkit-box-shadow: inset 0 1px 0 0 #c1393e;
+  box-shadow: inset 0 1px 0 0 #c1393e;
+  cursor: pointer;
+}
+/* line 49, ../../app/stylesheets/partials/_buttons.sass */
+#content #boxes section aside.more a:active {
+  border: 1px solid #b6262b;
+  border-bottom: 1px solid #a82328;
+  -moz-box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #eeeeee;
+  -webkit-box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #eeeeee;
+}
 
-/* line 11, ../../app/stylesheets/partials/_common.sass */
+/* line 15, ../../app/stylesheets/partials/_common.sass */
 hr {
   height: 0px;
   background: transparent;
