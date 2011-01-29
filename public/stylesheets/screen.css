@@ -719,8 +719,8 @@ aside#slideshow {
   *vertical-align: auto;
   text-decoration: none;
   background: #dd373d;
-  background: -moz-linear-gradient(0% 100% 90deg, #a82328, #dd373d);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dd373d), to(#a82328));
+  background: -moz-linear-gradient(0% 100% 90deg, #c3120c, #e5342e);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342e), to(#c3120c));
   border: 1px solid #b6262b;
   border-bottom: 1px solid #a82328;
   -moz-border-radius: 3px;
@@ -751,9 +751,9 @@ aside#slideshow {
 }
 /* line 41, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a:hover {
-  background: #a82328;
-  background: -moz-linear-gradient(0% 100% 90deg, #860106, #cc262c);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cc262c), to(#860106));
+  background: #c3120c;
+  background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4231d), to(#a10000));
   -moz-box-shadow: inset 0 1px 0 0 #c1393e;
   -webkit-box-shadow: inset 0 1px 0 0 #c1393e;
   box-shadow: inset 0 1px 0 0 #c1393e;
