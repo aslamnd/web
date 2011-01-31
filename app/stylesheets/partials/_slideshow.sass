@@ -1,8 +1,32 @@
 aside#slideshow
-  width: 100%
+  .prev, .next
+    position: absolute
+    z-index: 15
+    +button-codegram
+    bottom: 20px
+    &.prev
+      left: 265px
+    &.next
+      right: 20px
+
+  #slides
+    position: relative
+    overflow: hidden
+    width: 1000px
+    height: 280px
+
+  ul 
+    +no-bullets
+    padding: 0px
+    overflow: hidden
+    width: 20000em
+    position: absolute
+    li
+      float: left
+      width: 1000px
+  width: 1000px
   position: absolute
+  left: 50%
+  margin-left: -500px
   top: 0px
-  left: 0px
   z-index: 5
-  background: url(../images/slide.jpg) top center no-repeat
-  height: 280px

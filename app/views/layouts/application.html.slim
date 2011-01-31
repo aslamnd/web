@@ -5,6 +5,7 @@ html
     meta name="keywords" content="template language"
     = include_stylesheets :common, :media => 'all'
     = include_stylesheets :print, :media => 'print'
+    = include_javascripts :workspace
 
   body
     #container
@@ -39,9 +40,8 @@ html
             | Planta 2 oficina 19
             br
             | 08228 Terrassa (Barcelona)
-      aside#slideshow
-        Test
+      = render :partial => 'layouts/slideshow' 
       #content
         = yield
       footer#footer
-    = include_javascripts :workspace
+    = include_javascripts :application

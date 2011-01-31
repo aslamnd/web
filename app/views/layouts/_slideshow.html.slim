@@ -1,0 +1,16 @@
+aside#slideshow
+  #slides
+    ul
+      li
+        =image_tag 'slide.jpg' 
+      li
+        =image_tag 'slide2.jpg' 
+      li
+        =image_tag 'slide.jpg' 
+  a.prev.browse.left Prev
+  a.next.browse.right Next
+
+javascript:
+  $(function(){
+    $("#slides").scrollable({circular: true});
+  });
