@@ -565,7 +565,7 @@ body #content {
 
 /* line 15, ../../app/stylesheets/partials/_fonts.sass */
 html body h1, html body h2, html body h3 {
-  font-family: Klavika, "Helvetica Neue", Arial;
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
   color: #e5342e;
 }
