@@ -598,7 +598,7 @@ html body h3.tagline {
   display: block;
   width: 134px;
   height: 115px;
-  background: url(../images/logo.png) no-repeat;
+  background: url(../images/logo-plain.png) no-repeat;
 }
 /* line 16, ../../app/stylesheets/partials/_header.sass */
 #sidebar header h1 span {
@@ -609,7 +609,6 @@ html body h3.tagline {
 #sidebar {
   z-index: 10;
   position: relative;
-  text-shadow: #900000 0 -1px 0;
   color: white;
 }
 /* line 5, ../../app/stylesheets/partials/_menu.sass */
@@ -674,13 +673,106 @@ html body h3.tagline {
 
 /* line 1, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow {
-  width: 100%;
+  width: 1000px;
   position: absolute;
+  left: 50%;
+  margin-left: -500px;
   top: 0px;
-  left: 0px;
   z-index: 5;
-  background: url(../images/slide.jpg) top center no-repeat;
+}
+/* line 2, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow .prev, aside#slideshow .next {
+  position: absolute;
+  z-index: 15;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  background: #dd373d;
+  background: -moz-linear-gradient(0% 100% 90deg, #c3120c, #e5342e);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342e), to(#c3120c));
+  border: 1px solid #b6262b;
+  border-bottom: 1px solid #a82328;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #e35b60;
+  -webkit-box-shadow: inset 0 1px 0 0 #e35b60;
+  box-shadow: inset 0 1px 0 0 #e35b60;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 15px;
+  text-align: center;
+  text-shadow: #900000 0 -1px 0;
+  bottom: 20px;
+}
+/* line 2, ../../app/stylesheets/partials/_buttons.sass */
+aside#slideshow .prev:hover, aside#slideshow .next:hover {
+  cursor: pointer;
+}
+/* line 4, ../../app/stylesheets/partials/_buttons.sass */
+aside#slideshow .prev::-moz-focus-inner, aside#slideshow .next::-moz-focus-inner {
+  border: 0;
+}
+/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+aside#slideshow .prev, aside#slideshow .next {
+  *display: inline;
+}
+/* line 41, ../../app/stylesheets/partials/_buttons.sass */
+aside#slideshow .prev:hover, aside#slideshow .next:hover {
+  background: #c3120c;
+  background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4231d), to(#a10000));
+  -moz-box-shadow: inset 0 1px 0 0 #c1393e;
+  -webkit-box-shadow: inset 0 1px 0 0 #c1393e;
+  box-shadow: inset 0 1px 0 0 #c1393e;
+  cursor: pointer;
+}
+/* line 49, ../../app/stylesheets/partials/_buttons.sass */
+aside#slideshow .prev:active, aside#slideshow .next:active {
+  border: 1px solid #b6262b;
+  border-bottom: 1px solid #a82328;
+  -moz-box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #eeeeee;
+  -webkit-box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #eeeeee;
+}
+/* line 7, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow .prev.prev, aside#slideshow .next.prev {
+  left: 265px;
+}
+/* line 9, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow .prev.next, aside#slideshow .next.next {
+  right: 20px;
+}
+/* line 12, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow #slides {
+  position: relative;
+  overflow: hidden;
+  width: 1000px;
   height: 280px;
+}
+/* line 18, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow ul {
+  list-style: none;
+  padding: 0px;
+  overflow: hidden;
+  width: 20000em;
+  position: absolute;
+}
+/* line 11, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
+aside#slideshow ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+/* line 24, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow ul li {
+  float: left;
+  width: 1000px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_common.sass */

@@ -1,8 +1,11 @@
 embed_assets: on
 javascripts:
   workspace:
-    - public/javascripts/jquery.min.js
-    - public/javascripts/**/*
+    - public/javascripts/workspace/jquery.min.js
+    - public/javascripts/workspace/jquery.tools.min.js
+    - public/javascripts/workspace/**/*.js
+  application:
+    - public/javascripts/application/application.js
 stylesheets:
   common:
     - public/stylesheets/screen.css
