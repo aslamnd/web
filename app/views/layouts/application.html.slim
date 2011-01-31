@@ -8,8 +8,40 @@ html
 
   body
     #container
-      #header
-        h1 :codegram
+      #sidebar
+        #sidebar-inner
+          header#header
+            h1
+              a href='/'
+                span
+                  | :codegram
+          nav
+            ul
+              li.current
+                a href="#" Home
+              li
+                a href="#" Services
+              li
+                a href="#" Work
+              li
+                a href="#" About
+              li
+                a href="#" Blog
+              li
+                a href="#" Contact
+          aside
+            h4 Call us
+            | 0034 668 823 476 
+          aside
+            h4 Visit us 
+            | Plaça Aurora Bertrana 19
+            br
+            | Planta 2 oficina 19
+            br
+            | 08228 Terrassa (Barcelona)
+      aside#slideshow
+        Test
       #content
         = yield
-      #footer
+      footer#footer
+    = include_javascripts :workspace

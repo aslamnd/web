@@ -19,9 +19,10 @@ gem 'jammit'
 gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
-group :development do
-end
 
+group :development do
+  gem 'livereload'
+end
 group :test, :development do
   gem 'factory_girl_rails'
 end
