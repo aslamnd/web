@@ -11,7 +11,7 @@ $blueprint-grid-margin: 20px;
 // Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
 $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
 
-$default-text-shadow-color: #e35b60 - #ccc;
+$default-text-shadow-color: $codegram-color - #555;
 $default-text-shadow-h-offset: 0;
 $default-text-shadow-v-offset: -1px;
 $default-text-shadow-blur: 0;
