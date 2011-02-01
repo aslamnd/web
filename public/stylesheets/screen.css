@@ -875,7 +875,7 @@ aside#slideshow #slides headergroup h3 {
 }
 /* line 51, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides #slide-2 headergroup {
-  bottom: 20px;
+  bottom: 15px;
   top: auto;
 }
 /* line 54, ../../app/stylesheets/partials/_slideshow.sass */
@@ -902,6 +902,7 @@ aside#slideshow ul li {
   float: left;
   width: 1000px;
   position: relative;
+  height: 280px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_common.sass */
