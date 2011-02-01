@@ -1,11 +1,14 @@
 ! doctype html
 html
   head
-    title Slim Examples
-    meta name="keywords" content="template language"
+    title :codegram - smart web apps
+    meta name="keywords" content="web apps"
     = include_stylesheets :common, :media => 'all'
     = include_stylesheets :print, :media => 'print'
     = include_javascripts :workspace
+    | <!--[if lt IE 9]>
+    = javascript_include_tag 'html5'
+    | <![endif]-->
 
   body
     #container

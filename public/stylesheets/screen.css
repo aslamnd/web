@@ -1,4 +1,120 @@
 @charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+/* line 20, ../../app/stylesheets/_html5reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 30, ../../app/stylesheets/_html5reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 35, ../../app/stylesheets/_html5reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 39, ../../app/stylesheets/_html5reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 43, ../../app/stylesheets/_html5reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 48, ../../app/stylesheets/_html5reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 53, ../../app/stylesheets/_html5reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+/* line 62, ../../app/stylesheets/_html5reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+/* line 69, ../../app/stylesheets/_html5reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 76, ../../app/stylesheets/_html5reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 80, ../../app/stylesheets/_html5reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 85, ../../app/stylesheets/_html5reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+/* line 91, ../../app/stylesheets/_html5reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 100, ../../app/stylesheets/_html5reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
 /* line 4, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html, body {
   margin: 0;
@@ -139,7 +255,7 @@ form.inline p {
   margin-bottom: 0;
 }
 
-/* line 23, ../../app/stylesheets/screen.scss */
+/* line 24, ../../app/stylesheets/screen.scss */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -509,14 +625,14 @@ form textarea {
   height: 250px;
 }
 
-/* line 40, ../../app/stylesheets/screen.scss */
+/* line 41, ../../app/stylesheets/screen.scss */
 body #container {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 45, ../../app/stylesheets/screen.scss */
+/* line 46, ../../app/stylesheets/screen.scss */
 body #sidebar {
   display: inline;
   float: left;
@@ -527,7 +643,7 @@ body #sidebar {
 * html body #sidebar {
   overflow-x: hidden;
 }
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 51, ../../app/stylesheets/screen.scss */
 body #content {
   display: inline;
   float: left;
@@ -811,10 +927,10 @@ aside#slideshow .navi a.active:active {
 /* line 18, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow nav.navi {
   opacity: 0;
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
+  -moz-transition-property: -moz-opacity;
+  -webkit-transition-property: -moz-opacity;
+  -o-transition-property: -moz-opacity;
+  transition-property: -moz-opacity;
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
