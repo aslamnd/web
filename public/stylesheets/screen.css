@@ -731,11 +731,22 @@ html body h3 {
   font-size: 0.9em;
   margin-bottom: 20px;
 }
-/* line 12, ../../app/stylesheets/partials/_menu.sass */
+/* line 10, ../../app/stylesheets/partials/_menu.sass */
+#sidebar aside ul {
+  list-style: none;
+  padding: 0px;
+}
+/* line 11, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
+#sidebar aside ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+/* line 15, ../../app/stylesheets/partials/_menu.sass */
 #sidebar aside h4 {
   margin-bottom: 0px;
 }
-/* line 15, ../../app/stylesheets/partials/_menu.sass */
+/* line 18, ../../app/stylesheets/partials/_menu.sass */
 #sidebar aside a {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -754,12 +765,12 @@ html body h3 {
 #sidebar aside a {
   *display: inline;
 }
-/* line 24, ../../app/stylesheets/partials/_menu.sass */
+/* line 27, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav {
   padding-left: 20px;
   padding-bottom: 60px;
 }
-/* line 27, ../../app/stylesheets/partials/_menu.sass */
+/* line 30, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul {
   list-style: none;
   padding: 0px;
@@ -770,17 +781,17 @@ html body h3 {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 30, ../../app/stylesheets/partials/_menu.sass */
+/* line 33, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul li {
   line-height: 2.3em;
 }
-/* line 33, ../../app/stylesheets/partials/_menu.sass */
+/* line 36, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul li.current a {
   background-color: white;
   color: #e5342c;
   text-shadow: none;
 }
-/* line 37, ../../app/stylesheets/partials/_menu.sass */
+/* line 40, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul a {
   padding: 0px 5px;
   font-family: Klavika, "Helvetica Neue", Arial;
@@ -967,7 +978,7 @@ aside#slideshow #slides {
 /* line 30, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup {
   z-index: 20;
-  max-width: 500px;
+  max-width: 250px;
   position: absolute;
   right: 20px;
   top: 20px;
