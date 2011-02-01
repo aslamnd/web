@@ -1002,9 +1002,9 @@ aside#slideshow ul li {
 
 /* line 17, ../../app/stylesheets/partials/_common.sass */
 hr {
-  height: 0px;
-  background: transparent;
-  border-top: 2px dotted #9f9f9f;
+  height: 4px;
+  margin-bottom: 2em;
+  background: url(/images/embed/dots.png);
 }
 
 /* line 1, ../../app/stylesheets/partials/_motto.sass */
