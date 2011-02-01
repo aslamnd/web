@@ -30,7 +30,13 @@ aside#slideshow
 
 javascript:
   $(function(){
-      $("#slides").scrollable({circular: true}).autoscroll(
+      $("#slides").scrollable(
+        {
+          circular: true,
+          easing: 'bounce',
+          speed: 1000
+        }
+        ).autoscroll(
         {interval: 5000}
       ).navigator();
   });
