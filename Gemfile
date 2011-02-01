@@ -8,6 +8,7 @@ gem 'rack', :git => 'git://github.com/rack/rack.git'
 gem 'arel', :git => 'git://github.com/rails/arel.git'
 
 gem 'inherited_resources'
+gem 'escape_utils'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
@@ -34,7 +35,7 @@ end
 
 group :test do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git', :ref => 'v0.4.0.beta.1'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git', :ref => '0.4.1.1'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git', :ref => '0.3.9'
   gem 'rspec-rails', '~> 2.4.0'
   gem 'pickle'
   gem 'launchy'
