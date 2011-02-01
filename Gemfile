@@ -21,6 +21,7 @@ gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
 gem 'jquery-rails'
+gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
 

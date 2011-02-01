@@ -1,0 +1,40 @@
+! doctype html
+html
+  head
+    title :codegram - backend
+    meta name="keywords" content="web apps"
+    = include_stylesheets :common, :media => 'all'
+    = include_stylesheets :print, :media => 'print'
+    = include_javascripts :workspace
+    | <!--[if lt IE 9]>
+    = javascript_include_tag 'html5'
+    | <![endif]-->
+
+  body
+    #container
+      #sidebar
+        #sidebar-inner
+          header#header
+            h1
+              a href='/'
+                span
+                  | :codegram
+          nav
+            ul
+              li.current
+                a href="#" Dashboard
+              li
+                a href="#" Services
+              li
+                a href="#" Work
+              li
+                a href="#" Posts
+          aside
+            h4 Backend
+            | This backend is cool.
+      = render :partial => 'layouts/slideshow' 
+      #content
+        = flash_messages.html_safe
+        = yield
+      footer#footer
+    = include_javascripts :application
