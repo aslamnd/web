@@ -1,9 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+# gem 'rails', '3.0.3'
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rack', :git => 'git://github.com/rack/rack.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
@@ -12,7 +13,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip'
 gem 'devise'
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+# gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
@@ -28,7 +29,7 @@ group :test, :development do
 end
 
 group :test do
-  gem 'cucumber'
+  gem 'cucumber-rails'
   gem 'capybara'
   gem 'akephalos'
   gem 'rspec-rails', '~> 2.4.0'
