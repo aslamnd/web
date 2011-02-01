@@ -5,6 +5,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead:
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'rack', :git => 'git://github.com/rack/rack.git'
+gem 'arel', :git => 'git://github.com/rails/arel.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
@@ -30,9 +31,12 @@ group :test, :development do
 end
 
 group :test do
-  gem 'cucumber'
-  gem 'capybara'
-  gem 'akephalos'
+  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git', :ref => 'v0.4.0.beta.1'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git', :ref => '0.4.1.1'
+  gem 'rspec-rails', '~> 2.4.0'
+  gem 'pickle'
+  gem 'launchy'
+  gem "database_cleaner", "~> 0.6.0"
 end
 
 # Deploy with Capistrano
