@@ -706,7 +706,7 @@ html body h3 {
   display: block;
   width: 134px;
   height: 115px;
-  background: url(../images/logo.png) no-repeat;
+  background: url(../images/embed/logo.png) no-repeat;
 }
 /* line 16, ../../app/stylesheets/partials/_header.sass */
 #sidebar header h1 span {
