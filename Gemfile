@@ -17,6 +17,7 @@ gem 'devise'
 #gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'high_voltage'
 gem 'compass'
+gem 'jammit'
 gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -24,7 +25,6 @@ gem 'carrierwave'
 
 group :development do
   gem 'livereload'
-  gem 'jammit'
 end
 group :test, :development do
   gem 'factory_girl_rails'
