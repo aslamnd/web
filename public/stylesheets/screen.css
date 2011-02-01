@@ -828,134 +828,28 @@ aside#slideshow .navi {
 }
 /* line 7, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow .navi a {
-  outline: none;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  text-decoration: none;
-  background: #c4cfdb;
-  background: -moz-linear-gradient(0% 100% 90deg, #aaaaaa, #cccccc);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cccccc), to(#aaaaaa));
-  border: 1px solid #999999;
-  border-bottom: 1px solid #aaaaaa;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow: inset 0 1px 0 0 #cccccc;
-  -webkit-box-shadow: inset 0 1px 0 0 #cccccc;
-  box-shadow: inset 0 1px 0 0 #cccccc;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1;
-  padding: 8px 15px;
-  text-align: center;
-  text-shadow: #999999 0 -1px 0;
   float: left;
+  background-color: #dddddd;
+  border: 1px solid #bbbbbb;
   margin-left: 5px;
   width: 12px;
   height: 12px;
   padding: 0px;
 }
-/* line 3, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a:hover {
-  cursor: pointer;
-}
-/* line 5, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a::-moz-focus-inner {
-  border: 0;
-}
-/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-aside#slideshow .navi a {
-  *display: inline;
-}
-/* line 91, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a:hover {
-  background: #aaaaaa;
-  background: -moz-linear-gradient(0% 100% 90deg, #888888, #bbbbbb);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bbbbbb), to(#888888));
-  -moz-box-shadow: inset 0 1px 0 0 #aaaaaa;
-  -webkit-box-shadow: inset 0 1px 0 0 #aaaaaa;
-  box-shadow: inset 0 1px 0 0 #aaaaaa;
-  cursor: pointer;
-}
-/* line 99, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a:active {
-  border: 1px solid #999999;
-  border-bottom: none;
-  -moz-box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
-  -webkit-box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
-  box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
-}
-/* line 10, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 11, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow .navi a.active {
-  outline: none;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  text-decoration: none;
-  background: #ee484c;
-  background: -moz-linear-gradient(0% 100% 90deg, #d4231b, #f6453d);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6453d), to(#d4231b));
-  border: 1px solid #c7373a;
-  border-bottom: 1px solid #b93437;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow: inset 0 1px 0 0 #f46c6f;
-  -webkit-box-shadow: inset 0 1px 0 0 #f46c6f;
-  box-shadow: inset 0 1px 0 0 #f46c6f;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1;
-  padding: 8px 15px;
-  text-align: center;
-  text-shadow: #900000 0 -1px 0;
+  background-color: #e5342c;
+  border-color: #c3120a;
   padding: 0px;
 }
-/* line 3, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a.active:hover {
-  cursor: pointer;
-}
-/* line 5, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a.active::-moz-focus-inner {
-  border: 0;
-}
-/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-aside#slideshow .navi a.active {
-  *display: inline;
-}
-/* line 42, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a.active:hover {
-  background: #d4231b;
-  background: -moz-linear-gradient(0% 100% 90deg, #b20100, #e5342c);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342c), to(#b20100));
-  -moz-box-shadow: inset 0 1px 0 0 #d24a4d;
-  -webkit-box-shadow: inset 0 1px 0 0 #d24a4d;
-  box-shadow: inset 0 1px 0 0 #d24a4d;
-  cursor: pointer;
-}
-/* line 50, ../../app/stylesheets/partials/_buttons.sass */
-aside#slideshow .navi a.active:active {
-  border: 1px solid #c7373a;
-  border-bottom: 1px solid #b93437;
-  -moz-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
-  -webkit-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
-  box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
-}
-/* line 25, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 27, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides {
   position: relative;
   overflow: hidden;
   width: 1000px;
   height: 280px;
 }
-/* line 30, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 32, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup {
   z-index: 20;
   max-width: 250px;
@@ -966,30 +860,30 @@ aside#slideshow #slides headergroup {
   padding: 10px 15px;
   background: white;
 }
-/* line 39, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 41, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h2 {
   font-size: 1.2em;
   line-height: 1.1em;
   margin: 0px;
   margin-bottom: 5px;
 }
-/* line 44, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 46, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h3 {
   font-weight: normal;
   font-size: 1.2em;
   margin: 0px;
 }
-/* line 49, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 51, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides #slide-2 headergroup {
   bottom: 20px;
   top: auto;
 }
-/* line 52, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 54, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides #slide-5 headergroup {
   left: 265px;
   right: auto;
 }
-/* line 56, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 58, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul {
   list-style: none;
   padding: 0px;
@@ -1003,7 +897,7 @@ aside#slideshow ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 62, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 64, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul li {
   float: left;
   width: 1000px;
@@ -1121,7 +1015,6 @@ hr {
   color: #f14038;
   font-size: 2.5em;
   margin-bottom: 15px;
-  text-shadow: #900000 0 -1px 0;
 }
 /* line 8, ../../app/stylesheets/partials/_motto.sass */
 #motto h3 {

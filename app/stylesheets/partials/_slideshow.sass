@@ -5,10 +5,12 @@ aside#slideshow
     bottom: 15px
     left: 260px
     a
-      +button-codegram-disabled
       float: left
+      background-color: #ddd
+      border: 1px solid #bbb
       &.active
-        +button-codegram
+        background-color: $codegram-color
+        border-color: $codegram-color - #222
         padding: 0px
       margin-left: 5px
       width: 12px
