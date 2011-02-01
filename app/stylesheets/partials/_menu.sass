@@ -7,11 +7,23 @@
     font-weight: bold
   color: white
   aside
+    ul
+      +no-bullets
+      padding: 0px
     padding-left: 25px
     font-size: 0.9em
     h4
       margin-bottom: 0px
     margin-bottom: 20px
+    a
+      +inline-block
+      background-color: #fff
+      color: $codegram-color
+      padding: 0px 5px
+      line-height: 1.8em
+      margin-top: 6px
+      text-decoration: none
+      +text-shadow(none)
   nav
     padding-left: 20px
     padding-bottom: 60px
@@ -24,7 +36,7 @@
           a
             background-color: white 
             color: $codegram-color
-            text-shadow: none
+            +text-shadow(none)
       a
         padding: 0px 5px
         font-family: Klavika, "Helvetica Neue", Arial

@@ -1,10 +1,11 @@
 @mixin button-base
+  outline: none
   &:hover
     cursor: pointer
   &::-moz-focus-inner
     border: 0
 
-@mixin button-codegram($base-color: $codegram-color) 
+@mixin button-codegram($base-color: $codegram-color + #111) 
   $text-color: #fff
   $background-color: $base-color - #080000 + #00030f
   $border-color: $base-color - #2f0e03

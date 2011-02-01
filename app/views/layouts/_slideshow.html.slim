@@ -1,22 +1,52 @@
 aside#slideshow
   #slides
     ul
-      li
+      li#slide-1
         =image_tag 'slide.jpg' 
         headergroup
           h2 We care about your project
           h3 We love working with our customers.
-      li
+      li#slide-2
+        =image_tag 'slide1.jpg' 
+        headergroup
+          h2 We rumble
+          h3 We like programming for fun
+      li#slide-3
         =image_tag 'slide2.jpg' 
-        h3 whatcha
-      li
-        =image_tag 'slide.jpg' 
-        h3 doin'?
+        headergroup
+          h2 This screenshot is a shit
+          h3 Please do remind me to change it or we'll have serious problems with our potential customers.
+      li#slide-4
+        =image_tag 'slide3.jpg'
+        headergroup
+          h2 We take coffee
+          h3 You don't have to worry about the fact that we don't work while we're taking it 
+      li#slide-5
+        =image_tag 'slide4.jpg'
+        headergroup
+          h2 We make love to each other
+          h3 Only when we feel in the mood.
+      li#slide-6
+        =image_tag 'slide5.jpg'
+        headergroup
+          h2 We have great tools
+          h3 And we type fast
+      li#slide-7
+        =image_tag 'slide6.jpg'
+        headergroup
+          h2 We enjoy to poing & click
+          h3 You see?
   nav.navi
 
 javascript:
   $(function(){
-      $("#slides").scrollable({circular: true}).autoscroll(
+      $("#slides").scrollable(
+        {
+          circular: true,
+          easing: 'bounce',
+          speed: 1000
+        }
+        ).autoscroll(
         {interval: 5000}
       ).navigator();
   });

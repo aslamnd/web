@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-# gem 'rails', '3.0.3'
+gem 'rails', '~> 3.0'
 
 # Bundle edge Rails instead:
-gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'rack', :git => 'git://github.com/rack/rack.git'
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gem 'rack', :git => 'git://github.com/rack/rack.git'
 gem 'arel', :git => 'git://github.com/rails/arel.git'
 
 gem 'inherited_resources'
@@ -17,7 +17,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip'
 gem 'devise'
-# gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+#gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
+gem 'carrierwave'
 
 group :development do
   gem 'livereload'

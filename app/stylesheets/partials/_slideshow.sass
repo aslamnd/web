@@ -5,23 +5,24 @@ aside#slideshow
     bottom: 15px
     left: 260px
     a
-      +button-codegram-disabled
       float: left
+      background-color: #ddd
+      border: 1px solid #bbb
       &.active
-        +button-codegram
+        background-color: $codegram-color
+        border-color: $codegram-color - #222
         padding: 0px
       margin-left: 5px
-      width: 15px
-      height: 15px
+      width: 12px
+      height: 12px
       padding: 0px
 
-  nav.navi
-    opacity: 0
-    +transition(opacity, 0.3s)
-  &:hover
-    nav.navi
-      opacity: 1
-
+  // nav.navi
+  //   +opacity(0)
+  //   +transition(opacity, 0.3s)
+  // &:hover
+  //   nav.navi
+  //     +opacity(1)
 
   #slides
     position: relative
@@ -30,7 +31,7 @@ aside#slideshow
     height: 280px
     headergroup
       z-index: 20
-      max-width: 500px
+      max-width: 250px
       position: absolute
       right: 20px
       top: 20px
@@ -47,6 +48,13 @@ aside#slideshow
         font-size: 1.2em
         margin: 0px
 
+    #slide-2 headergroup
+      bottom: 15px
+      top: auto
+    #slide-5 headergroup
+      left: 265px
+      right: auto
+
   ul 
     +no-bullets
     padding: 0px
@@ -57,6 +65,7 @@ aside#slideshow
       float: left
       width: 1000px
       position: relative
+      height: 280px
   width: 1000px
   position: absolute
   left: 50%
