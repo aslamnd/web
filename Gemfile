@@ -31,6 +31,7 @@ group :test do
   gem 'cucumber'
   gem 'capybara'
   gem 'akephalos'
+  gem 'rspec-rails', '~> 2.4.0'
 end
 
 # Deploy with Capistrano
