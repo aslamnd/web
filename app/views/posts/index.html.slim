@@ -1,9 +1,11 @@
 h2 Codegram blog
 
 - unless collection.empty?
-  - collection.each do |post| 
-    h3 = post.title
-    p = post.body
-    hr
+  #posts
+    - collection.each do |post| 
+      .post
+        h3 = post.title
+        p = post.body
+        hr
 - else
   | Sorry, there are no posts to show.
