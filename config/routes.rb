@@ -47,6 +47,11 @@ CodegramWeb::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  namespace :admin do
+    resources :posts, :except => [:index, :show]
+  end
+
+  resources :posts, :only => [:index, :show]
 
   resource :pages, :controller => 'high_voltage/pages'
 
