@@ -855,8 +855,8 @@ aside#slideshow .navi a {
   text-shadow: #999999 0 -1px 0;
   float: left;
   margin-left: 5px;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   padding: 0px;
 }
 /* line 3, ../../app/stylesheets/partials/_buttons.sass */
@@ -898,17 +898,17 @@ aside#slideshow .navi a.active {
   vertical-align: middle;
   *vertical-align: auto;
   text-decoration: none;
-  background: #dd373b;
-  background: -moz-linear-gradient(0% 100% 90deg, #c3120a, #e5342c);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342c), to(#c3120a));
-  border: 1px solid #b62629;
-  border-bottom: 1px solid #a82326;
+  background: #ee484c;
+  background: -moz-linear-gradient(0% 100% 90deg, #d4231b, #f6453d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6453d), to(#d4231b));
+  border: 1px solid #c7373a;
+  border-bottom: 1px solid #b93437;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: inset 0 1px 0 0 #e35b5e;
-  -webkit-box-shadow: inset 0 1px 0 0 #e35b5e;
-  box-shadow: inset 0 1px 0 0 #e35b5e;
+  -moz-box-shadow: inset 0 1px 0 0 #f46c6f;
+  -webkit-box-shadow: inset 0 1px 0 0 #f46c6f;
+  box-shadow: inset 0 1px 0 0 #f46c6f;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -932,41 +932,21 @@ aside#slideshow .navi a.active {
 }
 /* line 42, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a.active:hover {
-  background: #c3120a;
-  background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231b);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4231b), to(#a10000));
-  -moz-box-shadow: inset 0 1px 0 0 #c1393c;
-  -webkit-box-shadow: inset 0 1px 0 0 #c1393c;
-  box-shadow: inset 0 1px 0 0 #c1393c;
+  background: #d4231b;
+  background: -moz-linear-gradient(0% 100% 90deg, #b20100, #e5342c);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342c), to(#b20100));
+  -moz-box-shadow: inset 0 1px 0 0 #d24a4d;
+  -webkit-box-shadow: inset 0 1px 0 0 #d24a4d;
+  box-shadow: inset 0 1px 0 0 #d24a4d;
   cursor: pointer;
 }
 /* line 50, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a.active:active {
-  border: 1px solid #b62629;
-  border-bottom: 1px solid #a82326;
-  -moz-box-shadow: inset 0 0 8px 4px #8e0609, 0 1px 0 0 #a82326;
-  -webkit-box-shadow: inset 0 0 8px 4px #8e0609, 0 1px 0 0 #a82326;
-  box-shadow: inset 0 0 8px 4px #8e0609, 0 1px 0 0 #a82326;
-}
-/* line 18, ../../app/stylesheets/partials/_slideshow.sass */
-aside#slideshow nav.navi {
-  opacity: 0;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-/* line 22, ../../app/stylesheets/partials/_slideshow.sass */
-aside#slideshow:hover nav.navi {
-  opacity: 1;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  border: 1px solid #c7373a;
+  border-bottom: 1px solid #b93437;
+  -moz-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
+  -webkit-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
+  box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
 }
 /* line 25, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides {
@@ -1000,6 +980,16 @@ aside#slideshow #slides headergroup h3 {
   margin: 0px;
 }
 /* line 49, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow #slides #slide-2 headergroup {
+  bottom: 20px;
+  top: auto;
+}
+/* line 52, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow #slides #slide-5 headergroup {
+  left: 265px;
+  right: auto;
+}
+/* line 56, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul {
   list-style: none;
   padding: 0px;
@@ -1013,7 +1003,7 @@ aside#slideshow ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 55, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 62, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul li {
   float: left;
   width: 1000px;
@@ -1064,17 +1054,17 @@ aside#slideshow ul li {
   vertical-align: middle;
   *vertical-align: auto;
   text-decoration: none;
-  background: #dd373b;
-  background: -moz-linear-gradient(0% 100% 90deg, #c3120a, #e5342c);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342c), to(#c3120a));
-  border: 1px solid #b62629;
-  border-bottom: 1px solid #a82326;
+  background: #ee484c;
+  background: -moz-linear-gradient(0% 100% 90deg, #d4231b, #f6453d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6453d), to(#d4231b));
+  border: 1px solid #c7373a;
+  border-bottom: 1px solid #b93437;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: inset 0 1px 0 0 #e35b5e;
-  -webkit-box-shadow: inset 0 1px 0 0 #e35b5e;
-  box-shadow: inset 0 1px 0 0 #e35b5e;
+  -moz-box-shadow: inset 0 1px 0 0 #f46c6f;
+  -webkit-box-shadow: inset 0 1px 0 0 #f46c6f;
+  box-shadow: inset 0 1px 0 0 #f46c6f;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -1097,21 +1087,21 @@ aside#slideshow ul li {
 }
 /* line 42, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a:hover {
-  background: #c3120a;
-  background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231b);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4231b), to(#a10000));
-  -moz-box-shadow: inset 0 1px 0 0 #c1393c;
-  -webkit-box-shadow: inset 0 1px 0 0 #c1393c;
-  box-shadow: inset 0 1px 0 0 #c1393c;
+  background: #d4231b;
+  background: -moz-linear-gradient(0% 100% 90deg, #b20100, #e5342c);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342c), to(#b20100));
+  -moz-box-shadow: inset 0 1px 0 0 #d24a4d;
+  -webkit-box-shadow: inset 0 1px 0 0 #d24a4d;
+  box-shadow: inset 0 1px 0 0 #d24a4d;
   cursor: pointer;
 }
 /* line 50, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a:active {
-  border: 1px solid #b62629;
-  border-bottom: 1px solid #a82326;
-  -moz-box-shadow: inset 0 0 8px 4px #8e0609, 0 1px 0 0 #a82326;
-  -webkit-box-shadow: inset 0 0 8px 4px #8e0609, 0 1px 0 0 #a82326;
-  box-shadow: inset 0 0 8px 4px #8e0609, 0 1px 0 0 #a82326;
+  border: 1px solid #c7373a;
+  border-bottom: 1px solid #b93437;
+  -moz-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
+  -webkit-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
+  box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
 }
 
 /* line 16, ../../app/stylesheets/partials/_common.sass */
@@ -1127,16 +1117,16 @@ hr {
 }
 /* line 3, ../../app/stylesheets/partials/_motto.sass */
 #motto h2 {
-  color: #ed3c34;
+  color: #f14038;
   font-size: 2.5em;
   margin-bottom: 15px;
+  text-shadow: #900000 0 -1px 0;
 }
-/* line 7, ../../app/stylesheets/partials/_motto.sass */
+/* line 8, ../../app/stylesheets/partials/_motto.sass */
 #motto h3 {
   margin-top: -15px;
   font-size: 24px;
-  color: #888888;
   font-weight: normal;
   font-size: 2.3em;
-  color: #aaaaaa;
+  color: #999999;
 }

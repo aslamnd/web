@@ -11,16 +11,16 @@ aside#slideshow
         +button-codegram
         padding: 0px
       margin-left: 5px
-      width: 15px
-      height: 15px
+      width: 12px
+      height: 12px
       padding: 0px
 
-  nav.navi
-    +opacity(0)
-    +transition(opacity, 0.3s)
-  &:hover
-    nav.navi
-      +opacity(1)
+  // nav.navi
+  //   +opacity(0)
+  //   +transition(opacity, 0.3s)
+  // &:hover
+  //   nav.navi
+  //     +opacity(1)
 
   #slides
     position: relative
@@ -45,6 +45,13 @@ aside#slideshow
         font-weight: normal
         font-size: 1.2em
         margin: 0px
+
+    #slide-2 headergroup
+      bottom: 20px
+      top: auto
+    #slide-5 headergroup
+      left: 265px
+      right: auto
 
   ul 
     +no-bullets
