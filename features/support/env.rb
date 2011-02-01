@@ -46,4 +46,13 @@ Cucumber::Rails::World.use_transactional_fixtures = true
 # How to clean your database when transactions are turned off. See
 # http://github.com/bmabey/database_cleaner for more info.
 # DatabaseCleaner.strategy = :truncation
+if(ENV['FAILFAST'])
+  After do |s| 
+    Cucumber.wants_to_quit = true if s.failed?
+  end
+end
 
+include Warden::Test::Helpers
+After do
+  Warden.test_reset!
+end

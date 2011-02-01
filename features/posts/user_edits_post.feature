@@ -6,7 +6,7 @@ Feature: User edits a post
   Scenario: User edits a post
     Given I am logged in
     And a post exists
-    And I am on the posts page
+    And I am on the admin posts page
     When I follow "Edit" in the first post
     And I fill in "Title" with "Cucumber is not only for veggies (updated!)"
     And I fill in "Body" with "Also, here are some new articles arguing why Cucumber might be useful!"

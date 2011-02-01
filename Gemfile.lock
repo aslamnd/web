@@ -121,8 +121,12 @@ GEM
     gherkin (2.3.3)
       json (~> 1.4.6)
     haml (3.0.25)
+    has_scope (0.5.0)
     high_voltage (0.9.3)
     i18n (0.5.0)
+    inherited_resources (1.2.1)
+      has_scope (~> 0.5.0)
+      responders (~> 0.6.0)
     jammit (0.6.0)
       closure-compiler (>= 0.1.0)
       yui-compressor (>= 0.9.1)
@@ -161,6 +165,7 @@ GEM
     rack-test (0.5.7)
       rack (>= 1.0)
     rake (0.8.7)
+    responders (0.6.2)
     rspec (2.4.0)
       rspec-core (~> 2.4.0)
       rspec-expectations (~> 2.4.0)
@@ -214,6 +219,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   high_voltage
+  inherited_resources
   jammit
   jquery-rails
   launchy
