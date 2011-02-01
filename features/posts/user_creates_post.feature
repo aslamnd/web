@@ -8,6 +8,6 @@ Feature: User creates a post
     And I am on the new admin post page
     When I fill in "Title" with "Cucumber is not only for veggies"
     And I fill in "Body" with "Readable cucumber stories help the development and maintaining process."
-    And I press "Create post"
+    And I press "Create Post"
     Then I should see "Post was successfully created."
     And I should see "Cucumber is not only for veggies" in the posts list
