@@ -806,6 +806,7 @@ aside#slideshow .navi {
 }
 /* line 7, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow .navi a {
+  outline: none;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -836,11 +837,11 @@ aside#slideshow .navi a {
   height: 15px;
   padding: 0px;
 }
-/* line 2, ../../app/stylesheets/partials/_buttons.sass */
+/* line 3, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a:hover {
   cursor: pointer;
 }
-/* line 4, ../../app/stylesheets/partials/_buttons.sass */
+/* line 5, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a::-moz-focus-inner {
   border: 0;
 }
@@ -848,7 +849,7 @@ aside#slideshow .navi a::-moz-focus-inner {
 aside#slideshow .navi a {
   *display: inline;
 }
-/* line 90, ../../app/stylesheets/partials/_buttons.sass */
+/* line 91, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a:hover {
   background: #aaaaaa;
   background: -moz-linear-gradient(0% 100% 90deg, #888888, #bbbbbb);
@@ -858,7 +859,7 @@ aside#slideshow .navi a:hover {
   box-shadow: inset 0 1px 0 0 #aaaaaa;
   cursor: pointer;
 }
-/* line 98, ../../app/stylesheets/partials/_buttons.sass */
+/* line 99, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a:active {
   border: 1px solid #999999;
   border-bottom: none;
@@ -868,6 +869,7 @@ aside#slideshow .navi a:active {
 }
 /* line 10, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow .navi a.active {
+  outline: none;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -894,11 +896,11 @@ aside#slideshow .navi a.active {
   text-shadow: #900000 0 -1px 0;
   padding: 0px;
 }
-/* line 2, ../../app/stylesheets/partials/_buttons.sass */
+/* line 3, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a.active:hover {
   cursor: pointer;
 }
-/* line 4, ../../app/stylesheets/partials/_buttons.sass */
+/* line 5, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a.active::-moz-focus-inner {
   border: 0;
 }
@@ -906,7 +908,7 @@ aside#slideshow .navi a.active::-moz-focus-inner {
 aside#slideshow .navi a.active {
   *display: inline;
 }
-/* line 41, ../../app/stylesheets/partials/_buttons.sass */
+/* line 42, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a.active:hover {
   background: #c3120c;
   background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231d);
@@ -916,7 +918,7 @@ aside#slideshow .navi a.active:hover {
   box-shadow: inset 0 1px 0 0 #c1393e;
   cursor: pointer;
 }
-/* line 49, ../../app/stylesheets/partials/_buttons.sass */
+/* line 50, ../../app/stylesheets/partials/_buttons.sass */
 aside#slideshow .navi a.active:active {
   border: 1px solid #b6262b;
   border-bottom: 1px solid #a82328;
@@ -927,10 +929,12 @@ aside#slideshow .navi a.active:active {
 /* line 18, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow nav.navi {
   opacity: 0;
-  -moz-transition-property: -moz-opacity;
-  -webkit-transition-property: -moz-opacity;
-  -o-transition-property: -moz-opacity;
-  transition-property: -moz-opacity;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -939,15 +943,17 @@ aside#slideshow nav.navi {
 /* line 22, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow:hover nav.navi {
   opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 26, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 25, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides {
   position: relative;
   overflow: hidden;
   width: 1000px;
   height: 280px;
 }
-/* line 31, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 30, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup {
   z-index: 20;
   max-width: 500px;
@@ -958,20 +964,20 @@ aside#slideshow #slides headergroup {
   padding: 10px 15px;
   background: white;
 }
-/* line 40, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 39, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h2 {
   font-size: 1.2em;
   line-height: 1.1em;
   margin: 0px;
   margin-bottom: 5px;
 }
-/* line 45, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 44, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h3 {
   font-weight: normal;
   font-size: 1.2em;
   margin: 0px;
 }
-/* line 50, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 49, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul {
   list-style: none;
   padding: 0px;
@@ -985,7 +991,7 @@ aside#slideshow ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 56, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 55, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul li {
   float: left;
   width: 1000px;
@@ -1029,6 +1035,7 @@ aside#slideshow ul li {
 }
 /* line 13, ../../app/stylesheets/partials/_common.sass */
 #content #boxes section aside.more a {
+  outline: none;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -1054,11 +1061,11 @@ aside#slideshow ul li {
   text-align: center;
   text-shadow: #900000 0 -1px 0;
 }
-/* line 2, ../../app/stylesheets/partials/_buttons.sass */
+/* line 3, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a:hover {
   cursor: pointer;
 }
-/* line 4, ../../app/stylesheets/partials/_buttons.sass */
+/* line 5, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a::-moz-focus-inner {
   border: 0;
 }
@@ -1066,7 +1073,7 @@ aside#slideshow ul li {
 #content #boxes section aside.more a {
   *display: inline;
 }
-/* line 41, ../../app/stylesheets/partials/_buttons.sass */
+/* line 42, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a:hover {
   background: #c3120c;
   background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231d);
@@ -1076,7 +1083,7 @@ aside#slideshow ul li {
   box-shadow: inset 0 1px 0 0 #c1393e;
   cursor: pointer;
 }
-/* line 49, ../../app/stylesheets/partials/_buttons.sass */
+/* line 50, ../../app/stylesheets/partials/_buttons.sass */
 #content #boxes section aside.more a:active {
   border: 1px solid #b6262b;
   border-bottom: 1px solid #a82328;

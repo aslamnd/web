@@ -16,12 +16,11 @@ aside#slideshow
       padding: 0px
 
   nav.navi
-    opacity: 0
+    +opacity(0)
     +transition(opacity, 0.3s)
   &:hover
     nav.navi
-      opacity: 1
-
+      +opacity(1)
 
   #slides
     position: relative
