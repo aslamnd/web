@@ -9,6 +9,7 @@ CodegramWeb::Application.routes.draw do
   # Public sections
   constraints subdomain: 'blog' do
     match '/' => 'posts#index'
+    match '/:year/:month/:id' => 'posts#show'
   end
 
   constraints BaseSubdomain do

@@ -56,6 +56,7 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     addressable (2.2.4)
+    babosa (0.2.2)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     carrierwave (0.5.1)
@@ -93,6 +94,8 @@ GEM
     ffi (0.6.3)
       rake (>= 0.8.7)
     flash_messages_helper (0.1.0)
+    friendly_id (3.2.0)
+      babosa (~> 0.2.1)
     gherkin (2.3.3)
       json (~> 1.4.6)
     haml (3.0.25)
@@ -208,6 +211,7 @@ DEPENDENCIES
   escape_utils
   factory_girl_rails
   flash_messages_helper
+  friendly_id
   high_voltage
   inherited_resources
   jammit

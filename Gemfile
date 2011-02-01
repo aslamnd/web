@@ -9,6 +9,7 @@ gem 'arel', :git => 'git://github.com/rails/arel.git'
 
 gem 'inherited_resources'
 gem 'escape_utils'
+gem 'friendly_id'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
