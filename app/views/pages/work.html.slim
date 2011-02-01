@@ -1,0 +1,29 @@
+ul.tabs
+  li
+    a href='#clientWork' Client Work
+  li
+    a href='#products' Products
+  li
+    a href='#openSource' Open Source
+
+.panes
+  div#clientWork
+    p HOla!
+    p Em dic Marc!
+  div#products
+    p I tu?
+    p Com et dius?
+  div#openSource
+    p Et dius Pere, potser?
+    p No? Vés-te'n, doncs!
+
+
+
+javascript:
+  $(function(){
+    $("ul.tabs").tabs("div.panes > div", {history: true});
+    var api = $("ul.tabs").data("tabs")
+    api.onClick(function(event, index){
+      alert(index);
+    });
+  });
