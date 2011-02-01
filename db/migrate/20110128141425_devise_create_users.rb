@@ -6,6 +6,11 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.rememberable
       t.trackable
 
+      t.string :name
+      t.string :position
+      t.string :twitter
+      t.string :github
+
       # t.confirmable
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable

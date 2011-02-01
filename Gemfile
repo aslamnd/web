@@ -20,6 +20,7 @@ gem 'jammit'
 gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
+gem 'carrierwave'
 
 group :development do
   gem 'livereload'

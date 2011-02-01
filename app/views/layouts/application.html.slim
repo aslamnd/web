@@ -43,6 +43,16 @@ html
             | Planta 2 oficina 19
             br
             | 08228 Terrassa (Barcelona)
+            =link_to 'See a map', 'http://www.google.com/maps/place?cid=1159346420148185036&q=codegram&hl=en&dtab=0&sll=41.532274,2.034602&sspn=0.071946,0.071946&ie=UTF8&ll=41.58412,1.922951&spn=0,0&z=13'
+          aside
+            h4 Contact us
+            = link_to 'info@codegram.com', 'mailto:info@codegram.com'
+          aside
+            h4 Follow us
+            ul
+              li=link_to '@josepjaume', 'http://twitter.com/josepjaume'
+              li=link_to '@oriolgual', 'http://twitter.com/oriolgual'
+              li=link_to '@txustice', 'http://twitter.com/txustice'
       = render :partial => 'layouts/slideshow' 
       #content
         = yield
