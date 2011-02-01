@@ -5,6 +5,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead:
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'rack', :git => 'git://github.com/rack/rack.git'
+gem 'arel', :git => 'git://github.com/rails/arel.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
@@ -33,6 +34,7 @@ group :test do
   gem 'capybara'
   gem 'akephalos'
   gem 'rspec-rails', '~> 2.4.0'
+  gem 'pickle'
 end
 
 # Deploy with Capistrano
