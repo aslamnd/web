@@ -48,6 +48,8 @@ CodegramWeb::Application.routes.draw do
   #     resources :products
   #   end
 
+  match 'contact' => 'contacts#new'
+
   resource :pages, :controller => 'high_voltage/pages'
 
   # You can have the root of your site routed with "root"

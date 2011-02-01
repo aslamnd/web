@@ -678,8 +678,9 @@ html body h1, html body h2, html body h3 {
 html body h2 {
   font-size: 26px;
   margin-top: 0.3em;
+  margin-bottom: 0.5em;
 }
-/* line 22, ../../app/stylesheets/partials/_fonts.sass */
+/* line 23, ../../app/stylesheets/partials/_fonts.sass */
 html body h3 {
   margin-bottom: 0.8em;
 }
@@ -688,27 +689,28 @@ html body h3 {
 #sidebar #sidebar-inner {
   background-color: #e5342c;
   min-height: 100%;
+  padding-bottom: 40px;
 }
-/* line 5, ../../app/stylesheets/partials/_header.sass */
+/* line 6, ../../app/stylesheets/partials/_header.sass */
 #sidebar header {
   padding-top: 60px;
   padding-bottom: 80px;
 }
-/* line 8, ../../app/stylesheets/partials/_header.sass */
+/* line 9, ../../app/stylesheets/partials/_header.sass */
 #sidebar header h1 {
   margin: 0px;
   padding: 0px;
   padding-left: 20px;
   color: white;
 }
-/* line 9, ../../app/stylesheets/partials/_header.sass */
+/* line 10, ../../app/stylesheets/partials/_header.sass */
 #sidebar header h1 a {
   display: block;
   width: 134px;
   height: 115px;
   background: url(../images/embed/logo.png) no-repeat;
 }
-/* line 16, ../../app/stylesheets/partials/_header.sass */
+/* line 17, ../../app/stylesheets/partials/_header.sass */
 #sidebar header h1 span {
   display: none;
 }
@@ -786,12 +788,20 @@ html body h3 {
   line-height: 2.3em;
 }
 /* line 36, ../../app/stylesheets/partials/_menu.sass */
-#sidebar nav ul li.current a {
+#sidebar nav ul li.selected a {
   background-color: white;
   color: #e5342c;
   text-shadow: none;
 }
 /* line 40, ../../app/stylesheets/partials/_menu.sass */
+#sidebar nav ul li.selected a:hover {
+  font-weight: normal;
+}
+/* line 43, ../../app/stylesheets/partials/_menu.sass */
+#sidebar nav ul li a:hover {
+  font-weight: bold;
+}
+/* line 45, ../../app/stylesheets/partials/_menu.sass */
 #sidebar nav ul a {
   padding: 0px 5px;
   font-family: Klavika, "Helvetica Neue", Arial;
@@ -831,25 +841,51 @@ aside#slideshow .navi a {
   float: left;
   background-color: #dddddd;
   border: 1px solid #bbbbbb;
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   margin-left: 5px;
   width: 12px;
   height: 12px;
   padding: 0px;
 }
-/* line 11, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 12, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow .navi a.active {
   background-color: #e5342c;
   border-color: #c3120a;
   padding: 0px;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 27, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 22, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow nav.navi {
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 26, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow:hover nav.navi {
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+/* line 29, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides {
   position: relative;
   overflow: hidden;
   width: 1000px;
   height: 280px;
 }
-/* line 32, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 34, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup {
   z-index: 20;
   max-width: 250px;
@@ -860,30 +896,30 @@ aside#slideshow #slides headergroup {
   padding: 10px 15px;
   background: white;
 }
-/* line 41, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 43, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h2 {
   font-size: 1.2em;
   line-height: 1.1em;
   margin: 0px;
   margin-bottom: 5px;
 }
-/* line 46, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 48, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h3 {
   font-weight: normal;
   font-size: 1.2em;
   margin: 0px;
 }
-/* line 51, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 53, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides #slide-2 headergroup {
   bottom: 15px;
   top: auto;
 }
-/* line 54, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 56, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides #slide-5 headergroup {
   left: 265px;
   right: auto;
 }
-/* line 58, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 60, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul {
   list-style: none;
   padding: 0px;
@@ -897,7 +933,7 @@ aside#slideshow ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 64, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 66, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul li {
   float: left;
   width: 1000px;
