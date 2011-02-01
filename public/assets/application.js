@@ -1,1 +1,1 @@
-var update_sidebar_height=function(){var a=$("#slideshow").height()+$("#content").height();var b=$(window).height();var c=0;if(a>b){c=a}else{c=b}if($("#sidebar-inner").height()<c){$("#sidebar-inner").css("height",c)}}();
+$(function(){var a=$("#slideshow").height()+$("#content").height();var b=$(window).height();var c=0;if(a>b){c=a}else{c=b}if($("#sidebar-inner").height()<c){$("#sidebar-inner").css("height",c)}});
