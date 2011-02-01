@@ -30,11 +30,13 @@ group :test, :development do
 end
 
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git', :ref => 'v0.4.0.beta.1'
   gem 'capybara'
   gem 'akephalos'
   gem 'rspec-rails', '~> 2.4.0'
   gem 'pickle'
+  gem 'launchy'
+  gem "database_cleaner", "~> 0.6.0"
 end
 
 # Deploy with Capistrano
