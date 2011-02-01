@@ -38,6 +38,7 @@ group :test do
   gem 'pickle'
   gem 'launchy'
   gem "database_cleaner", "~> 0.6.0"
+  gem 'shoulda'
 end
 
 # Deploy with Capistrano

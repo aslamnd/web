@@ -186,6 +186,7 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
+    shoulda (2.11.3)
     simple_form (1.2.2)
     slim (0.9.0)
       temple (~> 0.1.7)
@@ -229,6 +230,7 @@ DEPENDENCIES
   rack!
   rails!
   rspec-rails (~> 2.4.0)
+  shoulda
   simple_form
   slim
   sqlite3-ruby
