@@ -31,8 +31,7 @@ end
 
 group :test do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git', :ref => 'v0.4.0.beta.1'
-  gem 'capybara'
-  gem 'akephalos'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git', :ref => '0.4.1.1'
   gem 'rspec-rails', '~> 2.4.0'
   gem 'pickle'
   gem 'launchy'
