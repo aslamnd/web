@@ -1093,6 +1093,15 @@ hr {
 }
 
 /* line 1, ../../app/stylesheets/partials/_work.sass */
+nav#tabs {
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: -20px;
+  position: relative;
+  z-index: 10;
+  height: 48px;
+}
+
+/* line 7, ../../app/stylesheets/partials/_work.sass */
 ul.tabs {
   margin: 0;
   padding: 0;
@@ -1100,10 +1109,9 @@ ul.tabs {
   outline: 0;
   overflow: hidden;
   *zoom: 1;
-  border-bottom: 1px solid black;
-  margin-left: -20px;
-  margin-top: 10px;
   padding-left: 20px;
+  position: absolute;
+  z-index: 15;
 }
 /* line 56, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
 ul.tabs li {
@@ -1114,25 +1122,44 @@ ul.tabs li {
   display: inline;
   float: left;
 }
-/* line 7, ../../app/stylesheets/partials/_work.sass */
+/* line 12, ../../app/stylesheets/partials/_work.sass */
 ul.tabs li {
-  padding: 5px;
-}
-/* line 9, ../../app/stylesheets/partials/_work.sass */
-ul.tabs li.active {
-  border: 1px solid lime;
-  border-bottom: 0;
-  padding: 5px;
-  background-color: blue;
-}
-/* line 14, ../../app/stylesheets/partials/_work.sass */
-ul.tabs li.active a {
-  margin: 5px 3px;
-  padding: 3px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  position: relative;
 }
 /* line 17, ../../app/stylesheets/partials/_work.sass */
-ul.tabs li.active a.current {
-  background-color: #cccccc;
-  margin: 5px 3px;
-  padding: 3px;
+ul.tabs a {
+  background-color: white;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
+  font-size: 18px;
+  color: #888888;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 7, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+ul.tabs a {
+  *display: inline;
+}
+/* line 27, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a span {
+  padding: 5px 10px;
+}
+/* line 29, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a.current {
+  border: 1px solid #e5e5e5;
+  border-bottom: 1px solid white;
+  color: #e5342e;
+}
+/* line 33, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a.current span {
+  background-color: #f2f2f2;
 }
