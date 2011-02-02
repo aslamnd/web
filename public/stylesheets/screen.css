@@ -1043,6 +1043,27 @@ hr {
   background: url(/images/embed/dots.png);
 }
 
+/* line 23, ../../app/stylesheets/partials/_common.sass */
+#content a {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  padding: 2px 4px;
+  background-color: #afafaf;
+  color: white;
+}
+/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+#content a {
+  *display: inline;
+}
+/* line 29, ../../app/stylesheets/partials/_common.sass */
+#content a:hover {
+  background-color: #e5342c;
+}
+
 /* line 1, ../../app/stylesheets/partials/_motto.sass */
 #motto {
   text-align: center;
@@ -1067,7 +1088,7 @@ hr {
   display: inline;
   float: left;
   margin-right: 20px;
-  width: 347.5px;
+  width: 408.75px;
 }
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #contact-form {
@@ -1079,11 +1100,20 @@ hr {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 347.5px;
+  width: 286.25px;
 }
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #contact-details {
   overflow-x: hidden;
+}
+
+/* line 7, ../../app/stylesheets/partials/_contact.sass */
+#contact-form form input.string, #contact-form form textarea, #contact-form form select {
+  width: 340px;
+}
+/* line 9, ../../app/stylesheets/partials/_contact.sass */
+#contact-form form span.error {
+  width: 340px;
 }
 
 /* line 2, ../../app/stylesheets/partials/_forms.sass */
@@ -1091,13 +1121,150 @@ html body form label {
   display: block;
 }
 /* line 4, ../../app/stylesheets/partials/_forms.sass */
-html body form input.string, html body form textarea {
-  width: 300px;
+html body form input.string, html body form textarea, html body form select {
   border: 1px solid #d0d0d0;
   background: #f2f2f2 url(/images/form-background.png) repeat-x;
   padding: 8px;
+  font-size: 0.9em;
 }
 /* line 9, ../../app/stylesheets/partials/_forms.sass */
-html body form input.string::-webkit-input-placeholder, html body form input.string::-moz-placeholder, html body form textarea::-webkit-input-placeholder, html body form textarea::-moz-placeholder {
+html body form input.string::-webkit-input-placeholder, html body form input.string::-moz-placeholder, html body form textarea::-webkit-input-placeholder, html body form textarea::-moz-placeholder, html body form select::-webkit-input-placeholder, html body form select::-moz-placeholder {
   color: #5f5f5f;
+}
+/* line 11, ../../app/stylesheets/partials/_forms.sass */
+html body form span.error {
+  display: block;
+  padding: 8px;
+  border-width: 1px;
+  font-size: 0.9em;
+}
+/* line 17, ../../app/stylesheets/partials/_forms.sass */
+html body form button {
+  outline: none;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  background: #ee484c;
+  background: -moz-linear-gradient(0% 100% 90deg, #d4231b, #f6453d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6453d), to(#d4231b));
+  border: 1px solid #c7373a;
+  border-bottom: 1px solid #b93437;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #f46c6f;
+  -webkit-box-shadow: inset 0 1px 0 0 #f46c6f;
+  box-shadow: inset 0 1px 0 0 #f46c6f;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 15px;
+  text-align: center;
+  text-shadow: #900000 0 -1px 0;
+}
+/* line 3, ../../app/stylesheets/partials/_buttons.sass */
+html body form button:hover {
+  cursor: pointer;
+}
+/* line 5, ../../app/stylesheets/partials/_buttons.sass */
+html body form button::-moz-focus-inner {
+  border: 0;
+}
+/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+html body form button {
+  *display: inline;
+}
+/* line 42, ../../app/stylesheets/partials/_buttons.sass */
+html body form button:hover {
+  background: #d4231b;
+  background: -moz-linear-gradient(0% 100% 90deg, #b20100, #e5342c);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342c), to(#b20100));
+  -moz-box-shadow: inset 0 1px 0 0 #d24a4d;
+  -webkit-box-shadow: inset 0 1px 0 0 #d24a4d;
+  box-shadow: inset 0 1px 0 0 #d24a4d;
+  cursor: pointer;
+}
+/* line 50, ../../app/stylesheets/partials/_buttons.sass */
+html body form button:active {
+  border: 1px solid #c7373a;
+  border-bottom: 1px solid #b93437;
+  -moz-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
+  -webkit-box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
+  box-shadow: inset 0 0 8px 4px #9f171a, 0 1px 0 0 #b93437;
+}
+
+/* line 1, ../../app/stylesheets/partials/_work.sass */
+nav#tabs {
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: -20px;
+  position: relative;
+  z-index: 10;
+  height: 48px;
+}
+
+/* line 7, ../../app/stylesheets/partials/_work.sass */
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 20px;
+  position: absolute;
+  z-index: 15;
+}
+/* line 56, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+ul.tabs li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+}
+/* line 12, ../../app/stylesheets/partials/_work.sass */
+ul.tabs li {
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+/* line 17, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a {
+  background-color: white;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
+  font-size: 18px;
+  color: #888888;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+ul.tabs a {
+  *display: inline;
+}
+/* line 27, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a span {
+  padding: 5px 10px;
+}
+/* line 29, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a.current {
+  border: 1px solid #e5e5e5;
+  border-bottom: 1px solid white;
+  color: #e5342c;
+}
+/* line 33, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a.current span {
+  background-color: #f2f2f2;
 }

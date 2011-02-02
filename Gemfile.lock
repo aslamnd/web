@@ -94,6 +94,7 @@ GEM
       railties (>= 3.0.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    flash_messages_helper (0.1.0)
     gherkin (2.3.3)
       json (~> 1.4.6)
     haml (3.0.25)
@@ -206,6 +207,7 @@ DEPENDENCIES
   database_cleaner (~> 0.6.0)
   devise
   factory_girl_rails
+  flash_messages_helper
   high_voltage
   jammit
   jquery-rails

@@ -48,7 +48,9 @@ CodegramWeb::Application.routes.draw do
   #     resources :products
   #   end
 
-  resources :contact_forms
+  resource :contact, :controller => 'contact_forms',
+    :only => [:new, :create],
+    :path_names => {:new => '/'}
 
   resource :pages, :controller => 'high_voltage/pages'
 

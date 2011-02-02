@@ -24,6 +24,8 @@ html
             =render_navigation
           aside
             h4 Call us
+            | 0034 937 872 194
+            br
             | 0034 668 823 476 
           aside
             h4 Visit us 
@@ -48,6 +50,7 @@ html
               li=link_to '@txustice', 'http://twitter.com/txustice'
       = render :partial => 'layouts/slideshow' 
       #content
+        = flash_messages
         = yield
       footer#footer
     = include_javascripts :application

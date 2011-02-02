@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'mail_form'
 gem 'simple_form'
 gem 'simple-navigation'
+gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
 gem 'carrierwave'

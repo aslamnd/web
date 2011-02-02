@@ -5,10 +5,28 @@ p
 hr
 section#contact-form
   h3 Send us a message
-  =simple_form_for @contact_form do |f|
-    =f.input :name, :placeholder => 'Hola', :label => false
+  =simple_form_for @contact_form, :url => contact_path do |f|
+    =f.input :name, :placeholder => 'Your name', :label => false
     =f.input :email, :as => :email, :placeholder => 'you@yourdomain.com', :label => false
     =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'
-    =f.submit 'Send'
+    =f.submit 'Send message'
 aside#contact-details
-  | akaksjda
+  h3 Contact details
+  p
+    strong Address:
+    br
+    | Pl. d’Aurora Bertrana
+    br
+    | Office 19 (2nd floor)
+    br
+    | 08228 Terrassa
+    br
+    | Barcelona (Spain)
+    br
+    =link_to 'See a map', 'http://www.google.com/maps/place?cid=1159346420148185036&q=codegram&hl=en&dtab=0&sll=41.532274,2.034602&sspn=0.071946,0.071946&ie=UTF8&ll=41.58412,1.922951&spn=0,0&z=13'
+  p
+    strong Phone:
+    br
+    | 0034 937 872 194
+    br
+    | 0034 668 823 476 
