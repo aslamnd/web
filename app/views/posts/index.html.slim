@@ -5,6 +5,7 @@ h2 Codegram blog
     - collection.each do |post| 
       .post
         h3 = link_to(post.title, url_for(id: post, year: post.year, month: post.month))
+        small = date_and_author_for(post)
         p = post.body
         hr
 - else
