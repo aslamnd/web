@@ -4,6 +4,7 @@ CodegramWeb::Application.routes.draw do
   # Admin sections
   namespace :admin do
     resources :posts
+    match '/' => 'dashboards#show'
   end
 
   # Public sections

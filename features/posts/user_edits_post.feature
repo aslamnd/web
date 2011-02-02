@@ -9,7 +9,6 @@ Feature: User edits a post
     And I am on the admin posts page
     When I follow "Edit" in the first post
     And I fill in "Title" with "Cucumber is not only for veggies (updated!)"
-    Then show me the page
     And I select "November 1, 2010" as post_created_at
     And I fill in "Body" with "Also, here are some new articles arguing why Cucumber might be useful!"
     And I press "Update Post"

@@ -1,5 +1,7 @@
 h2 Manage posts
 hr
+ul#actions
+  li = link_to 'Add a new post', new_admin_post_path
 ul#posts
   - unless collection.empty?
     - collection.each do |post| 
