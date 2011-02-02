@@ -2,4 +2,4 @@ h2 = link_to(resource.title, url_for(id: resource, year: resource.year, month:
 resource.month))
 hr
 small = date_and_author_for(resource)
-p = resource.body
+p = resource.rendered_body.html_safe

@@ -27,8 +27,7 @@ gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
 gem 'carrierwave'
-gem 'rdiscount'
-
+gem 'markdownizer', '0.1.0'
 
 group :development do
   gem 'livereload'

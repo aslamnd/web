@@ -6,7 +6,7 @@ h2 Codegram blog
       .post
         h3 = link_to(post.title, url_for(id: post, year: post.year, month: post.month))
         small = date_and_author_for(post)
-        p = post.body
+        p = post.rendered_body.html_safe
         hr
 - else
   | Sorry, there are no posts to show.

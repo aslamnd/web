@@ -25,6 +25,14 @@ GIT
   specs:
     arel (2.0.7.beta.20110121165657)
 
+PATH
+  remote: ../markdownizer
+  specs:
+    markdownizer (0.0.1)
+      activerecord (~> 3.0.3)
+      coderay
+      rdiscount
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -64,6 +72,7 @@ GEM
     childprocess (0.1.6)
       ffi (~> 0.6.3)
     closure-compiler (1.0.0)
+    coderay (0.9.7)
     compass (0.10.6)
       haml (>= 3.0.4)
     configuration (1.2.0)
@@ -222,10 +231,10 @@ DEPENDENCIES
   jquery-rails
   launchy
   livereload
+  markdownizer!
   paperclip
   pickle
   rails (~> 3.0)
-  rdiscount
   rspec-rails (~> 2.4.0)
   shoulda
   simple_form
