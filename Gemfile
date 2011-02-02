@@ -23,12 +23,9 @@ gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
 gem 'jquery-rails'
-<<<<<<< HEAD
 gem 'mail_form'
 gem 'simple_form'
 gem 'simple-navigation'
-=======
->>>>>>> feature/posts
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
