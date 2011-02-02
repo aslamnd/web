@@ -1192,33 +1192,56 @@ ul.tabs a.current span {
 .panes div#openSource div article .snapshot {
   border: 1px solid #e5e5e5;
   position: relative;
+  width: 713px;
 }
-/* line 52, ../../app/stylesheets/partials/_work.sass */
+/* line 53, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article .snapshot .caption-bg,
+.panes div#products div article .snapshot .caption-bg,
+.panes div#openSource div article .snapshot .caption-bg {
+  position: absolute;
+  bottom: 0px;
+  height: 90px;
+  width: 713px;
+  opacity: 0.3;
+  background-color: lime;
+}
+/* line 60, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div article .snapshot .caption,
 .panes div#products div article .snapshot .caption,
 .panes div#openSource div article .snapshot .caption {
   position: relative;
-  width: 715px;
+  width: 713px;
   bottom: 0px;
-  opacity: 0.3;
+  background-color: yellow;
 }
-/* line 57, ../../app/stylesheets/partials/_work.sass */
+/* line 65, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div article .snapshot .caption blockquote,
 .panes div#products div article .snapshot .caption blockquote,
 .panes div#openSource div article .snapshot .caption blockquote {
+  margin: 15px;
+  margin-bottom: 0;
   font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
   font-size: 20px;
   font-weight: bold;
-  color: #5f5f5f;
+  color: #888888;
+  opacity: 1;
 }
-/* line 63, ../../app/stylesheets/partials/_work.sass */
+/* line 73, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article .snapshot .caption .caption-author,
+.panes div#products div article .snapshot .caption .caption-author,
+.panes div#openSource div article .snapshot .caption .caption-author {
+  position: relative;
+  color: #e5342e;
+  opacity: 1;
+}
+/* line 78, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div article h2,
 .panes div#products div article h2,
 .panes div#openSource div article h2 {
   margin-top: 0;
   font-size: 22px;
 }
-/* line 66, ../../app/stylesheets/partials/_work.sass */
+/* line 81, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div article h3,
 .panes div#products div article h3,
 .panes div#openSource div article h3 {
@@ -1226,11 +1249,11 @@ ul.tabs a.current span {
   font-weight: normal;
 }
 
-/* line 71, ../../app/stylesheets/partials/_work.sass */
+/* line 86, ../../app/stylesheets/partials/_work.sass */
 nav.examples_nav {
   background-color: lime;
 }
-/* line 73, ../../app/stylesheets/partials/_work.sass */
+/* line 88, ../../app/stylesheets/partials/_work.sass */
 nav.examples_nav a {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -1292,7 +1315,7 @@ nav.examples_nav a:active {
   -webkit-box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
   box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
 }
-/* line 76, ../../app/stylesheets/partials/_work.sass */
+/* line 91, ../../app/stylesheets/partials/_work.sass */
 nav.examples_nav a.active {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
