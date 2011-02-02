@@ -1,25 +1,10 @@
+
 aside#slideshow
-  .navi
+  nav.navi
     position: absolute
     z-index: 15
     bottom: 15px
     left: 260px
-    a
-      float: left
-      background-color: #ddd
-      border: 1px solid #bbb
-      +opacity(0.6)
-      &.active
-        background-color: $codegram-color
-        border-color: $codegram-color - #222
-        padding: 0px
-        +opacity(1)
-      margin-left: 5px
-      width: 12px
-      height: 12px
-      padding: 0px
-
-  nav.navi
     +opacity(0)
     +transition(opacity, 0.3s)
   &:hover

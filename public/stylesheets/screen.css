@@ -820,7 +820,7 @@ html body h3 {
   *display: inline;
 }
 
-/* line 1, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 2, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow {
   width: 1000px;
   position: absolute;
@@ -829,37 +829,12 @@ aside#slideshow {
   top: 0px;
   z-index: 5;
 }
-/* line 2, ../../app/stylesheets/partials/_slideshow.sass */
-aside#slideshow .navi {
+/* line 3, ../../app/stylesheets/partials/_slideshow.sass */
+aside#slideshow nav.navi {
   position: absolute;
   z-index: 15;
   bottom: 15px;
   left: 260px;
-}
-/* line 7, ../../app/stylesheets/partials/_slideshow.sass */
-aside#slideshow .navi a {
-  float: left;
-  background-color: #dddddd;
-  border: 1px solid #bbbbbb;
-  opacity: 0.6;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  margin-left: 5px;
-  width: 12px;
-  height: 12px;
-  padding: 0px;
-}
-/* line 12, ../../app/stylesheets/partials/_slideshow.sass */
-aside#slideshow .navi a.active {
-  background-color: #dd3433;
-  border-color: #bb1211;
-  padding: 0px;
-  opacity: 1;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-}
-/* line 22, ../../app/stylesheets/partials/_slideshow.sass */
-aside#slideshow nav.navi {
   opacity: 0;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -872,20 +847,20 @@ aside#slideshow nav.navi {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 26, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 11, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow:hover nav.navi {
   opacity: 1;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 29, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 14, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides {
   position: relative;
   overflow: hidden;
   width: 1000px;
   height: 280px;
 }
-/* line 34, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 19, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup {
   z-index: 20;
   max-width: 250px;
@@ -896,30 +871,30 @@ aside#slideshow #slides headergroup {
   padding: 10px 15px;
   background: white;
 }
-/* line 43, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 28, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h2 {
   font-size: 1.2em;
   line-height: 1.1em;
   margin: 0px;
   margin-bottom: 5px;
 }
-/* line 48, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 33, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides headergroup h3 {
   font-weight: normal;
   font-size: 1.2em;
   margin: 0px;
 }
-/* line 53, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 38, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides #slide-2 headergroup {
   bottom: 15px;
   top: auto;
 }
-/* line 56, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 41, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow #slides #slide-5 headergroup {
   left: 265px;
   right: auto;
 }
-/* line 60, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 45, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul {
   list-style: none;
   padding: 0px;
@@ -933,7 +908,7 @@ aside#slideshow ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 66, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 51, ../../app/stylesheets/partials/_slideshow.sass */
 aside#slideshow ul li {
   float: left;
   width: 1000px;
@@ -944,41 +919,40 @@ aside#slideshow ul li {
 /* line 1, ../../app/stylesheets/partials/_common.sass */
 #content {
   margin-top: 280px;
-  padding-bottom: 40px;
 }
-/* line 5, ../../app/stylesheets/partials/_common.sass */
-#content #boxes .row {
+/* line 3, ../../app/stylesheets/partials/_common.sass */
+#content .row {
   margin-bottom: 30px;
   overflow: hidden;
 }
-/* line 8, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section {
+/* line 6, ../../app/stylesheets/partials/_common.sass */
+#content section.left {
   display: inline;
   float: left;
   margin-right: 20px;
   width: 347.5px;
 }
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content #boxes section {
+* html #content section.left {
   overflow-x: hidden;
 }
-/* line 10, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section.right {
+/* line 8, ../../app/stylesheets/partials/_common.sass */
+#content section.right {
   display: inline;
   float: left;
   margin-right: 0;
   width: 347.5px;
 }
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content #boxes section.right {
+* html #content section.right {
   overflow-x: hidden;
 }
-/* line 12, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section aside.more {
+/* line 10, ../../app/stylesheets/partials/_common.sass */
+#content aside.more {
   margin-top: 10px;
 }
-/* line 14, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section aside.more a {
+/* line 12, ../../app/stylesheets/partials/_common.sass */
+#content aside.more a {
   outline: none;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -1006,19 +980,19 @@ aside#slideshow ul li {
   text-shadow: #aa0100 0 -1px 0;
 }
 /* line 3, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a:hover {
+#content aside.more a:hover {
   cursor: pointer;
 }
 /* line 5, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a::-moz-focus-inner {
+#content aside.more a::-moz-focus-inner {
   border: 0;
 }
 /* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-#content #boxes section aside.more a {
+#content aside.more a {
   *display: inline;
 }
 /* line 42, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a:hover {
+#content aside.more a:hover {
   background: #bb1211;
   background: -moz-linear-gradient(0% 100% 90deg, #990000, #cc2322);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cc2322), to(#990000));
@@ -1028,7 +1002,7 @@ aside#slideshow ul li {
   cursor: pointer;
 }
 /* line 50, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a:active {
+#content aside.more a:active {
   border: 1px solid #bb1211;
   border-bottom: 1px solid #bb1211;
   -moz-box-shadow: inset 0 0 8px 4px #a00000, 0 1px 0 0 #bb1211;
@@ -1036,35 +1010,14 @@ aside#slideshow ul li {
   box-shadow: inset 0 0 8px 4px #a00000, 0 1px 0 0 #bb1211;
 }
 
-/* line 17, ../../app/stylesheets/partials/_common.sass */
+/* line 15, ../../app/stylesheets/partials/_common.sass */
 hr {
   height: 4px;
   margin-bottom: 2em;
   background: url(/images/embed/dots.png);
 }
 
-/* line 23, ../../app/stylesheets/partials/_common.sass */
-#content a {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  text-decoration: none;
-  padding: 2px 4px;
-  background-color: #afafaf;
-  color: white;
-}
-/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-#content a {
-  *display: inline;
-}
-/* line 29, ../../app/stylesheets/partials/_common.sass */
-#content a:hover {
-  background-color: #dd3433;
-}
-
-/* line 32, ../../app/stylesheets/partials/_common.sass */
+/* line 21, ../../app/stylesheets/partials/_common.sass */
 .notice {
   margin-top: 15px;
   height: 80px;
@@ -1072,6 +1025,29 @@ hr {
   text-align: center;
   font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
   font-size: 1.5em;
+}
+
+/* line 31, ../../app/stylesheets/partials/_common.sass */
+html body .navi a, html body .examples_nav a {
+  float: left;
+  background-color: #dddddd;
+  border: 1px solid #bbbbbb;
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+  padding: 0px;
+}
+/* line 36, ../../app/stylesheets/partials/_common.sass */
+html body .navi a.active, html body .examples_nav a.active {
+  background-color: #dd3433;
+  border-color: #bb1211;
+  padding: 0px;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
 
 /* line 1, ../../app/stylesheets/partials/_motto.sass */
@@ -1277,6 +1253,107 @@ ul.tabs a.current {
 /* line 33, ../../app/stylesheets/partials/_work.sass */
 ul.tabs a.current span {
   background-color: #f2f2f2;
+}
+
+/* line 37, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork,
+.panes div#products,
+.panes div#openSource {
+  overflow: hidden;
+}
+/* line 41, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide,
+.panes div#products div#work_slide,
+.panes div#openSource div#work_slide {
+  position: relative;
+  width: 10000px;
+}
+/* line 44, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article,
+.panes div#products div#work_slide article,
+.panes div#openSource div#work_slide article {
+  float: left;
+  width: 715px;
+  position: relative;
+  margin-top: 15px;
+  height: 550px;
+}
+/* line 50, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article .snapshot,
+.panes div#products div#work_slide article .snapshot,
+.panes div#openSource div#work_slide article .snapshot {
+  height: 300px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  margin-bottom: 15px;
+}
+/* line 55, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article .snapshot .caption-bg, .panes div#clientWork div#work_slide article .snapshot .caption,
+.panes div#products div#work_slide article .snapshot .caption-bg,
+.panes div#products div#work_slide article .snapshot .caption,
+.panes div#openSource div#work_slide article .snapshot .caption-bg,
+.panes div#openSource div#work_slide article .snapshot .caption {
+  position: absolute;
+  bottom: 0px;
+  height: 90px;
+  width: 713px;
+}
+/* line 60, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article .snapshot .caption-bg,
+.panes div#products div#work_slide article .snapshot .caption-bg,
+.panes div#openSource div#work_slide article .snapshot .caption-bg {
+  opacity: 0.2;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  background-color: #999999;
+}
+/* line 63, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article .snapshot .caption,
+.panes div#products div#work_slide article .snapshot .caption,
+.panes div#openSource div#work_slide article .snapshot .caption {
+  padding-top: 15px;
+  bottom: 0px;
+}
+/* line 66, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article .snapshot .caption blockquote,
+.panes div#products div#work_slide article .snapshot .caption blockquote,
+.panes div#openSource div#work_slide article .snapshot .caption blockquote {
+  margin: 15px;
+  margin-bottom: 0;
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #888888;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+/* line 74, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article .snapshot .caption .caption-author,
+.panes div#products div#work_slide article .snapshot .caption .caption-author,
+.panes div#openSource div#work_slide article .snapshot .caption .caption-author {
+  position: absolute;
+  color: #dd3433;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  z-index: 20;
+  right: 15px;
+  bottom: 15px;
+}
+/* line 82, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article h2,
+.panes div#products div#work_slide article h2,
+.panes div#openSource div#work_slide article h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+/* line 85, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div#work_slide article h3,
+.panes div#products div#work_slide article h3,
+.panes div#openSource div#work_slide article h3 {
+  font-size: 22px;
+  font-weight: normal;
 }
 
 /* line 1, ../../app/stylesheets/partials/_about.sass */
