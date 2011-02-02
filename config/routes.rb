@@ -52,8 +52,6 @@ CodegramWeb::Application.routes.draw do
     :only => [:new, :create],
     :path_names => {:new => '/'}
 
-  resource :pages, :controller => 'high_voltage/pages'
-
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => "high_voltage/pages#show", :id => 'home'
@@ -62,5 +60,5 @@ CodegramWeb::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  match '/:id', :controller => 'high_voltage/pages', :action => :show
 end

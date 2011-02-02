@@ -50,7 +50,7 @@ html
               li=link_to '@txustice', 'http://twitter.com/txustice'
       = render :partial => 'layouts/slideshow' 
       #content
-        = flash_messages
+        = flash_messages.html_safe
         = yield
       footer#footer
     = include_javascripts :application
