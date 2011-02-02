@@ -9,6 +9,7 @@ javascripts:
 stylesheets:
   common:
     - public/stylesheets/screen.css
+    - public/stylesheets/markdownizer.css
   print:
     - public/stylesheets/print.css
 

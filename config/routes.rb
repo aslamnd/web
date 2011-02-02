@@ -1,9 +1,23 @@
 CodegramWeb::Application.routes.draw do
   devise_for :users
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+  # Admin sections
+  namespace :admin do
+    resources :posts
+    match '/' => 'dashboards#show'
+  end
 
+  # Public sections
+  constraints subdomain: 'blog' do
+    match '/' => 'posts#index'
+    match '/:year/:month/:id' => 'posts#show'
+  end
+
+  constraints BaseSubdomain do
+    resource :pages, :controller => 'high_voltage/pages'
+  end
+
+<<<<<<< HEAD
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -61,4 +75,8 @@ CodegramWeb::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   match '/:id', :controller => 'high_voltage/pages', :action => :show
+=======
+  root :to => "high_voltage/pages#show", :id => 'home'
+
+>>>>>>> feature/posts
 end

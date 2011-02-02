@@ -7,6 +7,10 @@ gem 'rails', '~> 3.0'
 # gem 'rack', :git => 'git://github.com/rack/rack.git'
 gem 'arel', :git => 'git://github.com/rails/arel.git'
 
+gem 'inherited_resources'
+gem 'escape_utils'
+gem 'friendly_id'
+
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'slim', :require => 'slim/rails'
@@ -19,28 +23,34 @@ gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
 gem 'jquery-rails'
+<<<<<<< HEAD
 gem 'mail_form'
 gem 'simple_form'
 gem 'simple-navigation'
+=======
+>>>>>>> feature/posts
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
 gem 'carrierwave'
+gem 'markdownizer', '0.1.0'
 
 group :development do
   gem 'livereload'
 end
 group :test, :development do
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :test do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git', :ref => 'v0.4.0.beta.1'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git', :ref => '0.4.1.1'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git', :ref => '0.3.9'
   gem 'rspec-rails', '~> 2.4.0'
   gem 'pickle'
   gem 'launchy'
   gem "database_cleaner", "~> 0.6.0"
+  gem 'shoulda'
 end
 
 # Deploy with Capistrano

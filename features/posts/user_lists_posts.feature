@@ -6,5 +6,5 @@ Feature: User lists posts
   Scenario: User lists posts
     Given I am logged in
     And 3 posts exist
-    When I am on the posts page
+    When I am on the admin posts page
     Then I should see 3 posts in the posts list

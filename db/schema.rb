@@ -10,20 +10,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110128141426) do
+ActiveRecord::Schema.define(:version => 20110201155733) do
 
-  create_table "histories", :force => true do |t|
-    t.string   "message"
-    t.string   "username"
-    t.integer  "item"
-    t.string   "table"
-    t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 5
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.text     "rendered_body"
+    t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cached_slug"
   end
 
-  add_index "histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
+  add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
+  add_index "posts", ["title"], :name => "index_posts_on_title"
+
+  create_table "slugs", :force => true do |t|
+    t.string   "name"
+    t.integer  "sluggable_id"
+    t.integer  "sequence",                     :default => 1, :null => false
+    t.string   "sluggable_type", :limit => 40
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
+  add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -37,6 +49,10 @@ ActiveRecord::Schema.define(:version => 20110128141426) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.string   "position"
+    t.string   "twitter"
+    t.string   "github"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
