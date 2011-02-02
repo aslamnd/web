@@ -11,19 +11,59 @@ nav#tabs
         span Open Source
 
 .panes
-  div#clientWork
-    p HOla!
-    p Em dic Marc!
-  div#products
-    p I tu?
-    p Com et dius?
-  div#openSource
-    p Et dius Pere, potser?
-    p No? Vés-te'n, doncs!
+  section
+    div#clientWork
+      div
+        article
+          .snapshot
+            img
+            .caption
+              blockquote
+                | It was a pleasure working together with Codegram, they kept 
+                | fixing and creating bugs during months and months.
+              .caption-author Happy client
+          .row
+            section.left
+              h2 Jamibia
+              | Jamibia is a social network for jam musicians. It helps 
+              | musicians find and organize jam sessions around the world. Users 
+              | can join, rate and discuss jam sessions and upload interesting 
+              | media as well.
+            section.right
+              h3 What we did 
+              | Jamibia was our  
+              strong Rails Rumble 2010 
+              | project, where we teamed with 
+              strong @holamon 
+              | as a designer. It was developed roughly in 48 hours. Even 
+              | though time was a heavy constraint, we stuck to our BDD 
+              | development cycle, which gave us a pretty robust app with a lot 
+              | of working functionality. Eventually we didn't get the first 
+              | prize, but it was a lot of fun and a great experience :)
+        article Iep!
+    nav.examples_nav
+  section
+    div#products
+      div
+        article Iep!
+        article Iep!
+        article Iep!
+    nav.examples_nav
+  section
+    div#openSource
+      div
+        article Iep!
+        article Iep!
+        article Iep!
+        article Iep!
+    nav.examples_nav
 
 
 
 javascript:
   $(function(){
-    $("ul.tabs").tabs("div.panes > div", {history: true});
+    $("ul.tabs").tabs("div.panes > section", {history: true});
+    $("#clientWork").scrollable().navigator({navi: "nav.examples_nav"});
+    $("#products").scrollable().navigator({navi: "nav.examples_nav"});
+    $("#openSource").scrollable().navigator({navi: "nav.examples_nav"});
   });

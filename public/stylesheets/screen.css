@@ -996,39 +996,39 @@ aside#slideshow ul li {
 #content {
   margin-top: 280px;
 }
-/* line 4, ../../app/stylesheets/partials/_common.sass */
-#content #boxes .row {
+/* line 3, ../../app/stylesheets/partials/_common.sass */
+#content .row {
   margin-bottom: 30px;
   overflow: hidden;
 }
-/* line 7, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section {
+/* line 6, ../../app/stylesheets/partials/_common.sass */
+#content section.left {
   display: inline;
   float: left;
   margin-right: 20px;
   width: 347.5px;
 }
 /* line 138, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content #boxes section {
+* html #content section.left {
   overflow-x: hidden;
 }
-/* line 9, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section.right {
+/* line 8, ../../app/stylesheets/partials/_common.sass */
+#content section.right {
   display: inline;
   float: left;
   margin-right: 0;
   width: 347.5px;
 }
 /* line 138, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content #boxes section.right {
+* html #content section.right {
   overflow-x: hidden;
 }
-/* line 11, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section aside.more {
+/* line 10, ../../app/stylesheets/partials/_common.sass */
+#content aside.more {
   margin-top: 10px;
 }
-/* line 13, ../../app/stylesheets/partials/_common.sass */
-#content #boxes section aside.more a {
+/* line 12, ../../app/stylesheets/partials/_common.sass */
+#content aside.more a {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -1055,19 +1055,19 @@ aside#slideshow ul li {
   text-shadow: #900000 0 -1px 0;
 }
 /* line 2, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a:hover {
+#content aside.more a:hover {
   cursor: pointer;
 }
 /* line 4, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a::-moz-focus-inner {
+#content aside.more a::-moz-focus-inner {
   border: 0;
 }
 /* line 7, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-#content #boxes section aside.more a {
+#content aside.more a {
   *display: inline;
 }
 /* line 41, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a:hover {
+#content aside.more a:hover {
   background: #c3120c;
   background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231d);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4231d), to(#a10000));
@@ -1077,7 +1077,7 @@ aside#slideshow ul li {
   cursor: pointer;
 }
 /* line 49, ../../app/stylesheets/partials/_buttons.sass */
-#content #boxes section aside.more a:active {
+#content aside.more a:active {
   border: 1px solid #b6262b;
   border-bottom: 1px solid #a82328;
   -moz-box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #a82328;
@@ -1085,7 +1085,7 @@ aside#slideshow ul li {
   box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #a82328;
 }
 
-/* line 16, ../../app/stylesheets/partials/_common.sass */
+/* line 15, ../../app/stylesheets/partials/_common.sass */
 hr {
   height: 0px;
   background: transparent;
@@ -1162,4 +1162,191 @@ ul.tabs a.current {
 /* line 33, ../../app/stylesheets/partials/_work.sass */
 ul.tabs a.current span {
   background-color: #f2f2f2;
+}
+
+/* line 37, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork,
+.panes div#products,
+.panes div#openSource {
+  overflow: hidden;
+}
+/* line 41, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div,
+.panes div#products div,
+.panes div#openSource div {
+  position: relative;
+  width: 10000px;
+}
+/* line 44, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article,
+.panes div#products div article,
+.panes div#openSource div article {
+  float: left;
+  width: 715px;
+  position: relative;
+  margin-top: 15px;
+}
+/* line 49, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article .snapshot,
+.panes div#products div article .snapshot,
+.panes div#openSource div article .snapshot {
+  border: 1px solid #e5e5e5;
+  position: relative;
+}
+/* line 52, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article .snapshot .caption,
+.panes div#products div article .snapshot .caption,
+.panes div#openSource div article .snapshot .caption {
+  position: relative;
+  width: 715px;
+  bottom: 0px;
+  opacity: 0.3;
+}
+/* line 57, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article .snapshot .caption blockquote,
+.panes div#products div article .snapshot .caption blockquote,
+.panes div#openSource div article .snapshot .caption blockquote {
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #5f5f5f;
+}
+/* line 63, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article h2,
+.panes div#products div article h2,
+.panes div#openSource div article h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+/* line 66, ../../app/stylesheets/partials/_work.sass */
+.panes div#clientWork div article h3,
+.panes div#products div article h3,
+.panes div#openSource div article h3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+/* line 71, ../../app/stylesheets/partials/_work.sass */
+nav.examples_nav {
+  background-color: lime;
+}
+/* line 73, ../../app/stylesheets/partials/_work.sass */
+nav.examples_nav a {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  background: #c4cfdb;
+  background: -moz-linear-gradient(0% 100% 90deg, #aaaaaa, #cccccc);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cccccc), to(#aaaaaa));
+  border: 1px solid #999999;
+  border-bottom: 1px solid #aaaaaa;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #cccccc;
+  -webkit-box-shadow: inset 0 1px 0 0 #cccccc;
+  box-shadow: inset 0 1px 0 0 #cccccc;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 15px;
+  text-align: center;
+  text-shadow: #999999 0 -1px 0;
+  float: left;
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  padding: 0px;
+}
+/* line 2, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a:hover {
+  cursor: pointer;
+}
+/* line 4, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a::-moz-focus-inner {
+  border: 0;
+}
+/* line 7, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+nav.examples_nav a {
+  *display: inline;
+}
+/* line 90, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a:hover {
+  background: #aaaaaa;
+  background: -moz-linear-gradient(0% 100% 90deg, #888888, #bbbbbb);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bbbbbb), to(#888888));
+  -moz-box-shadow: inset 0 1px 0 0 #aaaaaa;
+  -webkit-box-shadow: inset 0 1px 0 0 #aaaaaa;
+  box-shadow: inset 0 1px 0 0 #aaaaaa;
+  cursor: pointer;
+}
+/* line 98, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a:active {
+  border: 1px solid #999999;
+  border-bottom: none;
+  -moz-box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
+  -webkit-box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
+  box-shadow: inset 0 0 8px 4px #777777, 0 1px 0 0 #555555;
+}
+/* line 76, ../../app/stylesheets/partials/_work.sass */
+nav.examples_nav a.active {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  background: #dd373d;
+  background: -moz-linear-gradient(0% 100% 90deg, #c3120c, #e5342e);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5342e), to(#c3120c));
+  border: 1px solid #b6262b;
+  border-bottom: 1px solid #a82328;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #e35b60;
+  -webkit-box-shadow: inset 0 1px 0 0 #e35b60;
+  box-shadow: inset 0 1px 0 0 #e35b60;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 15px;
+  text-align: center;
+  text-shadow: #900000 0 -1px 0;
+  padding: 0px;
+}
+/* line 2, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a.active:hover {
+  cursor: pointer;
+}
+/* line 4, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a.active::-moz-focus-inner {
+  border: 0;
+}
+/* line 7, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+nav.examples_nav a.active {
+  *display: inline;
+}
+/* line 41, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a.active:hover {
+  background: #c3120c;
+  background: -moz-linear-gradient(0% 100% 90deg, #a10000, #d4231d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4231d), to(#a10000));
+  -moz-box-shadow: inset 0 1px 0 0 #c1393e;
+  -webkit-box-shadow: inset 0 1px 0 0 #c1393e;
+  box-shadow: inset 0 1px 0 0 #c1393e;
+  cursor: pointer;
+}
+/* line 49, ../../app/stylesheets/partials/_buttons.sass */
+nav.examples_nav a.active:active {
+  border: 1px solid #b6262b;
+  border-bottom: 1px solid #a82328;
+  -moz-box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #a82328;
+  -webkit-box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #a82328;
+  box-shadow: inset 0 0 8px 4px #8e060b, 0 1px 0 0 #a82328;
 }
