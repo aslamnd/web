@@ -1061,3 +1061,43 @@ hr {
   font-size: 2.3em;
   color: #999999;
 }
+
+/* line 1, ../../app/stylesheets/partials/_contact.sass */
+#contact-form {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  width: 347.5px;
+}
+/* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #contact-form {
+  overflow-x: hidden;
+}
+
+/* line 3, ../../app/stylesheets/partials/_contact.sass */
+#contact-details {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 347.5px;
+}
+/* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #contact-details {
+  overflow-x: hidden;
+}
+
+/* line 2, ../../app/stylesheets/partials/_forms.sass */
+html body form label {
+  display: block;
+}
+/* line 4, ../../app/stylesheets/partials/_forms.sass */
+html body form input.string, html body form textarea {
+  width: 300px;
+  border: 1px solid #d0d0d0;
+  background: #f2f2f2 url(/images/form-background.png) repeat-x;
+  padding: 8px;
+}
+/* line 9, ../../app/stylesheets/partials/_forms.sass */
+html body form input.string::-webkit-input-placeholder, html body form input.string::-moz-placeholder, html body form textarea::-webkit-input-placeholder, html body form textarea::-moz-placeholder {
+  color: #5f5f5f;
+}

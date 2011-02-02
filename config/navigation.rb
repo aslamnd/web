@@ -45,7 +45,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :work, 'Work', url_for('/work')
     primary.item :about, 'About', url_for('/about')
     primary.item :blog, 'Blog', url_for('/blog')
-    primary.item :contact, 'Contact', url_for(:controller => '/contacts', :action => 'new')
+    primary.item :contact, 'Contact', url_for(:controller => '/contact_forms', :action => 'new')
 
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu

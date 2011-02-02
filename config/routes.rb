@@ -48,7 +48,7 @@ CodegramWeb::Application.routes.draw do
   #     resources :products
   #   end
 
-  match 'contact' => 'contacts#new'
+  resources :contact_forms
 
   resource :pages, :controller => 'high_voltage/pages'
 

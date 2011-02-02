@@ -2,5 +2,13 @@ h2 Contact us
 p
   | Josep Jaume and Txus met at primary school, when Txus was programming a calculator with BASIC on the sand. Both were interested in computers and programming since they were kids. Many years later (by the end of 2007), Oriol hired them for a web shop where he was working at the moment as a lead developer. Since then it's been three years working together as a team of developers.
 
+hr
 section#contact-form
+  h3 Send us a message
+  =simple_form_for @contact_form do |f|
+    =f.input :name, :placeholder => 'Hola', :label => false
+    =f.input :email, :as => :email, :placeholder => 'you@yourdomain.com', :label => false
+    =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'
+    =f.submit 'Send'
 aside#contact-details
+  | akaksjda
