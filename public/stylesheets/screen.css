@@ -917,15 +917,20 @@ aside#slideshow ul li {
 }
 
 /* line 1, ../../app/stylesheets/partials/_common.sass */
+html body a {
+  outline: none;
+}
+
+/* line 4, ../../app/stylesheets/partials/_common.sass */
 #content {
   margin-top: 280px;
 }
-/* line 3, ../../app/stylesheets/partials/_common.sass */
+/* line 6, ../../app/stylesheets/partials/_common.sass */
 #content .row {
   margin-bottom: 30px;
   overflow: hidden;
 }
-/* line 6, ../../app/stylesheets/partials/_common.sass */
+/* line 9, ../../app/stylesheets/partials/_common.sass */
 #content section.left {
   display: inline;
   float: left;
@@ -936,7 +941,7 @@ aside#slideshow ul li {
 * html #content section.left {
   overflow-x: hidden;
 }
-/* line 8, ../../app/stylesheets/partials/_common.sass */
+/* line 11, ../../app/stylesheets/partials/_common.sass */
 #content section.right {
   display: inline;
   float: left;
@@ -947,11 +952,11 @@ aside#slideshow ul li {
 * html #content section.right {
   overflow-x: hidden;
 }
-/* line 10, ../../app/stylesheets/partials/_common.sass */
+/* line 13, ../../app/stylesheets/partials/_common.sass */
 #content aside.more {
   margin-top: 10px;
 }
-/* line 12, ../../app/stylesheets/partials/_common.sass */
+/* line 15, ../../app/stylesheets/partials/_common.sass */
 #content aside.more a {
   outline: none;
   display: -moz-inline-box;
@@ -1010,14 +1015,14 @@ aside#slideshow ul li {
   box-shadow: inset 0 0 8px 4px #a00000, 0 1px 0 0 #bb1211;
 }
 
-/* line 15, ../../app/stylesheets/partials/_common.sass */
+/* line 18, ../../app/stylesheets/partials/_common.sass */
 hr {
   height: 4px;
   margin-bottom: 2em;
   background: url(/images/embed/dots.png);
 }
 
-/* line 21, ../../app/stylesheets/partials/_common.sass */
+/* line 24, ../../app/stylesheets/partials/_common.sass */
 .notice {
   margin-top: 15px;
   height: 80px;
@@ -1027,7 +1032,7 @@ hr {
   font-size: 1.5em;
 }
 
-/* line 31, ../../app/stylesheets/partials/_common.sass */
+/* line 34, ../../app/stylesheets/partials/_common.sass */
 html body .navi a, html body .examples_nav a {
   float: left;
   background-color: #dddddd;
@@ -1040,7 +1045,7 @@ html body .navi a, html body .examples_nav a {
   height: 12px;
   padding: 0px;
 }
-/* line 36, ../../app/stylesheets/partials/_common.sass */
+/* line 39, ../../app/stylesheets/partials/_common.sass */
 html body .navi a.active, html body .examples_nav a.active {
   background-color: #dd3433;
   border-color: #bb1211;
@@ -1229,12 +1234,12 @@ ul.tabs a {
   vertical-align: middle;
   *vertical-align: auto;
   padding: 5px 5px;
+  padding-top: 7px;
+  padding-bottom: 3px;
   text-decoration: none;
   font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
   font-size: 18px;
   color: #888888;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #e5e5e5;
 }
 /* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 ul.tabs a {
