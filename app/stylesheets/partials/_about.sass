@@ -1,4 +1,16 @@
-.founder
+#content .founder
+  ul
+    +no-bullets
+    padding: 0px
+    li
+      margin-top: 5px
+      a
+        +button-codegram
+      &.twitter a
+        +button-codegram(#3BCEFF)
+      &.github a
+        +button-codegram(#999)
+
   +column(4)
   &.last
     +column(4,true)

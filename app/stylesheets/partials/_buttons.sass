@@ -5,68 +5,19 @@
   &::-moz-focus-inner
     border: 0
 
-@mixin button-codegram($base-color: $codegram-color + #111) 
+@mixin button-codegram($base-color: $codegram-color) 
   $text-color: #fff
-  $background-color: $base-color - #080000 + #00030f
-  $border-color: $base-color - #2f0e03
-  $border-bottom-color: $base-color - #3d1106
-  $gradient-up-color: $base-color
-  $gradient-down-color: $base-color - #222
-  $gradient-hover-up-color: $gradient-up-color - #111
-  $gradient-hover-down-color: $gradient-down-color - #222
-  $inset-shadow-color: $base-color - #020000 + #002732
-  $hover-inset-shadow-color: $inset-shadow-color - #222
-  $active-inset-shadow-color: $inset-shadow-color - #555
-  $text-shadow-color: $default-text-shadow-color
-  +button-base
-  +inline-block
-  text-decoration: none
-  background: $background-color
-  background: -moz-linear-gradient(0% 100% 90deg,$gradient-down-color, $gradient-up-color)
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($gradient-up-color), to($gradient-down-color))
-  border: 1px solid $border-color
-  border-bottom: 1px solid $border-bottom-color 
-  -moz-border-radius: 3px
-  -webkit-border-radius: 3px
-  border-radius: 3px
-  -moz-box-shadow: inset 0 1px 0 0 $inset-shadow-color 
-  -webkit-box-shadow: inset 0 1px 0 0 $inset-shadow-color
-  box-shadow: inset 0 1px 0 0 $inset-shadow-color
-  color: $text-color
-  font-size: 12px
-  font-weight: bold
-  line-height: 1
-  padding: 8px 15px 
-  text-align: center
-  +text-shadow
-  &:hover
-    background: $gradient-down-color
-    background: -moz-linear-gradient(0% 100% 90deg,$gradient-hover-down-color,$gradient-hover-up-color)
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($gradient-hover-up-color), to($gradient-hover-down-color))
-    -moz-box-shadow: inset 0 1px 0 0 $hover-inset-shadow-color
-    -webkit-box-shadow: inset 0 1px 0 0 $hover-inset-shadow-color
-    box-shadow: inset 0 1px 0 0 $hover-inset-shadow-color
-    cursor: pointer
-  &:active
-    border: 1px solid $border-color
-    border-bottom: 1px solid $border-bottom-color
-    -moz-box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color
-    -webkit-box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color
-    box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color
-
-@mixin button-codegram-disabled($base-color: #ccc) 
-  $text-color: #fff
-  $background-color: $base-color - #080000 + #00030f
-  $border-color: $base-color - #333
+  $background-color: $base-color
+  $border-color: $base-color - #222
   $border-bottom-color: $base-color - #222
   $gradient-up-color: $base-color
   $gradient-down-color: $base-color - #222
   $gradient-hover-up-color: $gradient-up-color - #111
   $gradient-hover-down-color: $gradient-down-color - #222
-  $inset-shadow-color: $base-color
+  $inset-shadow-color: $base-color + #181818
   $hover-inset-shadow-color: $inset-shadow-color - #222
   $active-inset-shadow-color: $inset-shadow-color - #555
-  $text-shadow-color: $base-color - #333
+  $text-shadow-color: $base-color - #333 
   +button-base
   +inline-block
   text-decoration: none
@@ -98,7 +49,7 @@
     cursor: pointer
   &:active
     border: 1px solid $border-color
-    border-bottom: none
-    -moz-box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color - #555
-    -webkit-box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color - #555
-    box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color - #555
+    border-bottom: 1px solid $border-bottom-color
+    -moz-box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color
+    -webkit-box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color
+    box-shadow: inset 0 0 8px 4px $active-inset-shadow-color, 0 1px 0 0 $border-bottom-color
