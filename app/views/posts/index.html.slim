@@ -1,0 +1,12 @@
+h2 Codegram blog
+
+- unless collection.empty?
+  #posts
+    - collection.each do |post| 
+      .post
+        h3 = link_to(post.title, url_for(id: post, year: post.year, month: post.month))
+        small = date_and_author_for(post)
+        p = post.rendered_body.html_safe
+        hr
+- else
+  | Sorry, there are no posts to show.
