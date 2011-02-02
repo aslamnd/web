@@ -1,5 +1,5 @@
 class CreatePosts < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :posts do |t|
       t.string :title
       t.text :body
@@ -8,5 +8,11 @@ class CreatePosts < ActiveRecord::Migration
       t.timestamps
     end
 
+    add_index :posts, :title
+    add_index :posts, :author_id
+  end
+
+  def self.down
+    drop_table :posts
   end
 end

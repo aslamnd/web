@@ -12,19 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110201155733) do
 
-  create_table "histories", :force => true do |t|
-    t.string   "message"
-    t.string   "username"
-    t.integer  "item"
-    t.string   "table"
-    t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 5
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
-
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -33,6 +20,9 @@ ActiveRecord::Schema.define(:version => 20110201155733) do
     t.datetime "updated_at"
     t.string   "cached_slug"
   end
+
+  add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
+  add_index "posts", ["title"], :name => "index_posts_on_title"
 
   create_table "slugs", :force => true do |t|
     t.string   "name"
@@ -58,6 +48,10 @@ ActiveRecord::Schema.define(:version => 20110201155733) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.string   "position"
+    t.string   "twitter"
+    t.string   "github"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
