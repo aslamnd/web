@@ -25,14 +25,6 @@ GIT
   specs:
     arel (2.0.7.beta.20110121165657)
 
-PATH
-  remote: ../markdownizer
-  specs:
-    markdownizer (0.0.1)
-      activerecord (~> 3.0.3)
-      coderay
-      rdiscount
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -105,11 +97,8 @@ GEM
     ffi (0.6.3)
       rake (>= 0.8.7)
     flash_messages_helper (0.1.0)
-<<<<<<< HEAD
-=======
     friendly_id (3.2.0)
       babosa (~> 0.2.1)
->>>>>>> feature/posts
     gherkin (2.3.3)
       json (~> 1.4.6)
     haml (3.0.25)
@@ -140,6 +129,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mail_form (1.3.0)
+    markdownizer (0.1.0)
+      activerecord (~> 3.0.3)
+      coderay
+      rdiscount
     mime-types (1.16)
     nokogiri (1.4.4)
     paperclip (2.3.8)
@@ -192,12 +185,9 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
-<<<<<<< HEAD
+    shoulda (2.11.3)
     simple-navigation (3.1.1)
       activesupport (>= 2.3.2)
-=======
-    shoulda (2.11.3)
->>>>>>> feature/posts
     simple_form (1.3.0)
       rails (~> 3.0.0)
     slim (0.9.0)
@@ -231,33 +221,23 @@ DEPENDENCIES
   devise
   escape_utils
   factory_girl_rails
-<<<<<<< HEAD
-  flash_messages_helper
-=======
   faker
   flash_messages_helper
   friendly_id
->>>>>>> feature/posts
   high_voltage
   inherited_resources
   jammit
   jquery-rails
   launchy
   livereload
-<<<<<<< HEAD
   mail_form
-=======
-  markdownizer!
->>>>>>> feature/posts
+  markdownizer (= 0.1.0)
   paperclip
   pickle
   rails (~> 3.0)
   rspec-rails (~> 2.4.0)
-<<<<<<< HEAD
-  simple-navigation
-=======
   shoulda
->>>>>>> feature/posts
+  simple-navigation
   simple_form
   slim
   sqlite3-ruby
