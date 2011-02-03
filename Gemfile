@@ -33,8 +33,9 @@ gem 'carrierwave'
 gem 'markdownizer', '0.1.0'
 
 group :development do
-  gem 'livereload'
+  gem 'livereload', "1.4"
 end
+
 group :test, :development do
   gem 'factory_girl_rails'
   gem 'faker'
