@@ -1,4 +1,8 @@
 h2 = resource.title
+small by #{post.author_name}
+.tagline
+  = post.created_at.to_s(:date)
+  | &mdash;
+  = post.tagline
 hr
-small = date_and_author_for(resource)
 p = resource.rendered_body.html_safe

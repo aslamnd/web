@@ -4,6 +4,7 @@ html
     title :codegram - smart web apps
     meta name="keywords" content="web apps"
     link rel="shortcut icon" href="/favicon.png"
+    = auto_discovery_link_tag :atom, "/feed.atom"
     = include_stylesheets :common, :media => 'all'
     = include_stylesheets :print, :media => 'print'
     = include_javascripts :workspace
