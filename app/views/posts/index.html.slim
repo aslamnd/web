@@ -12,5 +12,6 @@ h2 Codegram blog
           = post.tagline
         p = post.rendered_body.html_safe
         hr
+  = will_paginate collection
 - else
   | Sorry, there are no posts to show.

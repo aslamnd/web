@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   inherit_resources
   actions :index, :show
 
-  layout 'blog', only: :index
+  layout 'blog'
 
   respond_to :html
   respond_to :atom, only: :index
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
       post = Post.find(params[:id])
     rescue ActiveRecord::RecordNotFound
       render :file => "#{RAILS_ROOT}/public/404.html", :layout => '404', :status => 404
-      reeturn
+      return
     end
 
     if params[:year].to_i != post.year.to_i ||
@@ -26,8 +26,8 @@ class PostsController < ApplicationController
   private
 
   def collection
-    params[:year] ? end_of_association_chain.from_archive(params[:year],
+    (params[:year] ? end_of_association_chain.from_archive(params[:year],
                                                           params[:month])
-                  : end_of_association_chain.scoped
+                  : end_of_association_chain.scoped).paginate(page: params[:page], per_page: 5)
   end
 end

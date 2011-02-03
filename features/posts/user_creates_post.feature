@@ -8,6 +8,7 @@ Feature: User creates a post
     And I am on the admin posts page
     And I follow "Add a new post"
     When I fill in "Title" with "Cucumber is not only for veggies"
+    When I fill in "Tagline" with "Or that's what we think"
     And I fill in "Body" with "Readable cucumber stories help the development and maintaining process."
     And I press "Create Post"
     Then I should see "Post was successfully created."

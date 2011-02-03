@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Post do
 
   describe "attributes" do
-    it { should respond_to(:title, :body, :friendly_id) }
+    it { should respond_to(:title, :tagline, :body, :friendly_id) }
   end
 
   describe "relations" do
@@ -51,6 +51,14 @@ describe Post do
         end
       end
 
+    end
+  end
+
+  describe "class methods" do
+    describe ".per_page" do
+      it 'returns 5' do
+        Post.per_page.should == 5 
+      end
     end
   end
 

@@ -1,7 +1,7 @@
 atom_feed do |feed|
   feed.title "Codegram Blog"
 
-  feed.updated collection.first.updated_at
+  feed.updated collection.first.created_at
 
   collection.each do |post|
     feed.entry(post, url: post_path(post, year: post.year, month: post.month)) do |entry|
