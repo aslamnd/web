@@ -5,11 +5,14 @@
     li
       margin-top: 5px
       a
-        +button-codegram
+        padding-left: 20px
+        display: block
+        background-position: left center
+        background-repeat: no-repeat
       &.twitter a
-        +button-codegram(#3BCEFF)
+        background-image: url(/images/icons/twitter.png) 
       &.github a
-        +button-codegram(#999)
+        background-image: url(/images/icons/octocat.png) 
 
   +column(4)
   &.last

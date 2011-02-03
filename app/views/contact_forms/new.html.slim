@@ -5,7 +5,7 @@ p
 hr
 section#contact-form
   h3 Send us a message
-  =simple_form_for @contact_form, :url => contact_path do |f|
+  =simple_form_for @contact_form, :url => new_contact_form_path do |f|
     =f.input :name, :placeholder => 'Your name', :label => false
     =f.input :email, :as => :email, :placeholder => 'you@yourdomain.com', :label => false
     =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'

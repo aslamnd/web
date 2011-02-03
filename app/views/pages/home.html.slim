@@ -2,26 +2,57 @@ section#motto
   h2 We are a team of developers from Barcelona.
   h3.tagline We build web applications emphasizing code quality and user experience. 
 hr
-section#boxes
+section#home
   .row
     section.left
-      h3 Developing with love
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ipsum justo. Pellentesque sagittis leo ante, ac ultrices sapien. Duis enim mauris, pretium dapibus varius vitae, lacinia eu massa. Suspendisse volutpat ultrices aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
+      h3 What can we do for you?
+      p
+        | Are you starting up a <strong>web-driven business</strong>? Are you working on a new
+          awesome project and need <strong>consultancy</strong> or <strong>training</strong>? Are you stuck in the middle
+          of your development process and having problems <strong>getting the work done</strong>?
+      p 
+        | We are a team of expert web developers specialized in <em>Ruby on Rails</em> 
+          and the <em>Ruby</em> ecosystem. 
       aside.more
-        =link_to 'Explore our projects', '#'
+        =link_to 'Check our services', '/services'
+
     section.right
-      h3 Developing with love
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ipsum justo. Pellentesque sagittis leo ante, ac ultrices sapien. Duis enim mauris, pretium dapibus varius vitae, lacinia eu massa. Suspendisse volutpat ultrices aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
+      h3 Our recent work
+      figure.snapshot
+        a href='/work/projects/jamibia'
+          =image_tag 'screenshots/jamibia.jpg'
+          span.caption-bg
+          span.caption
+            blockquote
+              h4 Jamibia
+              p Developed in 48 hours
+        
       aside.more
-        a href='#' See more
+        a href='#' Explore our projects
   .row
-    section.left
-      h3 Developing with love
+    .separator.left=image_tag 'separator1.jpg'
+    .separator.right=image_tag 'separator2.jpg'
+  .row
+    section.left.blog
+      h3 Learn from our day-to-day
       | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ipsum justo. Pellentesque sagittis leo ante, ac ultrices sapien. Duis enim mauris, pretium dapibus varius vitae, lacinia eu massa. Suspendisse volutpat ultrices aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
       aside.more
-        a href='#' See more
-    section.right
-      h3 Developing with love
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ipsum justo. Pellentesque sagittis leo ante, ac ultrices sapien. Duis enim mauris, pretium dapibus varius vitae, lacinia eu massa. Suspendisse volutpat ultrices aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
+        a href='#' Read our blog
+
+    section.right.twitter
+      h3 What we're talking about
+      #tweets
       aside.more
-        a href='#' See more
+        a href='#' Follow us
+
+javascript:
+  $(function(){
+      $("#tweets").tweet({
+          query: 'codegram',
+          join_text: false,
+          avatar_size: 32,
+          count: 3,
+          loading_text: "loading tweets..."
+      });
+  });
+

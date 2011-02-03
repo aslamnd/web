@@ -40,12 +40,12 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.
     #
-    primary.item :home, 'Home', url_for('/')
-    primary.item :services, 'Services', url_for('/services')
-    primary.item :work, 'Work', url_for('/work')
-    primary.item :about, 'About', url_for('/about')
-    primary.item :blog, 'Blog', url_for('/blog')
-    primary.item :contact, 'Contact', new_contact_path 
+    primary.item :home, 'Home', '/'
+    primary.item :services, 'Services', '/services'
+    primary.item :work, 'Work', '/work'
+    primary.item :about, 'About', '/about'
+    primary.item :blog, 'Blog', url_for(:host => "blog.#{request.host_with_port}")
+    primary.item :contact, 'Contact', new_contact_form_path 
 
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu
