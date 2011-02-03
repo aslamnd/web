@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(:version => 20110201155733) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
+    t.string   "tagline"
     t.text     "body"
     t.text     "rendered_body"
     t.integer  "author_id"
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110201155733) do
   end
 
   add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
+  add_index "posts", ["tagline"], :name => "index_posts_on_tagline"
   add_index "posts", ["title"], :name => "index_posts_on_title"
 
   create_table "slugs", :force => true do |t|

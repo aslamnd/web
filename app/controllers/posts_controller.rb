@@ -2,11 +2,18 @@ class PostsController < ApplicationController
   inherit_resources
   actions :index, :show
 
-  # TODO: RSS for index pages
-  
-  # TODO: 404 if post not found
+  layout 'blog'
+
+  respond_to :html
+  respond_to :atom, only: :index
+
   def show
-    post = Post.find(params[:id])
+    begin
+      post = Post.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render :file => "#{RAILS_ROOT}/public/404.html", :layout => '404', :status => 404
+      return
+    end
 
     if params[:year].to_i != post.year.to_i ||
          params[:month].to_i != post.month.to_i
@@ -14,5 +21,13 @@ class PostsController < ApplicationController
     else
       show!
     end
+  end
+
+  private
+
+  def collection
+    (params[:year] ? end_of_association_chain.from_archive(params[:year],
+                                                          params[:month])
+                  : end_of_association_chain.scoped).paginate(page: params[:page], per_page: 5)
   end
 end

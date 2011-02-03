@@ -8,8 +8,7 @@
 #
 # Blog seeds
 
-User.destroy_all
-user = Factory(:user, name: 'Josep M. Bach', email: 'txus@codegram.com')
+user = User.find_by_email('txus@codegram.com') || Factory(:user, name: 'Josep M. Bach', email: 'txus@codegram.com')
 
 stendhal_post = Factory(:post,
                         title: 'Stendhal 0.1.2 released',

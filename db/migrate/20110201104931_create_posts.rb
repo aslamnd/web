@@ -2,6 +2,7 @@ class CreatePosts < ActiveRecord::Migration
   def self.up
     create_table :posts do |t|
       t.string :title
+      t.string :tagline
       t.text :body
       t.text :rendered_body
 
@@ -11,6 +12,7 @@ class CreatePosts < ActiveRecord::Migration
     end
 
     add_index :posts, :title
+    add_index :posts, :tagline
     add_index :posts, :author_id
   end
 

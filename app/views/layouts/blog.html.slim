@@ -4,6 +4,7 @@ html
     title :codegram - smart web apps
     meta name="keywords" content="web apps"
     link rel="shortcut icon" href="/favicon.png"
+    = auto_discovery_link_tag :atom, "/feed.atom"
     = include_stylesheets :common, :media => 'all'
     = include_stylesheets :print, :media => 'print'
     = include_javascripts :workspace
@@ -48,8 +49,6 @@ html
               li=link_to '@josepjaume', 'http://twitter.com/josepjaume'
               li=link_to '@oriolgual', 'http://twitter.com/oriolgual'
               li=link_to '@txustice', 'http://twitter.com/txustice'
-          #github
-            =link_to 'source code @ github', 'https://github.com/codegram/web'
       = render :partial => 'layouts/slideshow' 
       #content
         = flash_messages.html_safe
