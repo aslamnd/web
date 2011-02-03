@@ -10,3 +10,5 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
 end
 
 CodegramWeb::Application.load_tasks
+
+task :default => [:spec, :cucumber]

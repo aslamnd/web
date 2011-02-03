@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: 7b445c6dd578277f7313746fc497429a56e4b43c
+  revision: 4d92a6b33476a5b324188bd86dfa5b5d3f4dcd3a
   specs:
     arel (2.0.7.beta.20110121165657)
 
@@ -129,8 +129,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mail_form (1.3.0)
-    markdownizer (0.1.0)
-      activerecord (~> 3.0.3)
+    markdownizer (0.1.3)
+      activerecord (>= 3.0.3)
       coderay
       rdiscount
     mime-types (1.16)
@@ -231,7 +231,7 @@ DEPENDENCIES
   launchy
   livereload
   mail_form
-  markdownizer (= 0.1.0)
+  markdownizer (>= 0.1.3)
   paperclip
   pickle
   rails (~> 3.0)
