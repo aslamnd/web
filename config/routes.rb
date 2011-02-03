@@ -4,13 +4,14 @@ CodegramWeb::Application.routes.draw do
   # Admin sections
   namespace :admin do
     resources :posts
-    match '/' => 'dashboards#show'
+    match '/' => 'dashboards#show', via: :get
   end
 
   # Public sections
   constraints subdomain: 'blog' do
-    match '/' => 'posts#index'
-    match '/:year/:month/:id' => 'posts#show'
+    match '/' => 'posts#index', as: :blog, via: :get
+    match '(/:year)(/:month)' => 'posts#index', as: :posts, via: :get
+    resources :posts, { path: '/:year/:month', only: :show }
   end
 
   constraints BaseSubdomain do

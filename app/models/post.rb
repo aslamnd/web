@@ -12,4 +12,14 @@ class Post < ActiveRecord::Base
 
   has_friendly_id :title, use_slug: true
 
+  scope :from_archive, ->(year, month = nil) do
+    if month
+      where(arel_table[:created_at].gteq Date.new(year, month)).
+        where(arel_table[:created_at].lt Date.new(year, month+1))
+    else
+      where(arel_table[:created_at].gteq Date.new(year)).
+        where(arel_table[:created_at].lt Date.new(year+1))
+    end
+  end
+
 end
