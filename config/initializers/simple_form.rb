@@ -79,6 +79,7 @@ end
 module ActionView
   module Helpers
     def submit_tag(value = "Save changes", options = {})
+      output = super(*args)
       options.stringify_keys!
 
       if disable_with = options.delete("disable_with")

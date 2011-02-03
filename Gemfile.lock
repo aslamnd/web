@@ -119,7 +119,7 @@ GEM
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
-    livereload (1.5)
+    livereload (1.4)
       em-dir-watcher (>= 0.1)
       em-websocket (>= 0.1.2)
       ruby-json (>= 1.1.2)
@@ -229,7 +229,7 @@ DEPENDENCIES
   jammit
   jquery-rails
   launchy
-  livereload
+  livereload (= 1.4)
   mail_form
   markdownizer (>= 0.1.3)
   paperclip
