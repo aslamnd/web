@@ -16,7 +16,7 @@ CodegramWeb::Application.routes.draw do
 
   constraints BaseSubdomain do
     resource :pages, :only => [:show], :controller => 'high_voltage/pages'
-    resource :contact_forms,
+    resource :contact_form,
       :path => 'contact',
       :only => [:new, :create],
       :path_names => {:new => '/'}

@@ -1,0 +1,59 @@
+#home
+  section
+    padding-bottom: 30px
+    position: relative
+    *height: 220px
+    min-height: 220px
+    aside
+      position: absolute
+      bottom: 0px
+      left: 0px
+    figure
+      .caption-bg, .caption
+        height: 70px
+      a
+        text-decoration: none
+      h4, p
+        font-size: 1em
+        font-weight: normal
+        display: block
+        line-height: 1em
+        margin: 0px
+      p
+        font-size: 0.9em
+
+html body
+  #content
+    a
+      color: $codegram-color
+      text-decoration: none
+    section.blog, section.twitter
+      min-height: 330px
+      *height: 330px
+    section.twitter
+      ul
+        +no-bullets
+        padding: 0px
+        margin: 0px
+        li
+          overflow: hidden
+          border-top: 1px dotted #ccc
+          padding-top: 10px
+          margin-bottom: 10px
+          &.tweet_first
+            border-top: none
+            padding-top: 0px
+        .tweet_avatar
+          +column(1)
+          padding-top: 5px
+        .tweet_time, .tweet_text
+          +column(5,true)
+        .tweet_time
+          font-size: 0.8em
+          a
+            color: #999
+
+
+      aside.more
+        a
+          +button-codegram(#3BCEFF)
