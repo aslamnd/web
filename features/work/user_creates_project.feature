@@ -16,7 +16,6 @@ Feature: User creates a project
     And I fill in "Quote" with "It just made my life better."
     And I fill in "Client name" with "David Heinemeier Hansson"
 
-    Then show me the page
     And I select "Products" from "Category"
 
     And I check "Promoted"

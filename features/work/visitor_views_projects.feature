@@ -18,7 +18,6 @@ Feature: Visitor lists work categories
   Scenario: Visitor visits Products projects
     Given  I am on to the work page
     And 1 projects exist with category: "products"
-    Then show me the page
     When I follow "Products"
     Then I should see 1 project in the projects list
 
