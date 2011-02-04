@@ -12,7 +12,7 @@ module NavigationHelpers
       '/'
 
     when /the work page/
-      work_categories_path
+      work_path
 
     # the following are examples using path_to_pickle
 

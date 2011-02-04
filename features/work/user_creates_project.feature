@@ -5,7 +5,7 @@ Feature: User creates a project
 
   Scenario: User creates a project
     Given I am logged in
-    And I am on the projects page
+    And I am on the admin projects page
     And I follow "Add a new project"
 
     When I fill in "Title" with "Jamibia"
@@ -16,10 +16,11 @@ Feature: User creates a project
     And I fill in "Quote" with "It just made my life better."
     And I fill in "Client name" with "David Heinemeier Hansson"
 
+    Then show me the page
     And I select "Products" from "Category"
 
     And I check "Promoted"
 
-    And I press "Create project"
+    And I press "Create Project"
     Then I should see "Project was successfully created."
     And I should see "Jamibia" in the projects list

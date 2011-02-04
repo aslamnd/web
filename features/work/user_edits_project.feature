@@ -12,6 +12,8 @@ Feature: User edits a project
     And I fill in "Title" with "Rubygems"
     And I fill in "Url" with "http://rubygems.org"
 
-    And I press "Update project"
+    And I select "Open Source" from "Category"
+
+    And I press "Update Project"
     Then I should see "Project was successfully updated."
     And I should see "Rubygems" in the projects list

@@ -1,4 +1,4 @@
-Then /^I should see (\d+) projects$/ do |num|
+Then /^I should see (\d+) projects?$/ do |num|
   if num.to_i > 0
     page.should have_css('.project', count: num.to_i)
   else

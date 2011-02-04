@@ -5,6 +5,9 @@ class CreateProjects < ActiveRecord::Migration
       t.string :quote
       t.string :client_name
       t.string :category
+
+      t.string :cached_slug
+
       t.boolean :promoted
       t.text :description
       t.text :extended_description
@@ -19,6 +22,7 @@ class CreateProjects < ActiveRecord::Migration
     add_index :projects, :promoted
     add_index :projects, :created_at
     add_index :projects, :updated_at
+    add_index :projects, :cached_slug
   end
 
   def self.down

@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20110204090909) do
     t.string   "quote"
     t.string   "client_name"
     t.string   "category"
+    t.string   "cached_slug"
     t.boolean  "promoted"
     t.text     "description"
     t.text     "extended_description"
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20110204090909) do
     t.datetime "updated_at"
   end
 
+  add_index "projects", ["cached_slug"], :name => "index_projects_on_cached_slug"
   add_index "projects", ["category"], :name => "index_projects_on_category"
   add_index "projects", ["created_at"], :name => "index_projects_on_created_at"
   add_index "projects", ["promoted"], :name => "index_projects_on_promoted"

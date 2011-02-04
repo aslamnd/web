@@ -6,7 +6,7 @@ Feature: Projects navigation
   Scenario: User goes to manage projects
     Given I am logged in
     And I am on the admin page
-    When I follow "Work"
+    When I follow "Projects"
     Then I should be on the admin projects page
 
   Scenario: Visitor goes to visit projects
