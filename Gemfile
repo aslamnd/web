@@ -10,7 +10,7 @@ gem 'arel', :git => 'git://github.com/rails/arel.git'
 gem 'inherited_resources'
 gem 'escape_utils'
 gem 'friendly_id'
-gem 'will_paginate'
+gem 'will_paginate', '3.0.pre2'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
