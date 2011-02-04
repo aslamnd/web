@@ -4,6 +4,7 @@ CodegramWeb::Application.routes.draw do
   # Admin sections
   namespace :admin do
     resources :posts
+    resources :projects
     match '/' => 'dashboards#show', via: :get
   end
 
@@ -25,6 +26,10 @@ CodegramWeb::Application.routes.draw do
       :path => 'contact',
       :only => [:new, :create],
       :path_names => {:new => '/'}
+
+    resources :projects, :only =>[:show], :path => '/work/:work_category_id'
+    match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'client', via: :get, as: :work
+
     match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
     match '/services', :controller => 'high_voltage/pages', :action => :show, :id => 'services'
     match '/about', :controller => 'high_voltage/pages', :action => :show, :id => 'about'

@@ -9,6 +9,9 @@ html
 
   body#blog
     #container
+      #content
+        = flash_messages.html_safe
+        = yield
       #sidebar
         #sidebar-inner
           header#header
@@ -21,8 +24,5 @@ html
         #sidebar-blog
           = yield(:sidebar)
       = render :partial => 'layouts/slideshow' 
-      #content
-        = flash_messages.html_safe
-        = yield
       footer#footer
     = include_javascripts :application

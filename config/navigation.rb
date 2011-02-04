@@ -42,7 +42,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :home, 'Home', '/'
     primary.item :services, 'Services', '/services'
-    primary.item :work, 'Work', '/work'
+    primary.item :work, 'Work', '/work', highlights_on: /\/work/
     primary.item :about, 'About', '/about'
     primary.item :blog, 'Blog', "http://blog.#{request.host_with_port}" + posts_path
     primary.item :contact, 'Contact', new_contact_form_path 

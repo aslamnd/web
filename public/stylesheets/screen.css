@@ -636,18 +636,27 @@ body #container {
 body #sidebar {
   display: inline;
   float: left;
-  margin-right: 20px;
+  position: relative;
+  margin-left: -980px;
+  display: inline;
+  float: left;
+  margin-right: 0;
   width: 225px;
 }
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body #sidebar {
   overflow-x: hidden;
 }
-/* line 51, ../../app/stylesheets/screen.scss */
+/* line 52, ../../app/stylesheets/screen.scss */
 body #content {
   display: inline;
+  float: right;
+  position: relative;
+  margin: 0 -245px 1.5em 245px;
+  margin-top: 280px;
+  display: inline;
   float: left;
-  margin-right: 0;
+  margin-right: 20px;
   width: 715px;
 }
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -669,7 +678,7 @@ body #content {
 }
 
 /* line 15, ../../app/stylesheets/partials/_fonts.sass */
-html body h1, html body h2, html body h3 {
+html body h1, html body h2, html body h3, html body h4 {
   font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
   color: #db2e34;
@@ -716,7 +725,7 @@ html body h3 {
 
 /* line 22, ../../app/stylesheets/partials/_header.sass */
 #blog #sidebar-inner {
-  height: 280px;
+  height: 260px;
 }
 /* line 25, ../../app/stylesheets/partials/_header.sass */
 #blog #sidebar-inner header h2 {
@@ -732,14 +741,118 @@ html body h3 {
   display: block;
   background-color: #f2f2f2;
   color: #db2e34;
-  padding-left: 20px;
+  padding-left: 30px;
   text-shadow: none;
   text-decoration: none;
 }
 /* line 39, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-inner header h2 a:hover {
+  background-color: #eeeeee;
+}
+/* line 42, ../../app/stylesheets/partials/_header.sass */
 #blog #sidebar-blog {
-  padding-left: 20px;
+  padding-left: 30px;
   padding-top: 20px;
+}
+/* line 45, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog section {
+  margin-bottom: 20px;
+}
+/* line 47, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog hr {
+  margin-bottom: 10px;
+  width: 160px;
+}
+/* line 50, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog h4 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+/* line 55, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog strong {
+  color: #5f5f5f;
+}
+/* line 57, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog .author-more {
+  outline: none;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  background: #db2e34;
+  background: -moz-linear-gradient(0% 100% 90deg, #b90c12, #db2e34);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#db2e34), to(#b90c12));
+  border: 1px solid #b90c12;
+  border-bottom: 1px solid #b90c12;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #f3464c;
+  -webkit-box-shadow: inset 0 1px 0 0 #f3464c;
+  box-shadow: inset 0 1px 0 0 #f3464c;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 15px;
+  text-align: center;
+  text-shadow: #a80001 0 -1px 0;
+  width: 128px;
+}
+/* line 3, ../../app/stylesheets/partials/_buttons.sass */
+#blog #sidebar-blog .author-more:hover {
+  cursor: pointer;
+}
+/* line 5, ../../app/stylesheets/partials/_buttons.sass */
+#blog #sidebar-blog .author-more::-moz-focus-inner {
+  border: 0;
+}
+/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+#blog #sidebar-blog .author-more {
+  *display: inline;
+}
+/* line 42, ../../app/stylesheets/partials/_buttons.sass */
+#blog #sidebar-blog .author-more:hover {
+  background: #b90c12;
+  background: -moz-linear-gradient(0% 100% 90deg, #970000, #ca1d23);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ca1d23), to(#970000));
+  -moz-box-shadow: inset 0 1px 0 0 #d1242a;
+  -webkit-box-shadow: inset 0 1px 0 0 #d1242a;
+  box-shadow: inset 0 1px 0 0 #d1242a;
+  cursor: pointer;
+}
+/* line 50, ../../app/stylesheets/partials/_buttons.sass */
+#blog #sidebar-blog .author-more:active {
+  border: 1px solid #b90c12;
+  border-bottom: 1px solid #b90c12;
+  -moz-box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
+  -webkit-box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
+  box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
+}
+/* line 60, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog .tags ul {
+  padding-left: 5px;
+  margin-left: 0;
+}
+/* line 29, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
+#blog #sidebar-blog .tags ul li {
+  padding-left: 14px;
+  background: url('/images/bullet.png?1296828555') no-repeat 4px 6px;
+  list-style-type: none;
+}
+/* line 63, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog .tags ul li {
+  padding-left: 17px;
+}
+/* line 65, ../../app/stylesheets/partials/_header.sass */
+#blog #sidebar-blog .tags ul a {
+  text-decoration: none;
+  color: #5f5f5f;
+  margin-bottom: 10px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_menu.sass */
@@ -997,15 +1110,14 @@ html body a {
 
 /* line 4, ../../app/stylesheets/partials/_common.sass */
 #content {
-  margin-top: 280px;
   padding-top: 5px;
 }
-/* line 7, ../../app/stylesheets/partials/_common.sass */
+/* line 6, ../../app/stylesheets/partials/_common.sass */
 #content .row {
   padding-bottom: 30px;
   overflow: hidden;
 }
-/* line 10, ../../app/stylesheets/partials/_common.sass */
+/* line 9, ../../app/stylesheets/partials/_common.sass */
 #content section.left, #content .separator.left {
   display: inline;
   float: left;
@@ -1016,7 +1128,7 @@ html body a {
 * html #content section.left, * html #content .separator.left {
   overflow-x: hidden;
 }
-/* line 12, ../../app/stylesheets/partials/_common.sass */
+/* line 11, ../../app/stylesheets/partials/_common.sass */
 #content section.right, #content .separator.right {
   display: inline;
   float: left;
@@ -1027,15 +1139,15 @@ html body a {
 * html #content section.right, * html #content .separator.right {
   overflow-x: hidden;
 }
-/* line 14, ../../app/stylesheets/partials/_common.sass */
+/* line 13, ../../app/stylesheets/partials/_common.sass */
 #content .separator {
   height: 170px;
 }
-/* line 16, ../../app/stylesheets/partials/_common.sass */
+/* line 15, ../../app/stylesheets/partials/_common.sass */
 #content aside.more {
   margin-top: 10px;
 }
-/* line 18, ../../app/stylesheets/partials/_common.sass */
+/* line 17, ../../app/stylesheets/partials/_common.sass */
 #content aside.more a {
   outline: none;
   display: -moz-inline-box;
@@ -1094,14 +1206,14 @@ html body a {
   box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
 }
 
-/* line 21, ../../app/stylesheets/partials/_common.sass */
+/* line 20, ../../app/stylesheets/partials/_common.sass */
 hr {
   height: 4px;
   margin-bottom: 2em;
   background: url(/images/embed/dots.png);
 }
 
-/* line 27, ../../app/stylesheets/partials/_common.sass */
+/* line 26, ../../app/stylesheets/partials/_common.sass */
 .notice {
   margin-top: 15px;
   height: 80px;
@@ -1111,7 +1223,7 @@ hr {
   font-size: 1.5em;
 }
 
-/* line 37, ../../app/stylesheets/partials/_common.sass */
+/* line 36, ../../app/stylesheets/partials/_common.sass */
 html body .navi a, html body .examples_nav a {
   float: left;
   background-color: #dddddd;
@@ -1124,7 +1236,7 @@ html body .navi a, html body .examples_nav a {
   height: 12px;
   padding: 0px;
 }
-/* line 42, ../../app/stylesheets/partials/_common.sass */
+/* line 41, ../../app/stylesheets/partials/_common.sass */
 html body .navi a.active, html body .examples_nav a.active {
   background-color: #db2e34;
   border-color: #b90c12;
@@ -1133,27 +1245,27 @@ html body .navi a.active, html body .examples_nav a.active {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 52, ../../app/stylesheets/partials/_common.sass */
+/* line 51, ../../app/stylesheets/partials/_common.sass */
 html body p {
   margin-bottom: 0.8em;
 }
-/* line 54, ../../app/stylesheets/partials/_common.sass */
+/* line 53, ../../app/stylesheets/partials/_common.sass */
 html body strong {
   color: #4e4e4e;
 }
-/* line 60, ../../app/stylesheets/partials/_common.sass */
+/* line 59, ../../app/stylesheets/partials/_common.sass */
 html body blockquote {
   font-style: normal;
 }
 
-/* line 65, ../../app/stylesheets/partials/_common.sass */
+/* line 64, ../../app/stylesheets/partials/_common.sass */
 .snapshot {
   border: 1px solid #e5e5e5;
   position: relative;
   margin-bottom: 15px;
   overflow: hidden;
 }
-/* line 72, ../../app/stylesheets/partials/_common.sass */
+/* line 71, ../../app/stylesheets/partials/_common.sass */
 .snapshot:hover .caption-bg, .snapshot:hover .caption {
   opacity: 0;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -1167,7 +1279,7 @@ html body blockquote {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 76, ../../app/stylesheets/partials/_common.sass */
+/* line 75, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption-bg, .snapshot .caption {
   position: absolute;
   bottom: 0px;
@@ -1183,7 +1295,7 @@ html body blockquote {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 83, ../../app/stylesheets/partials/_common.sass */
+/* line 82, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption-bg {
   background-color: #f5f5f5;
   opacity: 0.9;
@@ -1198,12 +1310,12 @@ html body blockquote {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 87, ../../app/stylesheets/partials/_common.sass */
+/* line 86, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption {
   padding-top: 15px;
   bottom: 0px;
 }
-/* line 90, ../../app/stylesheets/partials/_common.sass */
+/* line 89, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption blockquote {
   margin: 15px;
   margin-bottom: 0;
@@ -1212,7 +1324,7 @@ html body blockquote {
   font-weight: bold;
   color: #888888;
 }
-/* line 97, ../../app/stylesheets/partials/_common.sass */
+/* line 96, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption .caption-author {
   position: absolute;
   color: #db2e34;
@@ -1358,12 +1470,13 @@ html body form button:active {
 nav#tabs {
   border-bottom: 1px solid #e5e5e5;
   margin-left: -20px;
+  margin-top: 10px;
   position: relative;
   z-index: 10;
-  height: 48px;
+  height: 38px;
 }
 
-/* line 7, ../../app/stylesheets/partials/_work.sass */
+/* line 8, ../../app/stylesheets/partials/_work.sass */
 ul.tabs {
   margin: 0;
   padding: 0;
@@ -1384,14 +1497,14 @@ ul.tabs li {
   display: inline;
   float: left;
 }
-/* line 12, ../../app/stylesheets/partials/_work.sass */
+/* line 13, ../../app/stylesheets/partials/_work.sass */
 ul.tabs li {
   background-color: white;
   margin-top: 10px;
   margin-bottom: 5px;
   position: relative;
 }
-/* line 17, ../../app/stylesheets/partials/_work.sass */
+/* line 18, ../../app/stylesheets/partials/_work.sass */
 ul.tabs a {
   background-color: white;
   display: -moz-inline-box;
@@ -1399,7 +1512,7 @@ ul.tabs a {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  padding: 5px 5px;
+  padding: 10px 10px;
   padding-top: 7px;
   padding-bottom: 3px;
   text-decoration: none;
@@ -1411,35 +1524,27 @@ ul.tabs a {
 ul.tabs a {
   *display: inline;
 }
-/* line 27, ../../app/stylesheets/partials/_work.sass */
-ul.tabs a span {
-  padding: 5px 10px;
-}
-/* line 29, ../../app/stylesheets/partials/_work.sass */
-ul.tabs a.current {
+/* line 28, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a.active {
   border: 1px solid #e5e5e5;
   border-bottom: 1px solid white;
   color: #db2e34;
 }
-/* line 33, ../../app/stylesheets/partials/_work.sass */
-ul.tabs a.current span {
-  background-color: #f2f2f2;
-}
 
-/* line 37, ../../app/stylesheets/partials/_work.sass */
+/* line 34, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork,
 .panes div#products,
 .panes div#openSource {
   overflow: hidden;
 }
-/* line 41, ../../app/stylesheets/partials/_work.sass */
+/* line 38, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide,
 .panes div#products div#work_slide,
 .panes div#openSource div#work_slide {
   position: relative;
   width: 10000px;
 }
-/* line 44, ../../app/stylesheets/partials/_work.sass */
+/* line 41, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide article,
 .panes div#products div#work_slide article,
 .panes div#openSource div#work_slide article {
@@ -1449,27 +1554,27 @@ ul.tabs a.current span {
   margin-top: 15px;
   height: 550px;
 }
-/* line 51, ../../app/stylesheets/partials/_work.sass */
+/* line 48, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide article h2,
 .panes div#products div#work_slide article h2,
 .panes div#openSource div#work_slide article h2 {
   margin-top: 0;
   font-size: 22px;
 }
-/* line 54, ../../app/stylesheets/partials/_work.sass */
+/* line 51, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide article h3,
 .panes div#products div#work_slide article h3,
 .panes div#openSource div#work_slide article h3 {
   font-size: 22px;
   font-weight: normal;
 }
-/* line 57, ../../app/stylesheets/partials/_work.sass */
+/* line 54, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide .snapshot,
 .panes div#products div#work_slide .snapshot,
 .panes div#openSource div#work_slide .snapshot {
   height: 300px;
 }
-/* line 59, ../../app/stylesheets/partials/_work.sass */
+/* line 56, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide .snapshot .caption-bg,
 .panes div#products div#work_slide .snapshot .caption-bg,
 .panes div#openSource div#work_slide .snapshot .caption-bg {
@@ -1634,6 +1739,12 @@ html body #content section.twitter aside.more a:active {
   box-shadow: inset 0 0 8px 4px #0091aa, 0 1px 0 0 #19acdd;
 }
 
+/* line 2, ../../app/stylesheets/partials/_error.sass */
+#error p.not_found {
+  font-size: 1.4em;
+  margin-bottom: 2em;
+}
+
 /* line 1, ../../app/stylesheets/partials/_about.sass */
 #content .founder {
   display: inline;
@@ -1685,4 +1796,116 @@ html body #content section.twitter aside.more a:active {
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #content .founder.last {
   overflow-x: hidden;
+}
+
+/* line 3, ../../app/stylesheets/partials/_blog.sass */
+.post headergroup h3 {
+  color: #7a7a7a;
+  font-size: 18px;
+  font-weight: normal;
+}
+/* line 7, ../../app/stylesheets/partials/_blog.sass */
+.post headergroup h3 span {
+  color: #db2e34;
+}
+/* line 9, ../../app/stylesheets/partials/_blog.sass */
+.post hr {
+  margin-bottom: 1em;
+}
+/* line 11, ../../app/stylesheets/partials/_blog.sass */
+.post .CodeRay {
+  margin-bottom: 10px;
+}
+
+/* line 13, ../../app/stylesheets/partials/_blog.sass */
+.post-body {
+  color: #5f5f5f;
+}
+
+/* line 16, ../../app/stylesheets/partials/_blog.sass */
+.dsq-post-area h3, #dsq-comments-title h3 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+/* line 21, ../../app/stylesheets/partials/_blog.sass */
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button {
+  outline: none;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  text-decoration: none;
+  background: #db9c03;
+  background: -moz-linear-gradient(0% 100% 90deg, #b97a00, #db9c03);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#db9c03), to(#b97a00));
+  border: 1px solid #b97a00;
+  border-bottom: 1px solid #b97a00;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #f3b41b;
+  -webkit-box-shadow: inset 0 1px 0 0 #f3b41b;
+  box-shadow: inset 0 1px 0 0 #f3b41b;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 15px;
+  text-align: center;
+  text-shadow: #a86900 0 -1px 0;
+  display: block;
+  float: right;
+  margin-bottom: 30px;
+}
+/* line 3, ../../app/stylesheets/partials/_buttons.sass */
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button:hover {
+  cursor: pointer;
+}
+/* line 5, ../../app/stylesheets/partials/_buttons.sass */
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button::-moz-focus-inner {
+  border: 0;
+}
+/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button {
+  *display: inline;
+}
+/* line 42, ../../app/stylesheets/partials/_buttons.sass */
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button:hover {
+  background: #b97a00;
+  background: -moz-linear-gradient(0% 100% 90deg, #975800, #ca8b00);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ca8b00), to(#975800));
+  -moz-box-shadow: inset 0 1px 0 0 #d19200;
+  -webkit-box-shadow: inset 0 1px 0 0 #d19200;
+  box-shadow: inset 0 1px 0 0 #d19200;
+  cursor: pointer;
+}
+/* line 50, ../../app/stylesheets/partials/_buttons.sass */
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button:active {
+  border: 1px solid #b97a00;
+  border-bottom: 1px solid #b97a00;
+  -moz-box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
+  -webkit-box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
+  box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
+}
+
+/* line 26, ../../app/stylesheets/partials/_blog.sass */
+.dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper,
+.dsq-content .dsq-input-wrapper {
+  width: 695px;
+  height: 70px;
+  background-color: lime;
+}
+/* line 31, ../../app/stylesheets/partials/_blog.sass */
+.dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper textarea,
+.dsq-content .dsq-input-wrapper textarea {
+  background-color: lime;
+}
+
+/* line 33, ../../app/stylesheets/partials/_blog.sass */
+.dsq-community-preview {
+  border-bottom: 1px dotted #cccccc;
+  background-color: blue;
 }
