@@ -1,0 +1,14 @@
+h2 Manage projects
+hr
+ul#actions
+  li = link_to 'Add a new project', new_admin_project_path
+ul#projects
+  - unless collection.empty?
+    - collection.each do |project| 
+      li.project
+        = project.title
+        .actions
+          = link_to 'Edit', edit_admin_project_path(project)
+          = link_to "Remove", admin_project_path(project.id), method: 'delete', confirm: "Are you sure you want to remove this project?"
+  - else
+    | Sorry, there are no projects to show.

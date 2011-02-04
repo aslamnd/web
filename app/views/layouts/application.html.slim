@@ -1,7 +1,7 @@
 ! doctype html
 html
   head
-    title :codegram - smart web apps
+    title=yield(:title) || ":codegram - smart web apps"
     meta name="keywords" content="web apps"
     link rel="shortcut icon" href="/favicon.png"
     = include_stylesheets :common, :media => 'all'

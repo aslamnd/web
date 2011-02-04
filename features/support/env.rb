@@ -55,4 +55,6 @@ end
 include Warden::Test::Helpers
 After do
   Warden.test_reset!
+  Capybara.default_host = "lvh.me" #for Rack::Test
+  Capybara.app_host = "http://lvh.me:9887" if Capybara.current_driver == :selenium
 end
