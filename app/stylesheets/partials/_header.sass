@@ -2,10 +2,9 @@
   #sidebar-inner
     background-color: $codegram-color
     min-height: 100%
-    padding-bottom: 40px
+    position: relative
   header
     padding-top: 60px
-    padding-bottom: 80px
     h1
       a
         display: block
@@ -18,3 +17,25 @@
         display: none
       padding-left: 20px
       color: white
+
+#blog
+  #sidebar-inner
+    height: 280px
+    header
+      h2
+        position: absolute
+        bottom: 0px
+        left: 0px
+        width: 100%
+        margin: 0px
+        padding: 0px
+        a
+          display: block
+          background-color: #f2f2f2
+          color: $codegram-color
+          padding-left: 20px
+          +text-shadow(none)
+          text-decoration: none
+  #sidebar-blog
+    padding-left: 20px
+    padding-top: 20px

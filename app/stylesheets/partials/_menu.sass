@@ -1,12 +1,13 @@
 #sidebar
   z-index: 10
   position: relative
-  +text-shadow
-  h1, h2, h3, h4, a
+  #sidebar-inner
     color: white
-    font-weight: bold
-  color: white
-  aside
+    +text-shadow
+    h1, h2, h3, h4, a
+      color: white
+      font-weight: bold
+  #sidebar-inner aside
     ul
       +no-bullets
       padding: 0px
@@ -24,7 +25,8 @@
       margin-top: 6px
       text-decoration: none
       +text-shadow(none)
-  nav
+  #sidebar-inner nav
+    padding-top: 80px
     padding-left: 20px
     padding-bottom: 60px
     ul

@@ -54,5 +54,18 @@ html
       #content
         = flash_messages.html_safe
         = yield
-      footer#footer
     = include_javascripts :application
+    javascript:
+      $(function(){
+        var content_height = $("#container").height(); 
+        var window_height = $(window).height();
+        var total_height = 0;
+        if(content_height > window_height){
+          total_height = content_height;
+        }else{
+          total_height = window_height;
+        }
+        if($("#sidebar-inner").height() < total_height){
+          $("#sidebar-inner").height(total_height + 5 );
+        }
+      });

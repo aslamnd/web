@@ -44,7 +44,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :services, 'Services', '/services'
     primary.item :work, 'Work', '/work'
     primary.item :about, 'About', '/about'
-    primary.item :blog, 'Blog', url_for(:host => "blog.#{request.host_with_port}")
+    primary.item :blog, 'Blog', "http://blog.#{request.host_with_port}" + posts_path
     primary.item :contact, 'Contact', new_contact_form_path 
 
     # you can also specify a css id or class to attach to this particular level

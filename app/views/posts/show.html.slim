@@ -6,3 +6,6 @@ small by #{resource.author_name}
   = resource.tagline
 hr
 p = resource.rendered_body.html_safe
+
+-content_for :sidebar do
+  | Hola
