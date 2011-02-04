@@ -1,11 +1,42 @@
-h2 = resource.title
-small by #{resource.author_name}
-.tagline
-  = resource.created_at.to_s(:date)
-  | &mdash;
-  = resource.tagline
-hr
-p = resource.rendered_body.html_safe
+headergroup.post-header
+  h2.post-title = resource.title
+  h3.post-tagline
+    span class="post-date"
+      = resource.created_at.to_s(:date)
+    |  &mdash; 
+    = resource.tagline
+.post-body
+  = resource.rendered_body.html_safe
 
 -content_for :sidebar do
-  | Hola
+  section.author_info
+    img width='160px' height='80px'
+    h4 #{resource.author_name}
+    p
+      strong Lead programmer
+    p
+      strong He likes: 
+      | Ruby, soft kittens, his car, Niki, big things...
+    a href="#" class="author-more" More from Txus
+  hr
+  section.images
+    h4 Images
+    img width='160px' height='160px'
+  hr
+  section.tags
+    h4 Tags
+    ul
+      li
+        a href="#" activemodel
+      li
+        a href="#" activerecord
+      li
+        a href="#" antiwaste
+      li
+        a href="#" date
+      li
+        a href="#" decimal
+      li
+        a href="#" entrepeneurship
+      li
+        a href="#" gems
