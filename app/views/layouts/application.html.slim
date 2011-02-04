@@ -7,15 +7,15 @@ html
 
   body
     #container
+      #content
+        = flash_messages.html_safe
+        = yield
       #sidebar
         #sidebar-inner
           =render :partial => 'layouts/title'
           =render :partial => 'layouts/main_sidebar'
           =render :partial => 'layouts/github_sidebar'
       = render :partial => 'layouts/slideshow' 
-      #content
-        = flash_messages.html_safe
-        = yield
     = include_javascripts :application
     javascript:
       $(function(){

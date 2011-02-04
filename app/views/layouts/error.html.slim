@@ -5,6 +5,9 @@ html
     =render :partial => 'layouts/header'
   body#error
     #container
+      #content
+        = flash_messages.html_safe
+        = yield
       #sidebar
         #sidebar-inner
           =render :partial => 'layouts/title'
@@ -17,9 +20,6 @@ html
               headergroup
                 h2 Hey!!
                 h3 Who did just turn off the lights??
-      #content
-        = flash_messages.html_safe
-        = yield
     = include_javascripts :application
     javascript:
       $(function(){

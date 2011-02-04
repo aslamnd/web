@@ -1,9 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  rescue_from ActiveRecord::RecordNotFound, :with => :not_found
-  rescue_from ActiveRecord::RecordInvalid, :with => :not_found
-  rescue_from StandardError, :with => :standard_error
+  if Rails.env.production?
+    rescue_from ActiveRecord::RecordNotFound, :with => :not_found
+    rescue_from ActiveRecord::RecordInvalid, :with => :not_found
+    rescue_from StandardError, :with => :standard_error
+  end
 
 private
 
@@ -15,7 +17,8 @@ private
   end
 
   def standard_error(error)
-    render :template => 'errors/not_found',
+    @error = get_data_for_error
+    render :template => 'errors/standard_error',
       :layout => 'error',
       :status => 500
   end
