@@ -9,14 +9,6 @@ article.post
   .post-body
     = resource.rendered_body.html_safe
   hr
-  section.add-comment
-    h4 Add new comment
-    form
-      textarea
-      button Post as...
-  hr
-  section.comments
-    h4 Reactions
 #disqus_thread
 javascript:
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -32,7 +24,12 @@ javascript:
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
+  })(); 
+
+-unless Rails.env.production?
+  javascript:
+    var disqus_developer = 1;
+
 noscript
   | Please enable JavaScript to view 
   a href="http://disqus.com/?ref_noscript" commentspowered by Disqus. 

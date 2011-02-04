@@ -8,19 +8,28 @@
         color: $codegram-color
   hr
     margin-bottom: 1em
+  .CodeRay
+    margin-bottom: 10px
 .post-body
   color: #5f5f5f
-.add-comment, .comments
-  h4
+.dsq-post-area, #dsq-comments-title
+  h3
     font-size: 22px
     font-weight: normal
     margin-bottom: 5px
-.add-comment
-  button
+.dsq-post-area
+  .dsq-post-footer button.dsq-button#dsq-post-button
     +button-codegram(#db9c03)
     display: block
     float: right
     margin-bottom: 30px
+.dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper, 
+.dsq-content .dsq-input-wrapper
+  width: 695px
+  height: 70px
+  background-color: #0f0
   textarea
-    width: 695px
-    height: 70px
+    background-color: #0f0
+.dsq-community-preview
+  border-bottom: 1px dotted #ccc
+  background-color: #00f

@@ -1796,21 +1796,25 @@ html body #content section.twitter aside.more a:active {
 .post hr {
   margin-bottom: 1em;
 }
-
 /* line 11, ../../app/stylesheets/partials/_blog.sass */
+.post .CodeRay {
+  margin-bottom: 10px;
+}
+
+/* line 13, ../../app/stylesheets/partials/_blog.sass */
 .post-body {
   color: #5f5f5f;
 }
 
-/* line 14, ../../app/stylesheets/partials/_blog.sass */
-.add-comment h4, .comments h4 {
+/* line 16, ../../app/stylesheets/partials/_blog.sass */
+.dsq-post-area h3, #dsq-comments-title h3 {
   font-size: 22px;
   font-weight: normal;
   margin-bottom: 5px;
 }
 
-/* line 19, ../../app/stylesheets/partials/_blog.sass */
-.add-comment button {
+/* line 21, ../../app/stylesheets/partials/_blog.sass */
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button {
   outline: none;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -1841,19 +1845,19 @@ html body #content section.twitter aside.more a:active {
   margin-bottom: 30px;
 }
 /* line 3, ../../app/stylesheets/partials/_buttons.sass */
-.add-comment button:hover {
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button:hover {
   cursor: pointer;
 }
 /* line 5, ../../app/stylesheets/partials/_buttons.sass */
-.add-comment button::-moz-focus-inner {
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button::-moz-focus-inner {
   border: 0;
 }
 /* line 7, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-.add-comment button {
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button {
   *display: inline;
 }
 /* line 42, ../../app/stylesheets/partials/_buttons.sass */
-.add-comment button:hover {
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button:hover {
   background: #b97a00;
   background: -moz-linear-gradient(0% 100% 90deg, #975800, #ca8b00);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ca8b00), to(#975800));
@@ -1863,15 +1867,29 @@ html body #content section.twitter aside.more a:active {
   cursor: pointer;
 }
 /* line 50, ../../app/stylesheets/partials/_buttons.sass */
-.add-comment button:active {
+.dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button:active {
   border: 1px solid #b97a00;
   border-bottom: 1px solid #b97a00;
   -moz-box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
   -webkit-box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
   box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
 }
-/* line 24, ../../app/stylesheets/partials/_blog.sass */
-.add-comment textarea {
+
+/* line 26, ../../app/stylesheets/partials/_blog.sass */
+.dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper,
+.dsq-content .dsq-input-wrapper {
   width: 695px;
   height: 70px;
+  background-color: lime;
+}
+/* line 31, ../../app/stylesheets/partials/_blog.sass */
+.dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper textarea,
+.dsq-content .dsq-input-wrapper textarea {
+  background-color: lime;
+}
+
+/* line 33, ../../app/stylesheets/partials/_blog.sass */
+.dsq-community-preview {
+  border-bottom: 1px dotted #cccccc;
+  background-color: blue;
 }
