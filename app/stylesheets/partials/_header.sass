@@ -33,9 +33,33 @@
           display: block
           background-color: #f2f2f2
           color: $codegram-color
-          padding-left: 20px
+          padding-left: 30px
           +text-shadow(none)
           text-decoration: none
   #sidebar-blog
-    padding-left: 20px
+    padding-left: 30px
     padding-top: 20px
+    section
+      margin-bottom: 20px
+    hr
+      margin-bottom: 10px
+      width: 160px
+    h4
+      font-size: 22px
+      font-weight: normal
+      margin-bottom: 5px 
+      margin-top: 5px
+    strong
+      color: #5f5f5f
+    .author-more
+      +button-codegram
+      width: 128px 
+    .tags ul
+      padding-left: 5px
+      +pretty-bullets("bullet.png")
+      li
+        padding-left: 17px
+      a
+        text-decoration: none
+        color: #5f5f5f
+        margin-bottom: 10px
