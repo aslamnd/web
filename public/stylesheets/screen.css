@@ -1470,12 +1470,13 @@ html body form button:active {
 nav#tabs {
   border-bottom: 1px solid #e5e5e5;
   margin-left: -20px;
+  margin-top: 10px;
   position: relative;
   z-index: 10;
-  height: 48px;
+  height: 38px;
 }
 
-/* line 7, ../../app/stylesheets/partials/_work.sass */
+/* line 8, ../../app/stylesheets/partials/_work.sass */
 ul.tabs {
   margin: 0;
   padding: 0;
@@ -1496,14 +1497,14 @@ ul.tabs li {
   display: inline;
   float: left;
 }
-/* line 12, ../../app/stylesheets/partials/_work.sass */
+/* line 13, ../../app/stylesheets/partials/_work.sass */
 ul.tabs li {
   background-color: white;
   margin-top: 10px;
   margin-bottom: 5px;
   position: relative;
 }
-/* line 17, ../../app/stylesheets/partials/_work.sass */
+/* line 18, ../../app/stylesheets/partials/_work.sass */
 ul.tabs a {
   background-color: white;
   display: -moz-inline-box;
@@ -1511,7 +1512,7 @@ ul.tabs a {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  padding: 5px 5px;
+  padding: 10px 10px;
   padding-top: 7px;
   padding-bottom: 3px;
   text-decoration: none;
@@ -1523,35 +1524,27 @@ ul.tabs a {
 ul.tabs a {
   *display: inline;
 }
-/* line 27, ../../app/stylesheets/partials/_work.sass */
-ul.tabs a span {
-  padding: 5px 10px;
-}
-/* line 29, ../../app/stylesheets/partials/_work.sass */
-ul.tabs a.current {
+/* line 28, ../../app/stylesheets/partials/_work.sass */
+ul.tabs a.active {
   border: 1px solid #e5e5e5;
   border-bottom: 1px solid white;
   color: #db2e34;
 }
-/* line 33, ../../app/stylesheets/partials/_work.sass */
-ul.tabs a.current span {
-  background-color: #f2f2f2;
-}
 
-/* line 37, ../../app/stylesheets/partials/_work.sass */
+/* line 34, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork,
 .panes div#products,
 .panes div#openSource {
   overflow: hidden;
 }
-/* line 41, ../../app/stylesheets/partials/_work.sass */
+/* line 38, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide,
 .panes div#products div#work_slide,
 .panes div#openSource div#work_slide {
   position: relative;
   width: 10000px;
 }
-/* line 44, ../../app/stylesheets/partials/_work.sass */
+/* line 41, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide article,
 .panes div#products div#work_slide article,
 .panes div#openSource div#work_slide article {
@@ -1561,27 +1554,27 @@ ul.tabs a.current span {
   margin-top: 15px;
   height: 550px;
 }
-/* line 51, ../../app/stylesheets/partials/_work.sass */
+/* line 48, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide article h2,
 .panes div#products div#work_slide article h2,
 .panes div#openSource div#work_slide article h2 {
   margin-top: 0;
   font-size: 22px;
 }
-/* line 54, ../../app/stylesheets/partials/_work.sass */
+/* line 51, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide article h3,
 .panes div#products div#work_slide article h3,
 .panes div#openSource div#work_slide article h3 {
   font-size: 22px;
   font-weight: normal;
 }
-/* line 57, ../../app/stylesheets/partials/_work.sass */
+/* line 54, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide .snapshot,
 .panes div#products div#work_slide .snapshot,
 .panes div#openSource div#work_slide .snapshot {
   height: 300px;
 }
-/* line 59, ../../app/stylesheets/partials/_work.sass */
+/* line 56, ../../app/stylesheets/partials/_work.sass */
 .panes div#clientWork div#work_slide .snapshot .caption-bg,
 .panes div#products div#work_slide .snapshot .caption-bg,
 .panes div#openSource div#work_slide .snapshot .caption-bg {
@@ -1875,7 +1868,7 @@ html body #content section.twitter aside.more a:active {
 .dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button::-moz-focus-inner {
   border: 0;
 }
-/* line 7, ../../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+/* line 7, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 .dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button {
   *display: inline;
 }

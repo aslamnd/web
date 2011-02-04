@@ -1,40 +1,7 @@
-nav#tabs
-  ul.tabs
-    - @categories.each do |category|
-      li
-      - if category.id == @active
-        = link_to category.name, work_path(category.id), class: :active
-      - else
-        = link_to category.name, work_path(category.id)
-
--if @project
-  .panes
-    section#projects
-      div#clientWork
-        div#work_slide
-          article.project
-            .snapshot
-              img
-              .caption-bg
-              .caption
-                blockquote = @project.quote
-                .caption-author = @project.client_name
-            .row
-              section.left
-                h2 = @project.title
-                = @project.description
-              section.right
-                h3 What we did 
-                = @project.extended_description
-
-- @projects.each do |project|
-  li
-    - if project == @project
-      = link_to "WHOO", project_path(project.category, project), class: :active
-    - else
-      = link_to "WHOO", project_path(project.category, project)
+nav#tabs=render :partial => 'tabs'
+#projects=render :partial => 'projects'
+#navigation=render :partial => 'project_navigation'
 
 -if @project && !params[:id]
-
   javascript:
     window.history.pushState(null, "#{escape_javascript yield(:title)}", "#{project_path(@project.category, @project).html_safe}");
