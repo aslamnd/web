@@ -750,20 +750,21 @@ html body h3 {
 /* line 4, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner {
   color: white;
+  padding-bottom: 20px;
   text-shadow: #860000 0 -1px 0;
 }
-/* line 7, ../../app/stylesheets/partials/_menu.sass */
+/* line 8, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner h1, #sidebar #sidebar-inner h2, #sidebar #sidebar-inner h3, #sidebar #sidebar-inner h4, #sidebar #sidebar-inner a {
   color: white;
   font-weight: bold;
 }
-/* line 10, ../../app/stylesheets/partials/_menu.sass */
+/* line 11, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside {
   padding-left: 25px;
   font-size: 0.9em;
   margin-bottom: 20px;
 }
-/* line 11, ../../app/stylesheets/partials/_menu.sass */
+/* line 12, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside ul {
   list-style: none;
   padding: 0px;
@@ -774,11 +775,11 @@ html body h3 {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 16, ../../app/stylesheets/partials/_menu.sass */
+/* line 17, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside h4 {
   margin-bottom: 0px;
 }
-/* line 19, ../../app/stylesheets/partials/_menu.sass */
+/* line 20, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside a {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -797,13 +798,13 @@ html body h3 {
 #sidebar #sidebar-inner aside a {
   *display: inline;
 }
-/* line 28, ../../app/stylesheets/partials/_menu.sass */
+/* line 29, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav {
   padding-top: 80px;
   padding-left: 20px;
   padding-bottom: 60px;
 }
-/* line 32, ../../app/stylesheets/partials/_menu.sass */
+/* line 33, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul {
   list-style: none;
   padding: 0px;
@@ -814,25 +815,25 @@ html body h3 {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 35, ../../app/stylesheets/partials/_menu.sass */
+/* line 36, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li {
   line-height: 2.3em;
 }
-/* line 38, ../../app/stylesheets/partials/_menu.sass */
+/* line 39, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.selected a {
   background-color: white;
   color: #db2e34;
   text-shadow: none;
 }
-/* line 42, ../../app/stylesheets/partials/_menu.sass */
+/* line 43, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.selected a:hover {
   font-weight: normal;
 }
-/* line 45, ../../app/stylesheets/partials/_menu.sass */
+/* line 46, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li a:hover {
   font-weight: bold;
 }
-/* line 47, ../../app/stylesheets/partials/_menu.sass */
+/* line 48, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul a {
   padding: 0px 5px;
   font-family: Klavika, "Helvetica Neue", Arial;
@@ -850,7 +851,7 @@ html body h3 {
 #sidebar #sidebar-inner nav ul a {
   *display: inline;
 }
-/* line 55, ../../app/stylesheets/partials/_menu.sass */
+/* line 56, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #github {
   position: absolute;
   bottom: 0px;
@@ -858,7 +859,7 @@ html body h3 {
   text-align: center;
   padding-bottom: 15px;
 }
-/* line 61, ../../app/stylesheets/partials/_menu.sass */
+/* line 62, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #github a {
   opacity: 0.3;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
@@ -874,7 +875,7 @@ html body h3 {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 66, ../../app/stylesheets/partials/_menu.sass */
+/* line 67, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #github a:hover {
   opacity: 1;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -964,6 +965,10 @@ html body h3 {
   right: auto;
 }
 /* line 45, ../../app/stylesheets/partials/_slideshow.sass */
+#slideshow #slides #slide-black {
+  background-color: black;
+}
+/* line 48, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow ul {
   list-style: none;
   padding: 0px;
@@ -977,7 +982,7 @@ html body h3 {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 51, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 54, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow ul li {
   float: left;
   width: 1000px;

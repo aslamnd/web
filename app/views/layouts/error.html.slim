@@ -3,16 +3,20 @@ html
   head
     title :codegram - smart web apps
     =render :partial => 'layouts/header'
-    meta name="keywords" content="web apps"
-
-  body
+  body#error
     #container
       #sidebar
         #sidebar-inner
           =render :partial => 'layouts/title'
           =render :partial => 'layouts/main_sidebar'
           =render :partial => 'layouts/github_sidebar'
-      = render :partial => 'layouts/slideshow' 
+      figure#slideshow
+        #slides
+          ul
+            li#slide-black
+              headergroup
+                h2 Hey!!
+                h3 Who did just turn off the lights??
       #content
         = flash_messages.html_safe
         = yield
