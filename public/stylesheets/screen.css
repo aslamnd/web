@@ -1781,3 +1781,19 @@ html body #content section.twitter aside.more a:active {
 * html #content .founder.last {
   overflow-x: hidden;
 }
+
+/* line 2, ../../app/stylesheets/partials/_blog.sass */
+#content headergroup h3 {
+  color: #7a7a7a;
+  font-size: 18px;
+  font-weight: normal;
+}
+/* line 6, ../../app/stylesheets/partials/_blog.sass */
+#content headergroup h3 span {
+  color: #db2e34;
+}
+
+/* line 8, ../../app/stylesheets/partials/_blog.sass */
+.post-body {
+  color: #5f5f5f;
+}
