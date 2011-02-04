@@ -12,6 +12,8 @@ class Post < ActiveRecord::Base
 
   has_friendly_id :title, use_slug: true
 
+  mount_uploader :picture, PictureUploader
+
   scope :from_archive, ->(year, month = nil) do
     year = year.to_i
     if month

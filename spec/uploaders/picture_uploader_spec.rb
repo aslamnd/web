@@ -1,25 +1,25 @@
 require 'carrierwave/test/matchers'
 
-describe AvatarUploader do
+describe PictureUploader do
   include CarrierWave::Test::Matchers
 
   let (:path_to_file) do
-    "spec/support/files/avatar.jpg"
+    "spec/support/files/post.jpg"
   end
 
   before do
-    AvatarUploader.enable_processing = true
-    @uploader = AvatarUploader.new(mock_model(User), :file)
+    PictureUploader.enable_processing = true
+    @uploader = PictureUploader.new(mock_model(Post), :file)
     @uploader.store!(File.open(path_to_file))
   end
 
   after do
-    AvatarUploader.enable_processing = false
+    PictureUploader.enable_processing = false
   end
 
   context 'the thumb version' do
-    it "should scale down a landscape image to fit within 216 by 216 pixels" do
-      @uploader.thumb.should be_no_larger_than(160, 80)
+    it "should scale down a square image to fit within 160 by 160 pixels" do
+      @uploader.thumb.should be_no_larger_than(160, 160)
     end
   end
 

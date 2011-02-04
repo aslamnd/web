@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class AvatarUploader < CarrierWave::Uploader::Base
+class PictureUploader < CarrierWave::Uploader::Base
   permissions 0600
   # Include RMagick or ImageScience support:
   include CarrierWave::MiniMagick

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110204090909) do
+ActiveRecord::Schema.define(:version => 20110204162811) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20110204090909) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cached_slug"
+    t.string   "picture"
   end
 
   add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
