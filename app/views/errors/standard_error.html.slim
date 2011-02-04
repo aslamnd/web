@@ -1,12 +1,12 @@
-h2 Error 404 - Page not found
-p.not_found
-  | Your were looking for the following url:
-  br
-  | <strong>#{@error[:url]}</strong>
-  br
-  | but this path just doesn't exist!
+h2 Error 500 - Something was wrong
 
 .row
+  p
+    | Your were looking for the following url:
+    br
+    | <strong>#{@error[:url]}</strong>
+    br
+    | but this path just doesn't exist!
   section.left
     h3 OMG! You just broke the internet!
     p
