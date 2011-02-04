@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :posts, foreign_key: :author_id
+
+  mount_uploader :avatar, AvatarUploader
+
 end

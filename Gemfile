@@ -17,8 +17,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'slim', :require => 'slim/rails'
 gem 'devise'
 gem 'simple_form'
-gem 'paperclip'
-gem 'devise'
+
 #gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'high_voltage'
 gem 'compass'
@@ -30,8 +29,11 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'carrierwave'
 gem 'markdownizer', '>= 0.1.3'
+
+# Uploaders
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development do
   gem 'livereload', "1.4"
