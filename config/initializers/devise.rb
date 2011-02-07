@@ -131,7 +131,7 @@ Devise.setup do |config|
   # you can configure them inside the config.warden block. The example below
   # allows you to setup OAuth, using http://github.com/roman/warden_oauth
 
-  config.omniauth :twitter, YAML::load_file('config/omniauth.yml')["twitter"]["key"], YAML::load_file('config/omniauth.yml')["twitter"]["token"]
+  config.omniauth :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
   #
   # config.warden do |manager|
   #   manager.oauth(:twitter) do |twitter|
