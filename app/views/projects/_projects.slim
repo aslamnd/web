@@ -18,7 +18,7 @@
                 -if @project.category == 'open-source'
                   .downloads
                     span.count
-                      | #{@project.downloads}
+                      | #{number_with_delimiter(@project.downloads)}
                     | downloads
                     a.rubygems href="http://rubygems.org/gems/#{@project.rubygem}"
                       | View project at RubyGems
