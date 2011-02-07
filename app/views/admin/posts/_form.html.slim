@@ -1,6 +1,7 @@
-= simple_form_for [:admin, resource] do |form|
+= simple_form_for [:admin, resource], html: { multipart: true } do |form|
   = form.input :title
   = form.input :tagline
   = form.input :created_at, :as => :date if resource.persisted?
   = form.input :body, as: :text
+  = form.input :picture, as: :file
   = form.submit
