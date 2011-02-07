@@ -49,7 +49,10 @@ unless Rails.env.production?
                           created_at: Date.parse('2011-01-06'),
                           author: user)
 
-  20.times do
+  6.times do
     Factory(:project)
+  end
+  6.times do
+    Factory(:project_without_screenshot)
   end
 end

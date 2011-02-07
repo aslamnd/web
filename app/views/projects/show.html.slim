@@ -2,6 +2,21 @@ nav#tabs=render :partial => 'tabs'
 #projects=render :partial => 'projects'
 #navigation=render :partial => 'project_navigation'
 
--if @project && !params[:id]
-  javascript:
-    window.history.pushState(null, "#{escape_javascript yield(:title)}", "#{project_path(@project.category, @project).html_safe}");
+=javascript_include_tag 'history.js', 'history.adapter.jquery.js'
+
+javascript:
+  (function(window, undefined){
+    var History = window.History;
+    History.options = {
+      hasChangeCheckerDelay: 0
+    }
+    History.Adapter.bind(window,'statechange',function(){
+      var State = History.getState(); 
+      $.get(State.url, function(){}, 'script');
+    });
+  })(window);
+
+  $('nav#tabs a, #content #navigation a').live('click',function(){
+    History.pushState(null, null, $(this).attr("href"));
+    return false;
+  });

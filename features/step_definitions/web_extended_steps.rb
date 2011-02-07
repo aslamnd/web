@@ -1,5 +1,5 @@
-When /^I select "([^"]*)" from my computer to upload it$/ do |filename|
-  When %(I attach the file "spec/support/files/#{filename}" to "Picture")
+When /^I select "([^"]*)" from my computer to upload it to "([^"]*)"$/ do |filename, name|
+  When %(I attach the file "spec/support/files/#{filename}" to "#{name}")
 end
 
 Then /^the "([^"]*)" should be highlighted with an error$/ do |field|

@@ -9,4 +9,9 @@ Factory.define :project do |p|
   p.extended_description { Faker::Lorem.paragraph }
 
   p.category { WorkCategory.sample }
+  p.screenshots { [Factory(:screenshot)] }
+end
+
+Factory.define :project_without_screenshot, parent: :project do |p|
+  p.screenshots { [] }
 end

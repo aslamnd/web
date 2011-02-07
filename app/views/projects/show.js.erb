@@ -1,9 +1,3 @@
 $("#content #projects").html("<%=escape_javascript (render :partial => 'projects')%>");
 $("#content #navigation").html("<%=escape_javascript (render :partial => 'project_navigation')%>");
 $("#content #tabs").html("<%=escape_javascript (render :partial => 'tabs')%>");
-
-<% if @project && !params[:id] %>
-  window.history.pushState(null, "<%=escape_javascript yield(:title) %>", "<% project_path(@project.category, @project).html_safe%>");
-<% else %>
-  window.history.pushState(null, "#{escape_javascript yield(:title)}", "<%=request.url%>");
-<% end %>

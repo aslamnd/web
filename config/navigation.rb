@@ -47,6 +47,12 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :blog, 'Blog', "http://blog.#{request.host_with_port}" + posts_path
     primary.item :contact, 'Contact', new_contact_form_path 
 
+    primary.item :dashboard, 'Dashboard', admin_path, if: lambda { current_user } do |admin_nav|
+      admin_nav.auto_highlight = false
+      admin_nav.item :projects, 'Projects', admin_projects_path, highlights_on: /\/projects/
+      admin_nav.item :posts, 'Posts', admin_posts_path, highlights_on: /\/posts/
+    end
+
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu
     # primary.dom_id = 'menu-id'

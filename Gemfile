@@ -6,6 +6,7 @@ gem 'rails', '~> 3.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 # gem 'rack', :git => 'git://github.com/rack/rack.git'
 gem 'arel', :git => 'git://github.com/rails/arel.git'
+gem 'rack-cache', :git => 'git://github.com/codegram/rack-cache.git'
 
 gem 'inherited_resources'
 gem 'escape_utils'
@@ -15,8 +16,10 @@ gem 'will_paginate', '3.0.pre2'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'slim', :require => 'slim/rails'
+
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
 gem "oa-oauth", :require => "omniauth/oauth", git: 'git://github.com/intridea/omniauth.git'
+
 gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
@@ -27,8 +30,11 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'carrierwave'
 gem 'markdownizer', '>= 0.1.3'
+
+# Uploaders
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development do
   gem 'livereload', "1.4"
