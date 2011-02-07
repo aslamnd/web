@@ -30,8 +30,8 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'markdownizer', '>= 0.3.1'
 gem 'cells'
+gem 'markdownizer', '>= 0.3.2'
 
 gem 'rest-client'
 gem 'crack'
