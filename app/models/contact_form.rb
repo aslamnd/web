@@ -1,16 +1,15 @@
 class ContactForm < MailForm::Base
-  attribute :name,      :validate => true
-  attribute :email,     :validate => /[^@]+@[^\.]+\.[\w\.\-]+/
-  #attribute :file,      :attachment => true
+  @@budgets = ['Less than 10.000 EUR', '10.000 to 25.000 EUR', '25.000 EUR to 50.000 EUR', 'More than 50.000 EUR']
+  @@start_times = [ 'Immediately', 'Within 1 month', 'Within 3 months' ]
 
-  #attribute :budget,      :validate => true
+  attribute :name,       validate: true
+  attribute :email,      validate: /[^@]+@[^\.]+\.[\w\.\-]+/
+  attribute :budget,     validate: @@budgets
+  attribute :start_time, validate: @@start_times
   attribute :message
-  #attribute :nickname,  :captcha  => true
 
   cattr_reader :budgets
-  @@budgets = [
-    'Less than 5.000eur'
-  ]
+  cattr_reader :start_times
 
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.
