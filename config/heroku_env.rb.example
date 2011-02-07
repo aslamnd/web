@@ -1,0 +1,14 @@
+# This file contains the ENV vars necessary to run the app locally.  
+# Some of these values are sensitive, and some are developer specific.
+#
+# DO NOT CHECK THIS FILE INTO VERSION CONTROL
+
+ENV['HOPTOAD_KEY']       = 'seekrit'
+ENV['GMAIL_USERNAME']    = 'seekrit'
+ENV['GMAIL_PASSWORD']    = 'seekrit'
+ENV['SESSION_STORE_KEY'] = 'seekrit'
+ENV['S3_KEY']            = 'seekrit'
+ENV['S3_SECRET']         = 'seekrit'
+ENV['S3_BUCKET']         = 'seekrit'
+ENV['TWITTER_KEY']       = 'seekrit'
+ENV['TWITTER_SECRET']    = 'seekrit'

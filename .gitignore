@@ -4,4 +4,4 @@ log/*.log
 tmp/**/*
 .DS_Store
 capybara*
-config/omniauth.yml
+config/heroku_env.rb
