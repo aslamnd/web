@@ -12,12 +12,14 @@ CodegramWeb::Application.routes.draw do
   
   ## Blog subdomain
   constraints subdomain: 'blog' do
-    constraints format: :html do
-      match '/' => 'posts#index', as: :blog, via: :get
-      match '(/:year)(/:month)' => 'posts#index', as: :posts, via: :get
-      resources :posts, { path: '/:year/:month', only: :show }
+    namespace :blog, path: '/' do
+      constraints format: :html do
+        match '/' => 'posts#index', as: :blog, via: :get
+        match '(/:year)(/:month)' => 'posts#index', as: :posts, via: :get
+        resources :posts, { path: '/:year/:month', only: :show }
+      end
+      match '/feed.atom' => 'posts#index', as: :feed, via: :get, format: :atom
     end
-    match '/feed.atom' => 'posts#index', as: :feed, via: :get, format: :atom
   end
 
   ## Base subdomain

@@ -18,6 +18,20 @@
     white-space:nowrap
     background-color: #fff
 
+#blog #sidebar-blog .archive
+  h4
+    font-weight: bold
+  ul
+    +no-bullets
+    padding: 0px
+
+#blog #sidebar-blog
+  a
+    color: $codegram-color
+    text-decoration: none
+    &.rss
+      +link-icon('feed.png')
+
 .post-body
   h2, h3, h4, h5
     color: $font-color - #222

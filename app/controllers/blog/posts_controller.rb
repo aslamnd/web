@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Blog::PostsController < ApplicationController
   inherit_resources
   actions :index, :show
 
@@ -23,6 +23,6 @@ class PostsController < ApplicationController
   def collection
     (params[:year] ? end_of_association_chain.from_archive(params[:year],
                                                           params[:month])
-                  : end_of_association_chain.scoped).paginate(page: params[:page], per_page: 5)
+                  : end_of_association_chain.scoped).ordered.paginate(page: params[:page], per_page: 5)
   end
 end

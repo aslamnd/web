@@ -17,6 +17,7 @@ private
   end
 
   def standard_error(error)
+    logger.error(error)
     @error = get_data_for_error
     render :template => 'errors/standard_error',
       :layout => 'error',
