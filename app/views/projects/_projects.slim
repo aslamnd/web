@@ -1,0 +1,19 @@
+-if @project
+  .panes
+    section#projects
+      div#clientWork
+        div#work_slide
+          article.project
+            .snapshot
+              = big_screenshot_for(@project)
+              .caption-bg
+              .caption
+                blockquote = @project.quote
+                .caption-author = @project.client_name
+            .row
+              section.left
+                h2 = @project.title
+                = @project.description
+              section.right
+                h3 What we did 
+                = @project.extended_description

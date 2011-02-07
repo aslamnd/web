@@ -1,0 +1,95 @@
+{
+  "profile_sidebar_fill_color": "ffffff",
+  "name": "codegram",
+  "profile_sidebar_border_color": "bdbdbd",
+  "profile_background_tile": false,
+  "created_at": "Mon Apr 20 15:28:09 +0000 2009",
+  "location": "Terrassa",
+  "profile_image_url": "http:\/\/a0.twimg.com\/profile_images\/1175920955\/codegram_avatar_normal.png",
+  "follow_request_sent": false,
+  "is_translator": false,
+  "id_str": "33549586",
+  "profile_link_color": "616161",
+  "favourites_count": 0,
+  "contributors_enabled": false,
+  "url": "http:\/\/codegram.com",
+  "states": {
+    "bouncing_email": false,
+    "pending_email": false,
+    "detached_email": false,
+    "suspended": false,
+    "needs_employee_email_update": false
+  },
+  "utc_offset": 3600,
+  "id": 33549586,
+  "profile_use_background_image": false,
+  "listed_count": 4,
+  "profile_text_color": "000000",
+  "protected": false,
+  "followers_count": 36,
+  "lang": "en",
+  "verified": false,
+  "profile_background_color": "ef4235",
+  "notifications": false,
+  "geo_enabled": true,
+  "description": "Codegram is a web studio located in Terrassa (Barcelona, Spain) specialized in Ruby on Rails development.",
+  "time_zone": "Madrid",
+  "profile_background_image_url": "http:\/\/a0.twimg.com\/profile_background_images\/175392091\/codegram_twitter_bg.png",
+  "friends_count": 3,
+  "statuses_count": 45,
+  "status": {
+    "coordinates": null,
+    "created_at": "Wed Feb 02 15:34:54 +0000 2011",
+    "favorited": false,
+    "truncated": false,
+    "id_str": "32824288289497088",
+    "entities": {
+      "urls": [
+        {
+          "expanded_url": "https:\/\/github.com\/codegram\/markdownizer",
+          "url": "http:\/\/t.co\/jHdbuue",
+          "indices": [
+            81,
+            100
+          ],
+          "display_url": "github.com\/codegram\/markd\u2026"
+        }
+      ],
+      "hashtags": [
+        {
+          "text": "markdown",
+          "indices": [
+            34,
+            43
+          ]
+        },
+        {
+          "text": "Rails",
+          "indices": [
+            71,
+            77
+          ]
+        }
+      ],
+      "user_mentions": [
+
+      ]
+    },
+    "in_reply_to_user_id_str": null,
+    "contributors": null,
+    "text": "Released markdownizer-0.0.1. Easy #markdown with code highlighting for #Rails 3! http:\/\/t.co\/jHdbuue",
+    "id": 32824288289497088,
+    "retweet_count": 3,
+    "in_reply_to_status_id_str": null,
+    "geo": null,
+    "retweeted": false,
+    "in_reply_to_user_id": null,
+    "place": null,
+    "in_reply_to_screen_name": null,
+    "source": "\u003Ca href=\"http:\/\/itunes.apple.com\/us\/app\/twitter\/id409789998?mt=12\" rel=\"nofollow\"\u003ETwitter for Mac\u003C\/a\u003E",
+    "in_reply_to_status_id": null
+  },
+  "following": false,
+  "show_all_inline_media": false,
+  "screen_name": "codegram"
+}

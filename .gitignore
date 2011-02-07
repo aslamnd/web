@@ -5,3 +5,4 @@ tmp/**/*
 .DS_Store
 capybara*
 public/uploads
+config/omniauth.yml

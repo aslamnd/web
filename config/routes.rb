@@ -1,5 +1,5 @@
 CodegramWeb::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "admin/omniauth_callbacks" }
 
   # Admin sections
   namespace :admin do
@@ -22,7 +22,6 @@ CodegramWeb::Application.routes.draw do
 
   ## Base subdomain
   constraints BaseSubdomain do
-    resource :pages, :only => [:show], :controller => 'high_voltage/pages'
     resource :contact_form,
       :path => 'contact',
       :only => [:new, :create],
@@ -32,9 +31,14 @@ CodegramWeb::Application.routes.draw do
     match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'client', via: :get, as: :work
 
     match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
-
-    match '/:id', :controller => 'high_voltage/pages', :action => :show
+    match '/services', :controller => 'high_voltage/pages', :action => :show, :id => 'services'
+    match '/about', :controller => 'high_voltage/pages', :action => :show, :id => 'about'
+    resources :work_categories, :path => 'work', :only => [:index, :show]  do
+      resources :projects, :only =>[:show], :path => '/'
+    end
   end
+
+  match '*path' => 'errors#not_found'
 
   root :to => "high_voltage/pages#show", :id => 'home'
 

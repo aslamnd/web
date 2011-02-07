@@ -15,10 +15,10 @@ gem 'will_paginate', '3.0.pre2'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'slim', :require => 'slim/rails'
-gem 'devise'
-gem 'simple_form'
 
-#gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'devise', :git => 'git://github.com/plataformatec/devise'
+gem "oa-oauth", :require => "omniauth/oauth", git: 'git://github.com/intridea/omniauth.git'
+
 gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
@@ -46,12 +46,13 @@ end
 
 group :test do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git', :ref => 'v0.4.0.beta.1'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git', :ref => '0.3.9'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'rspec-rails', '~> 2.4.0'
   gem 'pickle'
   gem 'launchy'
   gem "database_cleaner", "~> 0.6.0"
   gem 'shoulda'
+  gem 'fakeweb'
 end
 
 # Deploy with Capistrano

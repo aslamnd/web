@@ -1,0 +1,7 @@
+link rel="shortcut icon" href="/favicon.png"
+= include_stylesheets :common, :media => 'all'
+= include_stylesheets :print, :media => 'print'
+= include_javascripts :workspace
+| <!--[if lt IE 9]>
+= javascript_include_tag 'html5'
+| <![endif]-->

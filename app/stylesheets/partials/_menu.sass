@@ -3,6 +3,7 @@
   position: relative
   #sidebar-inner
     color: white
+    padding-bottom: 20px
     +text-shadow
     h1, h2, h3, h4, a
       color: white
@@ -41,6 +42,10 @@
             +text-shadow(none)
             &:hover
               font-weight: normal
+        &.sign_out 
+          margin-top: 20px
+          a
+            +button-codegram
         a
           &:hover
             font-weight: bold

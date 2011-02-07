@@ -2,18 +2,16 @@
 html
   head
     title :codegram - smart web apps
+    =render :partial => 'layouts/header'
     meta name="keywords" content="web apps"
     link rel="shortcut icon" href="/favicon.png"
     = auto_discovery_link_tag :atom, "/feed.atom"
-    = include_stylesheets :common, :media => 'all'
-    = include_stylesheets :print, :media => 'print'
-    = include_javascripts :workspace
-    | <!--[if lt IE 9]>
-    = javascript_include_tag 'html5'
-    | <![endif]-->
 
   body#blog
     #container
+      #content
+        = flash_messages.html_safe
+        = yield
       #sidebar
         #sidebar-inner
           header#header
@@ -26,8 +24,5 @@ html
         #sidebar-blog
           = yield(:sidebar)
       = render :partial => 'layouts/slideshow' 
-      #content
-        = flash_messages.html_safe
-        = yield
       footer#footer
     = include_javascripts :application

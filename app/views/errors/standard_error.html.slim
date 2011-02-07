@@ -1,0 +1,28 @@
+h2 Error 500 - Something was wrong
+
+.row
+  p
+    | Your were looking for the following url:
+    br
+    | <strong>#{@error[:url]}</strong>
+    br
+    | but this path just doesn't exist!
+  section.left
+    h3 OMG! You just broke the internet!
+    p
+      | Maybe you were redirected here from <em>Google</em> or
+        a a post from our blog.
+    p
+      | If you're not mad at us, you could still use the time to
+        see our page and find out who we are.
+
+
+  section.right
+    h3 You might be interested in...
+    ul
+      li
+        =link_to 'Our blog', 'http://blog.codegram.com' 
+      li
+        =link_to 'Our Services', 'http://codegram.com/services'
+      li
+        =link_to 'See our website as if the world was ruled by cats\'s', 'http://lolinator.com/lol/codegram.heroku.com/'

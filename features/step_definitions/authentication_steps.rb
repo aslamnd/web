@@ -19,3 +19,11 @@ Given /^I am logged in$/ do
   user = find_model(:user) || Factory(:user)
   login_as user
 end
+
+When /^Twitter authorizes me$/ do
+  visit '/users/auth/twitter/callback'
+end
+
+Given /^I am registered as and admin$/ do
+  admin = find_model(:user, name: 'admin') || Factory(:user, name: 'admin')
+end
