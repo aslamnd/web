@@ -1,5 +1,5 @@
 CodegramWeb::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "admin/omniauth_callbacks" }
 
   # Admin sections
   namespace :admin do
