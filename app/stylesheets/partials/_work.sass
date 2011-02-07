@@ -43,7 +43,7 @@ ul.tabs
         width: 715px
         position: relative
         margin-top: 15px
-        height: 500px
+        height: 550px
           
         h2
           margin-top: 0
@@ -53,6 +53,23 @@ ul.tabs
           font-weight: normal
       .snapshot
         height: 300px
+      .downloads
+        font-family: Klavika, "Helvetica Neue", Helvetica, Arial
+        text-align: center
+        margin-top: 20px
+        .count
+          margin-right: 5px
+          font-size: 1.1em
+          color: $font-color - #222
+        font-size: 1.8em
+        a
+          +button-codegram
+          &.github
+            +button-codegram(#bbb)
+            font-size: 13px
+          font-size: 13px
+          width: 160px
+          
 
 html body #content nav
   .prev, .next
