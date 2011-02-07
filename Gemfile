@@ -32,6 +32,8 @@ gem 'flash_messages_helper'
 # gem 'unicorn'
 gem 'markdownizer', '>= 0.1.3'
 
+gem 'rest-client'
+
 # Uploaders
 gem 'carrierwave'
 gem 'mini_magick'
