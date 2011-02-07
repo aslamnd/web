@@ -14,7 +14,7 @@ nav#tabs
         div#work_slide
           article.project
             .snapshot
-              img
+              = big_screenshot_for(@project)
               .caption-bg
               .caption
                 blockquote = @project.quote
