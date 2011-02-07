@@ -1201,25 +1201,25 @@ html body a {
   overflow: hidden;
 }
 /* line 9, ../../app/stylesheets/partials/_common.sass */
-#content section.left, #content .separator.left {
+#content .left {
   display: inline;
   float: left;
   margin-right: 20px;
   width: 347.5px;
 }
 /* line 138, ../../../../.rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content section.left, * html #content .separator.left {
+* html #content .left {
   overflow-x: hidden;
 }
 /* line 11, ../../app/stylesheets/partials/_common.sass */
-#content section.right, #content .separator.right {
+#content .right {
   display: inline;
   float: left;
   margin-right: 0;
   width: 347.5px;
 }
 /* line 138, ../../../../.rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content section.right, * html #content .separator.right {
+* html #content .right {
   overflow-x: hidden;
 }
 /* line 13, ../../app/stylesheets/partials/_common.sass */
@@ -2366,6 +2366,23 @@ html body #content section.twitter aside.more a:active {
   overflow-x: hidden;
 }
 
+/* line 1, ../../app/stylesheets/partials/_services.sass */
+.service {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 30px;
+}
+/* line 6, ../../app/stylesheets/partials/_services.sass */
+.service article {
+  overflow: hidden;
+  display: block;
+  margin-top: 20px;
+}
+/* line 11, ../../app/stylesheets/partials/_services.sass */
+.service h2, .service h3, .service article {
+  clear: both;
+}
+
 /* line 1, ../../app/stylesheets/partials/_blog.sass */
 .post {
   position: relative;
@@ -2449,7 +2466,7 @@ html body #content section.twitter aside.more a:active {
   margin: -2px 0;
   background-repeat: no-repeat;
   background-position: left center;
-  background-image: url('/images/link_icons/feed.png?1297102870');
+  background-image: url('/images/link_icons/feed.png?1297102927');
 }
 
 /* line 54, ../../app/stylesheets/partials/_blog.sass */
