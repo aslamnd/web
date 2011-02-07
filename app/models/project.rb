@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
 
+  after_create :update_downloads!, if: :open_source?
+
   validates :title, :url, :description, :extended_description, :category, presence: true
   validates :category, inclusion: WorkCategory.names
 
@@ -13,6 +15,10 @@ class Project < ActiveRecord::Base
 
   def screenshot
     screenshots.first
+  end
+
+  def open_source?
+    category == 'open-source'
   end
 
   def update_downloads!

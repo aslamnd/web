@@ -45,6 +45,21 @@ describe Project do
     end
   end
 
+  describe "#open_source?" do
+    context 'if the project is open source' do
+      it 'returns true' do
+        subject.stub(:category).and_return 'open-source'
+        subject.should be_open_source
+      end
+    end
+    context 'otherwise' do
+      it 'returns false' do
+        subject.stub(:category).and_return 'client'
+        subject.should_not be_open_source
+      end
+    end
+  end
+
   describe "#update_downloads!" do
     it 'updates the :downloads attribute with info from RubygemsFetcher' do
       result = double :result
