@@ -35,7 +35,13 @@ section#home
   .row
     section.left.blog
       h3 Learn from our day-to-day
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ipsum justo. Pellentesque sagittis leo ante, ac ultrices sapien. Duis enim mauris, pretium dapibus varius vitae, lacinia eu massa. Suspendisse volutpat ultrices aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
+      -Post.ordered.limit(3).each do |post|
+        h4
+          =post_link(post)
+        .date
+          = post.created_at.to_s(:date)
+        p
+          =post.tagline
       aside.more
         a href='#' Read our blog
 

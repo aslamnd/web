@@ -30,6 +30,7 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
+gem 'cells'
 gem 'markdownizer', '>= 0.3.2'
 
 gem 'rest-client'
@@ -38,10 +39,6 @@ gem 'crack'
 # Uploaders
 gem 'carrierwave'
 gem 'mini_magick'
-
-group :development do
-  gem 'livereload', "1.4"
-end
 
 group :test, :development do
   gem 'factory_girl_rails'

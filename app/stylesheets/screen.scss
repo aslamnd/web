@@ -12,6 +12,7 @@
 @import "blueprint/scaffolding";
 
 @import "compass";
+@import "blueprint/link-icons";
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -58,6 +59,8 @@ body {
     margin-top: 280px;
     @include column($content-columns); } }
 
+@import "partials/mixins";
+
 @import "partials/buttons";
 @import "partials/fonts";
 @import "partials/header";
@@ -73,3 +76,4 @@ body {
 @import "partials/error";
 @import "partials/about";
 @import "partials/blog";
+

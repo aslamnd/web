@@ -1,43 +1,47 @@
 figure#slideshow
   #slides
     ul
-      li#slide-1
-        =image_tag 'slide.jpg' 
-        headergroup
-          h2 We care about your project
-          h3 We love working with our customers.
-      li#slide-2
-        =image_tag 'slide1.jpg' 
-        headergroup
-          h2 We rumble
-          h3 We like programming for fun
-      li#slide-4
-        =image_tag 'slide3.jpg'
-        headergroup
-          h2 We take coffee
-          h3 You don't have to worry about the fact that we don't work while we're taking it 
-      li#slide-5
-        =image_tag 'slide4.jpg'
-        headergroup
-          h2 We make love to each other
-          h3 Only when we feel in the mood.
-      li#slide-7
-        =image_tag 'slide6.jpg'
-        headergroup
-          h2 We enjoy to point & click
-          h3 You see?
+      -if yield(:slideshow)
+        =yield(:slideshow)
+      -else
+        li#slide-1
+          =image_tag 'slide.jpg' 
+          headergroup
+            h2 We care about your project
+            h3 We love working with our customers.
+        li#slide-2
+          =image_tag 'slide1.jpg' 
+          headergroup
+            h2 We rumble
+            h3 We like programming for fun
+        li#slide-4
+          =image_tag 'slide3.jpg'
+          headergroup
+            h2 We take coffee
+            h3 You don't have to worry about the fact that we don't work while we're taking it 
+        li#slide-5
+          =image_tag 'slide4.jpg'
+          headergroup
+            h2 We make love to each other
+            h3 Only when we feel in the mood.
+        li#slide-7
+          =image_tag 'slide6.jpg'
+          headergroup
+            h2 We enjoy to point & click
+            h3 You see?
   nav.navi
 
 javascript:
   $(function(){
-    $("#slides ul").randomize("li");
-    $("#slides").scrollable(
-      {
-        circular: true,
-        easing: 'bounce',
-        speed: 700 
-      }
-      ).autoscroll(
-      {interval: 5000}
-    ).navigator();
+    if( $('#slides ul li').length > 1) {
+      $("#slides ul").randomize("li");
+      $("#slides").scrollable(
+        {
+          circular: true,
+          easing: 'bounce',
+          speed: 700 
+        }
+        ).autoscroll(
+        {interval: 5000}
+      ).navigator();
   });
