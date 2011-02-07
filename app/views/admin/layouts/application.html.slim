@@ -29,6 +29,8 @@ html
                 = link_to 'Projects', admin_projects_path
               li
                 = link_to 'Posts', admin_posts_path
+              li.sign_out
+                = link_to 'Sign out', destroy_user_session_path
           aside
             h4 Backend
             | This backend is cool.

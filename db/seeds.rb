@@ -8,10 +8,29 @@
 #
 # Blog seeds
 
-user = User.find_by_email('txus@codegram.com') || Factory(:user, name: 'Josep M. Bach', email: 'txus@codegram.com')
+oriol = Factory(:user, name: 'Oriol Gual', email: 'oriol@codegram.com')
+oriol.user_tokens << UserToken.new(user: oriol, provider: 'twitter', uid: '128157474')
+oriol.save
+
+txus = Factory(:user, name: 'Josep M. Bach', email: 'txus@codegram.com')
+txus.user_tokens << UserToken.new(user: txus, provider: 'twitter', uid: '6895722')
+txus.save
+
+josepjaume = Factory(:user, name: 'Josep Jaume Rey', email: 'josepjaume@codegram.com')
+josepjaume.user_tokens << UserToken.new(user: josepjaume, provider: 'twitter', uid: '6965262')
+josepjaume.save
+
+marc = Factory(:user, name: 'Marc Riera', email: 'marc@codegram.com')
+marc.user_tokens << UserToken.new(user: marc, provider: 'twitter', uid: '15055477')
+marc.save
+
+roger = Factory(:user, name: 'Roger Bacardit', email: 'roger@codegram.com')
+roger.user_tokens << UserToken.new(user: roger, provider: 'twitter', uid: '7086462')
+roger.save
 
 unless Rails.env.production?
 
+  user = User.find_by_email('txus@codegram.com') || Factory(:user, name: 'Josep M. Bach', email: 'txus@codegram.com')
   stendhal_post = Factory(:post,
                           title: 'Stendhal 0.1.2 released',
                           body: File.read('db/seeds/stendhal.md'),
