@@ -15,5 +15,15 @@
                 h2 = @project.title
                 = @project.description
               section.right
-                h3 What we did 
-                = @project.extended_description
+                -if @project.category == 'open-source'
+                  .downloads
+                    span.count
+                      | 2.245
+                    | downloads
+                    a href="http://rubygems.org/gems/#{@project.rubygem}"
+                      | View project at RubyGems
+                    a.github href=@project.url
+                      | View source at GitHub
+                -else
+                  h3 What we did
+                  = @project.extended_description

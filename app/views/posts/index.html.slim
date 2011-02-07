@@ -1,17 +1,11 @@
-h2 Codegram blog
-
 - unless collection.empty?
   #posts
     - collection.each do |post| 
-      .post
-        h3 = link_to(post.title, post_path(post, year: post.year, month: post.month))
-        small by #{post.author_name}
-        .tagline
-          = post.created_at.to_s(:date)
-          | &mdash;
-          = post.tagline
-        p = post.rendered_body.html_safe
-        hr
+      =render :partial => 'post', :object => post
+      hr
   = will_paginate collection, renderer: PaginationNoFollow
 - else
   | Sorry, there are no posts to show.
+
+-content_for :sidebar do
+  h3 Archive
