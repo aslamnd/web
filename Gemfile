@@ -39,10 +39,6 @@ gem 'crack'
 gem 'carrierwave'
 gem 'mini_magick'
 
-group :development do
-  gem 'livereload', "1.4"
-end
-
 group :test, :development do
   gem 'factory_girl_rails'
   gem 'faker'
