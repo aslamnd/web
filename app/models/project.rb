@@ -12,6 +12,7 @@ class Project < ActiveRecord::Base
   has_friendly_id :title, use_slug: true
 
   scope :open_source, where(category: 'open-source')
+  scope :promoted, where(promoted: true)
 
   def screenshot
     screenshots.first

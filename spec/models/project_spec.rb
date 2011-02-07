@@ -35,6 +35,13 @@ describe Project do
         Project.open_source.all.should == [open_source_project]
       end
     end
+    describe ".promoted" do
+      it 'returns promoted projects' do
+        promoted_project = Factory.create :project, promoted: true
+        normal_project = Factory.create :project, promoted: false
+        Project.promoted.all.should == [promoted_project]
+      end
+    end
   end
 
   describe "#screenshot" do
