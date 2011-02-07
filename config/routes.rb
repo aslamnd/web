@@ -29,17 +29,13 @@ CodegramWeb::Application.routes.draw do
 
     resources :projects, :only =>[:show], :path => '/work/:work_category_id'
     match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'client', via: :get, as: :work
-
     match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
-    match '/services', :controller => 'high_voltage/pages', :action => :show, :id => 'services'
-    match '/about', :controller => 'high_voltage/pages', :action => :show, :id => 'about'
-    resources :work_categories, :path => 'work', :only => [:index, :show]  do
-      resources :projects, :only =>[:show], :path => '/'
-    end
+    match '/services', :controller => 'pages', :action => :show, :id => 'services'
+    match '/about', :controller => 'pages', :action => :show, :id => 'about'
   end
 
   match '*path' => 'errors#not_found'
 
-  root :to => "high_voltage/pages#show", :id => 'home'
+  root :to => "pages#show", :id => 'home'
 
 end
