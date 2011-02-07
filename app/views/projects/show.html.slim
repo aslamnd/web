@@ -1,7 +1,3 @@
 nav#tabs=render :partial => 'tabs'
 #projects=render :partial => 'projects'
 #navigation=render :partial => 'project_navigation'
-
--if @project && !params[:id]
-  javascript:
-    window.history.pushState(null, "#{escape_javascript yield(:title)}", "#{project_path(@project.category, @project).html_safe}");

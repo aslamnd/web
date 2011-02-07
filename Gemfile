@@ -6,6 +6,7 @@ gem 'rails', '~> 3.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 # gem 'rack', :git => 'git://github.com/rack/rack.git'
 gem 'arel', :git => 'git://github.com/rails/arel.git'
+gem 'rack-cache', :git => 'git://github.com/codegram/rack-cache.git'
 
 gem 'inherited_resources'
 gem 'escape_utils'
