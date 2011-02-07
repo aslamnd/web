@@ -17,3 +17,15 @@ Feature: User edits a project
     And I press "Update Project"
     Then I should see "Project was successfully updated."
     And I should see "Rubygems" in the projects list
+
+  Scenario: User deletes a screenshot from a project
+    Given I am logged in
+    And a project exists
+    And I am on the admin projects page
+    When I follow "Edit" in the first project
+
+    When I check "Delete" for the first screenshot
+
+    And I press "Update Project"
+    Then I should see "Project was successfully updated."
+    And the project should have 0 screenshots

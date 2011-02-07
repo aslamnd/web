@@ -20,6 +20,10 @@ Feature: User creates a project
 
     And I check "Promoted"
 
+    And I select "screenshot.jpg" from my computer to upload it to "Project screenshot"
+
+    Then show me the page
     And I press "Create Project"
     Then I should see "Project was successfully created."
+    And the project should have 1 screenshot
     And I should see "Jamibia" in the projects list

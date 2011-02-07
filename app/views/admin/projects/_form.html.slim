@@ -1,3 +1,4 @@
+pre = resource.errors.inspect
 = simple_form_for [:admin, resource] do |form|
   = form.input :title
   = form.input :url
@@ -11,5 +12,17 @@
   = form.input :category, collection: @categories, label_method: :name, value_method: :id, label: 'Category', default: 'Client Work'
 
   = form.input :promoted
+
+  - if !resource.screenshots.empty?
+    ul#screenshots
+      = form.simple_fields_for :screenshots, resource.screenshots.select {|screenshot| screenshot.persisted?}, html: { multipart: true } do |screenshot|
+        li.screenshot
+          = image_tag(screenshot.object.file.thumb.url)
+          .destroy
+            = screenshot.check_box :_destroy
+            = screenshot.label :_destroy, "Delete screenshot"
+
+  = form.simple_fields_for :screenshots, form.object.class.reflect_on_association(:screenshots).klass.new, child_index: (resource.screenshots.length + 1).to_s, html: { multipart: true } do |builder|
+    = builder.input :file, as: :file, label: 'Project screenshot'
 
   = form.submit
