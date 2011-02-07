@@ -1,8 +1,8 @@
 figure#slideshow
   #slides
     ul
-      -if yield(:slideshow)
-        =yield(:slideshow)
+      -unless (slides = yield(:slideshow)).blank?
+        =slides
       -else
         li#slide-1
           =image_tag 'slide.jpg' 
