@@ -55,4 +55,6 @@ unless Rails.env.production?
   6.times do
     Factory(:project_without_screenshot)
   end
+  Factory(:project, :promoted => true)
+  Factory(:project_without_screenshot, :promoted => true)
 end
