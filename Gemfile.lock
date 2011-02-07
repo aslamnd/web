@@ -92,6 +92,8 @@ GEM
     carrierwave (0.5.1)
       activesupport (~> 3.0)
     celerity (0.8.7)
+    cells (3.5.0)
+      rails (~> 3.0)
     childprocess (0.1.6)
       ffi (~> 0.6.3)
     closure-compiler (1.0.0)
@@ -250,6 +252,7 @@ DEPENDENCIES
   arel!
   capybara!
   carrierwave
+  cells
   compass
   crack
   cucumber-rails!

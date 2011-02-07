@@ -4,7 +4,7 @@ atom_feed do |feed|
   feed.updated collection.first.created_at
 
   collection.each do |post|
-    feed.entry(post, url: post_path(post, year: post.year, month: post.month)) do |entry|
+    feed.entry(post, url: post_link(post, :host => true)) do |entry|
 
       entry.title post.title
       entry.summary post.tagline

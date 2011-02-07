@@ -1,7 +1,7 @@
 article.post
   headergroup.post-header
     h2.post-title
-      =link_to(post.title, post_path(post, year: post.year, month: post.month))
+      =post_link(post)
     span class="post-date"
       = post.created_at.to_s(:date)
     h3.post-tagline

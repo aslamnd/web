@@ -1,0 +1,11 @@
+aside.archive
+  h3 Archive
+  -@grouped.each do |group|
+    h4=group[0]
+    -if group[1].count > 0
+      ul
+        -group[1].each do |month|
+          li
+            a href='#{blog_posts_path(year: month.group_year, month: month.group_month)}'
+              =t('date.month_names')[month.group_month.to_i]
+            =" (#{month.count})"

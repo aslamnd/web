@@ -31,6 +31,7 @@ gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
 gem 'markdownizer', '>= 0.1.3'
+gem 'cells'
 
 gem 'rest-client'
 gem 'crack'
