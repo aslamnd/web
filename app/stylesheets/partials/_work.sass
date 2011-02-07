@@ -43,7 +43,7 @@ ul.tabs
         width: 715px
         position: relative
         margin-top: 15px
-        height: 550px
+        height: 500px
           
         h2
           margin-top: 0
@@ -53,7 +53,18 @@ ul.tabs
           font-weight: normal
       .snapshot
         height: 300px
-        .caption-bg
-          height: 90px
 
-
+html body #content nav
+  .prev, .next
+    a
+      +button-codegram
+      width: 50px
+    height: 40px
+    width: 100px
+    &.prev
+      float: left
+    &.next
+      float: right
+  .pagination
+    text-align: center
+    width: auto
