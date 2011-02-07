@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
 
+  after_create :update_downloads!, if: :open_source?
+
   validates :title, :url, :description, :extended_description, :category, presence: true
   validates :category, inclusion: WorkCategory.names
 
@@ -9,8 +11,20 @@ class Project < ActiveRecord::Base
 
   has_friendly_id :title, use_slug: true
 
+  scope :open_source, where(category: 'open-source')
+
   def screenshot
     screenshots.first
+  end
+
+  def open_source?
+    category == 'open-source'
+  end
+
+  def update_downloads!
+    update_attribute(:downloads,
+                      RubygemsFetcher.get(:downloads,
+                                          rubygem))
   end
 
 end

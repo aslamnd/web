@@ -1,4 +1,3 @@
-pre = resource.errors.inspect
 = simple_form_for [:admin, resource], html: { multipart: true } do |form|
   = form.input :title
   = form.input :url
@@ -12,6 +11,7 @@ pre = resource.errors.inspect
   = form.input :category, collection: @categories, label_method: :name, value_method: :id, label: 'Category', default: 'Client Work'
 
   = form.input :promoted
+  = form.input :rubygem, label: 'Gem name'
 
   - if !resource.screenshots.empty?
     ul#screenshots
@@ -26,3 +26,16 @@ pre = resource.errors.inspect
     = builder.input :file, as: :file, label: 'Project screenshot'
 
   = form.submit
+
+javascript:
+
+  $(function() {
+    $('#project_rubygem').parent().hide();
+    $('#project_category').change(function() {
+      if (this.value === 'open-source') {
+        $('#project_rubygem').parent().show();
+      } else {
+        $('#project_rubygem').parent().hide();
+      }
+    });
+  });
