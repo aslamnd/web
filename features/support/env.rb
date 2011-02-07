@@ -62,11 +62,7 @@ OmniAuth.config.mock_auth[:twitter] = {
 
 
 After do
-<<<<<<< HEAD
   Warden.test_reset!
   Capybara.default_host = "lvh.me" #for Rack::Test
   Capybara.app_host = "http://lvh.me:9887" if Capybara.current_driver == :selenium
-=======
- Warden.test_reset!
->>>>>>> 3f86e80... Admin signs in
 end

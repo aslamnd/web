@@ -8,6 +8,7 @@ article.post
       = resource.tagline
   .post-body
     = resource.rendered_body.html_safe
+  = image_tag(resource.picture_url) if resource.picture?
   hr
 #disqus_thread
 javascript:

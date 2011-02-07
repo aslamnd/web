@@ -9,4 +9,5 @@ Factory.define :project do |p|
   p.extended_description { Faker::Lorem.paragraph }
 
   p.category { WorkCategory.sample }
+  p.screenshots { [Factory(:screenshot)] }
 end

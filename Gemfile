@@ -16,8 +16,10 @@ gem 'will_paginate', '3.0.pre2'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'slim', :require => 'slim/rails'
+
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
 gem "oa-oauth", :require => "omniauth/oauth", git: 'git://github.com/intridea/omniauth.git'
+
 gem 'high_voltage'
 gem 'compass'
 gem 'jammit'
@@ -28,8 +30,11 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'carrierwave'
 gem 'markdownizer', '>= 0.1.3'
+
+# Uploaders
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development do
   gem 'livereload', "1.4"
