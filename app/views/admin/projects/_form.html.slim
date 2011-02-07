@@ -1,5 +1,5 @@
 pre = resource.errors.inspect
-= simple_form_for [:admin, resource] do |form|
+= simple_form_for [:admin, resource], html: { multipart: true } do |form|
   = form.input :title
   = form.input :url
 

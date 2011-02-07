@@ -8,22 +8,21 @@ Feature: User creates a project
     And I am on the admin projects page
     And I follow "Add a new project"
 
-    When I fill in "Title" with "Jamibia"
-    And I fill in "Url" with "http://jamibia.com"
-    And I fill in "Description" with "Jamibia is an example of code quality!"
-    And I fill in "What we did" with "We did it in 48 hours."
-
-    And I fill in "Quote" with "It just made my life better."
-    And I fill in "Client name" with "David Heinemeier Hansson"
+    When I fill in the following:
+      | Title         | Jamibia                                |
+      | Url           | http://jamibia.com                     |
+      | Description   | Jamibia is an example of code quality! |
+      | What we did   | We did it in 48 hours.                 |
+      | Quote         | It just made my life better.           |
+      | Client name   | David Heinemeier Hansson               |
 
     And I select "Products" from "Category"
-
     And I check "Promoted"
+    And I select "screenshot.png" from my computer to upload it to "Project screenshot"
 
-    And I select "screenshot.jpg" from my computer to upload it to "Project screenshot"
-
-    Then show me the page
     And I press "Create Project"
+
     Then I should see "Project was successfully created."
-    And the project should have 1 screenshot
     And I should see "Jamibia" in the projects list
+    And a project should exist
+    And the project should have 1 screenshots
