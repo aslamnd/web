@@ -10,6 +10,8 @@ By 0.1.0, the only way to "assert" something inside an example was to
 primitively do it like this:
 
 {% code ruby %}
+{% caption 'Simple assertion' %}
+{% highlight (2..4) %}
 describe "something" do
   it "does something" do
     assert(3 + 4)
