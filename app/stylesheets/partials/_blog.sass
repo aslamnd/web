@@ -1,5 +1,8 @@
 .post
+  position: relative
   headergroup
+    h2
+      padding-right: 260px
     h3
       color: $font-color
       font-weight: normal
@@ -24,11 +27,17 @@
   color: #5f5f5f
   padding-bottom: 20px
 
-.post-date
-  margin-top: -45px
-  margin-bottom: 20px
+.post-metadata
+  position: absolute 
+  top: 15px
+  right: 0px
+  font-size: 0.8em
+  color: $font-color + #222
   text-align: right
-  display: block
+  .author
+    color: $font-color - #222
+  .date
+    color: $font-color - #222
 
 .post-tagline
   padding: 10px

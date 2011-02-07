@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  markdownize! :body, tab_width: 2, line_numbers: :table
+  markdownize! :body, tab_width: 2
 
   belongs_to :author, class_name: 'User'
   validates :author, :title, :body, presence: true
