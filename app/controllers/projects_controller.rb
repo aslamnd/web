@@ -6,6 +6,9 @@ class ProjectsController < ApplicationController
   def show
     @projects = Project.where(category: params[:work_category_id]).order('created_at DESC')
     @project = params[:id] ? Project.find(params[:id]) : @projects.first
+    index = @projects.index(@project)
+    @previous = @projects[index - 1] if index > 0
+    @next = @projects[index + 1] if index <= @projects.count
   end
 
   private

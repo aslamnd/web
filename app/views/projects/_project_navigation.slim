@@ -1,6 +1,13 @@
 nav.examples_nav
-  - @projects.each do |project|
-    - if project == @project
-      = link_to "", project_path(project.category, project), class: :active
-    - else
-      = link_to "", project_path(project.category, project)
+  .prev 
+    -if @previous
+      =link_to 'Previous', project_path(@previous.category, @previous), rel: 'no-follow'
+  .next
+    -if @next
+      =link_to 'Next', project_path(@next.category, @next), rel: 'no-follow'
+  .pagination
+    - @projects.each do |project|
+      - if project == @project
+        = link_to "", project_path(project.category, project), class: :active
+      - else
+        = link_to "", project_path(project.category, project)
