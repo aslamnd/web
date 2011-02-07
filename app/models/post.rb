@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  markdownize! :body
+  markdownize! :body, tab_width: 2, hierarchy: 1
 
   belongs_to :author, class_name: 'User'
   validates :author, :title, :body, presence: true
@@ -13,6 +13,8 @@ class Post < ActiveRecord::Base
   has_friendly_id :title, use_slug: true
 
   mount_uploader :picture, PictureUploader
+
+  scope :ordered, order: 'created_at desc'
 
   scope :from_archive, ->(year, month = nil) do
     year = year.to_i

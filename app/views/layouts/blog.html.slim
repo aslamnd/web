@@ -23,6 +23,8 @@ html
               =link_to 'Our blog', '/'
         #sidebar-blog
           = yield(:sidebar)
+          hr
+          =link_to 'RSS Feed', '/feed.atom', class: 'rss'
       = render :partial => 'layouts/blog_slideshow' 
       footer#footer
     = include_javascripts :application

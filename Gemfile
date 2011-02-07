@@ -5,7 +5,7 @@ gem 'rails', '~> 3.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 # gem 'rack', :git => 'git://github.com/rack/rack.git'
-gem 'arel', :git => 'git://github.com/rails/arel.git'
+gem 'arel'
 gem 'rack-cache', :git => 'git://github.com/codegram/rack-cache.git'
 
 gem 'inherited_resources'
@@ -30,7 +30,8 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'markdownizer', '>= 0.1.3'
+gem 'cells'
+gem 'markdownizer', '>= 0.3.2'
 
 gem 'rest-client'
 gem 'crack'
@@ -38,10 +39,6 @@ gem 'crack'
 # Uploaders
 gem 'carrierwave'
 gem 'mini_magick'
-
-group :development do
-  gem 'livereload', "1.4"
-end
 
 group :test, :development do
   gem 'factory_girl_rails'
