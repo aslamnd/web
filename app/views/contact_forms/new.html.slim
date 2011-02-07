@@ -1,32 +1,46 @@
+-content_for :slideshow do
+  li#contact_slide
+    =image_tag 'slides/business_cards.jpg'
+    headergroup
+      h2 These are our contact cards
+      h3 You can get one by visiting us
+
 h2 Contact us
 p
   | Josep Jaume and Txus met at primary school, when Txus was programming a calculator with BASIC on the sand. Both were interested in computers and programming since they were kids. Many years later (by the end of 2007), Oriol hired them for a web shop where he was working at the moment as a lead developer. Since then it's been three years working together as a team of developers.
 
 hr
-section#contact-form
-  h3 Send us a message
-  =simple_form_for @contact_form, :url => new_contact_form_path do |f|
-    =f.input :name, :placeholder => 'Your name', :label => false
-    =f.input :email, :as => :email, :placeholder => 'you@yourdomain.com', :label => false
-    =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'
-    =f.submit 'Send message'
-aside#contact-details
-  h3 Contact details
-  p
-    strong Address:
-    br
-    | Pl. d’Aurora Bertrana
-    br
-    | Office 19 (2nd floor)
-    br
-    | 08228 Terrassa
-    br
-    | Barcelona (Spain)
-    br
-    =link_to 'See a map', 'http://www.google.com/maps/place?cid=1159346420148185036&q=codegram&hl=en&dtab=0&sll=41.532274,2.034602&sspn=0.071946,0.071946&ie=UTF8&ll=41.58412,1.922951&spn=0,0&z=13'
-  p
-    strong Phone:
-    br
-    | 0034 937 872 194
-    br
-    | 0034 668 823 476 
+#contact
+  section#contact-form
+    h3 Send us a message
+    =simple_form_for @contact_form, :url => new_contact_form_path do |f|
+      =f.input :name, :placeholder => 'Your name', :label => false
+      =f.input :email, :as => :email, :placeholder => 'your@email.com', :label => false
+      =f.input :start_time, :as => :select, :collection => @contact_form.start_times, :prompt => 'When do you want to start your project?', :label => false
+      =f.input :budget, :as => :select, :collection => @contact_form.budgets,  :prompt => 'Please select and estimated budget', :label => false
+      =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'
+      =f.submit 'Send message'
+  aside#contact-details
+    h3 Contact details
+    p
+      strong Address:
+      br
+      | Pl. d’Aurora Bertrana
+      br
+      | Office 19 (2nd floor)
+      br
+      | 08228 Terrassa
+      br
+      | Barcelona (Spain)
+      br
+      =link_to 'See a map', 'http://goo.gl/dIf4I'
+    p
+      strong Phone:
+      br
+      | 0034 937 872 194
+      br
+      | 0034 668 823 476 
+
+hr
+h3 We're on a map
+iframe#contact-map frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.com/maps?q=codegram&amp;sll=41.532274,2.034602&amp;sspn=0.071946,0.071946&amp;ie=UTF8&amp;hl=en&amp;view=map&amp;cid=1159346420148185036&amp;hq=codegram&amp;hnear=&amp;ll=41.534619,2.035711&amp;spn=0.005622,0.01502&amp;z=16&amp;iwloc=A&amp;output=embed"
