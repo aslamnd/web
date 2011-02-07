@@ -1,3 +1,10 @@
+title
+  -if yield(:title).blank?
+    =":codegram - smart web apps"
+  -else
+    ="#{yield(:title)} - :codegram"
+
+meta name="description" content=yield(:meta_description)
 link rel="shortcut icon" href="/favicon.png"
 = include_stylesheets :common, :media => 'all'
 = include_stylesheets :print, :media => 'print'
@@ -5,3 +12,4 @@ link rel="shortcut icon" href="/favicon.png"
 | <!--[if lt IE 9]>
 = javascript_include_tag 'html5'
 | <![endif]-->
+
