@@ -503,7 +503,7 @@ body .bottom {
 }
 /* line 8, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 body .showgrid {
-  background: url('/images/grid.png?1296484963');
+  background: url('/images/grid.png?1296227363');
 }
 /* line 4, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 body .error {
@@ -848,7 +848,7 @@ html body h4 {
 /* line 29, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
 #blog #sidebar-blog .tags ul li {
   padding-left: 14px;
-  background: url('/images/bullet.png?1296835548') no-repeat 4px 6px;
+  background: url('/images/bullet.png?1296839495') no-repeat 4px 6px;
   list-style-type: none;
 }
 /* line 65, ../../app/stylesheets/partials/_header.sass */
@@ -2175,21 +2175,44 @@ html body #content section.twitter aside.more a:active {
   margin-bottom: 1em;
 }
 /* line 14, ../../app/stylesheets/partials/_blog.sass */
+.post .markdownizer_code {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 18, ../../app/stylesheets/partials/_blog.sass */
+.post .markdownizer_code h5 {
+  position: absolute;
+  background: white;
+  padding: 0px 10px;
+  top: -0.8em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  left: 10px;
+  margin: 0px;
+  line-height: 1.5em;
+  color: #999999;
+  font-weight: normal;
+}
+/* line 31, ../../app/stylesheets/partials/_blog.sass */
 .post .CodeRay {
-  border: none;
+  border: 1px solid #dddddd;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 12px;
   background-color: white;
 }
 
-<<<<<<< HEAD
-/* line 22, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 19, ../../app/stylesheets/partials/_blog.sass */
+/* line 40, ../../app/stylesheets/partials/_blog.sass */
 #blog #sidebar-blog .archive h4 {
   font-weight: bold;
 }
-/* line 21, ../../app/stylesheets/partials/_blog.sass */
+/* line 42, ../../app/stylesheets/partials/_blog.sass */
 #blog #sidebar-blog .archive ul {
   list-style: none;
   padding: 0px;
@@ -2201,89 +2224,65 @@ html body #content section.twitter aside.more a:active {
   margin-left: 0px;
 }
 
-/* line 26, ../../app/stylesheets/partials/_blog.sass */
+/* line 47, ../../app/stylesheets/partials/_blog.sass */
 #blog #sidebar-blog a {
   color: #db2e34;
   text-decoration: none;
 }
-/* line 29, ../../app/stylesheets/partials/_blog.sass */
+/* line 50, ../../app/stylesheets/partials/_blog.sass */
 #blog #sidebar-blog a.rss {
   padding: 2px 0px 2px 22px;
   margin: -2px 0;
   background-repeat: no-repeat;
   background-position: left center;
-  background-image: url('/images/link_icons/feed.png?1297096607');
+  background-image: url('/images/link_icons/feed.png?1297101259');
 }
 
-/* line 33, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 54, ../../app/stylesheets/partials/_blog.sass */
 .post-body h2, .post-body h3, .post-body h4, .post-body h5 {
   color: #3d3d3d;
   margin-top: 25px;
 }
 
-<<<<<<< HEAD
-/* line 26, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 37, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 58, ../../app/stylesheets/partials/_blog.sass */
 .post-body {
   color: #5f5f5f;
   padding-bottom: 20px;
 }
 
-<<<<<<< HEAD
-/* line 30, ../../app/stylesheets/partials/_blog.sass */
+/* line 62, ../../app/stylesheets/partials/_blog.sass */
 .post-metadata {
   position: absolute;
   top: 15px;
   right: 0px;
   font-size: 0.8em;
   color: #818181;
-=======
-/* line 41, ../../app/stylesheets/partials/_blog.sass */
-.post-date {
-  margin-top: -45px;
-  margin-bottom: 20px;
->>>>>>> master
   text-align: right;
 }
-/* line 37, ../../app/stylesheets/partials/_blog.sass */
+/* line 69, ../../app/stylesheets/partials/_blog.sass */
 .post-metadata .author {
   color: #3d3d3d;
 }
-/* line 39, ../../app/stylesheets/partials/_blog.sass */
+/* line 71, ../../app/stylesheets/partials/_blog.sass */
 .post-metadata .date {
   color: #3d3d3d;
 }
 
-<<<<<<< HEAD
-/* line 42, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 47, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 74, ../../app/stylesheets/partials/_blog.sass */
 .post-tagline {
   padding: 10px;
   background-color: #f8f8f8;
   font-size: 1.4em;
 }
 
-<<<<<<< HEAD
-/* line 48, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 53, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 80, ../../app/stylesheets/partials/_blog.sass */
 .dsq-post-area h3, #dsq-comments-title h3 {
   font-size: 22px;
   font-weight: normal;
   margin-bottom: 5px;
 }
 
-<<<<<<< HEAD
-/* line 53, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 58, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 85, ../../app/stylesheets/partials/_blog.sass */
 .dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button {
   outline: none;
   display: -moz-inline-box;
@@ -2345,32 +2344,20 @@ html body #content section.twitter aside.more a:active {
   box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
 }
 
-<<<<<<< HEAD
-/* line 58, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 63, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 90, ../../app/stylesheets/partials/_blog.sass */
 .dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper,
 .dsq-content .dsq-input-wrapper {
   width: 695px;
   height: 70px;
   background-color: lime;
 }
-<<<<<<< HEAD
-/* line 63, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 68, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 95, ../../app/stylesheets/partials/_blog.sass */
 .dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper textarea,
 .dsq-content .dsq-input-wrapper textarea {
   background-color: lime;
 }
 
-<<<<<<< HEAD
-/* line 65, ../../app/stylesheets/partials/_blog.sass */
-=======
-/* line 70, ../../app/stylesheets/partials/_blog.sass */
->>>>>>> master
+/* line 97, ../../app/stylesheets/partials/_blog.sass */
 .dsq-community-preview {
   border-bottom: 1px dotted #cccccc;
   background-color: blue;
