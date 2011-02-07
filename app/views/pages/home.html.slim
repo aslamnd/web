@@ -19,13 +19,7 @@ section#home
     section.right
       h3 Our recent work
       figure.snapshot
-        a href='/work/projects/jamibia'
-          =image_tag 'screenshots/jamibia.jpg'
-          span.caption-bg
-          span.caption
-            blockquote
-              h4 Jamibia
-              p Developed in 48 hours
+        = render_cell :project, :latest
         
       aside.more
         a href='/work' Explore our projects

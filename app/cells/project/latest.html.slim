@@ -1,0 +1,7 @@
+a href="#{project_path(@project.category, @project)}"
+  =thumb_screenshot_for(@project)
+  span.caption-bg
+  span.caption
+    blockquote
+      h4 = @project.title
+      h5 = @project.url

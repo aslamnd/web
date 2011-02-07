@@ -10,5 +10,5 @@ article.post
     h3.post-tagline
       = post.tagline
   .post-body
+    = image_tag(post.picture_url) if post.picture?
     = post.rendered_body.html_safe
-  = image_tag(post.picture_url) if post.picture?

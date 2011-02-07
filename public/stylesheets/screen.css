@@ -2117,32 +2117,41 @@ html body #content nav .pagination {
   margin: 0px;
 }
 /* line 22, ../../app/stylesheets/partials/_home.sass */
+#home section figure h5 {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #db2e34;
+  display: block;
+  line-height: 2.4em;
+  margin: 0px;
+}
+/* line 29, ../../app/stylesheets/partials/_home.sass */
 #home section figure p {
   font-size: 0.9em;
 }
-/* line 25, ../../app/stylesheets/partials/_home.sass */
+/* line 32, ../../app/stylesheets/partials/_home.sass */
 #home section.blog h4 {
   font-size: 1em;
   margin: 0px;
   padding: 0px;
 }
-/* line 29, ../../app/stylesheets/partials/_home.sass */
+/* line 36, ../../app/stylesheets/partials/_home.sass */
 #home section.blog .date {
   font-size: 0.9em;
   margin-bottom: 5px;
 }
 
-/* line 35, ../../app/stylesheets/partials/_home.sass */
+/* line 42, ../../app/stylesheets/partials/_home.sass */
 html body #content a {
   color: #db2e34;
   text-decoration: none;
 }
-/* line 38, ../../app/stylesheets/partials/_home.sass */
+/* line 45, ../../app/stylesheets/partials/_home.sass */
 html body #content section.blog, html body #content section.twitter {
   min-height: 330px;
   *height: 330px;
 }
-/* line 42, ../../app/stylesheets/partials/_home.sass */
+/* line 49, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul {
   list-style: none;
   padding: 0px;
@@ -2154,19 +2163,19 @@ html body #content section.twitter ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 46, ../../app/stylesheets/partials/_home.sass */
+/* line 53, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul li {
   overflow: hidden;
   border-top: 1px dotted #cccccc;
   padding-top: 10px;
   margin-bottom: 10px;
 }
-/* line 51, ../../app/stylesheets/partials/_home.sass */
+/* line 58, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul li.tweet_first {
   border-top: none;
   padding-top: 0px;
 }
-/* line 54, ../../app/stylesheets/partials/_home.sass */
+/* line 61, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_avatar {
   display: inline;
   float: left;
@@ -2178,7 +2187,7 @@ html body #content section.twitter ul .tweet_avatar {
 * html html body #content section.twitter ul .tweet_avatar {
   overflow-x: hidden;
 }
-/* line 57, ../../app/stylesheets/partials/_home.sass */
+/* line 64, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_time, html body #content section.twitter ul .tweet_text {
   display: inline;
   float: left;
@@ -2189,15 +2198,15 @@ html body #content section.twitter ul .tweet_time, html body #content section.tw
 * html html body #content section.twitter ul .tweet_time, * html html body #content section.twitter ul .tweet_text {
   overflow-x: hidden;
 }
-/* line 59, ../../app/stylesheets/partials/_home.sass */
+/* line 66, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_time {
   font-size: 0.8em;
 }
-/* line 61, ../../app/stylesheets/partials/_home.sass */
+/* line 68, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_time a {
   color: #999999;
 }
-/* line 66, ../../app/stylesheets/partials/_home.sass */
+/* line 73, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter aside.more a {
   outline: none;
   display: -moz-inline-box;
@@ -2480,8 +2489,13 @@ html body #content section.twitter aside.more a:active {
   color: #5f5f5f;
   padding-bottom: 20px;
 }
+/* line 61, ../../app/stylesheets/partials/_blog.sass */
+.post-body img {
+  float: right;
+  margin-left: 15px;
+}
 
-/* line 62, ../../app/stylesheets/partials/_blog.sass */
+/* line 65, ../../app/stylesheets/partials/_blog.sass */
 .post-metadata {
   position: absolute;
   top: 15px;
@@ -2490,30 +2504,30 @@ html body #content section.twitter aside.more a:active {
   color: #818181;
   text-align: right;
 }
-/* line 69, ../../app/stylesheets/partials/_blog.sass */
+/* line 72, ../../app/stylesheets/partials/_blog.sass */
 .post-metadata .author {
   color: #3d3d3d;
 }
-/* line 71, ../../app/stylesheets/partials/_blog.sass */
+/* line 74, ../../app/stylesheets/partials/_blog.sass */
 .post-metadata .date {
   color: #3d3d3d;
 }
 
-/* line 74, ../../app/stylesheets/partials/_blog.sass */
+/* line 77, ../../app/stylesheets/partials/_blog.sass */
 .post-tagline {
   padding: 10px;
   background-color: #f8f8f8;
   font-size: 1.4em;
 }
 
-/* line 80, ../../app/stylesheets/partials/_blog.sass */
+/* line 83, ../../app/stylesheets/partials/_blog.sass */
 .dsq-post-area h3, #dsq-comments-title h3 {
   font-size: 22px;
   font-weight: normal;
   margin-bottom: 5px;
 }
 
-/* line 85, ../../app/stylesheets/partials/_blog.sass */
+/* line 88, ../../app/stylesheets/partials/_blog.sass */
 .dsq-post-area .dsq-post-footer button.dsq-button#dsq-post-button {
   outline: none;
   display: -moz-inline-box;
@@ -2575,20 +2589,20 @@ html body #content section.twitter aside.more a:active {
   box-shadow: inset 0 0 8px 4px #9e5f00, 0 1px 0 0 #b97a00;
 }
 
-/* line 90, ../../app/stylesheets/partials/_blog.sass */
+/* line 93, ../../app/stylesheets/partials/_blog.sass */
 .dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper,
 .dsq-content .dsq-input-wrapper {
   width: 695px;
   height: 70px;
   background-color: lime;
 }
-/* line 95, ../../app/stylesheets/partials/_blog.sass */
+/* line 98, ../../app/stylesheets/partials/_blog.sass */
 .dsq-textarea div.dsq-textarea-wrapper#dsq-textarea-wrapper textarea,
 .dsq-content .dsq-input-wrapper textarea {
   background-color: lime;
 }
 
-/* line 97, ../../app/stylesheets/partials/_blog.sass */
+/* line 100, ../../app/stylesheets/partials/_blog.sass */
 .dsq-community-preview {
   border-bottom: 1px dotted #cccccc;
   background-color: blue;
