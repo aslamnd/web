@@ -1,0 +1,15 @@
+= simple_form_for [:admin, resource] do |form|
+  = form.input :title
+  = form.input :url
+
+  = form.input :description, as: :text
+  = form.input :extended_description, as: :text, label: 'What we did'
+
+  = form.input :quote
+  = form.input :client_name
+
+  = form.input :category, collection: @categories, label_method: :name, value_method: :id, label: 'Category', default: 'Client Work'
+
+  = form.input :promoted
+
+  = form.submit

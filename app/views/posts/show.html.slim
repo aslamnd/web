@@ -1,8 +1,68 @@
-h2 = resource.title
-small by #{resource.author_name}
-.tagline
-  = resource.created_at.to_s(:date)
-  | &mdash;
-  = resource.tagline
-hr
-p = resource.rendered_body.html_safe
+article.post
+  headergroup.post-header
+    h2.post-title = resource.title
+    h3.post-tagline
+      span class="post-date"
+        = resource.created_at.to_s(:date)
+      |  &mdash; 
+      = resource.tagline
+  .post-body
+    = resource.rendered_body.html_safe
+  hr
+#disqus_thread
+javascript:
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'example'; // required: replace example with your forum shortname
+  
+  // The following are highly recommended additional parameters. Remove
+  // the slashes in front to use.
+  // var disqus_identifier = 'unique_dynamic_id_1234';
+  // var disqus_url = 'http://example.com/permalink-to-page.html';
+          
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })(); 
+
+-unless Rails.env.production?
+  javascript:
+    var disqus_developer = 1;
+
+noscript
+  | Please enable JavaScript to view 
+  a href="http://disqus.com/?ref_noscript" commentspowered by Disqus. 
+
+-content_for :sidebar do
+  section.author_info
+    img width='160px' height='80px'
+    h4 #{resource.author_name}
+    p
+      strong Lead programmer
+    p
+      strong He likes: 
+      | Ruby, soft kittens, his car, Niki, big things...
+    a href="#" class="author-more" More from Txus
+  hr
+  section.images
+    h4 Images
+    img width='160px' height='160px'
+  hr
+  section.tags
+    h4 Tags
+    ul
+      li
+        a href="#" activemodel
+      li
+        a href="#" activerecord
+      li
+        a href="#" antiwaste
+      li
+        a href="#" date
+      li
+        a href="#" decimal
+      li
+        a href="#" entrepeneurship
+      li
+        a href="#" gems

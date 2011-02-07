@@ -10,6 +10,13 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the login page/
+      new_user_session_path
+    when /the admin dashboard/
+      admin_path
+
+    when /the work page/
+      work_path
 
     # the following are examples using path_to_pickle
 

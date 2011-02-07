@@ -54,12 +54,4 @@ describe Post do
     end
   end
 
-  describe "class methods" do
-    describe ".per_page" do
-      it 'returns 5' do
-        Post.per_page.should == 5 
-      end
-    end
-  end
-
 end
