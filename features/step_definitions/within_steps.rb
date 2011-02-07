@@ -6,6 +6,10 @@
   # Posts
   'in the posts list' => '#posts',
   'in the first post' => '#posts .post:nth-of-type(1)',
+
+  # Projects
+  'in the projects list' => '#projects',
+  'in the first project' => '#projects .project:nth-of-type(1)',
 }.
 each do |within, selector|
   Then /^(.+) #{within}$/ do |step|

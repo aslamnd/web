@@ -3,7 +3,7 @@
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
-  config.mailer_sender = "please-change-me@config-initializers-devise.com"
+  config.mailer_sender = "web@codegram.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -130,6 +130,8 @@ Devise.setup do |config|
   # If you want to use other strategies, that are not (yet) supported by Devise,
   # you can configure them inside the config.warden block. The example below
   # allows you to setup OAuth, using http://github.com/roman/warden_oauth
+
+  config.omniauth :twitter, YAML::load_file('config/omniauth.yml')["twitter"]["key"], YAML::load_file('config/omniauth.yml')["twitter"]["token"]
   #
   # config.warden do |manager|
   #   manager.oauth(:twitter) do |twitter|

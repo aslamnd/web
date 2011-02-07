@@ -1,0 +1,6 @@
+nav.examples_nav
+  - @projects.each do |project|
+    - if project == @project
+      = link_to "", project_path(project.category, project), class: :active, remote: true
+    - else
+      = link_to "", project_path(project.category, project), remote: true

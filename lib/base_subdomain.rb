@@ -1,7 +1,7 @@
 class BaseSubdomain
   class << self
     def matches?(request)
-      request.subdomain.blank?
+      ['codegram', '', 'www'].include? request.subdomain
     end
   end
 end

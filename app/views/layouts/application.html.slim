@@ -2,57 +2,33 @@
 html
   head
     title :codegram - smart web apps
+    =render :partial => 'layouts/header'
+    title=yield(:title) || ":codegram - smart web apps"
     meta name="keywords" content="web apps"
-    link rel="shortcut icon" href="/favicon.png"
-    = include_stylesheets :common, :media => 'all'
-    = include_stylesheets :print, :media => 'print'
-    = include_javascripts :workspace
-    | <!--[if lt IE 9]>
-    = javascript_include_tag 'html5'
-    | <![endif]-->
 
   body
     #container
-      #sidebar
-        #sidebar-inner
-          header#header
-            h1
-              a href='/'
-                span
-                  | :codegram
-          nav
-            =render_navigation
-          aside
-            h4 Call us
-            | 0034 937 872 194
-            br
-            | 0034 668 823 476 
-          aside
-            h4 Visit us 
-            | Pl. d’Aurora Bertrana
-            br
-            | Office 19 (2nd floor)
-            br
-            | 08228 Terrassa
-            br
-            | Barcelona (Spain)
-            br
-            =link_to 'See a map', 'http://www.google.com/maps/place?cid=1159346420148185036&q=codegram&hl=en&dtab=0&sll=41.532274,2.034602&sspn=0.071946,0.071946&ie=UTF8&ll=41.58412,1.922951&spn=0,0&z=13'
-          aside
-            h4 Contact us
-            = link_to 'info@codegram.com', 'mailto:info@codegram.com'
-          aside
-            h4 Follow us
-            ul
-              li=link_to '@codegram', 'http://twitter.com/codegram'
-              li=link_to '@josepjaume', 'http://twitter.com/josepjaume'
-              li=link_to '@oriolgual', 'http://twitter.com/oriolgual'
-              li=link_to '@txustice', 'http://twitter.com/txustice'
-          #github
-            =link_to 'source code @ github', 'https://github.com/codegram/web'
-      = render :partial => 'layouts/slideshow' 
       #content
         = flash_messages.html_safe
         = yield
-      footer#footer
+      #sidebar
+        #sidebar-inner
+          =render :partial => 'layouts/title'
+          =render :partial => 'layouts/main_sidebar'
+          =render :partial => 'layouts/github_sidebar'
+      = render :partial => 'layouts/slideshow' 
     = include_javascripts :application
+    javascript:
+      $(function(){
+        var content_height = $("#container").height(); 
+        var window_height = $(window).height();
+        var total_height = 0;
+        if(content_height > window_height){
+          total_height = content_height;
+        }else{
+          total_height = window_height;
+        }
+        if($("#sidebar-inner").height() < total_height){
+          $("#sidebar-inner").height(total_height + 5 );
+        }
+      });

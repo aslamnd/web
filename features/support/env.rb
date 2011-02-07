@@ -53,6 +53,20 @@ if(ENV['FAILFAST'])
 end
 
 include Warden::Test::Helpers
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:twitter] = {
+  'uid' => '12345',
+  'provider' => 'twitter',
+  "user_info"=> {"name"=>"Codegram", "email"=>"info@codegram.com", "nickname"=>"codegram"}
+}
+
+
 After do
+<<<<<<< HEAD
   Warden.test_reset!
+  Capybara.default_host = "lvh.me" #for Rack::Test
+  Capybara.app_host = "http://lvh.me:9887" if Capybara.current_driver == :selenium
+=======
+ Warden.test_reset!
+>>>>>>> 3f86e80... Admin signs in
 end
