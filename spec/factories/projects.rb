@@ -8,6 +8,8 @@ Factory.define :project do |p|
   p.description { Faker::Lorem.paragraph }
   p.extended_description { Faker::Lorem.paragraph }
 
+  p.rubygem { %w(date_validator colorant colorblind lastfm).sample }
+
   p.category { WorkCategory.sample }
   p.screenshots { [Factory(:screenshot)] }
 end
