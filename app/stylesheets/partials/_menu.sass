@@ -35,6 +35,8 @@
       padding: 0px
       li
         line-height: 2.3em
+        &#dashboard
+          margin-top: 50px
         &.selected
           a
             background-color: white 
@@ -42,6 +44,17 @@
             +text-shadow(none)
             &:hover
               font-weight: normal
+          li
+            a
+              background-color: transparent
+              color: white
+            &.selected
+              a
+                background-color: white 
+                color: $codegram-color
+                +text-shadow(none)
+                &:hover
+                  font-weight: normal
         &.sign_out 
           margin-top: 20px
           a
