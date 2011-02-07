@@ -9,8 +9,16 @@ class Project < ActiveRecord::Base
 
   has_friendly_id :title, use_slug: true
 
+  scope :open_source, where(category: 'open-source')
+
   def screenshot
     screenshots.first
+  end
+
+  def update_downloads!
+    update_attribute(:downloads,
+                      RubygemsFetcher.get(:downloads,
+                                          rubygem))
   end
 
 end
