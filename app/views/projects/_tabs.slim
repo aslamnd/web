@@ -2,6 +2,6 @@ ul.tabs
   - @categories.each do |category|
     li
     - if category.id == @active
-      = link_to category.name, work_path + '/' + category.id, class: :active, remote: true
+      = link_to category.name, work_path + '/' + category.id, class: :active
     - else
-      = link_to category.name, work_path + '/' + category.id, remote: true
+      = link_to category.name, work_path + '/' + category.id

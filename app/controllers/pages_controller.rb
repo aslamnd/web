@@ -4,7 +4,9 @@ class PagesController < HighVoltage::PagesController
 private
 
   def set_cache_control
-    expires_in 24.hours, :public => true unless user_signed_in?
+    if Rails.env.production?
+      expires_in 24.hours, :public => true unless user_signed_in?
+    end
   end
 
 end
