@@ -13,6 +13,7 @@ CodegramWeb::Application.routes.draw do
   ## Blog subdomain
   constraints subdomain: 'blog' do
     namespace :blog, path: '/' do
+      match '/sitemap.xml' => 'sitemaps#show'
       constraints format: :html do
         match '/' => 'posts#index', as: :blog, via: :get
         match '(/:year)(/:month)' => 'posts#index', as: :posts, via: :get
@@ -34,6 +35,7 @@ CodegramWeb::Application.routes.draw do
     match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
+    match '/sitemap.xml' => 'sitemaps#show'
   end
 
   match '*path' => 'errors#not_found'

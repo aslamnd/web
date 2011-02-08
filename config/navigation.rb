@@ -44,8 +44,8 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :services, 'Services', '/services'
     primary.item :work, 'Work', '/work', highlights_on: /\/work/
     primary.item :about, 'About', '/about'
-    primary.item :blog, 'Blog', "http://blog.#{request.host_with_port}" + blog_posts_path
     primary.item :contact, 'Contact', new_contact_form_path 
+    primary.item :blog, 'Blog', "http://blog.#{request.host_with_port}" + blog_posts_path
 
     primary.item :dashboard, 'Dashboard', admin_path, if: lambda { current_user } do |admin_nav|
       admin_nav.auto_highlight = false

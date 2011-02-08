@@ -38,7 +38,9 @@ CodegramWeb::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.middleware.use Rack::Cache,
-     :verbose => false
+     :verbose => false,
+     :allow_reload => true,
+     :allow_revalidate => true
 
 
   # Enable threaded mode
