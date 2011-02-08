@@ -2272,23 +2272,32 @@ html body #content section.twitter aside.more a:active {
   margin-bottom: 2em;
 }
 
-/* line 1, ../../app/stylesheets/partials/_about.sass */
+/* line 2, ../../app/stylesheets/partials/_about.sass */
+#style h4 {
+  color: #db2e34;
+  font-family: "Klavika";
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* line 9, ../../app/stylesheets/partials/_about.sass */
 #content .founder {
   display: inline;
   float: left;
   margin-right: 20px;
   width: 225px;
 }
-/* line 2, ../../app/stylesheets/partials/_about.sass */
+/* line 10, ../../app/stylesheets/partials/_about.sass */
 #content .founder h3 {
   margin-bottom: 5px;
 }
-/* line 4, ../../app/stylesheets/partials/_about.sass */
+/* line 12, ../../app/stylesheets/partials/_about.sass */
 #content .founder h4 {
   color: #5f5f5f;
   font-weight: bold;
 }
-/* line 7, ../../app/stylesheets/partials/_about.sass */
+/* line 15, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul {
   list-style: none;
   padding: 0px;
@@ -2299,11 +2308,11 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 10, ../../app/stylesheets/partials/_about.sass */
+/* line 18, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li {
   margin-top: 5px;
 }
-/* line 12, ../../app/stylesheets/partials/_about.sass */
+/* line 20, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li a {
   height: 25px;
   padding-left: 30px;
@@ -2312,15 +2321,15 @@ html body #content section.twitter aside.more a:active {
   background-repeat: no-repeat;
   color: #5f5f5f;
 }
-/* line 19, ../../app/stylesheets/partials/_about.sass */
+/* line 27, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li a:hover {
   color: #db2e34;
 }
-/* line 21, ../../app/stylesheets/partials/_about.sass */
+/* line 29, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li.twitter a {
   background-image: url(/images/embed/twitter.png);
 }
-/* line 23, ../../app/stylesheets/partials/_about.sass */
+/* line 31, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li.github a {
   background-image: url(/images/embed/github.png);
 }
@@ -2328,7 +2337,7 @@ html body #content section.twitter aside.more a:active {
 * html #content .founder {
   overflow-x: hidden;
 }
-/* line 27, ../../app/stylesheets/partials/_about.sass */
+/* line 35, ../../app/stylesheets/partials/_about.sass */
 #content .founder.last {
   display: inline;
   float: left;
@@ -2340,7 +2349,7 @@ html body #content section.twitter aside.more a:active {
   overflow-x: hidden;
 }
 
-/* line 30, ../../app/stylesheets/partials/_about.sass */
+/* line 38, ../../app/stylesheets/partials/_about.sass */
 #offices ul {
   list-style: none;
   padding: 0px;
@@ -2353,7 +2362,7 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 35, ../../app/stylesheets/partials/_about.sass */
+/* line 43, ../../app/stylesheets/partials/_about.sass */
 #offices ul li {
   display: inline;
   float: left;
@@ -2364,7 +2373,7 @@ html body #content section.twitter aside.more a:active {
 * html #offices ul li {
   overflow-x: hidden;
 }
-/* line 37, ../../app/stylesheets/partials/_about.sass */
+/* line 45, ../../app/stylesheets/partials/_about.sass */
 #offices ul li.last {
   display: inline;
   float: left;
