@@ -1,15 +1,19 @@
 class ContactForm < MailForm::Base
-  @@budgets = ['Less than 10.000 EUR', '10.000 to 25.000 EUR', '25.000 EUR to 50.000 EUR', 'More than 50.000 EUR']
+  @@services = [ ['Development', ['Web Application', 'Kickstart']], 
+                 ['Consultancy', ['Ruby on Rails Training', 'Rescue Mission']] ]
   @@start_times = [ 'Immediately', 'Within 1 month', 'Within 3 months' ]
+  @@budgets = ['Less than 10.000 EUR', '10.000 to 25.000 EUR', '25.000 EUR to 50.000 EUR', 'More than 50.000 EUR']
 
   attribute :name,       validate: true
   attribute :email,      validate: /[^@]+@[^\.]+\.[\w\.\-]+/
-  attribute :budget,     validate: @@budgets
+  attribute :service,    validate: @@services.map { |services| services.last }.flatten
   attribute :start_time, validate: @@start_times
-  attribute :message
+  attribute :budget,     validate: @@budgets
+  attribute :message,    validate: true
 
-  cattr_reader :budgets
+  cattr_reader :services
   cattr_reader :start_times
+  cattr_reader :budgets
 
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.

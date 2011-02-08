@@ -503,7 +503,11 @@ body .bottom {
 }
 /* line 8, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 body .showgrid {
+<<<<<<< HEAD
   background: url('/images/grid.png?1296227363');
+=======
+  background: url('/images/grid.png?1296484963');
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 }
 /* line 4, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 body .error {
@@ -849,7 +853,11 @@ html body h4 {
 /* line 29, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
 #blog #sidebar-blog .tags ul li {
   padding-left: 14px;
+<<<<<<< HEAD
   background: url('/images/bullet.png?1296839495') no-repeat 4px 6px;
+=======
+  background: url('/images/bullet.png?1296835548') no-repeat 4px 6px;
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
   list-style-type: none;
 }
 /* line 65, ../../app/stylesheets/partials/_header.sass */
@@ -1464,26 +1472,27 @@ html body blockquote {
   float: left;
   margin-right: 0;
   width: 286.25px;
+  margin-top: 6px;
 }
 /* line 138, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #contact-details {
   overflow-x: hidden;
 }
 
-/* line 9, ../../app/stylesheets/partials/_contact.sass */
+/* line 10, ../../app/stylesheets/partials/_contact.sass */
 #contact-form form input.string, #contact-form form textarea, #contact-form form select {
   width: 340px;
 }
-/* line 11, ../../app/stylesheets/partials/_contact.sass */
+/* line 12, ../../app/stylesheets/partials/_contact.sass */
 #contact-form form select {
   width: 358px;
 }
-/* line 13, ../../app/stylesheets/partials/_contact.sass */
+/* line 14, ../../app/stylesheets/partials/_contact.sass */
 #contact-form form span.error {
   width: 340px;
 }
 
-/* line 15, ../../app/stylesheets/partials/_contact.sass */
+/* line 16, ../../app/stylesheets/partials/_contact.sass */
 #contact-map {
   width: 100%;
   height: 350px;
@@ -1499,7 +1508,206 @@ html body form input.string, html body form textarea, html body form select {
   background: #f2f2f2 url(/images/form-background.png) repeat-x;
   padding: 8px;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
   font-size: 12px;
+=======
+  color: #5f5f5f;
+  font-size: 87.5%;
+}
+/* line 65, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h1, html body form input.string h2, html body form input.string h3, html body form input.string h4, html body form input.string h5, html body form input.string h6, html body form textarea h1, html body form textarea h2, html body form textarea h3, html body form textarea h4, html body form textarea h5, html body form textarea h6, html body form select h1, html body form select h2, html body form select h3, html body form select h4, html body form select h5, html body form select h6 {
+  font-weight: normal;
+  color: #4e4e4e;
+}
+/* line 66, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h1 img, html body form input.string h2 img, html body form input.string h3 img, html body form input.string h4 img, html body form input.string h5 img, html body form input.string h6 img, html body form textarea h1 img, html body form textarea h2 img, html body form textarea h3 img, html body form textarea h4 img, html body form textarea h5 img, html body form textarea h6 img, html body form select h1 img, html body form select h2 img, html body form select h3 img, html body form select h4 img, html body form select h5 img, html body form select h6 img {
+  margin: 0;
+}
+/* line 67, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h1, html body form textarea h1, html body form select h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.50em;
+}
+/* line 68, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h2, html body form textarea h2, html body form select h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+/* line 69, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h3, html body form textarea h3, html body form select h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1.00em;
+}
+/* line 70, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h4, html body form textarea h4, html body form select h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+/* line 71, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h5, html body form textarea h5, html body form select h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.50em;
+}
+/* line 72, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string h6, html body form textarea h6, html body form select h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 73, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string p, html body form textarea p, html body form select p {
+  margin: 0 0 1.5em;
+}
+/* line 74, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string p img.left, html body form textarea p img.left, html body form select p img.left {
+  display: inline;
+  float: left;
+  margin: 1.5em 1.5em 1.5em 0;
+  padding: 0;
+}
+/* line 75, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string p img.right, html body form textarea p img.right, html body form select p img.right {
+  display: inline;
+  float: right;
+  margin: 1.5em 0 1.5em 1.5em;
+  padding: 0;
+}
+/* line 77, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string a, html body form textarea a, html body form select a {
+  text-decoration: underline;
+  color: #000099;
+}
+/* line 18, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+html body form input.string a:visited, html body form textarea a:visited, html body form select a:visited {
+  color: #000066;
+}
+/* line 21, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+html body form input.string a:focus, html body form textarea a:focus, html body form select a:focus {
+  color: black;
+}
+/* line 24, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+html body form input.string a:hover, html body form textarea a:hover, html body form select a:hover {
+  color: black;
+}
+/* line 27, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+html body form input.string a:active, html body form textarea a:active, html body form select a:active {
+  color: #cc0099;
+}
+/* line 78, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string blockquote, html body form textarea blockquote, html body form select blockquote {
+  margin: 1.5em;
+  color: #666666;
+  font-style: italic;
+}
+/* line 79, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string strong, html body form textarea strong, html body form select strong {
+  font-weight: bold;
+}
+/* line 80, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string em, html body form textarea em, html body form select em {
+  font-style: italic;
+}
+/* line 81, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string dfn, html body form textarea dfn, html body form select dfn {
+  font-style: italic;
+  font-weight: bold;
+}
+/* line 82, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string sup, html body form input.string sub, html body form textarea sup, html body form textarea sub, html body form select sup, html body form select sub {
+  line-height: 0;
+}
+/* line 83, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string abbr, html body form input.string acronym, html body form textarea abbr, html body form textarea acronym, html body form select abbr, html body form select acronym {
+  border-bottom: 1px dotted #666666;
+}
+/* line 84, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string address, html body form textarea address, html body form select address {
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+/* line 85, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string del, html body form textarea del, html body form select del {
+  color: #666666;
+}
+/* line 86, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string pre, html body form textarea pre, html body form select pre {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+/* line 87, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string pre, html body form input.string code, html body form input.string tt, html body form textarea pre, html body form textarea code, html body form textarea tt, html body form select pre, html body form select code, html body form select tt {
+  font: 1em "andale mono", "lucida console", monospace;
+  line-height: 1.5;
+}
+/* line 88, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string li ul, html body form input.string li ol, html body form textarea li ul, html body form textarea li ol, html body form select li ul, html body form select li ol {
+  margin: 0;
+}
+/* line 89, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string ul, html body form input.string ol, html body form textarea ul, html body form textarea ol, html body form select ul, html body form select ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 3.333em;
+}
+/* line 90, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string ul, html body form textarea ul, html body form select ul {
+  list-style-type: disc;
+}
+/* line 91, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string ol, html body form textarea ol, html body form select ol {
+  list-style-type: decimal;
+}
+/* line 92, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string dl, html body form textarea dl, html body form select dl {
+  margin: 0 0 1.5em 0;
+}
+/* line 93, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string dl dt, html body form textarea dl dt, html body form select dl dt {
+  font-weight: bold;
+}
+/* line 94, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string dd, html body form textarea dd, html body form select dd {
+  margin-left: 1.5em;
+}
+/* line 95, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string table, html body form textarea table, html body form select table {
+  margin-bottom: 1.4em;
+  width: 100%;
+}
+/* line 96, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string th, html body form textarea th, html body form select th {
+  font-weight: bold;
+}
+/* line 97, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string thead th, html body form textarea thead th, html body form select thead th {
+  background: #c3d9ff;
+}
+/* line 98, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string th, html body form input.string td, html body form input.string caption, html body form textarea th, html body form textarea td, html body form textarea caption, html body form select th, html body form select td, html body form select caption {
+  padding: 4px 10px 4px 5px;
+}
+/* line 99, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string tr.even td, html body form textarea tr.even td, html body form select tr.even td {
+  background: #e5ecf9;
+}
+/* line 100, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string tfoot, html body form textarea tfoot, html body form select tfoot {
+  font-style: italic;
+}
+/* line 101, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string caption, html body form textarea caption, html body form select caption {
+  background: #eeeeee;
+}
+/* line 102, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string .quiet, html body form textarea .quiet, html body form select .quiet {
+  color: #929292;
+}
+/* line 103, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+html body form input.string .loud, html body form textarea .loud, html body form select .loud {
+  color: #3d3d3d;
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 }
 /* line 10, ../../app/stylesheets/partials/_forms.sass */
 html body form input.string::-webkit-input-placeholder, html body form input.string::-moz-placeholder, html body form textarea::-webkit-input-placeholder, html body form textarea::-moz-placeholder, html body form select::-webkit-input-placeholder, html body form select::-moz-placeholder {
@@ -2193,24 +2401,41 @@ html body #content section.twitter aside.more a:active {
   margin-bottom: 2em;
 }
 
-/* line 1, ../../app/stylesheets/partials/_about.sass */
+/* line 2, ../../app/stylesheets/partials/_about.sass */
+#style h4 {
+  color: #db2e34;
+  font-family: "Klavika";
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* line 9, ../../app/stylesheets/partials/_about.sass */
 #content .founder {
   display: inline;
   float: left;
   margin-right: 20px;
   width: 225px;
 }
-/* line 2, ../../app/stylesheets/partials/_about.sass */
+/* line 10, ../../app/stylesheets/partials/_about.sass */
 #content .founder h3 {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+<<<<<<< HEAD
 /* line 5, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 12, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #content .founder h4 {
   color: #5f5f5f;
   font-weight: bold;
 }
+<<<<<<< HEAD
 /* line 8, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 15, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #content .founder ul {
   list-style: none;
   padding: 0px;
@@ -2221,11 +2446,19 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
+<<<<<<< HEAD
 /* line 11, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li {
   margin-top: 5px;
 }
 /* line 13, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 18, ../../app/stylesheets/partials/_about.sass */
+#content .founder ul li {
+  margin-top: 5px;
+}
+/* line 20, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #content .founder ul li a {
   height: 25px;
   padding-left: 30px;
@@ -2233,11 +2466,23 @@ html body #content section.twitter aside.more a:active {
   background-position: left center;
   background-repeat: no-repeat;
 }
+<<<<<<< HEAD
 /* line 19, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li.twitter a {
   background-image: url(/images/embed/twitter.png);
 }
 /* line 21, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 27, ../../app/stylesheets/partials/_about.sass */
+#content .founder ul li a:hover {
+  color: #db2e34;
+}
+/* line 29, ../../app/stylesheets/partials/_about.sass */
+#content .founder ul li.twitter a {
+  background-image: url(/images/embed/twitter.png);
+}
+/* line 31, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #content .founder ul li.github a {
   background-image: url(/images/embed/github.png);
 }
@@ -2245,7 +2490,11 @@ html body #content section.twitter aside.more a:active {
 * html #content .founder {
   overflow-x: hidden;
 }
+<<<<<<< HEAD
 /* line 25, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 35, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #content .founder.last {
   display: inline;
   float: left;
@@ -2257,7 +2506,11 @@ html body #content section.twitter aside.more a:active {
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
 /* line 28, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 38, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #offices ul {
   list-style: none;
   padding: 0px;
@@ -2270,7 +2523,11 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
+<<<<<<< HEAD
 /* line 33, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 43, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #offices ul li {
   display: inline;
   float: left;
@@ -2281,7 +2538,11 @@ html body #content section.twitter aside.more a:active {
 * html #offices ul li {
   overflow-x: hidden;
 }
+<<<<<<< HEAD
 /* line 35, ../../app/stylesheets/partials/_about.sass */
+=======
+/* line 45, ../../app/stylesheets/partials/_about.sass */
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 #offices ul li.last {
   display: inline;
   float: left;
@@ -2393,7 +2654,11 @@ html body #content section.twitter aside.more a:active {
   margin: -2px 0;
   background-repeat: no-repeat;
   background-position: left center;
+<<<<<<< HEAD
   background-image: url('/images/link_icons/feed.png?1297101259');
+=======
+  background-image: url('/images/link_icons/feed.png?1297103290');
+>>>>>>> 70517ac5ce0f1843052b2f2f34b54abe59239204
 }
 
 /* line 54, ../../app/stylesheets/partials/_blog.sass */
