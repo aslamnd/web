@@ -1,7 +1,11 @@
+-content_for :meta_description do
+  We are a team of developers from Barcelona. We build web Ruby on Rails applications emphasizing code quality and user experience. 
+
 section#motto
   h2 We are a team of developers from Barcelona.
   h3.tagline We build web Ruby on Rails applications emphasizing code quality and user experience. 
 hr
+
 section#home
   .row
     section.left
@@ -30,12 +34,19 @@ section#home
     section.left.blog
       h3 Learn from our day-to-day
       -Post.ordered.limit(3).each do |post|
-        h4
-          =post_link(post)
-        .date
-          = post.created_at.to_s(:date)
-        p
-          =post.tagline
+        article.post
+          .image
+            -if post.picture?
+              =image_tag post.picture_url, width: 60
+            -else
+              =image_tag "authors/#{post.author.twitter}.jpg", width: 60
+          .content
+            h4
+              =post_link(post, host: true)
+            .date
+              = post.created_at.to_s(:date)
+            p
+              =post.tagline
       aside.more
         a href='#' Read our blog
 

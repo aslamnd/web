@@ -13,7 +13,7 @@ javascript:
     }
     History.Adapter.bind(window,'statechange',function(){
       var State = History.getState(); 
-      $.get(State.url, function(){}, 'script');
+      $.get(State.url + '.js', function(){}, 'script');
     });
   })(window);
 
