@@ -16,7 +16,9 @@ hr
     =simple_form_for @contact_form, :url => new_contact_form_path do |f|
       =f.input :name, :placeholder => 'Your name', :label => false
       =f.input :email, :as => :email, :placeholder => 'your@email.com', :label => false
-      =f.input :start_time, :as => :select, :collection => @contact_form.start_times, :prompt => 'When do you want to start your project?', :label => false
+      =f.input :service, :label => false do
+        =f.select :service, grouped_options_for_select(@contact_form.services), :prompt => 'What service are you interested in?'
+      =f.input :start_time, :as => :select, :collection => @contact_form.start_times, :prompt => 'When do you plan to start your project?', :label => false
       =f.input :budget, :as => :select, :collection => @contact_form.budgets,  :prompt => 'Please select and estimated budget', :label => false
       =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'
       =f.submit 'Send message'
