@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  if true # Rails.env.production?
+  if Rails.env.production?
     rescue_from ActiveRecord::RecordNotFound, :with => :not_found
     rescue_from ActiveRecord::RecordInvalid, :with => :not_found
     rescue_from StandardError, :with => :standard_error
