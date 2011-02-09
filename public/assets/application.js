@@ -1,1 +1,1 @@
-$.easing.bounce=function(e,f,a,i,h){var g=0;if((f/=h/2)<1){return i/2*(f*f*(((g*=(1.525))+1)*f-g))+a}return i/2*((f-=2)*f*(((g*=(1.525))+1)*f+g)+2)+a};$(function(){$("input, textarea").placeholder()});
+$.easing.bounce=function(e,f,a,i,h){var g=0;if((f/=h/2)<1){return i/2*(f*f*(((g*=(1.525))+1)*f-g))+a}return i/2*((f-=2)*f*(((g*=(1.525))+1)*f+g)+2)+a};$(function(){$("input, textarea").placeholder()});$.easing.heavy_bounce=function(e,f,a,i,h){var g=0.8;if((f/=h/2)<1){return i/2*(f*f*(((g*=(1.525))+1)*f-g))+a}return i/2*((f-=2)*f*(((g*=(1.525))+1)*f+g)+2)+a};
