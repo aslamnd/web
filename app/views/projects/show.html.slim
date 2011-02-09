@@ -1,5 +1,6 @@
 nav#tabs=render :partial => 'tabs'
-#projects=render :partial => 'projects'
+#project_parent
+  #projects=render :partial => 'projects'
 hr
 #navigation=render :partial => 'project_navigation'
 
@@ -8,16 +9,20 @@ hr
 javascript:
   (function(window, undefined){
     var History = window.History;
+    History.firstCall = true;
     History.options = {
       hasChangeCheckerDelay: 0
     }
     History.Adapter.bind(window,'statechange',function(){
       var State = History.getState(); 
-      $.get(State.url + '.js', function(){}, 'script');
+      $.get(State.url + '.js' + "?direction=" + direction, function(){}, 'script');
     });
   })(window);
 
+  var direction = undefined;
+
   $('nav#tabs a, #content #navigation a').live('click',function(){
-    History.pushState(null, null, $(this).attr("href"));
+    direction = $(this).attr("data-direction");
+    History.pushState({direction: direction}, null, $(this).attr("href"));
     return false;
   });

@@ -2,6 +2,7 @@ nav#tabs
   border-bottom: 1px solid #e5e5e5
   margin-left: -20px
   margin-top: 10px
+  margin-bottom: 15px
   position: relative
   z-index: 10
   height: 38px
@@ -25,25 +26,33 @@ ul.tabs
     font-family: Klavika, "Helvetica Neue", Helvetica, Arial
     font-size: 18px
     color: #888
+    margin: 1px
     &.active
       border: 1px solid #e5e5e5
         bottom: 1px solid #fff
       color: $codegram-color
+      margin: 0px
+
+#project_parent
+  overflow: hidden
+  height: 550px
+  #projects
+    position: relative
+    left: 0px
+    width: 999em
+    height: 550px
 
 .panes
+  float: left
+  width: 715px
   div#clientWork,
   div#products,
   div#openSource
     overflow: hidden
     div#work_slide
-      position: relative
-      width: 10000px
       article
         float: left
-        width: 715px
         position: relative
-        margin-top: 15px
-        height: 550px
           
         h2
           margin-top: 0
