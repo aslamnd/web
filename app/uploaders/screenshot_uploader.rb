@@ -34,7 +34,7 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process :resize_to_fill => [350, 165]
+    process :resize_to_fill => [345, 171]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

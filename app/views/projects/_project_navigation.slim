@@ -1,13 +1,14 @@
 nav.examples_nav
   .prev 
     -if @previous
-      =link_to 'Previous', project_path(@previous.category, @previous), rel: 'no-follow'
+      =link_to 'Previous', project_path(@previous.category, @previous), :rel => 'no-follow', :'data-direction' => 'left'
   .next
     -if @next
-      =link_to 'Next', project_path(@next.category, @next), rel: 'no-follow'
+      =link_to 'Next', project_path(@next.category, @next), :rel => 'no-follow', :'data-direction' => 'right'
+
   .pagination
-    - @projects.each do |project|
-      - if project == @project
-        = link_to "", project_path(project.category, project), class: :active
-      - else
-        = link_to "", project_path(project.category, project)
+    - @projects.each_with_index do |project, index|
+      - direction = [(index > @index) ? 'right' : 'left']
+      - classes = []
+      - classes << 'active' if project == @project
+      = link_to "", project_path(project.category, project), :class => classes.join(" "), :'data-direction' => direction

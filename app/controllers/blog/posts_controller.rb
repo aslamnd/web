@@ -2,7 +2,7 @@ class Blog::PostsController < ApplicationController
   inherit_resources
   actions :index, :show
 
-  before_filter :set_cache_control
+  before_filter :set_cache_control, only: 'show'
   
   layout 'blog'
 
@@ -21,12 +21,6 @@ class Blog::PostsController < ApplicationController
   end
 
   private
-
-  def set_cache_control
-    if Rails.env.production?
-      expires_in 24.hours, :public => true unless user_signed_in?
-    end
-  end
 
   def collection
     (params[:year] ? end_of_association_chain.from_archive(params[:year],
