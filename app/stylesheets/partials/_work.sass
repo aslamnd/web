@@ -86,15 +86,17 @@ ul.tabs
 
 html body #content nav
   .prev, .next
+    a, span
+      width: 50px
+    span
+      +button-codegram-disabled
+      cursor: default
     a
       +button-codegram
-      width: 50px
-    height: 40px
-    width: 100px
     &.prev
       float: left
     &.next
       float: right
   .pagination
-    text-align: center
+    padding: 3px 90px
     width: auto
