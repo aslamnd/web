@@ -704,34 +704,39 @@ html body h4 {
   min-height: 100%;
   position: relative;
 }
-/* line 6, ../../app/stylesheets/partials/_header.sass */
-#sidebar header {
-  padding-top: 60px;
+
+/* line 7, ../../app/stylesheets/partials/_header.sass */
+header#header {
+  position: absolute;
+  z-index: 30;
+  top: 60px;
 }
-/* line 8, ../../app/stylesheets/partials/_header.sass */
-#sidebar header h1 {
+/* line 11, ../../app/stylesheets/partials/_header.sass */
+header#header h1 {
+  left: 20px;
+  padding-top: 60px;
   margin: 0px;
   padding: 0px;
   padding-left: 20px;
   color: white;
 }
-/* line 9, ../../app/stylesheets/partials/_header.sass */
-#sidebar header h1 a {
+/* line 14, ../../app/stylesheets/partials/_header.sass */
+header#header h1 a {
   display: block;
   width: 134px;
   height: 115px;
   background: url(../images/embed/logo-plain.png) no-repeat;
 }
-/* line 16, ../../app/stylesheets/partials/_header.sass */
-#sidebar header h1 span {
+/* line 21, ../../app/stylesheets/partials/_header.sass */
+header#header h1 span {
   display: none;
 }
 
-/* line 22, ../../app/stylesheets/partials/_header.sass */
+/* line 27, ../../app/stylesheets/partials/_header.sass */
 #blog #sidebar-inner {
   height: 260px;
 }
-/* line 25, ../../app/stylesheets/partials/_header.sass */
+/* line 30, ../../app/stylesheets/partials/_header.sass */
 #blog #sidebar-inner header h2 {
   position: absolute;
   bottom: 0px;
@@ -740,7 +745,7 @@ html body h4 {
   margin: 0px;
   padding: 0px;
 }
-/* line 32, ../../app/stylesheets/partials/_header.sass */
+/* line 37, ../../app/stylesheets/partials/_header.sass */
 #blog #sidebar-inner header h2 a {
   display: block;
   background-color: #f2f2f2;
@@ -749,7 +754,7 @@ html body h4 {
   text-shadow: none;
   text-decoration: none;
 }
-/* line 39, ../../app/stylesheets/partials/_header.sass */
+/* line 44, ../../app/stylesheets/partials/_header.sass */
 #blog #sidebar-inner header h2 a:hover {
   background-color: #eeeeee;
 }
@@ -762,20 +767,21 @@ html body h4 {
 /* line 4, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner {
   color: white;
+  padding-top: 175px;
   padding-bottom: 20px;
 }
-/* line 8, ../../app/stylesheets/partials/_menu.sass */
+/* line 9, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner h1, #sidebar #sidebar-inner h2, #sidebar #sidebar-inner h3, #sidebar #sidebar-inner h4, #sidebar #sidebar-inner a {
   color: white;
   font-weight: bold;
 }
-/* line 11, ../../app/stylesheets/partials/_menu.sass */
+/* line 12, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside {
   padding-left: 25px;
   font-size: 0.9em;
   margin-bottom: 20px;
 }
-/* line 12, ../../app/stylesheets/partials/_menu.sass */
+/* line 13, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside ul {
   list-style: none;
   padding: 0px;
@@ -786,11 +792,11 @@ html body h4 {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 17, ../../app/stylesheets/partials/_menu.sass */
+/* line 18, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside h4 {
   margin-bottom: 0px;
 }
-/* line 20, ../../app/stylesheets/partials/_menu.sass */
+/* line 21, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner aside a {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -809,13 +815,13 @@ html body h4 {
 #sidebar #sidebar-inner aside a {
   *display: inline;
 }
-/* line 29, ../../app/stylesheets/partials/_menu.sass */
+/* line 30, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav {
   padding-top: 80px;
   padding-left: 20px;
   padding-bottom: 40px;
 }
-/* line 33, ../../app/stylesheets/partials/_menu.sass */
+/* line 34, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul {
   list-style: none;
   padding: 0px;
@@ -826,44 +832,44 @@ html body h4 {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 36, ../../app/stylesheets/partials/_menu.sass */
+/* line 37, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li {
   line-height: 2.3em;
 }
-/* line 39, ../../app/stylesheets/partials/_menu.sass */
+/* line 40, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li#dashboard {
   margin-top: 50px;
 }
-/* line 42, ../../app/stylesheets/partials/_menu.sass */
+/* line 43, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.selected a {
   background-color: white;
   color: #db2e34;
   text-shadow: none;
 }
-/* line 46, ../../app/stylesheets/partials/_menu.sass */
+/* line 47, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.selected a:hover {
   font-weight: normal;
 }
-/* line 49, ../../app/stylesheets/partials/_menu.sass */
+/* line 50, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.selected li a {
   background-color: transparent;
   color: white;
 }
-/* line 53, ../../app/stylesheets/partials/_menu.sass */
+/* line 54, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.selected li.selected a {
   background-color: white;
   color: #db2e34;
   text-shadow: none;
 }
-/* line 57, ../../app/stylesheets/partials/_menu.sass */
+/* line 58, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.selected li.selected a:hover {
   font-weight: normal;
 }
-/* line 59, ../../app/stylesheets/partials/_menu.sass */
+/* line 60, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.sign_out {
   margin-top: 20px;
 }
-/* line 61, ../../app/stylesheets/partials/_menu.sass */
+/* line 62, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul li.sign_out a {
   outline: none;
   display: -moz-inline-box;
@@ -922,7 +928,7 @@ html body h4 {
   -webkit-box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
   box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
 }
-/* line 65, ../../app/stylesheets/partials/_menu.sass */
+/* line 66, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul a {
   padding: 0px 5px;
   font-family: Klavika, "Helvetica Neue", Arial;
@@ -948,7 +954,7 @@ html body h4 {
 #sidebar #sidebar-inner nav ul a {
   *display: inline;
 }
-/* line 74, ../../app/stylesheets/partials/_menu.sass */
+/* line 75, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #sidebar-inner nav ul a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   -moz-transition-property: background-color;
@@ -960,7 +966,7 @@ html body h4 {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 77, ../../app/stylesheets/partials/_menu.sass */
+/* line 78, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #github {
   position: absolute;
   bottom: 0px;
@@ -968,7 +974,7 @@ html body h4 {
   text-align: center;
   padding-bottom: 15px;
 }
-/* line 83, ../../app/stylesheets/partials/_menu.sass */
+/* line 84, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #github a {
   opacity: 0.3;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
@@ -984,7 +990,7 @@ html body h4 {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 88, ../../app/stylesheets/partials/_menu.sass */
+/* line 89, ../../app/stylesheets/partials/_menu.sass */
 #sidebar #github a:hover {
   opacity: 1;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -999,7 +1005,7 @@ html body h4 {
   transition-duration: 0.8s;
 }
 
-/* line 2, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 1, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow {
   width: 1000px;
   position: absolute;
@@ -1008,38 +1014,21 @@ html body h4 {
   top: 0px;
   z-index: 5;
 }
-/* line 3, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 2, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow nav.navi {
   position: absolute;
   z-index: 15;
   bottom: 15px;
   left: 260px;
-  opacity: 0;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
 }
-/* line 11, ../../app/stylesheets/partials/_slideshow.sass */
-#slideshow:hover nav.navi {
-  opacity: 1;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-}
-/* line 14, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 8, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow #slides {
   position: relative;
   overflow: hidden;
   width: 1000px;
   height: 280px;
 }
-/* line 19, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 13, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow #slides headergroup {
   z-index: 20;
   max-width: 250px;
@@ -1050,34 +1039,34 @@ html body h4 {
   padding: 10px 15px;
   background: white;
 }
-/* line 28, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 22, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow #slides headergroup h2 {
   font-size: 1.2em;
   line-height: 1.1em;
   margin: 0px;
   margin-bottom: 5px;
 }
-/* line 33, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 27, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow #slides headergroup h3 {
   font-weight: normal;
   font-size: 1.2em;
   margin: 0px;
 }
-/* line 38, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 32, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow #slides #slide-2 headergroup {
   bottom: 15px;
   top: auto;
 }
-/* line 41, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 35, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow #slides #slide-5 headergroup {
   left: 265px;
   right: auto;
 }
-/* line 45, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 39, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow #slides #slide-black {
   background-color: black;
 }
-/* line 48, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 42, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow ul {
   list-style: none;
   padding: 0px;
@@ -1091,7 +1080,7 @@ html body h4 {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 54, ../../app/stylesheets/partials/_slideshow.sass */
+/* line 48, ../../app/stylesheets/partials/_slideshow.sass */
 #slideshow ul li {
   float: left;
   width: 1000px;
