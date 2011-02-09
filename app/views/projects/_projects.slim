@@ -1,4 +1,9 @@
 -if @project
+  -content_for :meta_description do
+    =@project.quote
+  -content_for :title do
+    =@project.title
+
   .panes
     section#projects
       div#clientWork
@@ -14,11 +19,14 @@
               section.left
                 h2 = @project.title
                 = @project.description
+                -if @project.category != 'open-source'
+                  .visit-site
+                    =link_to 'Visit project site', @project.url, class: 'visit-site'
               section.right
                 -if @project.category == 'open-source'
                   .downloads
                     span.count
-                      | #{@project.downloads}
+                      | #{number_with_delimiter(@project.downloads)}
                     | downloads
                     a.rubygems href="http://rubygems.org/gems/#{@project.rubygem}"
                       | View project at RubyGems

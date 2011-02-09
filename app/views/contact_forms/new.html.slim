@@ -3,23 +3,28 @@
     =image_tag 'slides/business_cards.jpg'
     headergroup
       h2 These are our contact cards
-      h3 You can get one by visiting us
+      h3 You can get one if you come visit us
 
-h2 Contact us
+h2 Contact
 p
-  | Josep Jaume and Txus met at primary school, when Txus was programming a calculator with BASIC on the sand. Both were interested in computers and programming since they were kids. Many years later (by the end of 2007), Oriol hired them for a web shop where he was working at the moment as a lead developer. Since then it's been three years working together as a team of developers.
+  | If you are interested in hiring Codegram or just want to learn more about any of our 
+  = link_to 'services', services_path
+  | , please use the form below. We'll get back to you in our next 
+  = link_to 'pomodoro break', 'http://www.pomodorotechnique.com/'
+  | !
 
 hr
 #contact
   section#contact-form
-    h3 Send us a message
     =simple_form_for @contact_form, :url => new_contact_form_path do |f|
       =f.input :name, :placeholder => 'Your name', :label => false
       =f.input :email, :as => :email, :placeholder => 'your@email.com', :label => false
-      =f.input :start_time, :as => :select, :collection => @contact_form.start_times, :prompt => 'When do you want to start your project?', :label => false
+      =f.input :service, :label => false do
+        =f.select :service, grouped_options_for_select(@contact_form.services), :prompt => 'What service are you interested in?'
+      =f.input :start_time, :as => :select, :collection => @contact_form.start_times, :prompt => 'When do you plan to start your project?', :label => false
       =f.input :budget, :as => :select, :collection => @contact_form.budgets,  :prompt => 'Please select and estimated budget', :label => false
       =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'
-      =f.submit 'Send message'
+      =f.submit 'Submit'
   aside#contact-details
     h3 Contact details
     p

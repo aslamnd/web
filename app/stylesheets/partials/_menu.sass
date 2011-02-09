@@ -29,11 +29,12 @@
   #sidebar-inner nav
     padding-top: 80px
     padding-left: 20px
-    padding-bottom: 60px
+    padding-bottom: 40px
     ul
       +no-bullets
       padding: 0px
       li
+        &#blog
         line-height: 2.3em
         &#dashboard
           margin-top: 50px
@@ -69,6 +70,10 @@
         text-decoration: none
         font-size: 22px
         +inline-block
+        +transition(background-color, 0.8s)
+        &:hover
+          background-color: rgba(255,255,255,0.2)
+          +transition(background-color, 0.2s)
   #github
     position: absolute
     bottom: 0px

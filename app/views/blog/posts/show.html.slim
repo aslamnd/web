@@ -33,33 +33,11 @@ noscript
 
 -content_for :sidebar do
   section.author_info
-    img width='160px' height='80px'
+    =image_tag "authors/#{resource.author.twitter}.jpg", :width => 160, :height => 106
     h4 #{resource.author_name}
     p
-      strong Lead programmer
+      =resource.author.position
     p
-      strong He likes: 
-      | Ruby, soft kittens, his car, Niki, big things...
-    a href="#" class="author-more" More from Txus
-  hr
-  section.images
-    h4 Images
-    img width='160px' height='160px'
-  hr
-  section.tags
-    h4 Tags
-    ul
-      li
-        a href="#" activemodel
-      li
-        a href="#" activerecord
-      li
-        a href="#" antiwaste
-      li
-        a href="#" date
-      li
-        a href="#" decimal
-      li
-        a href="#" entrepeneurship
-      li
-        a href="#" gems
+      a href="http://twitter.com/#{resource.author.twitter}" class="author-more"="Follow in Twitter"
+    p
+      a href="http://github.com/#{resource.author.github}" class="author-more"="Follow in GitHub"

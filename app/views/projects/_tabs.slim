@@ -1,7 +1,10 @@
 ul.tabs
-  - @categories.each do |category|
-    li
+  - @categories.each_with_index do |category, index|
+    -classes = []
+    -direction = 'up'
     - if category.id == @active
-      = link_to category.name, work_path + '/' + category.id, class: :active
-    - else
-      = link_to category.name, work_path + '/' + category.id
+      -@top = true
+      -classes << 'active'
+    -if @top
+      -direction = 'down'
+    = link_to category.name, work_path + '/' + category.id, :class => classes.join(" "), :'data-direction' => direction

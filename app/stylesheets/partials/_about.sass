@@ -1,5 +1,14 @@
+#style
+  h4
+    color: $codegram-color
+    font-family: 'Klavika' 
+    font-size: 1.3em
+    font-weight: bold
+    margin-bottom: 12px
+
 #content .founder
   h3
+    margin-top: 10px
     margin-bottom: 5px
   h4
     color: $font-color
@@ -15,9 +24,6 @@
         display: block
         background-position: left center
         background-repeat: no-repeat
-        color: $font-color
-        &:hover
-          color: $codegram-color
       &.twitter a
         background-image: url(/images/embed/twitter.png) 
       &.github a
@@ -26,6 +32,7 @@
   +column(4)
   &.last
     +column(4,true)
+
 #offices
   ul
     +no-bullets
