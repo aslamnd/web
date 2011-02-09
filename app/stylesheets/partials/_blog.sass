@@ -1,8 +1,10 @@
 .post
   position: relative
+  .title-header
+    overflow: auto
   headergroup
     h2
-      padding-right: 260px
+      margin-bottom: 5px
     h3
       color: $font-color
       font-weight: normal
@@ -36,12 +38,50 @@
     white-space:nowrap
     background-color: #fff
 
+#blog #sidebar-blog
+  padding-left: 30px
+  padding-top: 20px
+  section
+    margin-bottom: 20px
+  hr
+    width: 160px
+    margin-top: 15px
+    margin-bottom: 15px
+  h4
+    font-weight: normal
+    margin-bottom: 5px 
+    margin-top: 5px
+  .author_info
+    h4
+      font-size: 22px
+  strong
+    color: #5f5f5f
+  .author-more
+    +button-codegram
+    width: 128px 
+  .tags ul
+    padding-left: 5px
+    +pretty-bullets("bullet.png")
+    li
+      padding-left: 17px
+    a
+      text-decoration: none
+      color: #5f5f5f
+      margin-bottom: 10px
+      
 #blog #sidebar-blog .archive
   h4
     font-weight: bold
   ul
     +no-bullets
     padding: 0px
+    margin: 0px
+
+.archive-title
+  margin-top: 10px
+  color: $font-color + #444
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial
+  font-size: 1.3em
 
 #blog #sidebar-blog
   a
@@ -63,21 +103,21 @@
     margin-left: 15px
 
 .post-metadata
-  position: absolute 
-  top: 15px
-  right: 0px
   font-size: 0.8em
-  color: $font-color + #222
   text-align: right
+  color: $font-color + #444
   .author
-    color: $font-color - #222
+    color: $font-color
   .date
-    color: $font-color - #222
+    color: $font-color 
+  display: block
+  margin-bottom: 20px
+  margin-top: 0px
 
 .post-tagline
-  padding: 10px
-  background-color: #f8f8f8
+  padding: 15px
   font-size: 1.4em
+  margin-bottom: 0px
 
 .dsq-post-area, #dsq-comments-title
   h3

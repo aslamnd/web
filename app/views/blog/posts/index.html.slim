@@ -2,10 +2,10 @@
   | :codegram blog
 
 -content_for :meta_description do
-  This is the corporate blog of :codegram, a Ruby on Rails web development shop located in Barcelona.
+  | This is the corporate blog of :codegram, a Ruby on Rails web development shop located in Barcelona.
 
 -if params[:month] && params[:year]
-  h3 
+  .archive-title
     -@month = params[:month].to_i
     | Showing posts for #{t('date.month_names')[@month]}, #{params[:year]}
 
@@ -18,5 +18,3 @@
 - else
   | Sorry, there are no posts to show.
 
--content_for :sidebar do
-  =render_cell :blog, :archive
