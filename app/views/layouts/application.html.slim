@@ -6,19 +6,19 @@ html
 
   body
     #container
+      =render :partial => 'layouts/title'
       #content
         = flash_messages.html_safe
         = yield
       #sidebar
         #sidebar-inner
-          =render :partial => 'layouts/title'
           =render :partial => 'layouts/main_sidebar'
           =render :partial => 'layouts/github_sidebar'
       = render :partial => 'layouts/slideshow' 
     = include_javascripts :application
     javascript:
       $(function(){
-        var content_height = $("#container").height(); 
+        var content_height = $("#container").outerHeight(); 
         var window_height = $(window).height();
         var total_height = 0;
         if(content_height > window_height){
@@ -26,7 +26,7 @@ html
         }else{
           total_height = window_height;
         }
-        if($("#sidebar-inner").height() < total_height){
+        if($("#sidebar-inner").outerHeight() < total_height){
           $("#sidebar-inner").height(total_height + 5 );
         }
       });

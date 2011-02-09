@@ -1,4 +1,3 @@
-
 $.easing.bounce = function (x, t, b, c, d) {
 	var s = 0;
 	if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
