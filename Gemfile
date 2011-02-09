@@ -40,9 +40,10 @@ gem 'crack'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'faker'
+
 group :test, :development do
   gem 'factory_girl_rails'
-  gem 'faker'
 end
 
 group :test do
