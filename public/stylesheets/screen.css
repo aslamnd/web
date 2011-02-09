@@ -2025,14 +2025,19 @@ html body #content nav .pagination {
   left: 0px;
 }
 /* line 12, ../../app/stylesheets/partials/_home.sass */
+#home section figure.snapshot {
+  height: 171px;
+  margin-bottom: -10px;
+}
+/* line 15, ../../app/stylesheets/partials/_home.sass */
 #home section figure .caption-bg, #home section figure .caption {
   height: 70px;
 }
-/* line 14, ../../app/stylesheets/partials/_home.sass */
+/* line 17, ../../app/stylesheets/partials/_home.sass */
 #home section figure a {
   text-decoration: none;
 }
-/* line 16, ../../app/stylesheets/partials/_home.sass */
+/* line 19, ../../app/stylesheets/partials/_home.sass */
 #home section figure h4, #home section figure p {
   font-size: 1em;
   font-weight: normal;
@@ -2040,7 +2045,7 @@ html body #content nav .pagination {
   line-height: 1em;
   margin: 0px;
 }
-/* line 22, ../../app/stylesheets/partials/_home.sass */
+/* line 25, ../../app/stylesheets/partials/_home.sass */
 #home section figure h5 {
   font-size: 0.8em;
   font-weight: normal;
@@ -2049,42 +2054,42 @@ html body #content nav .pagination {
   line-height: 2.4em;
   margin: 0px;
 }
-/* line 29, ../../app/stylesheets/partials/_home.sass */
+/* line 32, ../../app/stylesheets/partials/_home.sass */
 #home section figure p {
   font-size: 0.9em;
 }
-/* line 32, ../../app/stylesheets/partials/_home.sass */
+/* line 35, ../../app/stylesheets/partials/_home.sass */
 #home section.blog .image {
   float: left;
   margin-right: 15px;
 }
-/* line 35, ../../app/stylesheets/partials/_home.sass */
+/* line 38, ../../app/stylesheets/partials/_home.sass */
 #home section.blog h4 {
   font-size: 1em;
   margin: 0px;
   padding: 0px;
 }
-/* line 39, ../../app/stylesheets/partials/_home.sass */
+/* line 42, ../../app/stylesheets/partials/_home.sass */
 #home section.blog .date {
   font-size: 0.8em;
   margin-bottom: 5px;
 }
 
-/* line 45, ../../app/stylesheets/partials/_home.sass */
+/* line 48, ../../app/stylesheets/partials/_home.sass */
 html body #content a {
   color: #db2e34;
   text-decoration: none;
 }
-/* line 48, ../../app/stylesheets/partials/_home.sass */
+/* line 51, ../../app/stylesheets/partials/_home.sass */
 html body #content a:hover {
   text-decoration: underline;
 }
-/* line 50, ../../app/stylesheets/partials/_home.sass */
+/* line 53, ../../app/stylesheets/partials/_home.sass */
 html body #content section.blog, html body #content section.twitter {
   min-height: 330px;
   *height: 330px;
 }
-/* line 54, ../../app/stylesheets/partials/_home.sass */
+/* line 57, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul {
   list-style: none;
   padding: 0px;
@@ -2096,19 +2101,19 @@ html body #content section.twitter ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 58, ../../app/stylesheets/partials/_home.sass */
+/* line 61, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul li {
   overflow: hidden;
   border-top: 1px dotted #cccccc;
   padding-top: 10px;
   margin-bottom: 10px;
 }
-/* line 63, ../../app/stylesheets/partials/_home.sass */
+/* line 66, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul li.tweet_first {
   border-top: none;
   padding-top: 0px;
 }
-/* line 66, ../../app/stylesheets/partials/_home.sass */
+/* line 69, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_avatar {
   display: inline;
   float: left;
@@ -2120,7 +2125,7 @@ html body #content section.twitter ul .tweet_avatar {
 * html html body #content section.twitter ul .tweet_avatar {
   overflow-x: hidden;
 }
-/* line 69, ../../app/stylesheets/partials/_home.sass */
+/* line 72, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_time, html body #content section.twitter ul .tweet_text {
   display: inline;
   float: left;
@@ -2131,15 +2136,15 @@ html body #content section.twitter ul .tweet_time, html body #content section.tw
 * html html body #content section.twitter ul .tweet_time, * html html body #content section.twitter ul .tweet_text {
   overflow-x: hidden;
 }
-/* line 71, ../../app/stylesheets/partials/_home.sass */
+/* line 74, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_time {
   font-size: 0.8em;
 }
-/* line 73, ../../app/stylesheets/partials/_home.sass */
+/* line 76, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter ul .tweet_time a {
   color: #999999;
 }
-/* line 78, ../../app/stylesheets/partials/_home.sass */
+/* line 81, ../../app/stylesheets/partials/_home.sass */
 html body #content section.twitter aside.more a {
   outline: none;
   display: -moz-inline-box;
