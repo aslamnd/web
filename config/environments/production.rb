@@ -37,7 +37,6 @@ CodegramWeb::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
-  Sass::Plugin.options[:never_update] = true
 
   config.middleware.use Rack::Cache,
      :verbose => false,
