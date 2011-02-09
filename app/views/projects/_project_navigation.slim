@@ -2,9 +2,13 @@ nav.examples_nav
   .prev 
     -if @previous
       =link_to 'Previous', project_path(@previous.category, @previous), :rel => 'no-follow', :'data-direction' => 'left'
+    -else
+      span.disabled Previous
   .next
     -if @next
       =link_to 'Next', project_path(@next.category, @next), :rel => 'no-follow', :'data-direction' => 'right'
+    -else
+      span.disabled Next
 
   .pagination
     - @projects.each_with_index do |project, index|

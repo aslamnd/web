@@ -1,10 +1,21 @@
 #style
-  h4
-    color: $codegram-color
-    font-family: 'Klavika' 
-    font-size: 1.3em
-    font-weight: bold
-    margin-bottom: 12px
+  article
+    clear: both
+    margin-top: 20px
+    h4
+      color: $codegram-color
+      font-family: 'Klavika' 
+      font-size: 1.3em
+      font-weight: bold
+      margin-bottom: 12px
+    img
+      margin-bottom: 15px
+      &.left
+        float: left
+        margin-right: 15px
+      &.right
+        float: right
+        margin-left: 15px
 
 #content .founder
   h3
@@ -13,6 +24,7 @@
   h4
     color: $font-color
     font-weight: bold
+    height: 51px
   ul
     +no-bullets
     padding: 0px

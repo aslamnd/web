@@ -24,8 +24,8 @@ describe ScreenshotUploader do
   end
 
   context 'the thumb version' do
-    it "should scale down a landscape image to be exactly 350 by 165 pixels" do
-      @uploader.thumb.should have_dimensions(350, 165)
+    it "should scale down a landscape image to be exactly 345 by 171 pixels" do
+      @uploader.thumb.should have_dimensions(345, 171)
     end
   end
 
