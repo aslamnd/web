@@ -503,7 +503,7 @@ body .bottom {
 }
 /* line 8, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 body .showgrid {
-  background: url('/images/grid.png?1296227363');
+  background: url('/images/grid.png?1296484963');
 }
 /* line 4, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 body .error {
@@ -849,7 +849,7 @@ html body h4 {
 /* line 29, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
 #blog #sidebar-blog .tags ul li {
   padding-left: 14px;
-  background: url('/images/bullet.png?1296839495') no-repeat 4px 6px;
+  background: url('/images/bullet.png?1297161904') no-repeat 4px 6px;
   list-style-type: none;
 }
 /* line 65, ../../app/stylesheets/partials/_header.sass */
@@ -2206,32 +2206,51 @@ html body #content section.twitter aside.more a:active {
 }
 
 /* line 2, ../../app/stylesheets/partials/_about.sass */
-#style h4 {
+#style article {
+  clear: both;
+  margin-top: 20px;
+}
+/* line 5, ../../app/stylesheets/partials/_about.sass */
+#style article h4 {
   color: #db2e34;
   font-family: "Klavika";
   font-size: 1.3em;
   font-weight: bold;
   margin-bottom: 12px;
 }
+/* line 11, ../../app/stylesheets/partials/_about.sass */
+#style article img {
+  margin-bottom: 15px;
+}
+/* line 13, ../../app/stylesheets/partials/_about.sass */
+#style article img.left {
+  float: left;
+  margin-right: 15px;
+}
+/* line 16, ../../app/stylesheets/partials/_about.sass */
+#style article img.right {
+  float: right;
+  margin-left: 15px;
+}
 
-/* line 9, ../../app/stylesheets/partials/_about.sass */
+/* line 20, ../../app/stylesheets/partials/_about.sass */
 #content .founder {
   display: inline;
   float: left;
   margin-right: 20px;
   width: 225px;
 }
-/* line 10, ../../app/stylesheets/partials/_about.sass */
+/* line 21, ../../app/stylesheets/partials/_about.sass */
 #content .founder h3 {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-/* line 13, ../../app/stylesheets/partials/_about.sass */
+/* line 24, ../../app/stylesheets/partials/_about.sass */
 #content .founder h4 {
   color: #5f5f5f;
   font-weight: bold;
 }
-/* line 16, ../../app/stylesheets/partials/_about.sass */
+/* line 27, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul {
   list-style: none;
   padding: 0px;
@@ -2242,11 +2261,11 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 19, ../../app/stylesheets/partials/_about.sass */
+/* line 30, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li {
   margin-top: 5px;
 }
-/* line 21, ../../app/stylesheets/partials/_about.sass */
+/* line 32, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li a {
   height: 25px;
   padding-left: 30px;
@@ -2254,11 +2273,11 @@ html body #content section.twitter aside.more a:active {
   background-position: left center;
   background-repeat: no-repeat;
 }
-/* line 27, ../../app/stylesheets/partials/_about.sass */
+/* line 38, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li.twitter a {
   background-image: url(/images/embed/twitter.png);
 }
-/* line 29, ../../app/stylesheets/partials/_about.sass */
+/* line 40, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li.github a {
   background-image: url(/images/embed/github.png);
 }
@@ -2266,7 +2285,7 @@ html body #content section.twitter aside.more a:active {
 * html #content .founder {
   overflow-x: hidden;
 }
-/* line 33, ../../app/stylesheets/partials/_about.sass */
+/* line 44, ../../app/stylesheets/partials/_about.sass */
 #content .founder.last {
   display: inline;
   float: left;
@@ -2278,7 +2297,7 @@ html body #content section.twitter aside.more a:active {
   overflow-x: hidden;
 }
 
-/* line 37, ../../app/stylesheets/partials/_about.sass */
+/* line 48, ../../app/stylesheets/partials/_about.sass */
 #offices ul {
   list-style: none;
   padding: 0px;
@@ -2291,7 +2310,7 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 42, ../../app/stylesheets/partials/_about.sass */
+/* line 53, ../../app/stylesheets/partials/_about.sass */
 #offices ul li {
   display: inline;
   float: left;
@@ -2302,7 +2321,7 @@ html body #content section.twitter aside.more a:active {
 * html #offices ul li {
   overflow-x: hidden;
 }
-/* line 44, ../../app/stylesheets/partials/_about.sass */
+/* line 55, ../../app/stylesheets/partials/_about.sass */
 #offices ul li.last {
   display: inline;
   float: left;
@@ -2414,7 +2433,7 @@ html body #content section.twitter aside.more a:active {
   margin: -2px 0;
   background-repeat: no-repeat;
   background-position: left center;
-  background-image: url('/images/link_icons/feed.png?1297101259');
+  background-image: url('/images/link_icons/feed.png?1297161904');
 }
 
 /* line 54, ../../app/stylesheets/partials/_blog.sass */
