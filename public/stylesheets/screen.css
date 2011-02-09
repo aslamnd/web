@@ -2254,8 +2254,9 @@ html body #content section.twitter aside.more a:active {
 #content .founder h4 {
   color: #5f5f5f;
   font-weight: bold;
+  height: 51px;
 }
-/* line 27, ../../app/stylesheets/partials/_about.sass */
+/* line 28, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul {
   list-style: none;
   padding: 0px;
@@ -2266,11 +2267,11 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 30, ../../app/stylesheets/partials/_about.sass */
+/* line 31, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li {
   margin-top: 5px;
 }
-/* line 32, ../../app/stylesheets/partials/_about.sass */
+/* line 33, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li a {
   height: 25px;
   padding-left: 30px;
@@ -2278,11 +2279,11 @@ html body #content section.twitter aside.more a:active {
   background-position: left center;
   background-repeat: no-repeat;
 }
-/* line 38, ../../app/stylesheets/partials/_about.sass */
+/* line 39, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li.twitter a {
   background-image: url(/images/embed/twitter.png);
 }
-/* line 40, ../../app/stylesheets/partials/_about.sass */
+/* line 41, ../../app/stylesheets/partials/_about.sass */
 #content .founder ul li.github a {
   background-image: url(/images/embed/github.png);
 }
@@ -2290,7 +2291,7 @@ html body #content section.twitter aside.more a:active {
 * html #content .founder {
   overflow-x: hidden;
 }
-/* line 44, ../../app/stylesheets/partials/_about.sass */
+/* line 45, ../../app/stylesheets/partials/_about.sass */
 #content .founder.last {
   display: inline;
   float: left;
@@ -2302,7 +2303,7 @@ html body #content section.twitter aside.more a:active {
   overflow-x: hidden;
 }
 
-/* line 48, ../../app/stylesheets/partials/_about.sass */
+/* line 49, ../../app/stylesheets/partials/_about.sass */
 #offices ul {
   list-style: none;
   padding: 0px;
@@ -2315,7 +2316,7 @@ html body #content section.twitter aside.more a:active {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 53, ../../app/stylesheets/partials/_about.sass */
+/* line 54, ../../app/stylesheets/partials/_about.sass */
 #offices ul li {
   display: inline;
   float: left;
@@ -2326,7 +2327,7 @@ html body #content section.twitter aside.more a:active {
 * html #offices ul li {
   overflow-x: hidden;
 }
-/* line 55, ../../app/stylesheets/partials/_about.sass */
+/* line 56, ../../app/stylesheets/partials/_about.sass */
 #offices ul li.last {
   display: inline;
   float: left;
