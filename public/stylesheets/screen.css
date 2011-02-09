@@ -1921,6 +1921,7 @@ html body #content nav .prev.next, html body #content nav .next.next {
 html body #content nav .pagination {
   padding: 3px 90px;
   width: auto;
+  text-align: center;
 }
 
 /* line 2, ../../app/stylesheets/partials/_home.sass */
