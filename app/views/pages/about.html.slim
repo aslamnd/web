@@ -1,76 +1,98 @@
+-content_for :slideshow do
+  li#contact_slide
+    =image_tag 'slides/codegram_building.jpg'
+    headergroup
+      h2 ZOMG this is shiny
+      h3 Just like us
+  li#contact_slide
+    =image_tag 'slides/codegram_team.jpg'
+    headergroup
+      h2 We like to stare at screens
+      h3 It's the best way to work
+
 section#style
 
   h2 Our style (The Codegram Way)
   p At Codegram we care about software. We are a passionate team of developers concerned about both quality and productivity. And we think developing software is fun when done properly.
   p Throughout our experience, the following tools and standards proved making our clients (and us) happier:
-  h3 Code Quality
-  p 
-   | The only constant is change and software needs to respond well to it. Thus, code quality is a must in our day to day. And we know 100% test coverage 
-   =link_to 'is not enough', 'http://www.exampler.com/testing-com/writings/coverage.pdf'
-   |  &mdash;it is still mandatory though!
-  p 
-   | Through techniques such as 
-   = link_to 'refactoring', 'http://en.wikipedia.org/wiki/Code_refactoring'
-   |  and promoting regular 
-   = link_to 'code reviews', 'https://github.com/features/projects/codereview'
-   |  among our developers, we aim to deliver well-crafted, high quality software. Software that not only works now, but will be extensible and easily maintainable in the future.
 
-  h3 Behavior Driven Development - BDD
-  p 
-    | What exactly does lead to a good software design? We believe in software driven by business value, the so-called 
-    = link_to 'outside-in development', 'http://en.wikipedia.org/wiki/Behavior_Driven_Development#Outside-in'
-    | . It focuses on the 
-    strong why
-    |  &mdash; why does this particular feature serve a customers' interest? To what extent will this other feature make the user experience better?
-  p
-    | We try to focus on the 
-    strong core value
-    |  of your project, delivering the most valuable features first. And we start describing these features, because we don't want to end up implementing something that nobody is going to use. In a way, 
-    = link_to 'code only exists to make tests pass', 'http://japhr.blogspot.com/2010/07/code-should-only-exist-to-make-test.html'
-    |  &mdash; we code 
-    strong just as much
-    |  as needed by the particular feature we're working on.
-  p This leads both to a cleaner design and to less code. And less code is less error-prone software. Actually, we wish we could help you without writing a line of code.
+  article
+    h3 Code Quality
+    = image_tag 'about/quality.jpg', :height => 160, :width => 160, :class => 'right'
+    p 
+     | The only constant is change and software needs to respond well to it. Thus, code quality is a must in our day to day. And we know 100% test coverage 
+     =link_to 'is not enough', 'http://www.exampler.com/testing-com/writings/coverage.pdf'
+     |  &mdash;it is still mandatory though!
+    p 
+     | Through techniques such as 
+     = link_to 'refactoring', 'http://en.wikipedia.org/wiki/Code_refactoring'
+     |  and promoting regular 
+     = link_to 'code reviews', 'https://github.com/features/projects/codereview'
+     |  among our developers, we aim to deliver well-crafted, high quality software. Software that not only works now, but will be extensible and easily maintainable in the future.
 
-  h3 Agile Development
-  p We manage our projects together with the client. We don't believe in specification documents (in a broader sense, we don't even believe in paper). We don't believe in written requirements either &mdash; mainly because they don't exist.
-  p 
-    | Your project needs keep evolving along with user feedback and ever-changing industry demands. We adapt to those needs reducing the overall cost, focusing on the 
-    strong features that matter
-    | . That means we work together not just for you, but with you as well.
-  p 
-    | In order to make all this possible, we embrace iterative development, frequently delivering small releases. These are driven by 
-    = link_to 'user stories', 'http://cuke4ninja.com/sec_cucumber_jargon.html#N10135'
-    | , which serve as documentation for the project.
+  article
+    h3 Behavior Driven Development
+    = image_tag 'about/bdd.jpg', :height => 160, :width => 160, :class => 'left'
+    p 
+      | What exactly does lead to a good software design? We believe in software driven by business value, the so-called 
+      = link_to 'outside-in development', 'http://en.wikipedia.org/wiki/Behavior_Driven_Development#Outside-in'
+      | . It focuses on the 
+      strong why
+      |  &mdash; why does this particular feature serve a customers' interest? To what extent will this other feature make the user experience better?
+    p
+      | We try to focus on the 
+      strong core value
+      |  of your project, delivering the most valuable features first. And we start describing these features, because we don't want to end up implementing something that nobody is going to use. In a way, 
+      = link_to 'code only exists to make tests pass', 'http://japhr.blogspot.com/2010/07/code-should-only-exist-to-make-test.html'
+      |  &mdash; we code 
+      strong just as much
+      |  as needed by the particular feature we're working on.
+    p This leads both to a cleaner design and to less code. And less code is less error-prone software. Actually, we wish we could help you without writing a line of code.
 
-  h4 User Stories
-  p 
-    | User stories are the main tool of translating your ideas into implementable features. You express your ideas in your own language &mdash; your 
-    strong business domain
-    | . We map these into more specific software-related concepts, in tight cooperation with you. This way we always work on valuable features, features that are expressed in your business domain.
-  p This preliminary stage helps you define what you really expect from your project, and it also serves as a guideline for actual code and tests. Plus, these user stories become the project documentation, and since they are tightly related to the code, they are always up to date!
+  article
+    h3 Agile Development
+    = image_tag 'about/pivotal.jpg', :height => 160, :width => 160, :class => 'right'
+    p We manage our projects together with the client. We don't believe in specification documents (in a broader sense, we don't even believe in paper). We don't believe in written requirements either &mdash; mainly because they don't exist.
+    p 
+      | Your project needs keep evolving along with user feedback and ever-changing industry demands. We adapt to those needs reducing the overall cost, focusing on the 
+      strong features that matter
+      | . That means we work together not just for you, but with you as well.
+    p 
+      | In order to make all this possible, we embrace iterative development, frequently delivering small releases. These are driven by 
+      = link_to 'user stories', 'http://cuke4ninja.com/sec_cucumber_jargon.html#N10135'
+      | , which serve as documentation for the project.
 
-  h3 Pair Programming
-  p
-    | We also borrowed some goodness from the 
-    =link_to 'Extreme Programming movement', 'http://www.extremeprogramming.org/'
-    |  &mdash; developing in pairs.
-  p 
-    | This technique is one of the main keys to well-crafted software. Two developers working together produce more reliable, higher quality code, in less time. Through continuous discussion and collaborative coding, better designs and implementations come up.
+    h4 User Stories
+    p 
+      | User stories are the main tool of translating your ideas into implementable features. You express your ideas in your own language &mdash; your 
+      strong business domain
+      | . We map these into more specific software-related concepts, in tight cooperation with you. This way we always work on valuable features, features that are expressed in your business domain.
+    p This preliminary stage helps you define what you really expect from your project, and it also serves as a guideline for actual code and tests. Plus, these user stories become the project documentation, and since they are tightly related to the code, they are always up to date!
 
-  h3 Giving back to the Open Source community
+  article
+    h3 Pair Programming
+    = image_tag 'about/pair.jpg', :height => 160, :width => 160, :class => 'left'
+    p
+      | We also borrowed some goodness from the 
+      =link_to 'Extreme Programming movement', 'http://www.extremeprogramming.org/'
+      |  &mdash; developing in pairs.
+    p 
+      | This technique is one of the main keys to well-crafted software. Two developers working together produce more reliable, higher quality code, in less time. Through continuous discussion and collaborative coding, better designs and implementations come up.
 
-  p We work in the edge of the Ruby software craftsmanship community, continuously revisiting our tools and practices according to both the evolving technology and market.
-  p
-    | Since all the tools we use from the Ruby universe are open source, we 
-    =link_to "give back to the community", 'http://railscasts.com/give_back'
-    |  by periodically contributing to most of the tools we use on a daily basis, such as Ruby, Rails and RSpec. We also develop open source tools which enhance the existing Ruby ecosystem.
-  p
-    | You can check out our open source tools on the 
-    =link_to 'work section', work_path(work_category_id: 'open-source')
-    |  or directly on 
-    =link_to 'our github profile', 'http://github.com/codegram'
-    |  (and fork some of them if you want!).
+  article
+    h3 Giving back to the Open Source community
+    = image_tag 'about/opensource.jpg', :height => 160, :width => 160, :class => 'right'
+    p We work in the edge of the Ruby software craftsmanship community, continuously revisiting our tools and practices according to both the evolving technology and market.
+    p
+      | Since all the tools we use from the Ruby universe are open source, we 
+      =link_to "give back to the community", 'http://railscasts.com/give_back'
+      |  by periodically contributing to most of the tools we use on a daily basis, such as Ruby, Rails and RSpec. We also develop open source tools which enhance the existing Ruby ecosystem.
+    p
+      | You can check out our open source tools on the 
+      =link_to 'work section', work_path(work_category_id: 'open-source')
+      |  or directly on 
+      =link_to 'our github profile', 'http://github.com/codegram'
+      |  (and fork some of them if you want!).
 
 hr 
 
