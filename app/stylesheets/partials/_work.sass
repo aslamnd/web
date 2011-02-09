@@ -6,16 +6,12 @@ nav#tabs
   position: relative
   z-index: 10
   height: 38px
-ul.tabs
+
+#content ul.tabs
   +horizontal-list(false)
   padding-left: 20px
   position: absolute
   z-index: 15
-  li
-    background-color: #fff
-    margin-top: 10px
-    margin-bottom: 5px
-    position: relative
   a
     background-color: #fff
     +inline-block
@@ -27,6 +23,9 @@ ul.tabs
     font-size: 18px
     color: #888
     margin: 1px
+    &:hover
+      text-decoration: none
+      color: $codegram-color
     &.active
       border: 1px solid #e5e5e5
         bottom: 1px solid #fff
