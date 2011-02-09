@@ -6,7 +6,7 @@ website](http://codegram.com).
 Codegram is a team of agile developers offering consulting and training
 services, mainly on Ruby on Rails and related technologies.
 
-#Notes
+#Copyright
 
                              .,,::::,.                                         ,;iX&HBBAG2i;,                   
                         .;2H#@@@@@@@@@@H2;.                                ,iA@@@@#MBHBM#@@@@@As.               
