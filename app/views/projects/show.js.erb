@@ -47,3 +47,8 @@ if(History.firstCall == true){
 
 $("#content #navigation").html("<%=escape_javascript (render :partial => 'project_navigation')%>");
 $("#content #tabs").html("<%=escape_javascript (render :partial => 'tabs')%>");
+$('nav#tabs a, #content #navigation a').click(function(){
+  direction = $(this).attr("data-direction");
+  History.pushState({direction: direction}, null, $(this).attr("href"));
+  return false;
+});

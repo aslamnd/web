@@ -2,7 +2,8 @@ embed_assets: on
 
 javascripts:
   workspace:
-    - public/javascripts/workspace/jquery.tools.min.js
+    - public/javascripts/workspace/jquery.min.js
+    - public/javascripts/workspace/scrollable.js
     - public/javascripts/workspace/**/*.js
   application:
     - public/javascripts/application/application.js
