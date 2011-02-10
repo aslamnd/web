@@ -6,4 +6,8 @@ class ErrorsController < ApplicationController
     render :status => 404
   end
 
+  def standard_error
+    render :status => 500
+  end
+
 end
