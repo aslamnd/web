@@ -25,6 +25,7 @@ CodegramWeb::Application.routes.draw do
 
   ## Base subdomain
   constraints BaseSubdomain do
+
     resource :contact_form,
       :path => 'contact',
       :only => [:new, :create],
