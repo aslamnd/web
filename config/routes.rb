@@ -25,7 +25,6 @@ CodegramWeb::Application.routes.draw do
 
   ## Base subdomain
   constraints BaseSubdomain do
-
     resource :contact_form,
       :path => 'contact',
       :only => [:new, :create],
@@ -37,10 +36,10 @@ CodegramWeb::Application.routes.draw do
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
     match '/sitemap.xml' => 'sitemaps#show'
+    root :to => "pages#show", :id => 'home'
   end
 
-  # match '*path' => 'errors#not_found'
+  match '*path' => 'errors#not_found'
 
-  root :to => "pages#show", :id => 'home'
 
 end
