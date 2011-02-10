@@ -38,7 +38,7 @@ CodegramWeb::Application.routes.draw do
     match '/sitemap.xml' => 'sitemaps#show'
   end
 
-  match '*path' => 'errors#not_found'
+  # match '*path' => 'errors#not_found'
 
   root :to => "pages#show", :id => 'home'
 
