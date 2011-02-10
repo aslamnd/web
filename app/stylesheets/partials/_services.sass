@@ -1,10 +1,13 @@
 #content section.service
   position: relative
   padding-bottom: 0px
-  margin-bottom: 30px
   overflow: auto
   article
-    margin-bottom: 30px
+    padding-bottom: 40px
+  h4
+    font-size: 1.3em
+    margin-bottom: 10px
+    font-family: Klavika, "Helvetica Neue", Helvetica, Arial
   .links a
     position: absolute
     bottom: 0px
@@ -12,16 +15,49 @@
 
   img
     float: left
-    height: 100px
-    width: 100px
+    height: 120px
+    width: 120px
     margin:
       right: 10px
-    -webkit-transform: perspective(900) rotateY(0deg)
-  article:hover img
-    -webkit-transform: perspective(900) rotateY(360deg)
-    +transition(-webkit-transform, 0.6s)
+    +transition(all, 0.8s, ease-in-out)
+    -webkit-opacity: 0.7
+
+  h4
+    +transition(all, 1s)
+
+  article:hover 
+    h4
+      +transition(all, 0.8s, ease-in-out)
+      color: $font-color - #444
+    img
+      +transition(all, 0.8s, ease-in-out)
+      -webkit-opacity: 1
+
+  article#webapplication
+    img
+    &:hover img
+      margin-top: -10px  
+      margin-bottom: 10px
+
+  article#kickstart
+    img
+      -webkit-transform:  rotateZ(0deg) rotateY(0deg)
+    &:hover img
+      -webkit-transform:  rotateZ(20deg) rotateY(0deg)
+
+  article#training
+    img
+      -webkit-transform:  rotateX(0deg)
+    &:hover img
+      -webkit-transform:  rotateX(180deg) 
+
+  article#rescuemission
+    img
+      -webkit-transform:  rotateZ(0deg)
+    &:hover img
+      -webkit-transform:  rotateZ(180deg) 
+
+
   h3
     margin-top: 10px
     margin-bottom: 10px
-.development, .help
-  overflow: hidden

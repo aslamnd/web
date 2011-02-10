@@ -2212,14 +2212,19 @@ html body #content section.twitter aside.more a:active {
 #content section.service {
   position: relative;
   padding-bottom: 0px;
-  margin-bottom: 30px;
   overflow: auto;
 }
-/* line 6, ../../app/stylesheets/partials/_services.sass */
+/* line 5, ../../app/stylesheets/partials/_services.sass */
 #content section.service article {
-  margin-bottom: 30px;
+  padding-bottom: 40px;
 }
-/* line 8, ../../app/stylesheets/partials/_services.sass */
+/* line 7, ../../app/stylesheets/partials/_services.sass */
+#content section.service h4 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
+}
+/* line 11, ../../app/stylesheets/partials/_services.sass */
 #content section.service .links a {
   position: absolute;
   bottom: 0px;
@@ -2280,35 +2285,102 @@ html body #content section.twitter aside.more a:active {
   -webkit-box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
   box-shadow: inset 0 0 8px 4px #9e0000, 0 1px 0 0 #b90c12;
 }
-/* line 13, ../../app/stylesheets/partials/_services.sass */
+/* line 16, ../../app/stylesheets/partials/_services.sass */
 #content section.service img {
   float: left;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   margin-right: 10px;
-  -webkit-transform: perspective(900) rotateY(0deg);
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-opacity: 0.7;
 }
-/* line 20, ../../app/stylesheets/partials/_services.sass */
+/* line 25, ../../app/stylesheets/partials/_services.sass */
+#content section.service h4 {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+/* line 29, ../../app/stylesheets/partials/_services.sass */
+#content section.service article:hover h4 {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  color: #1b1b1b;
+}
+/* line 32, ../../app/stylesheets/partials/_services.sass */
 #content section.service article:hover img {
-  -webkit-transform: perspective(900) rotateY(360deg);
-  -moz-transition-property: -webkit-transform;
-  -webkit-transition-property: -webkit-transform;
-  -o-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -moz-transition-duration: 0.6s;
-  -webkit-transition-duration: 0.6s;
-  -o-transition-duration: 0.6s;
-  transition-duration: 0.6s;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-opacity: 1;
 }
-/* line 23, ../../app/stylesheets/partials/_services.sass */
+/* line 38, ../../app/stylesheets/partials/_services.sass */
+#content section.service article#webapplication:hover img {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+/* line 43, ../../app/stylesheets/partials/_services.sass */
+#content section.service article#kickstart img {
+  -webkit-transform: rotateZ(0deg) rotateY(0deg);
+}
+/* line 45, ../../app/stylesheets/partials/_services.sass */
+#content section.service article#kickstart:hover img {
+  -webkit-transform: rotateZ(20deg) rotateY(0deg);
+}
+/* line 49, ../../app/stylesheets/partials/_services.sass */
+#content section.service article#training img {
+  -webkit-transform: rotateX(0deg);
+}
+/* line 51, ../../app/stylesheets/partials/_services.sass */
+#content section.service article#training:hover img {
+  -webkit-transform: rotateX(180deg);
+}
+/* line 55, ../../app/stylesheets/partials/_services.sass */
+#content section.service article#rescuemission img {
+  -webkit-transform: rotateZ(0deg);
+}
+/* line 57, ../../app/stylesheets/partials/_services.sass */
+#content section.service article#rescuemission:hover img {
+  -webkit-transform: rotateZ(180deg);
+}
+/* line 61, ../../app/stylesheets/partials/_services.sass */
 #content section.service h3 {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-/* line 26, ../../app/stylesheets/partials/_services.sass */
-.development, .help {
-  overflow: hidden;
 }
 
 /* line 1, ../../app/stylesheets/partials/_blog.sass */
