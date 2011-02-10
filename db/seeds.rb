@@ -28,6 +28,24 @@ roger = Factory(:user, name: 'Roger Bacardit', email: 'roger@codegram.com', posi
 roger.user_tokens << UserToken.new(user: roger, provider: 'twitter', uid: '7086462')
 roger.save
 
+
+# Migrating old posts
+Factory(:post,
+        title: 'Date validation with Rails 3',
+        tagline: 'Effortless date validation for your Rails 3 application, ActiveModel style',
+        body: File.read('db/seeds/date-validation-with-rails-3.md'),
+        created_at: Date.parse('2010-04-30'),
+        picture: File.open('db/seeds/images/date-validation-with-rails-3.jpg'),
+        author: oriol)
+
+Factory(:post,
+        title: 'Released Acts as Decimal',
+        tagline: 'Treat your integers as if they were decimals, preserving floating point precision',
+        body: File.read('db/seeds/released-acts-as-decimal.md'),
+        created_at: Date.parse('2010-06-23'),
+        picture: File.open('db/seeds/images/released-acts-as-decimal.png'),
+        author: txus)
+
 unless Rails.env.production?
 
   stendhal_post = Factory(:post,
