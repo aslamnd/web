@@ -12,16 +12,5 @@ Rails.env.test? do
   task default: [:spec, :cucumber]
 end
 
-desc 'Update downloads for all open source projects'
-task update_downloads: :environment do
-  puts 'Updating downloads for all open source projects...'
-  Project.open_source.each do |project|
-    print "\t"
-    print "* #{project.title}\t\t\t\t"
-    project.update_downloads!
-    print project.downloads
-    print "\n"
-  end
-end
 
 CodegramWeb::Application.load_tasks
