@@ -9,35 +9,46 @@ if(History.firstCall == true){
       elem.css("top", "0px");
     }
 
+    function resetProjectSize(container){
+      $('article',container).css('height', project_height);
+      $('article',container).css('width', project_width);
+    }
+
     var container = $("#content div#projects:first");
+    var project_width = $("article.project", container).width();
+    var project_height = $("article.project", container).height();
 
     <% if params[:direction] == 'right' %>
       container.append("<%=escape_javascript (render :partial => 'projects')%>");
+      resetProjectSize(container);
       $(".panes", container).css("clear", "none");
-      container.animate({left: ("-" + ($("article.project", container).width() - 2) + 'px')}, 500, "bounce", function(){
+      container.animate({left: ("-" + (project_width - 2) + 'px')}, 500, "bounce", function(){
         container.children().first().remove();
         resetPosition(container);
       });
     <% elsif params[:direction] == 'left' %>
       container.prepend("<%=escape_javascript (render :partial => 'projects')%>");
+      resetProjectSize(container);
       $(".panes", container).css("clear", "none");
-      container.css("left", ("-" + ($("article.project", container).width() - 2) + 'px'));
+      container.css("left", ("-" + (project_width - 2) + 'px'));
       container.animate({left: "0px"}, 500, "bounce", function(){
         container.children().last().remove();
         resetPosition(container);
       });
     <% elsif params[:direction] == 'up' %>
       container.prepend("<%=escape_javascript (render :partial => 'projects')%>");
-      $(".panes", container).css("clear", "both");
-      container.css("top", ("-" + $(container).height() + 'px'));
+      resetProjectSize(container);
+      $("article.project", container).css("clear", "both");
+      container.css("top", ("-" + project_height + 'px'));
       container.animate({top: "0px"}, 800, "heavy_bounce", function(){
         container.children().last().remove();
         resetPosition(container);
       });
     <% elsif params[:direction] == 'down' %>
       container.append("<%=escape_javascript (render :partial => 'projects')%>");
-      $(".panes", container).css("clear", "both");
-      container.animate({top: ("-" + $(container).height() + 'px')}, 800, "heavy_bounce", function(){
+      resetProjectSize(container);
+      $("article.project", container).css("clear", "both");
+      container.animate({top: ("-" + project_height + 'px')}, 800, "heavy_bounce", function(){
         container.children().first().remove();
         resetPosition(container);
       });
@@ -47,8 +58,4 @@ if(History.firstCall == true){
 
 $("#content #navigation").html("<%=escape_javascript (render :partial => 'project_navigation')%>");
 $("#content #tabs").html("<%=escape_javascript (render :partial => 'tabs')%>");
-$('nav#tabs a, #content #navigation a').click(function(){
-  direction = $(this).attr("data-direction");
-  History.pushState({direction: direction}, null, $(this).attr("href"));
-  return false;
-});
+

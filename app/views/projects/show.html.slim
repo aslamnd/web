@@ -7,16 +7,25 @@ hr
 =javascript_include_tag 'history.js', 'history.adapter.jquery.js'
 
 javascript:
-  (function(window, undefined){
-    var History = window.History;
-    History.firstCall = true;
-    History.options = {
-      hasChangeCheckerDelay: 0
-    }
-    History.Adapter.bind(window,'statechange',function(){
-      var State = History.getState(); 
-      $.get(State.url + '.js' + "?direction=" + direction, function(){}, 'script');
-    });
-  })(window);
+  if(!jQuery.browser.msie==true){
+    (function(window, undefined){
+      var History = window.History;
+      History.firstCall = true;
+      History.options = {
+        hasChangeCheckerDelay: 0
+      }
 
-  var direction = undefined;
+      History.Adapter.bind(window,'statechange',function(){
+        var State = History.getState(); 
+        $.get(State.url + '.js' + "?direction=" + direction, function(){}, 'script');
+      });
+    })(window);
+
+    var direction = undefined;
+
+    $('nav#tabs a, #content #navigation a').live('click',function(){
+        direction = $(this).attr("data-direction");
+        History.pushState({direction: direction}, null, $(this).attr("href"));
+        return false;
+    });
+  }
