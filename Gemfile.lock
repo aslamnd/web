@@ -16,7 +16,8 @@ GIT
 
 GIT
   remote: git://github.com/intridea/omniauth.git
-  revision: 71d639d203762b521709423b023ede9c75156c0a
+  revision: 15a86b6d51db94a864be433744cc88a4dbf80e8a
+  ref: 15a86b6d51db94a864be
   specs:
     oa-core (0.2.0.beta3)
       rack (~> 1.1)

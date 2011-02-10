@@ -11,8 +11,8 @@ gem 'will_paginate', '3.0.pre2'
 
 gem 'slim', :require => 'slim/rails'
 
+gem "oa-oauth", :git => 'git://github.com/intridea/omniauth.git', :ref => '15a86b6d51db94a864be', :require => "omniauth/oauth"
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
-gem "oa-oauth", :require => "omniauth/oauth", git: 'git://github.com/intridea/omniauth.git'
 
 gem 'high_voltage'
 gem 'compass'
