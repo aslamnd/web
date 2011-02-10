@@ -7,10 +7,10 @@
   article.project
     .snapshot
       = big_screenshot_for(@project)
-      .caption-bg
-      .caption
-        blockquote = @project.quote
-        .caption-author = @project.client_name
+      -unless @project.quote.blank?
+        .caption
+          blockquote = @project.quote
+          .caption-author = @project.client_name
     .row
       section.left
         h2 = @project.title
