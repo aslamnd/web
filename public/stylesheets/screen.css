@@ -2353,28 +2353,28 @@ html body #content section.twitter aside.more a:active {
   transition-timing-function: ease-out;
   -webkit-opacity: 1;
 }
-/* line 38, ../../app/stylesheets/partials/_services.sass */
+/* line 39, ../../app/stylesheets/partials/_services.sass */
 #content section.service article#webapplication:hover img {
   margin-top: -15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-/* line 43, ../../app/stylesheets/partials/_services.sass */
+/* line 44, ../../app/stylesheets/partials/_services.sass */
 #content section.service article#kickstart img {
   -webkit-transform: rotateZ(0deg) rotateY(0deg);
 }
-/* line 45, ../../app/stylesheets/partials/_services.sass */
+/* line 46, ../../app/stylesheets/partials/_services.sass */
 #content section.service article#kickstart:hover img {
   -webkit-transform: rotateZ(20deg) rotateY(0deg);
 }
-/* line 49, ../../app/stylesheets/partials/_services.sass */
+/* line 50, ../../app/stylesheets/partials/_services.sass */
 #content section.service article#training img {
   -webkit-transform: rotateX(0deg) rotateY(0deg);
 }
-/* line 51, ../../app/stylesheets/partials/_services.sass */
+/* line 52, ../../app/stylesheets/partials/_services.sass */
 #content section.service article#training:hover img {
   -webkit-transform: rotateX(360deg) rotateY(0deg);
 }
-/* line 55, ../../app/stylesheets/partials/_services.sass */
+/* line 56, ../../app/stylesheets/partials/_services.sass */
 #content section.service article#rescuemission img {
   -webkit-transform: rotateZ(0deg);
   -moz-transition-property: all;
@@ -2390,12 +2390,18 @@ html body #content section.twitter aside.more a:active {
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 58, ../../app/stylesheets/partials/_services.sass */
+/* line 59, ../../app/stylesheets/partials/_services.sass */
 #content section.service article#rescuemission:hover img {
   -webkit-transform: rotateZ(180deg);
 }
-/* line 62, ../../app/stylesheets/partials/_services.sass */
-#content section.service h3 {
+
+/* line 64, ../../app/stylesheets/partials/_services.sass */
+html.no-csstransitions:hover img {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/* line 68, ../../app/stylesheets/partials/_services.sass */
+html.no-csstransitions h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
