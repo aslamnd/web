@@ -1,6 +1,6 @@
 -if @project
   -content_for :meta_description do
-    =@project.quote
+    =@project.description[0..160]
   -content_for :title do
     =@project.title
 

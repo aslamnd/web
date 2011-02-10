@@ -2,7 +2,7 @@
   | :codegram blog
 
 -content_for :meta_description do
-  | This is the corporate blog of :codegram, a Ruby on Rails web development shop located in Barcelona.
+  | This is the corporate blog of :codegram, a team of expert web developers specialized in Ruby on Rails and the Ruby ecosystem located in Terrassa, near Barcelona
 
 -if params[:month] && params[:year]
   .archive-title
@@ -17,4 +17,3 @@
   = will_paginate collection, renderer: PaginationNoFollow
 - else
   | Sorry, there are no posts to show.
-
