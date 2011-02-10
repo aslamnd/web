@@ -5,28 +5,67 @@
 -content_for :title do
   | Services
 
-section.service
+section.service#development
   h2 Development
-  .development
-    article.left
-      /*=image_tag 'services/service.jpg', height: 180, width: 340*/
-      h3 Web application
-      p.left Ratione magni doloribus mollitia aut veritatis inventore. Eaque et ipsam et nihil sed quia cupiditate. Eum rerum sunt perspiciatis dolor asperiores. Voluptatem beatae illum aspernatur.A porro vel ipsum id. Velit aspernatur odit labore facilis quae nemo quasi. Repellat enim sapiente aliquid quidem rem occaecati.Rem numquam quia dolores hic ut est. Ut nihil quia aut delectus quasi. Numquam amet omnis illo repudiandae et id mollitia similique. Rem quibusdam est voluptates eveniet ea.
+  article.left#webapplication
+    /*=image_tag 'services/service.jpg', height: 180, width: 340*/
+    h3 Web application
+    p
+      strong We only build successes. 
+      | We craft high-quality web applications combining scalable technologies with state-of-the-art frameworks such as 
+      = link_to 'Ruby on Rails', 'http://rubyonrails.org'
+      | , with fancy front-ends powered by HTML5, CSS3 and JQuery, among others.
+    p 
+      | Are you starting a 
+      strong web-driven business
+      | ? Do you need an online sales platform to broaden your company's target? Or maybe you need a custom internal application for your company and want to stay away from slow legacy desktop apps? 
+      =link_to 'Get in touch', new_contact_form_path
+      | .
 
-    article.right
-      /*=image_tag 'services/service.jpg', height: 180, width: 340*/
-      h3 Kick start
-      p.right Sit atque eum magni. Soluta fuga temporibus et quam debitis consequatur. Quidem ut quis deserunt odio. Veniam autem ea odio delectus molestias.Placeat ut id dolore et. Laudantium est mollitia dolores rerum ut expedita in. Non animi vero doloribus ullam. Ad facilis laudantium dolorum labore et quia sunt.Sequi ut rerum dolor deserunt. Est similique aut necessitatibus magni sunt accusamus optio quisquam. Distinctio omnis est voluptas. Asperiores voluptatem officia voluptatem et.
+  article.right#kickstart
+    /*=image_tag 'services/service.jpg', height: 180, width: 340*/
+    h3 Kickstart
+    p 
+      strong We love baking express start-ups. 
+      | We help you develop your MVP (Minimum Viable Product) to launch your product right away, benefitting from user feedback from day one. We also 
+      strong help you hire 
+      | your own development team, and train them about your product's internals. After your product's launch, we can also assist you extending the application according to the evolving needs of your userbase.
+    p 
+      strong Lightning fast
+      | . From the first meeting to product launch in 
+      strong 3 weeks 
+      | tops (
+      =link_to 'we already did it in 48 hours', '/work/products/jamibia'
+      | !).
 
-section.service
+section.service#help
   h2 Need help?
-  .help
-    article.left
-      /*=image_tag 'services/service.jpg', height: 180, width: 340*/
-      h3 Ruby on Rails Training
-      p.left Quis ut non voluptatem sequi praesentium. Tempore adipisci et deleniti. Perferendis quo soluta occaecati dolores cumque fugit molestias necessitatibus.Recusandae voluptas minima aut et rerum. Consequatur praesentium quis unde sit facere autem. Excepturi sunt autem ut doloribus sint qui aliquid. Minus ad et aut totam quidem. Perferendis harum eaque aut tempore.Quo adipisci qui dolorem illo. 
+  article.left#training
+    /*=image_tag 'services/service.jpg', height: 180, width: 340*/
+    h3 Ruby on Rails Training
+    p
+      strong We know our craft well.
+      |  Your team can take advantage of it. We provide on-site training sessions on 
+      = link_to 'everything we know', about_path
+      |  and practice on a daily basis. With us, your team will be able to explore and understand Ruby on Rails internals &mdash; they will get familiar with the Ruby software ecosystem and take advantage of it.
+    p
+      | We teach you how to 
+      strong successfully integrate Agile Development 
+      |  techniques into your work environment. We teach all you need to know to boost your developers' quality and efficiency by effectively integrating 
+      strong Behavior Driven Development 
+      | workflow into your day to day.
 
-    article.right
-      /*=image_tag 'services/service.jpg', height: 180, width: 340*/
-      h3 Rescue Mission
-      p.right Illo omnis libero unde est expedita. Ipsum et maiores omnis et saepe. Ad unde ab quia aut suscipit. Id cupiditate iure est earum praesentium ipsum voluptates. Maxime nihil omnis sunt.Culpa et atque in hic qui dolorem. Officia quaerat molestias dolorum. Aut dolorem architecto omnis incidunt deserunt quidem. Aspernatur voluptatem omnis magnam rem in quae.Rerum accusantium vel blanditiis quaerat.
+  article.right#rescuemission
+    /*=image_tag 'services/service.jpg', height: 180, width: 340*/
+    h3 Rescue Mission
+    p 
+      strong 
+        | It all starts with 
+        =link_to 'just a broken window', 'http://en.wikipedia.org/wiki/Broken_windows_theory'
+      | . Old legacy applications that have ended up slowly rotting, becoming unmaintainable, unusable, and dangerous. Even freshly started projects lacking architectural perspective, which ended up becoming a real pain (and a 
+      strong real cost
+      | ) to maintain and extend. All those could use some help.
+    p 
+      | Working with you and your team, we spot weaknesses and smells in your application and help you refactor it and 
+      strong put it back onto the rails 
+      | (no pun intended, we promise). Getting hands dirty and re-engineering existing broken applications is no problem for us, so that your project can meet today's demands on quality and flexibility.

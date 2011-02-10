@@ -2250,19 +2250,18 @@ html body #content section.twitter aside.more a:active {
   overflow-x: hidden;
 }
 
-/* line 2, ../../app/stylesheets/partials/_services.sass */
+/* line 1, ../../app/stylesheets/partials/_services.sass */
+section.service {
+  overflow: hidden;
+}
+/* line 3, ../../app/stylesheets/partials/_services.sass */
 section.service img {
   clear: both;
 }
-/* line 4, ../../app/stylesheets/partials/_services.sass */
+/* line 5, ../../app/stylesheets/partials/_services.sass */
 section.service h3 {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-/* line 7, ../../app/stylesheets/partials/_services.sass */
-.development, .help {
-  overflow: hidden;
 }
 
 /* line 1, ../../app/stylesheets/partials/_blog.sass */
