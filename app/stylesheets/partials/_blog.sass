@@ -1,10 +1,19 @@
+#sidebar header#header h2
+  position: absolute
+  top: 0px
+  left: 0px
+  width: 225px
+  top: 181px
+
 .post
   position: relative
   .title-header
     overflow: auto
+
   headergroup
     h2
       margin-bottom: 5px
+      padding-right: 160px
     h3
       color: $font-color
       font-weight: normal
@@ -31,12 +40,15 @@
       font-weight: normal
 
   .CodeRay
+    border: none
+    background: none
+  pre
     border: 1px solid #ddd
     +border-radius
     margin-bottom: 10px
-    padding: 12px
     white-space:nowrap
     background-color: #fff
+    padding: 12px
 
 #blog #sidebar-blog
   padding-left: 30px
@@ -106,6 +118,12 @@
   font-size: 0.8em
   text-align: right
   color: $font-color + #444
+  position: absolute
+  width: 150px
+  top: 3px
+  right: 0px
+  .author-line .date-line
+    display: block
   .author
     color: $font-color
   .date
@@ -117,7 +135,7 @@
 .post-tagline
   padding: 15px
   font-size: 1.4em
-  margin-bottom: 0px
+  margin-bottom: 10px
 
 .dsq-post-area, #dsq-comments-title
   h3

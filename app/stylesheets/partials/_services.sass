@@ -27,16 +27,16 @@
 
   article:hover 
     h4
-      +transition(all, 0.8s, ease-in-out)
+      +transition(all, 0.8s, ease-out)
       color: $font-color - #444
     img
-      +transition(all, 0.8s, ease-in-out)
+      +transition(all, 0.8s, ease-out)
       -webkit-opacity: 1
 
   article#webapplication
     img
     &:hover img
-      margin-top: -10px  
+      margin-top: -15px  
       margin-bottom: 10px
 
   article#kickstart
@@ -47,13 +47,14 @@
 
   article#training
     img
-      -webkit-transform:  rotateX(0deg)
+      -webkit-transform:  rotateX(0deg) rotateY(0deg)
     &:hover img
-      -webkit-transform:  rotateX(180deg) 
+      -webkit-transform:  rotateX(360deg) rotateY(0deg)
 
   article#rescuemission
     img
       -webkit-transform:  rotateZ(0deg)
+      +transition(all, 0.8s, ease-in-out)
     &:hover img
       -webkit-transform:  rotateZ(180deg) 
 
