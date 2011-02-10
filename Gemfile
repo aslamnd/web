@@ -16,7 +16,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise'
 
 gem 'high_voltage'
 gem 'compass'
-gem 'jammit'
+gem 'jammit-s3'
 gem 'jquery-rails'
 gem 'mail_form'
 gem 'simple_form'
