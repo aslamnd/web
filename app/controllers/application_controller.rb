@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   if Rails.env.production?
     rescue_from ActiveRecord::RecordNotFound, :with => :not_found
     rescue_from ActiveRecord::RecordInvalid, :with => :not_found
-    rescue_from StandardError, :with => :standard_error
   end
 
 private
