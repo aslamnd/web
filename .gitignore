@@ -7,3 +7,4 @@ tmp/**/*
 capybara*
 config/heroku_env.rb
 public/uploads
+tmp/

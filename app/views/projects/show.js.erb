@@ -2,44 +2,53 @@ if(History.firstCall == true){
   $("#content div#projects").first().html("<%=escape_javascript (render :partial => 'projects')%>");
   History.firstCall = false;
 }else{
-  container = $("#content div#projects").first();
-  <% if params[:direction] == 'right' %>
-    container.append("<%=escape_javascript (render :partial => 'projects')%>");
-    $(".panes", container).css("clear", "none");
-    container.animate({left: ("-" + ($("article.project", container).width() - 2) + 'px')}, 500, "bounce", function(){
-      container.children().first().remove();
-      resetPosition();
-    });
-  <% elsif params[:direction] == 'left' %>
-    container.prepend("<%=escape_javascript (render :partial => 'projects')%>");
-    $(".panes", container).css("clear", "none");
-    container.css("left", ("-" + ($("article.project", container).width() - 2) + 'px'));
-    container.animate({left: "0px"}, 500, "bounce", function(){
-      container.children().last().remove();
-      resetPosition();
-    });
-  <% elsif params[:direction] == 'up' %>
-    container.prepend("<%=escape_javascript (render :partial => 'projects')%>");
-    $(".panes", container).css("clear", "both");
-    container.css("top", ("-" + $(container).height() + 'px'));
-    container.animate({top: "0px"}, 800, "heavy_bounce", function(){
-      container.children().last().remove();
-      resetPosition();
-    });
-  <% elsif params[:direction] == 'down' %>
-    container.append("<%=escape_javascript (render :partial => 'projects')%>");
-    $(".panes", container).css("clear", "both");
-    container.animate({top: ("-" + $(container).height() + 'px')}, 800, "heavy_bounce", function(){
-      container.children().first().remove();
-      resetPosition();
-    });
-  <% end %>
-  function resetPosition(){
-  container.css("left", "0px");
-  container.css("top", "0px");
-  }
-}
+  (function(){
 
+    function resetPosition(elem){
+      elem.css("left", "0px");
+      elem.css("top", "0px");
+    }
+
+    var container = $("#content div#projects:first");
+
+    <% if params[:direction] == 'right' %>
+      container.append("<%=escape_javascript (render :partial => 'projects')%>");
+      $(".panes", container).css("clear", "none");
+      container.animate({left: ("-" + ($("article.project", container).width() - 2) + 'px')}, 500, "bounce", function(){
+        container.children().first().remove();
+        resetPosition(container);
+      });
+    <% elsif params[:direction] == 'left' %>
+      container.prepend("<%=escape_javascript (render :partial => 'projects')%>");
+      $(".panes", container).css("clear", "none");
+      container.css("left", ("-" + ($("article.project", container).width() - 2) + 'px'));
+      container.animate({left: "0px"}, 500, "bounce", function(){
+        container.children().last().remove();
+        resetPosition(container);
+      });
+    <% elsif params[:direction] == 'up' %>
+      container.prepend("<%=escape_javascript (render :partial => 'projects')%>");
+      $(".panes", container).css("clear", "both");
+      container.css("top", ("-" + $(container).height() + 'px'));
+      container.animate({top: "0px"}, 800, "heavy_bounce", function(){
+        container.children().last().remove();
+        resetPosition(container);
+      });
+    <% elsif params[:direction] == 'down' %>
+      container.append("<%=escape_javascript (render :partial => 'projects')%>");
+      $(".panes", container).css("clear", "both");
+      container.animate({top: ("-" + $(container).height() + 'px')}, 800, "heavy_bounce", function(){
+        container.children().first().remove();
+        resetPosition(container);
+      });
+    <% end %>
+  })();
+}
 
 $("#content #navigation").html("<%=escape_javascript (render :partial => 'project_navigation')%>");
 $("#content #tabs").html("<%=escape_javascript (render :partial => 'tabs')%>");
+$('nav#tabs a, #content #navigation a').click(function(){
+  direction = $(this).attr("data-direction");
+  History.pushState({direction: direction}, null, $(this).attr("href"));
+  return false;
+});
