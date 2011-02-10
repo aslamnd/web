@@ -1,24 +1,35 @@
 nav
   =render_navigation
-aside
-  h4 Call us
-  | 0034 937 872 194
-  br
-  | 0034 668 823 476 
-aside
-  h4 Visit us 
-  | Pl. d’Aurora Bertrana
-  br
-  | Office 19 (2nd floor)
-  br
-  | 08228 Terrassa
-  br
-  | Barcelona (Spain)
-  br
-  =link_to 'See a map', 'http://goo.gl/dIf4I'
-aside
-  h4 Contact us
-  = link_to 'info@codegram.com', 'mailto:info@codegram.com'
+.vcard
+  aside
+    h4 Call us
+    span.fn.hidden
+      span.given-name Codegram
+    span.tel 0034 937 872 194
+    br
+    | 0034 668 823 476 
+  aside
+    .adr
+      h4 Visit us 
+      span.street-address Pl. d’Aurora Bertrana
+      br
+      span.extended-address Office 19 (2nd floor)
+      br
+      span.postal-code 08228 
+      span.locality Terrassa
+      br
+      span.region Barcelona
+      |  (
+      span.country-name Spain
+      | )
+      br
+    =link_to 'See a map', 'http://goo.gl/dIf4I'
+    span.hidden.photo
+      =link_to 'http://' + request.host_with_port + '/images/logo.png'
+  aside
+    h4 Contact us
+    span.hidden.url http://codegram.com
+    = link_to '<span class="email">info@codegram.com</span>'.html_safe, 'mailto:info@codegram.com'
 aside
   h4 Follow us
   ul

@@ -20,9 +20,3 @@ javascript:
   })(window);
 
   var direction = undefined;
-
-  $('nav#tabs a, #content #navigation a').live('click',function(){
-    direction = $(this).attr("data-direction");
-    History.pushState({direction: direction}, null, $(this).attr("href"));
-    return false;
-  });

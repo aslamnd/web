@@ -503,7 +503,7 @@ body .bottom {
 }
 /* line 8, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 body .showgrid {
-  background: url('/images/grid.png?1296484963');
+  background: url('/images/grid.png?1296227363');
 }
 /* line 4, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 body .error {
@@ -1192,6 +1192,11 @@ html body a {
 }
 
 /* line 20, ../../app/stylesheets/partials/_common.sass */
+.hidden {
+  display: none;
+}
+
+/* line 23, ../../app/stylesheets/partials/_common.sass */
 hr {
   height: 4px;
   margin: 2em 0em;
@@ -1200,7 +1205,7 @@ hr {
   display: block;
 }
 
-/* line 28, ../../app/stylesheets/partials/_common.sass */
+/* line 31, ../../app/stylesheets/partials/_common.sass */
 .notice {
   margin-top: 15px;
   height: 80px;
@@ -1210,7 +1215,7 @@ hr {
   font-size: 1.5em;
 }
 
-/* line 38, ../../app/stylesheets/partials/_common.sass */
+/* line 41, ../../app/stylesheets/partials/_common.sass */
 html body .navi a, html body .examples_nav .pagination a {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -1231,7 +1236,7 @@ html body .navi a, html body .examples_nav .pagination a {
 html body .navi a, html body .examples_nav .pagination a {
   *display: inline;
 }
-/* line 43, ../../app/stylesheets/partials/_common.sass */
+/* line 46, ../../app/stylesheets/partials/_common.sass */
 html body .navi a.active, html body .examples_nav .pagination a.active {
   background-color: #db2e34;
   border-color: #b90c12;
@@ -1240,11 +1245,11 @@ html body .navi a.active, html body .examples_nav .pagination a.active {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 53, ../../app/stylesheets/partials/_common.sass */
+/* line 56, ../../app/stylesheets/partials/_common.sass */
 html body p {
   margin-bottom: 0.8em;
 }
-/* line 55, ../../app/stylesheets/partials/_common.sass */
+/* line 58, ../../app/stylesheets/partials/_common.sass */
 html body pre {
   font-family: monospace;
   font-size: 13px;
@@ -1252,27 +1257,27 @@ html body pre {
   font-variant: normal;
   font-weight: normal;
 }
-/* line 62, ../../app/stylesheets/partials/_common.sass */
+/* line 65, ../../app/stylesheets/partials/_common.sass */
 html body strong {
   color: #4e4e4e;
 }
-/* line 68, ../../app/stylesheets/partials/_common.sass */
+/* line 71, ../../app/stylesheets/partials/_common.sass */
 html body blockquote {
   font-style: normal;
 }
 
-/* line 73, ../../app/stylesheets/partials/_common.sass */
+/* line 76, ../../app/stylesheets/partials/_common.sass */
 .snapshot {
   border: 1px solid #e5e5e5;
   position: relative;
   margin-bottom: 15px;
   overflow: hidden;
 }
-/* line 79, ../../app/stylesheets/partials/_common.sass */
+/* line 82, ../../app/stylesheets/partials/_common.sass */
 .snapshot a:hover h4 {
   text-decoration: none;
 }
-/* line 82, ../../app/stylesheets/partials/_common.sass */
+/* line 85, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption {
   background: rgba(255, 255, 255, 0.85);
   position: absolute;
@@ -1282,7 +1287,7 @@ html body blockquote {
   width: 100%;
   padding-bottom: 10px;
 }
-/* line 90, ../../app/stylesheets/partials/_common.sass */
+/* line 93, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption blockquote {
   margin: 15px;
   font-family: Klavika, "Helvetica Neue", Helvetica, Arial;
@@ -1291,7 +1296,7 @@ html body blockquote {
   color: #555555;
   padding-bottom: 15px;
 }
-/* line 97, ../../app/stylesheets/partials/_common.sass */
+/* line 100, ../../app/stylesheets/partials/_common.sass */
 .snapshot .caption .caption-author {
   position: absolute;
   color: #db2e34;
@@ -1916,6 +1921,7 @@ html body #content nav .prev.next, html body #content nav .next.next {
 html body #content nav .pagination {
   padding: 3px 90px;
   width: auto;
+  text-align: center;
 }
 
 /* line 2, ../../app/stylesheets/partials/_home.sass */
@@ -2421,7 +2427,7 @@ section.service h3 {
 /* line 29, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@codegram-web/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
 #blog #sidebar-blog .tags ul li {
   padding-left: 14px;
-  background: url('/images/bullet.png?1297161904') no-repeat 4px 6px;
+  background: url('/images/bullet.png?1296839495') no-repeat 4px 6px;
   list-style-type: none;
 }
 /* line 65, ../../app/stylesheets/partials/_blog.sass */
@@ -2471,7 +2477,7 @@ section.service h3 {
   margin: -2px 0;
   background-repeat: no-repeat;
   background-position: left center;
-  background-image: url('/images/link_icons/feed.png?1297161904');
+  background-image: url('/images/link_icons/feed.png?1297101259');
 }
 
 /* line 94, ../../app/stylesheets/partials/_blog.sass */
