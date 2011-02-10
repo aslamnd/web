@@ -12,13 +12,6 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
     storage :file
   end
 
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    path = File.join(*("%08d" % model.id).scan(/..../))
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{path}"
-  end
-
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
     "/images/fallback/" + [version_name, "screenshot.jpg"].compact.join('_')
