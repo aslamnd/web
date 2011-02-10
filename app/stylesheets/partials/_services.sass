@@ -1,7 +1,64 @@
-section.service
-  overflow: hidden
+#content section.service
+  position: relative
+  padding-bottom: 0px
+  overflow: auto
+  article
+    padding-bottom: 40px
+  h4
+    font-size: 1.3em
+    margin-bottom: 10px
+    font-family: Klavika, "Helvetica Neue", Helvetica, Arial
+  .links a
+    position: absolute
+    bottom: 0px
+    +button-codegram
+
   img
-    clear: both
+    float: left
+    height: 120px
+    width: 120px
+    margin:
+      right: 10px
+    +transition(all, 0.8s, ease-in-out)
+    -webkit-opacity: 0.7
+
+  h4
+    +transition(all, 1s)
+
+  article:hover 
+    h4
+      +transition(all, 0.8s, ease-out)
+      color: $font-color - #444
+    img
+      +transition(all, 0.8s, ease-out)
+      -webkit-opacity: 1
+
+  article#webapplication
+    img
+    &:hover img
+      margin-top: -15px  
+      margin-bottom: 10px
+
+  article#kickstart
+    img
+      -webkit-transform:  rotateZ(0deg) rotateY(0deg)
+    &:hover img
+      -webkit-transform:  rotateZ(20deg) rotateY(0deg)
+
+  article#training
+    img
+      -webkit-transform:  rotateX(0deg) rotateY(0deg)
+    &:hover img
+      -webkit-transform:  rotateX(360deg) rotateY(0deg)
+
+  article#rescuemission
+    img
+      -webkit-transform:  rotateZ(0deg)
+      +transition(all, 0.8s, ease-in-out)
+    &:hover img
+      -webkit-transform:  rotateZ(180deg) 
+
+
   h3
     margin-top: 10px
     margin-bottom: 10px

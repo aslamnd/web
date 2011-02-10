@@ -4,9 +4,11 @@ article.post
       =post_link(post)
     h3.post-tagline
       = post.tagline
-    span class="post-metadata"
+  span class="post-metadata"
+    .author-line
       | posted by  
       span.author = post.author_name
+    .date-line
       |  on 
       span.date = post.created_at.to_s(:date)
   .post-body

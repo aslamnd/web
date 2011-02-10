@@ -7,7 +7,7 @@ class ContactFormsController < ApplicationController
   def create
     @contact_form = ContactForm.new(params[:contact_form])
     if @contact_form.deliver
-      flash[:notice] = 'Thank you for contacting us! Now get the fuck out of here! :)'
+      flash[:notice] = 'Thank you for contacting us! You will be receiving an answer soon'
     end
     render :action => 'new'
   end

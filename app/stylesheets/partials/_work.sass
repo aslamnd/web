@@ -34,53 +34,45 @@ nav#tabs
 
 #project_parent
   overflow: hidden
-  height: 550px
+  position: relative
+  +column(12, true)
+  height: 530px
+  margin-bottom: 40px
   #projects
     position: relative
-    left: 0px
     width: 999em
-    height: 550px
-
-.panes
-  float: left
-  width: 715px
-  div#clientWork,
-  div#products,
-  div#openSource
-    overflow: hidden
-    div#work_slide
-      article
-        float: left
-        position: relative
-          
-        h2
-          margin-top: 0
-          font-size: 22px
-        h3
-          font-size: 22px
-          font-weight: normal
-      .snapshot
-        height: 300px
-      .visit-site 
-        margin-top: 10px
-        a
-          +button-codegram
-      .downloads
-        font-family: Klavika, "Helvetica Neue", Helvetica, Arial
-        text-align: center
-        margin-top: 20px
-        .count
-          margin-right: 5px
-          font-size: 1.1em
-          color: $font-color - #222
-        font-size: 1.8em
-        a
-          +button-codegram
-          &.github
-            +button-codegram(#bbb)
-            font-size: 13px
+    overflow: auto
+    article.project
+      float: left
+      position: relative
+      h2
+        margin-top: 0
+        font-size: 22px
+      h3
+        font-size: 22px
+        font-weight: normal
+    .snapshot
+      height: 300px
+    .visit-site 
+      margin-top: 10px
+      a
+        +button-codegram
+    .downloads
+      font-family: Klavika, "Helvetica Neue", Helvetica, Arial
+      text-align: center
+      margin-top: 20px
+      .count
+        margin-right: 5px
+        font-size: 1.1em
+        color: $font-color - #222
+      font-size: 1.8em
+      a
+        +button-codegram
+        &.github
+          +button-codegram(#bbb)
           font-size: 13px
-          width: 160px
+        font-size: 13px
+        width: 160px
           
 
 html body #content nav
