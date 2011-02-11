@@ -15,14 +15,6 @@ private
       :status => 404
   end
 
-  def standard_error(error)
-    logger.error(error)
-    @error = get_data_for_error
-    render :template => 'errors/standard_error',
-      :layout => 'error',
-      :status => 500
-  end
-
   def get_data_for_error
     {:url => request.url}
   end

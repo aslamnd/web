@@ -3,6 +3,6 @@
   = form.input :tagline
   = form.input :created_at, :as => :date if resource.persisted?
   = form.input :body, as: :text
-  = form.input :picture, as: :file
+  = form.input :picture, as: :file, required: false
   = form.input :published, as: :boolean
   = form.submit
