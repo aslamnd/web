@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  default_value_for :published, true
+  after_initialize :default_values
 
   markdownize! :body, tab_width: 2, hierarchy: 1
 
@@ -30,4 +30,7 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def default_values
+    self[:published] ||= false
+  end
 end

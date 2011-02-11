@@ -8,7 +8,6 @@ gem 'inherited_resources'
 gem 'escape_utils'
 gem 'friendly_id'
 gem 'will_paginate', '3.0.pre2'
-gem 'default_value_for'
 
 gem 'slim', :require => 'slim/rails'
 
