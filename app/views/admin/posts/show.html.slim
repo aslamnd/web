@@ -1,6 +1,13 @@
-h3 = resource.title
-p = resource.rendered_body.html_safe
-hr
+-content_for :meta_description do
+  =resource.tagline
+
+-content_for :title do
+  =resource.title
+
 .actions
+  = link_to 'Back to post list', admin_posts_path
   = link_to 'Edit', edit_admin_post_path(resource)
   = link_to "Remove", admin_post_path(resource.id), method: 'delete', confirm: "Are you sure you want to remove this post?"
+
+hr
+=render :partial => 'blog/posts/post', :object => resource

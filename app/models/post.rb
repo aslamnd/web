@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+  after_initialize :default_values
+
   markdownize! :body, tab_width: 2, hierarchy: 1
 
   belongs_to :author, class_name: 'User'
@@ -15,6 +17,7 @@ class Post < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
 
   scope :ordered, order: 'created_at desc'
+  scope :published, where(published: true)
 
   scope :from_archive, ->(year, month = nil) do
     year = year.to_i
@@ -28,9 +31,8 @@ class Post < ActiveRecord::Base
     end
   end
 
-  def permalink options = {}
-    host = options.delete(:host)
-     
+  def default_values
+    self[:published] ||= false
   end
 
 end
