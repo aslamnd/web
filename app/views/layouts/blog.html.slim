@@ -2,6 +2,7 @@
 html
   head
     =render :partial => 'layouts/header'
+    = include_stylesheets :blog, :media => 'all'
     link rel="shortcut icon" href="/favicon.png"
     = auto_discovery_link_tag :atom, "/feed.atom"
     javascript:
