@@ -8,6 +8,7 @@ ul#posts
       li.post
         = post.title
         .actions
+          = link_to 'Preview', admin_post_path(post)
           = link_to 'Edit', edit_admin_post_path(post)
           = link_to "Remove", admin_post_path(post.id), method: 'delete', confirm: "Are you sure you want to remove this post?"
   - else
