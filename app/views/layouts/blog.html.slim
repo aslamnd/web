@@ -31,7 +31,7 @@ html
               =link_to 'Our blog', '/'
         #sidebar-blog
           = yield(:sidebar)
-          =render_cell :blog, :archive
+          =render_cell :blog, :latest
           hr
           =link_to 'RSS Feed', '/feed.atom', class: 'rss'
       = render :partial => 'layouts/blog_slideshow' 

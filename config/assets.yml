@@ -1,4 +1,8 @@
-package_assets: off
+
+s3_bucket: codegram-web
+s3_access_key_id: <%= ENV['S3_KEY'] %>
+s3_secret_access_key: <%= ENV['S3_SECRET'] %>
+s3_cache_control: public, max-age=<%= 365 * 24 * 60 * 60 %>
 embed_assets: datauri
 
 javascripts:

@@ -25,22 +25,21 @@ CodegramWeb::Application.routes.draw do
 
   ## Base subdomain
   constraints BaseSubdomain do
-
     resource :contact_form,
       :path => 'contact',
       :only => [:new, :create],
       :path_names => {:new => '/'}
 
     resources :projects, :only =>[:show], :path => '/work/:work_category_id'
-    match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'client', via: :get, as: :work
+    match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'products', via: :get, as: :work
     match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
     match '/sitemap.xml' => 'sitemaps#show'
+    root :to => "pages#show", :id => 'home'
   end
 
-  # match '*path' => 'errors#not_found'
+  match '*path' => 'errors#not_found'
 
-  root :to => "pages#show", :id => 'home'
 
 end

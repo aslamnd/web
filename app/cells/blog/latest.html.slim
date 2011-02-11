@@ -1,0 +1,8 @@
+aside.latest
+  h3 Latest posts
+  ul
+    -@posts.each do |post|
+      li
+        =post_link(post)
+        =" - "
+        =post.tagline

@@ -8,3 +8,4 @@ capybara*
 config/heroku_env.rb
 public/uploads
 tmp/
+.sass-cache/
