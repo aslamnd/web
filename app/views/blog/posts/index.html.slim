@@ -12,9 +12,8 @@
 - unless collection.empty?
   #posts
     - collection.each do |post| 
-      -if post.published
-        =render :partial => 'post', :object => post
-        hr
+      =render :partial => 'post', :object => post
+      hr
   = will_paginate collection, renderer: PaginationNoFollow
 - else
   | Sorry, there are no posts to show.
