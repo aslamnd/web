@@ -12,5 +12,5 @@ article.post
       |  on 
       span.date = post.created_at.to_s(:date)
   .post-body
-    = image_tag(post.picture_url) if post.picture?
+    = image_tag(post.picture.thumb.url) if post.picture?
     = post.rendered_body.html_safe
