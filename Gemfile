@@ -30,7 +30,7 @@ gem 'rest-client'
 gem 'crack'
 
 # Uploaders
-gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git', :branch => 'fog'
+gem 'carrierwave', '~> 0.5.1'
 gem 'fog'
 gem 'mini_magick'
 

@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
     @project = params[:id] ? @projects.detect{|project| project.to_param == params[:id]} : @projects.first
     @index = @projects.index(@project) and begin
       @previous = @projects[@index - 1] if @index > 0
-      @next = @projects[@index + 1] if @index <= @projects.count
+      @next = @projects[@index + 1] if @index <= @projects.length
     end
   end
 
