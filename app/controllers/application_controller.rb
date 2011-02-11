@@ -25,7 +25,7 @@ private
 
   def set_cache_control
     if Rails.env.production?
-      expires_in 2.week, :public => true
+      expires_in 5.minutes, :public => true
     end
   end
 
