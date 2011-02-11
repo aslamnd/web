@@ -21,6 +21,7 @@ CodegramWeb::Application.routes.draw do
       end
       match '/feed.atom' => 'posts#index', as: :feed, via: :get, format: :atom
     end
+    match '*path' => 'errors#not_found'
   end
 
   ## Base subdomain
@@ -37,9 +38,10 @@ CodegramWeb::Application.routes.draw do
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
     match '/sitemap.xml' => 'sitemaps#show'
     root :to => "pages#show", :id => 'home'
+    match '*path' => 'errors#not_found'
   end
 
-  match '*path' => 'errors#not_found'
-
+  match '*path' => redirect("http://codegram.com/%{path}", status: 301)
+  match '/' => redirect("http://codegram.com/", status: 301)
 
 end
