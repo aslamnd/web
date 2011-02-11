@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+  after_initialize :default_values
+
   markdownize! :body, tab_width: 2, hierarchy: 1
 
   belongs_to :author, class_name: 'User'
@@ -28,4 +30,7 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def default_values
+    self[:published] ||= false
+  end
 end
