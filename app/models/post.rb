@@ -34,4 +34,5 @@ class Post < ActiveRecord::Base
   def default_values
     self[:published] ||= false
   end
+
 end
