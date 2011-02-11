@@ -1,1 +1,1 @@
-git pull origin develop && git push origin develop && git checkout master && git pull origin master && git merge develop && git push origin master && git push heroku master
+git pull origin develop && git push origin develop && git checkout master && git pull origin master && git merge develop && git push origin master && heroku maintenance:on && git push heroku master && heroku rake db:migrate && maintenance:off
