@@ -11,7 +11,7 @@ class ContactForm < MailForm::Base
   attribute :budget,     validate: @@budgets
   attribute :message,    validate: true
 
-  #append :remote_ip, :user_agent, :session
+  append :remote_ip, :user_agent, :session
 
   cattr_reader :services
   cattr_reader :start_times
@@ -23,7 +23,7 @@ class ContactForm < MailForm::Base
     {
       :subject => "Codegram contact form",
       :to => "info@codegram.com",
-      :from => %("#{name}" <#{email}>)
+      :from => %("Codegram Mailer <info@codegram.com>)
     }
   end
 
