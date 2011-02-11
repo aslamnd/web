@@ -14,6 +14,12 @@ class Project < ActiveRecord::Base
   scope :open_source, where(category: 'open-source')
   scope :promoted, where(promoted: true)
 
+  def self.update_downloads!
+    open_source.each do |open_source_project|
+      open_source_project.update_downloads!
+    end
+  end
+
   def screenshot
     screenshots.first
   end
@@ -26,6 +32,10 @@ class Project < ActiveRecord::Base
     update_attribute(:downloads,
                       RubygemsFetcher.get(:downloads,
                                           rubygem))
+  end
+
+  def normalize_friendly_id text
+    rubygem.blank? ? super(text) : rubygem
   end
 
 end

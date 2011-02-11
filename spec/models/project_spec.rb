@@ -78,4 +78,34 @@ describe Project do
       subject.update_downloads!
     end
   end
+
+  describe "#normalize_friendly_id", "preprocesses friendly_ids" do
+    context 'if the project has a rubygem' do
+      it 'returns the rubygem name' do
+        project = Project.new rubygem: 'acts_as_decimal'
+        project.normalize_friendly_id('Easy acts as decimal').should == 'acts_as_decimal'
+      end
+    end
+    context 'otherwise' do
+      it 'returns the same name' do
+        project = Project.new rubygem: nil
+        project.normalize_friendly_id('Easy acts as decimal').should == 'Easy acts as decimal'
+      end
+    end
+  end
+
+  describe "class methods" do
+    describe ".update_downloads!" do
+      it 'calls #update_downloads! for every open source project' do
+        colorblind = double :colorblind
+        markdownizer = double :markdownizer
+        [colorblind, markdownizer].each do |project|
+          project.should_receive(:update_downloads!)
+        end
+
+        Project.stub(:open_source).and_return [colorblind, markdownizer]
+        Project.update_downloads!
+      end
+    end
+  end
 end
