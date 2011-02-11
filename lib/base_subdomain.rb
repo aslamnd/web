@@ -1,7 +1,7 @@
 class BaseSubdomain
   class << self
     def matches?(request)
-      [''].include? request.subdomain
+      request.subdomain == ''
     end
   end
 end
