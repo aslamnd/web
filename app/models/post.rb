@@ -28,4 +28,9 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def permalink options = {}
+    host = options.delete(:host)
+     
+  end
+
 end
