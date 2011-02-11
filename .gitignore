@@ -7,5 +7,7 @@ tmp/**/*
 capybara*
 config/heroku_env.rb
 public/uploads
+public/assets
+public/stylesheets
 tmp/
 .sass-cache/
