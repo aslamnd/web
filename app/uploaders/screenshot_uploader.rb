@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 class ScreenshotUploader < CarrierWave::Uploader::Base
   permissions 0600
   # Include RMagick or ImageScience support:
@@ -7,7 +8,7 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
-    storage :s3
+    storage :fog
   else
     storage :file
   end

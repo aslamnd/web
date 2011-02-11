@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Post do
 
   describe "attributes" do
-    it { should respond_to(:title, :tagline, :body, :friendly_id) }
+    it { should respond_to(:title, :tagline, :body, :friendly_id, :published) }
   end
 
   describe "relations" do
@@ -51,6 +51,25 @@ describe Post do
         end
       end
 
+    end
+    describe ".published" do
+      let(:published_post) do
+        Factory :post, published: true
+      end
+      let(:unpublished_post) do
+        Factory :post, published: false
+      end
+
+      it "does not return unpublished posts" do
+        expected = unpublished_post
+
+        Post.published.all.should_not include expected
+      end
+      it "returns only published posts" do
+        expected = published_post
+
+        Post.published.all.should == [expected]
+      end
     end
   end
 
