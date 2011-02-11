@@ -1,3 +1,4 @@
+#!/bin/sh
 git push origin master
 compass compile
 rake jammit_s3
