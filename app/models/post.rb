@@ -17,6 +17,7 @@ class Post < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
 
   scope :ordered, order: 'created_at desc'
+  scope :published, where(published: true)
 
   scope :from_archive, ->(year, month = nil) do
     year = year.to_i
