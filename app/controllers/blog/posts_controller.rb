@@ -10,7 +10,7 @@ class Blog::PostsController < ApplicationController
   respond_to :atom, only: :index
 
   def show
-    post = Post.published.find(params[:id])
+    post = Post.published.includes(:author).find(params[:id])
     if params[:year].to_i != post.year.to_i ||
          params[:month].to_i != post.month.to_i
       redirect_to post_path(post, year: post.year, month: post.month)
