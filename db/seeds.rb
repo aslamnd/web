@@ -39,62 +39,46 @@ unless roger = User.find_by_name('Roger Bacardit')
 end
 
 
-# Migrating old posts
-# Factory(:post,
-#         title: 'Date validation with Rails 3',
-#         tagline: 'Effortless date validation for your Rails 3 application, ActiveModel style',
-#         body: File.read('db/seeds/date-validation-with-rails-3.md'),
-#         created_at: Date.parse('2010-04-30'),
-#         picture: File.open('db/seeds/images/date-validation-with-rails-3.jpg'),
-#         author: oriol)
-# 
-# Factory(:post,
-#         title: 'Released Acts as Decimal',
-#         tagline: 'Treat your integers as if they were decimals, preserving floating point precision',
-#         body: File.read('db/seeds/released-acts-as-decimal.md'),
-#         created_at: Date.parse('2010-06-23'),
-#         picture: File.open('db/seeds/images/released-acts-as-decimal.png'),
-#         author: txus)
-# 
-# unless Rails.env.production?
-# 
-#   stendhal_post = Factory(:post,
-#                           title: 'Stendhal 0.1.2 released',
-#                           body: File.read('db/seeds/stendhal.md'),
-#                           created_at: Date.parse('2010-10-31'),
-#                           author: txus)
-# 
-#   hijacker_post = Factory(:post,
-#                            title: 'Introducing hijacker: spy on your ruby objects!',
-#                            body: File.read('db/seeds/hijacker.md'),
-#                            created_at: Date.parse('2010-11-21'),
-#                            author: josepjaume)
-# 
-#   micetrap_post = Factory(:post,
-#                           title: 'Micetrap: catch evil hackers on the fly',
-#                           body: File.read('db/seeds/micetrap.md'),
-#                           created_at: Date.parse('2011-01-06'),
-#                           author: oriol)
-# 
-#   micetrap_post = Factory(:post,
-#                           title: 'Micetrap: catch evil hackers on the fly',
-#                           body: File.read('db/seeds/micetrap.md'),
-#                           created_at: Date.parse('2011-01-06'),
-#                           author: marc)
-# 
-#   micetrap_post = Factory(:post,
-#                           title: 'Micetrap: catch evil hackers on the fly',
-#                           body: File.read('db/seeds/micetrap.md'),
-#                           created_at: Date.parse('2011-01-06'),
-#                           author: roger)
-# 
-# 
-#   6.times do
-#     Factory(:project)
-#   end
-#   6.times do
-#     Factory(:project_without_screenshot)
-#   end
-#   Factory(:project, :promoted => true)
-#   Factory(:project_without_screenshot, :promoted => true)
-# end
+unless Rails.env.production?
+
+  stendhal_post = Factory(:post,
+                          title: 'Stendhal 0.1.2 released',
+                          body: File.read('db/seeds/stendhal.md'),
+                          created_at: Date.parse('2010-10-31'),
+                          published: true,
+                          author: txus)
+
+  hijacker_post = Factory(:post,
+                           title: 'Introducing hijacker: spy on your ruby objects!',
+                           body: File.read('db/seeds/hijacker.md'),
+                           created_at: Date.parse('2010-11-21'),
+                           published: true,
+                           author: josepjaume)
+
+  micetrap_post = Factory(:post,
+                          title: 'Micetrap: catch evil hackers on the fly',
+                          body: File.read('db/seeds/micetrap.md'),
+                          created_at: Date.parse('2011-01-06'),
+                          published: true,
+                          author: oriol)
+
+  micetrap_post = Factory(:post,
+                          title: 'Micetrap: catch evil hackers on the fly',
+                          body: File.read('db/seeds/micetrap.md'),
+                          created_at: Date.parse('2011-01-06'),
+                          published: true,
+                          author: marc)
+
+  micetrap_post = Factory(:post,
+                          title: 'Micetrap: catch evil hackers on the fly',
+                          body: File.read('db/seeds/micetrap.md'),
+                          created_at: Date.parse('2011-01-06'),
+                          published: true,
+                          author: roger)
+
+
+  6.times do
+    Factory(:project)
+  end
+  Factory(:project, :promoted => true)
+end
