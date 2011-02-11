@@ -23,7 +23,7 @@
             = screenshot.label :_destroy, "Delete screenshot"
 
   = form.simple_fields_for :screenshots, form.object.class.reflect_on_association(:screenshots).klass.new, child_index: (resource.screenshots.length + 1).to_s, html: { multipart: true } do |builder|
-    = builder.input :file, as: :file, label: 'Project screenshot'
+    = builder.input :file, as: :file, label: 'Project screenshot', required: resource.screenshots.empty?
 
   = form.submit
 
