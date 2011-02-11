@@ -2,6 +2,7 @@
 git pull origin master
 git push origin master
 compass compile
+jammit
 rake jammit_s3
 git push heroku master
 heroku maintenance:on
