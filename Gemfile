@@ -24,6 +24,7 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 gem 'cells'
 gem 'markdownizer', '>= 0.3.2'
+gem 'heroku'
 
 gem 'rest-client'
 gem 'crack'

@@ -141,6 +141,10 @@ GEM
       json (~> 1.4.6)
     haml (3.0.25)
     has_scope (0.5.0)
+    heroku (1.17.10)
+      json (~> 1.4.6)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
     high_voltage (0.9.3)
     i18n (0.5.0)
     inherited_resources (1.2.1)
@@ -281,6 +285,7 @@ DEPENDENCIES
   flash_messages_helper
   fog
   friendly_id
+  heroku
   high_voltage
   inherited_resources
   jammit-s3
