@@ -25,10 +25,11 @@
             span.count
               | #{number_with_delimiter(@project.downloads)}
             | downloads
-            a.rubygems href="http://rubygems.org/gems/#{@project.rubygem}"
-              | View project at RubyGems
-            a.github href="http://github.com/codegram/#{@project.rubygem}"
-              | View source at GitHub
+            .links
+              a.rubygems href="http://rubygems.org/gems/#{@project.rubygem}"
+                | View project at RubyGems
+              a.github href="http://github.com/codegram/#{@project.rubygem}"
+                | View source at GitHub
         -else
           h3 What we did
           = @project.extended_description
