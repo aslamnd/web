@@ -12,7 +12,7 @@
   'in the first project' => '#projects .project:nth-of-type(1)',
 
   # Screenshots
-  'for the first screenshot' => '#screenshots .screenshot:nth-of-type(1)',
+  'for the first screenshot' => 'ul#screenshots li.screenshot:nth-of-type(1)',
 }.
 each do |within, selector|
   Then /^(.+) #{within}$/ do |step|
