@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  if Rails.env.production?
-    rescue_from ActiveRecord::RecordNotFound, :with => :not_found
-    rescue_from ActiveRecord::RecordInvalid, :with => :not_found
+  unless Rails.env.development?
+    rescue_from ActiveRecord::RecordNotFound, with: :not_found
+    rescue_from ActiveRecord::RecordInvalid, with: :not_found
   end
 
 private
@@ -25,7 +25,7 @@ private
 
   def set_cache_control
     if Rails.env.production?
-      expires_in 5.minutes, :public => true
+      expires_in 5.minutes, public: true
     end
   end
 
