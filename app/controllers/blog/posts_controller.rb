@@ -24,7 +24,8 @@ class Blog::PostsController < ApplicationController
   private
 
   def validate_dates
-    raise ActiveRecord::RecordNotFound if params[:year].to_i < 2009 || !(1..12).include?(params[:month].to_i)
+    raise ActiveRecord::RecordNotFound if params[:year] && params[:year].to_i < 2009
+    raise ActiveRecord::RecordNotFound if params[:date] && !(1..12).include?(params[:month].to_i)
   end
 
   def collection
