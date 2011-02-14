@@ -10,7 +10,7 @@ Factory.define :project do |p|
 
   p.rubygem { %w(date_validator colorant colorblind lastfm).sample }
 
-  p.category { WorkCategory.sample }
+  p.category { ['open-source', 'products'].sample }
   p.screenshots { [Factory(:screenshot)] }
 end
 
