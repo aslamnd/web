@@ -24,8 +24,7 @@ nav
       | )
       br
     =link_to 'See a map', 'http://goo.gl/dIf4I'
-    span.hidden.photo
-      =link_to 'http://' + request.host_with_port + '/images/logo.png'
+    =image_tag 'http://' + request.host_with_port + '/images/logo_hcard.png', :class => 'hidden photo'
   aside
     h4 Contact us
     span.hidden.url http://codegram.com

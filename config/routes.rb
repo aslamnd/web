@@ -20,7 +20,7 @@ CodegramWeb::Application.routes.draw do
         resources :posts, { path: '/:year/:month', only: :show }
       end
     end
-    match '/feed' => 'posts#index', as: :feed, via: :get, format: :atom
+    match '/feed.xml' => 'blog/posts#index', as: :feed, via: :get, format: :atom
     match '/feed.atom' => redirect('http://feeds.feedburner.com/codegram', status: 301)
     match '*path' => 'errors#not_found'
   end
