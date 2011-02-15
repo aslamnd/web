@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 
   after_initialize :default_values
 
-  markdownize! :body, tab_width: 2, hierarchy: 1
+  markdownize! :body, tab_width: 2, hierarchy: 2
 
   belongs_to :author, class_name: 'User'
   validates :author, :title, :body, presence: true
