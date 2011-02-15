@@ -17,6 +17,12 @@ module NavigationHelpers
 
     when /the work page/
       work_path
+    when /the project edit page/
+      project = find_model(:project)
+      edit_admin_project_path(project)
+    when /the project page/
+      project = find_model(:project)
+      project_path(project.category, project)
 
     # the following are examples using path_to_pickle
 

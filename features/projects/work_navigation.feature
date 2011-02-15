@@ -9,6 +9,13 @@ Feature: Projects navigation
     When I follow "Projects"
     Then I should be on the admin projects page
 
+  Scenario: User views the current project when editing
+    Given I am logged in
+    And a project exists
+    And I am on the project edit page
+    When I follow "View project"
+    Then I should be on the project page
+
   Scenario: Visitor goes to visit projects
     Given I am logged in
     And I am on the home page

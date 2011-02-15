@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110211091003) do
+ActiveRecord::Schema.define(:version => 20110214090230) do
 
   create_table "histories", :force => true do |t|
     t.string    "message"
@@ -56,12 +56,16 @@ ActiveRecord::Schema.define(:version => 20110211091003) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
     t.string    "rubygem"
+    t.text      "rendered_description"
+    t.text      "rendered_extended_description"
   end
 
   add_index "projects", ["cached_slug"], :name => "index_projects_on_cached_slug"
   add_index "projects", ["category"], :name => "index_projects_on_category"
   add_index "projects", ["created_at"], :name => "index_projects_on_created_at"
   add_index "projects", ["promoted"], :name => "index_projects_on_promoted"
+  add_index "projects", ["rendered_description"], :name => "index_projects_on_rendered_description"
+  add_index "projects", ["rendered_extended_description"], :name => "index_projects_on_rendered_extended_description"
   add_index "projects", ["title"], :name => "index_projects_on_title"
   add_index "projects", ["updated_at"], :name => "index_projects_on_updated_at"
 

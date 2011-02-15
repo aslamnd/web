@@ -3,8 +3,8 @@ atom_feed do |feed|
 
   feed.updated collection.first.created_at
 
-  feed.icon "http://#{request.host_with_port}/favicon.ico"
-  feed.logo "http://#{request.host_with_port}/images/logo.png"
+  feed.icon "http://codegram-web.s3.amazonaws.com/favicon.png"
+  feed.logo "http://codegram-web.s3.amazonaws.com/images/logo.png"
 
   collection.each do |post|
     feed.entry(post, url: post_url(post, host: true)) do |entry|

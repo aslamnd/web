@@ -14,6 +14,9 @@ class Project < ActiveRecord::Base
   scope :open_source, where(category: 'open-source')
   scope :promoted, where(promoted: true)
 
+  markdownize! :description, tab_width: 2, hierarchy: 1
+  markdownize! :extended_description, tab_width: 2, hierarchy: 1
+
   def self.update_downloads!
     open_source.each do |open_source_project|
       open_source_project.update_downloads!
