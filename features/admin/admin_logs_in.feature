@@ -6,7 +6,6 @@ Feature: Admin signs in
   Scenario: Admin signs in with Twitter
     Given I am registered as and admin
     And I am on the login page
-    And I follow "Sign in with Twitter"
-    When Twitter authorizes me
+    When I follow "Sign in with Twitter"
     Then I should see "Successfully authorized from Twitter account"
     And I should be on the admin dashboard

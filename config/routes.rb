@@ -1,5 +1,5 @@
 CodegramWeb::Application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: "admin/omniauth_callbacks" }
+  devise_for :users, controllers: { omniauth_callbacks: 'admin/omniauth_callbacks' }
 
   # Admin sections
   namespace :admin do
@@ -44,6 +44,5 @@ CodegramWeb::Application.routes.draw do
   end
 
   match '*path' => redirect("http://codegram.com/%{path}", status: 301)
-  match '/' => redirect("http://codegram.com/", status: 301)
-
+  match '/' => redirect('http://codegram.com/', status: 301)
 end
