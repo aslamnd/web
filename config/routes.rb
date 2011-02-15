@@ -37,6 +37,7 @@ CodegramWeb::Application.routes.draw do
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
     match '/sitemap.xml' => 'sitemaps#show'
+    match '/what-we-do' => redirect('/services', status: 301)
     root :to => "pages#show", :id => 'home'
     match '*path' => 'errors#not_found'
   end
