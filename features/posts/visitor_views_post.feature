@@ -9,6 +9,12 @@ Feature: Visitor views a particular post
     When I follow "Fun with new Rails engines"
     Then I should see "New Rails engines are fun to work with!"
 
+  Scenario: Visitor gets a not found error when visiting and unpublished post
+    Given an unpublished post exist
+    And I visit the blog subdomain
+    When I visit the unpublished post
+    Then I should get a 404 error
+
   Scenario: Visitor gets a not found error when not a valid date
     Given a post exists with title: "Fun with new Rails engines", body: "New Rails engines are fun to work with!"
     And I visit the blog subdomain

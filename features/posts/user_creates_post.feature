@@ -10,7 +10,7 @@ Feature: User creates a post
     When I fill in "Title" with "Cucumber is not only for veggies"
     When I fill in "Tagline" with "Or that's what we think"
     And I fill in "Body" with "Readable cucumber stories help the development and maintaining process."
-    And I select "post.jpg" from my computer to upload it to "Picture"
+    And I select "screenshot.png" from my computer to upload it to "Picture"
     And I check "Published"
     And I press "Create Post"
     Then I should see "Post was successfully created."

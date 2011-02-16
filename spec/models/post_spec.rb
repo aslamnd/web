@@ -23,6 +23,20 @@ describe Post do
   end
 
   describe "scopes" do
+    describe "default scope" do
+      it "returns only published posts" do
+        published_post = Factory :post, published: true
+        
+        Post.all.should == [published_post]
+      end
+
+      it "does not return unpublished posts" do
+        unpublished_post = Factory :post, published: false
+
+        Post.all.should_not include unpublished_post
+      end
+    end
+
     describe ".from_archive" do
 
       let(:february_post) do
@@ -49,26 +63,6 @@ describe Post do
           expected = february_post
           Post.from_archive(*args).all.should == [expected]
         end
-      end
-
-    end
-    describe ".published" do
-      let(:published_post) do
-        Factory :post, published: true
-      end
-      let(:unpublished_post) do
-        Factory :post, published: false
-      end
-
-      it "does not return unpublished posts" do
-        expected = unpublished_post
-
-        Post.published.all.should_not include expected
-      end
-      it "returns only published posts" do
-        expected = published_post
-
-        Post.published.all.should == [expected]
       end
     end
   end
