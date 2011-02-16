@@ -4,7 +4,7 @@ describe PictureUploader do
   include CarrierWave::Test::Matchers
 
   let (:path_to_file) do
-    "spec/support/files/post.jpg"
+    "spec/support/files/screenshot.png"
   end
 
   before do
