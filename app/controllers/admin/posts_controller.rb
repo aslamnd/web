@@ -10,4 +10,10 @@ class Admin::PostsController < Admin::ApplicationController
     update! { admin_posts_path }
   end
 
+  protected
+
+  def collection
+    @posts ||= Post.unscoped
+  end
+
 end

@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.0'
 gem 'arel'
 gem 'rack-cache', :git => 'git://github.com/codegram/rack-cache.git'
+gem 'pg'
 
 gem 'inherited_resources'
 gem 'escape_utils'
@@ -38,7 +39,6 @@ gem 'faker'
 
 group :test, :development do
   gem 'factory_girl_rails'
-  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 group :test do
