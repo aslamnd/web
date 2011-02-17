@@ -42,6 +42,13 @@ ActionController::Base.allow_rescue = false
 # subsequent scenarios. If you do this, we recommend you create a Before
 # block that will explicitly put your database in a known state.
 Cucumber::Rails::World.use_transactional_fixtures = true
+if defined?(ActiveRecord::Base)
+  begin
+    require 'database_cleaner'
+    DatabaseCleaner.strategy = :truncation
+  rescue LoadError => ignore_if_database_cleaner_not_present
+  end
+end
 
 # How to clean your database when transactions are turned off. See
 # http://github.com/bmabey/database_cleaner for more info.
@@ -62,6 +69,7 @@ OmniAuth.config.mock_auth[:twitter] = {
 
 
 After do
+  DatabaseCleaner.clean
   Warden.test_reset!
   Capybara.default_host = "lvh.me" #for Rack::Test
   Capybara.app_host = "http://lvh.me:9887" if Capybara.current_driver == :selenium
