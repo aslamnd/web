@@ -22,3 +22,7 @@ When /^I visit the unpublished post$/ do
   post = Post.unscoped.last
   visit blog_post_path(post.year, post.month, post)
 end
+
+Then /^I should see a post$/ do
+  page.should have_selector('article.post')
+end

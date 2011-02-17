@@ -16,9 +16,14 @@ class Admin::PostsController < Admin::ApplicationController
     update! { admin_posts_path }
   end
 
+  def show
+    @post = Post.unscoped.find(params[:id])
+    show!
+  end
+
   protected
 
   def collection
-    end_of_association_chain.unscoped
+    Post.unscoped
   end
 end
