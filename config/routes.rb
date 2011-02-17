@@ -12,6 +12,8 @@ CodegramWeb::Application.routes.draw do
   
   ## Blog subdomain
   constraints subdomain: 'blog' do
+    match '/en/2010/04/30/presenting-date-validator.html' => redirect('/2011/2/date-validation-with-rails-3', status: 301)
+    match '/es/2010/04/29/presenting-date-validator.html' => redirect('/2011/2/date-validation-with-rails-3', status: 301)
     namespace :blog, path: '/' do
       match '/sitemap.xml' => 'sitemaps#show'
       constraints format: :html do
