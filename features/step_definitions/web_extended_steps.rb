@@ -50,3 +50,7 @@ def find_selector(number)
     when "third" then "nth-of-type(3)"
   end
 end
+Given /^I pause$/ do
+  print "Press Return to continue"
+  STDIN.getc
+end

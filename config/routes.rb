@@ -1,5 +1,5 @@
 CodegramWeb::Application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: "admin/omniauth_callbacks" }
+  devise_for :users, controllers: { omniauth_callbacks: 'admin/omniauth_callbacks' }
 
   # Admin sections
   namespace :admin do
@@ -12,6 +12,8 @@ CodegramWeb::Application.routes.draw do
   
   ## Blog subdomain
   constraints subdomain: 'blog' do
+    match '/en/2010/04/30/presenting-date-validator.html' => redirect('/2011/2/date-validation-with-rails-3', status: 301)
+    match '/es/2010/04/29/presenting-date-validator.html' => redirect('/2011/2/date-validation-with-rails-3', status: 301)
     namespace :blog, path: '/' do
       match '/sitemap.xml' => 'sitemaps#show'
       constraints format: :html do
@@ -19,8 +21,9 @@ CodegramWeb::Application.routes.draw do
         match '(/:year)(/:month)' => 'posts#index', as: :posts, via: :get
         resources :posts, { path: '/:year/:month', only: :show }
       end
-      match '/feed.atom' => 'posts#index', as: :feed, via: :get, format: :atom
     end
+    match '/feed.xml' => 'blog/posts#index', as: :feed, via: :get, format: :atom
+    match '/feed.atom' => redirect('http://feeds.feedburner.com/codegram', status: 301)
     match '*path' => 'errors#not_found'
   end
 
@@ -37,11 +40,11 @@ CodegramWeb::Application.routes.draw do
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
     match '/sitemap.xml' => 'sitemaps#show'
+    match '/what-we-do' => redirect('/services', status: 301)
     root :to => "pages#show", :id => 'home'
     match '*path' => 'errors#not_found'
   end
 
   match '*path' => redirect("http://codegram.com/%{path}", status: 301)
-  match '/' => redirect("http://codegram.com/", status: 301)
-
+  match '/' => redirect('http://codegram.com/', status: 301)
 end

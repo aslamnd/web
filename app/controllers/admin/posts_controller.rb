@@ -26,5 +26,4 @@ class Admin::PostsController < Admin::ApplicationController
   def collection
     Post.unscoped
   end
-
 end

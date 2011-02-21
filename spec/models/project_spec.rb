@@ -89,7 +89,7 @@ describe Project do
     context 'otherwise' do
       it 'returns the same name' do
         project = Project.new rubygem: nil
-        project.normalize_friendly_id('Easy acts as decimal').should == 'Easy acts as decimal'
+        project.normalize_friendly_id('Easy acts as decimal').should == 'easy-acts-as-decimal'
       end
     end
   end

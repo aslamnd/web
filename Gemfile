@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.0'
 gem 'arel'
 gem 'rack-cache', :git => 'git://github.com/codegram/rack-cache.git'
+gem 'pg'
 
 gem 'inherited_resources'
 gem 'escape_utils'
@@ -23,7 +24,7 @@ gem 'simple_form'
 gem 'simple-navigation'
 gem 'flash_messages_helper'
 gem 'cells'
-gem 'markdownizer', '>= 0.3.2'
+gem 'markdownizer', '>= 0.3.6'
 gem 'heroku'
 
 gem 'rest-client'
@@ -35,10 +36,11 @@ gem 'fog'
 gem 'mini_magick'
 
 gem 'faker'
-
+group :development do
+  gem 'sqlite3'
+end
 group :test, :development do
   gem 'factory_girl_rails'
-  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 group :test do

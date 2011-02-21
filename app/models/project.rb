@@ -39,7 +39,7 @@ class Project < ActiveRecord::Base
   end
 
   def normalize_friendly_id text
-    rubygem.blank? ? super(text) : rubygem
+    rubygem.blank? ? super(FriendlyId::SlugString.new(text)) : rubygem
   end
 
 end

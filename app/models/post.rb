@@ -2,23 +2,20 @@ class Post < ActiveRecord::Base
 
   after_initialize :default_values
 
-  markdownize! :body, tab_width: 2, hierarchy: 1
+  markdownize! :body, tab_width: 2, hierarchy: 2
 
   belongs_to :author, class_name: 'User'
+  mount_uploader :picture, PictureUploader
+  has_friendly_id :title, use_slug: true
+
   validates :author, :title, :body, presence: true
 
   delegate :year, to: :created_at
   delegate :month, to: :created_at
-
   delegate :name, to: :author, prefix: true
 
-  has_friendly_id :title, use_slug: true
-
-  mount_uploader :picture, PictureUploader
-
+  default_scope where(published: true)
   scope :ordered, order: 'created_at desc'
-  scope :published, where(published: true)
-
   scope :from_archive, ->(year, month = nil) do
     year = year.to_i
     if month

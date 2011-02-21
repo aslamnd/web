@@ -14,3 +14,13 @@ Feature: User edits a post
     And I press "Update Post"
     Then I should see "Post was successfully updated."
     And I should see "Cucumber is not only for veggies (updated!)" in the posts list
+
+  Scenario: User edits an unpublished post
+    Given I am logged in
+    And an unpublished post exist
+    And I am on the admin posts page
+    When I follow "Edit" in the first post
+    And I fill in "Title" with "Cucumber is not only for veggies (updated!)"
+    And I press "Update Post"
+    Then I should see "Post was successfully updated."
+    And I should see "Cucumber is not only for veggies (updated!)" in the posts list

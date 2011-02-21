@@ -4,10 +4,10 @@ html
     =render :partial => 'layouts/header'
     = include_stylesheets :blog, :media => 'all'
     link rel="shortcut icon" href="http://codegram-web.s3.amazonaws.com/favicon.png"
-    = auto_discovery_link_tag :atom, "http://feeds.feedburner.com/codegram"
+    = auto_discovery_link_tag :atom, "/feed.atom"
     javascript:
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-21318559-1']);
+      _gaq.push(['_setAccount', 'UA-8493672-1']);
       _gaq.push(['_trackPageview']);
 
       (function() {
@@ -34,7 +34,7 @@ html
           = yield(:sidebar)
           =render_cell :blog, :latest
           hr
-          =link_to 'RSS Feed', 'http://feeds.feedburner.com/codegram', class: 'rss'
+          =link_to 'RSS Feed', '/feed.atom', class: 'rss'
       = render :partial => 'layouts/blog_slideshow' 
       footer#footer
     = include_javascripts :application
