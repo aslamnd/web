@@ -11,6 +11,7 @@
   = form.input :category, collection: @categories, label_method: :name, value_method: :id, label: 'Category', default: 'Client Work'
 
   = form.input :promoted
+  = form.input :published
   = form.input :rubygem, label: 'Gem name'
 
   - if !resource.screenshots.empty?

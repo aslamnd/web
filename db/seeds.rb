@@ -78,7 +78,9 @@ unless Rails.env.production?
 
 
   6.times do
-    Factory(:project)
+    Factory(:project, :published => true)
   end
-  Factory(:project, :promoted => true)
+  Factory(:project, :promoted => true, :published => true)
+  Factory(:project, :promoted => true, :published => false)
+  Factory(:project, :published => false)
 end

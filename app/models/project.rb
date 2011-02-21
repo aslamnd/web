@@ -13,6 +13,7 @@ class Project < ActiveRecord::Base
 
   scope :open_source, where(category: 'open-source')
   scope :promoted, where(promoted: true)
+  default_scope where(published: true)
 
   markdownize! :description, tab_width: 2, hierarchy: 1
   markdownize! :extended_description, tab_width: 2, hierarchy: 1
