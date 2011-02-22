@@ -12,17 +12,30 @@
 
 ActiveRecord::Schema.define(:version => 20110221152827) do
 
+  create_table "histories", :force => true do |t|
+    t.string    "message"
+    t.string    "username"
+    t.integer   "item"
+    t.string    "table"
+    t.integer   "month"
+    t.integer   "year"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
+
+  add_index "histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
+
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.string   "tagline"
-    t.text     "body"
-    t.text     "rendered_body"
-    t.integer  "author_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "cached_slug"
-    t.string   "picture"
-    t.boolean  "published"
+    t.string    "title"
+    t.string    "tagline"
+    t.text      "body"
+    t.text      "rendered_body"
+    t.integer   "author_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "cached_slug"
+    t.string    "picture"
+    t.boolean   "published"
   end
 
   add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
@@ -30,22 +43,22 @@ ActiveRecord::Schema.define(:version => 20110221152827) do
   add_index "posts", ["title"], :name => "index_posts_on_title"
 
   create_table "projects", :force => true do |t|
-    t.string   "title"
-    t.string   "quote"
-    t.string   "client_name"
-    t.string   "category"
-    t.string   "cached_slug"
-    t.boolean  "promoted"
-    t.text     "description"
-    t.text     "extended_description"
-    t.string   "url"
-    t.integer  "downloads"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "rubygem"
-    t.text     "rendered_description"
-    t.text     "rendered_extended_description"
-    t.boolean  "published"
+    t.string    "title"
+    t.string    "quote"
+    t.string    "client_name"
+    t.string    "category"
+    t.string    "cached_slug"
+    t.boolean   "promoted"
+    t.text      "description"
+    t.text      "extended_description"
+    t.string    "url"
+    t.integer   "downloads"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "rubygem"
+    t.text      "rendered_description"
+    t.text      "rendered_extended_description"
+    t.boolean   "published"
   end
 
   add_index "projects", ["cached_slug"], :name => "index_projects_on_cached_slug"
@@ -58,51 +71,51 @@ ActiveRecord::Schema.define(:version => 20110221152827) do
   add_index "projects", ["updated_at"], :name => "index_projects_on_updated_at"
 
   create_table "screenshots", :force => true do |t|
-    t.string   "file"
-    t.integer  "project_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "file"
+    t.integer   "project_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "screenshots", ["project_id"], :name => "index_screenshots_on_project_id"
 
   create_table "slugs", :force => true do |t|
-    t.string   "name"
-    t.integer  "sluggable_id"
-    t.integer  "sequence",                     :default => 1, :null => false
-    t.string   "sluggable_type", :limit => 40
-    t.string   "scope"
-    t.datetime "created_at"
+    t.string    "name"
+    t.integer   "sluggable_id"
+    t.integer   "sequence",                     :default => 1, :null => false
+    t.string    "sluggable_type", :limit => 40
+    t.string    "scope"
+    t.timestamp "created_at"
   end
 
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
   create_table "user_tokens", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "user_id"
+    t.string    "provider"
+    t.string    "uid"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "reset_password_token"
-    t.string   "remember_token"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                       :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "name"
-    t.string   "position"
-    t.string   "twitter"
-    t.string   "github"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email",                               :default => "", :null => false
+    t.string    "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string    "reset_password_token"
+    t.string    "remember_token"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",                       :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.string    "name"
+    t.string    "position"
+    t.string    "twitter"
+    t.string    "github"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

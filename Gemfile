@@ -36,9 +36,13 @@ gem 'fog'
 gem 'mini_magick'
 
 gem 'faker'
+
 group :development do
   gem 'sqlite3'
+  gem 'heroku'
+  gem 'taps'
 end
+
 group :test, :development do
   gem 'factory_girl_rails'
 end
