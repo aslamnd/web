@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
 
   markdownize! :body, tab_width: 2, hierarchy: 2
 
+  paginates_per 5
+
   belongs_to :author, class_name: 'User'
   mount_uploader :picture, PictureUploader
   has_friendly_id :title, use_slug: true
