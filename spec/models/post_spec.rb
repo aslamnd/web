@@ -23,17 +23,11 @@ describe Post do
   end
 
   describe "scopes" do
-    describe "default scope" do
+    describe "published scope" do
       it "returns only published posts" do
         published_post = Factory :post, published: true
-        
-        Post.all.should == [published_post]
-      end
-
-      it "does not return unpublished posts" do
-        unpublished_post = Factory :post, published: false
-
-        Post.all.should_not include unpublished_post
+        Factory :post, published: false
+        Post.published.all.should == [published_post]
       end
     end
 

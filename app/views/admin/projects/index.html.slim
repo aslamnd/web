@@ -8,7 +8,7 @@ ul#projects
       li.project
         = project.title
         .actions
-          = link_to 'Edit', edit_admin_project_path(project)
-          = link_to "Remove", admin_project_path(project.id), method: 'delete', confirm: "Are you sure you want to remove this project?"
+          = link_to 'Edit', edit_admin_project_path(project.to_param)
+          = link_to "Remove", admin_project_path(project.to_param), method: 'delete', confirm: "Are you sure you want to remove this project?"
   - else
     | Sorry, there are no projects to show.

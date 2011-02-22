@@ -8,17 +8,17 @@ class Admin::ProjectsController < Admin::ApplicationController
   end
 
   def edit
-    @project = Project.unscoped.find(params[:id])
+    @project = Project.find(params[:id])
     edit!
   end
 
   def update
-    @project = Project.unscoped.find(params[:id])
+    @project = Project.find(params[:id])
     update! { admin_projects_path }
   end
 
   def show
-    @project = Project.unscoped.find(params[:id])
+    @project = Project.find(params[:id])
     show!
   end
 
@@ -26,12 +26,6 @@ class Admin::ProjectsController < Admin::ApplicationController
   
   def load_categories
     @categories = WorkCategory.all
-  end
-
-  protected 
-
-  def collection
-    Project.unscoped
   end
 
 end

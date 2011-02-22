@@ -4,7 +4,7 @@ ul#actions
   li = link_to 'Add a new post', new_admin_post_path
 ul#posts
   - unless collection.empty?
-    - collection.each do |post| 
+    - @posts.each do |post| 
       li.post
         = post.title
         .actions

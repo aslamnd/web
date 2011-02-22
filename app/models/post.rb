@@ -14,7 +14,8 @@ class Post < ActiveRecord::Base
   delegate :month, to: :created_at
   delegate :name, to: :author, prefix: true
 
-  default_scope where(published: true)
+  scope :published, where(published: true)
+
   scope :ordered, order: 'created_at desc'
   scope :from_archive, ->(year, month = nil) do
     year = year.to_i

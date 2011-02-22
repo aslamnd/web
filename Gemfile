@@ -8,7 +8,6 @@ gem 'pg'
 gem 'inherited_resources'
 gem 'escape_utils'
 gem 'friendly_id'
-gem 'will_paginate', '3.0.pre2'
 
 gem 'slim', :require => 'slim/rails'
 
@@ -26,6 +25,7 @@ gem 'flash_messages_helper'
 gem 'cells'
 gem 'markdownizer', '>= 0.3.6'
 gem 'heroku'
+gem 'kaminari'
 
 gem 'rest-client'
 gem 'crack'

@@ -8,7 +8,7 @@ class BlogCell < Cell::Rails
   end
 
   def latest
-    @posts = Post.ordered.limit(10)
+    @posts = Post.published.ordered.limit(10)
     render
   end
 
