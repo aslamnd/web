@@ -29,6 +29,12 @@ CodegramWeb::Application.routes.draw do
 
   ## Base subdomain
   constraints BaseSubdomain do
+    scope '/api' do
+      scope '/posts' do
+        post "/" => "api/posts#create"
+      end
+    end
+
     resource :contact_form,
       :path => 'contact',
       :only => [:new, :create],
