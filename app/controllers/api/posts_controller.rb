@@ -13,7 +13,7 @@ class Api::PostsController < ApplicationController
   protected
 
   def authenticate_token!
-    user = User.find_by_api_token(params[:token])
+    user = User.where(api_token: params[:token]).first
     if user
       params[:post][:author_id] = user.id
       params[:post][:published] = false
