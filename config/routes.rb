@@ -31,6 +31,7 @@ CodegramWeb::Application.routes.draw do
   constraints BaseSubdomain do
     scope '/api' do
       scope '/posts' do
+        get "/" => "api/posts#index"
         post "/" => "api/posts#create"
       end
     end

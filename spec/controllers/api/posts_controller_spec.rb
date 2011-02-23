@@ -45,5 +45,32 @@ module Api
 
     end
 
+    describe "#index" do
+
+      it "returns a user's posts" do
+        posts = [Factory(:post), Factory(:post)]
+        user = Factory(:user)
+        user.stub(:posts).and_return posts
+
+        User.stub(:where).and_return [user]
+        
+        get :index, token: '123456', format: :json
+
+        JSON.parse(response.body).first["post"]["body"].should == posts.first.body
+
+        response.code.should == "200"
+      end
+
+      context 'when the token is invalid' do
+        it 'rejects the request' do
+          User.stub(:where).and_return [nil]
+
+          post :create, token: '1234567'
+
+          response.code.should == "401"
+        end
+      end
+
+    end
   end
 end

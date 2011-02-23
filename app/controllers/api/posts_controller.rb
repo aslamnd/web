@@ -1,6 +1,8 @@
 class Api::PostsController < ApplicationController
   before_filter :authenticate_token!
 
+  respond_to :json
+
   def create
     post = Post.new(params[:post])
     if post.save
@@ -10,16 +12,20 @@ class Api::PostsController < ApplicationController
     end
   end
 
+  def index
+    respond_with @user.posts
+  end
+
   protected
 
   def authenticate_token!
-    user = User.where(api_token: params[:token]).first
-    if user
-      params[:post][:author_id] = user.id
+    @user = User.where(api_token: params[:token]).first
+    permission_denied unless @user
+
+    if params[:post]
+      params[:post][:author_id] = @user.id
       params[:post][:published] = false
       params.delete(:token)
-    else
-      permission_denied
     end
   end
 
