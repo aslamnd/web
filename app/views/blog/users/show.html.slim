@@ -1,1 +1,8 @@
 =@user.email
+h3 Latest posts
+ul
+  -@user.posts.limit(5).each do |post|
+    li
+      =post_link(post)
+      =' - '
+      =post.tagline
