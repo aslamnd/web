@@ -1,8 +1,4 @@
 class Api::PostsController < ApplicationController
-  inherit_resources
-
-  actions :create
-
   before_filter :authenticate_token!
 
   def create
