@@ -12,4 +12,9 @@ class BlogCell < Cell::Rails
     render
   end
 
+  def home
+    @posts = Post.published.ordered.limit(3)
+    render
+  end
+
 end
