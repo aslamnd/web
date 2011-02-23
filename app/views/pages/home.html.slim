@@ -33,20 +33,7 @@ section#home
   .row
     section.left.blog
       h3 Learn from our day-to-day
-      -Post.ordered.limit(3).each do |post|
-        article.post
-          .image
-            -if post.picture?
-              =image_tag post.picture_url, width: 60
-            -else
-              =image_tag "authors/#{post.author.twitter}.jpg", width: 60
-          .content
-            h4
-              =post_link(post, host: true)
-            .date
-              = post.created_at.to_s(:date)
-            p
-              =post.tagline
+      =render_cell :blog, :home
       aside.more
         a href="http://blog.#{request.host_with_port + blog_posts_path}" Read our blog
 

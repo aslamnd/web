@@ -1,0 +1,14 @@
+-@posts.each do |post|
+  article.post
+    .image
+      -if post.picture?
+        =image_tag post.picture_url, width: 60
+      -else
+        =image_tag "authors/#{post.author.twitter}.jpg", width: 60
+    .content
+      h4
+        =post_link(post, host: true)
+      .date
+        = post.created_at.to_s(:date)
+      p
+        =post.tagline
