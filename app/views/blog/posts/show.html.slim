@@ -36,7 +36,7 @@ hr
     -content_for :sidebar do
       section.author_info
         =image_tag "authors/#{resource.author.twitter}.jpg", :width => 160, :height => 106
-        h4 #{resource.author_name}
+        h4 = link_to resource.author_name, blog_user_path(resource.author)
         p
           =resource.author.position
         p
