@@ -8,7 +8,7 @@ section.user-page
     li.twitter 
       =link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
     li.github 
-      =link_to "@#{@user.github}", "http://github.com/#{@user.github}"
+      =link_to "github.com/#{@user.github}", "http://github.com/#{@user.github}"
   h3 Latest posts
   ul.user-posts
     -@user.posts.limit(5).each do |post|
