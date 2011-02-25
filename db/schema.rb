@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110221152827) do
+ActiveRecord::Schema.define(:version => 20110225105642) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(:version => 20110221152827) do
     t.string   "github"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
