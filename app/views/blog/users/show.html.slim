@@ -1,15 +1,16 @@
-.user-info
-  h3 =@user.name
-  =image_tag "authors/#{@user.twitter}.jpg", :width => 160, :height => 106
-  .user-description
-    p
-      =@user.description
-  p
-    =link_to "Twitter", "http://twitter.com/"+@user.twitter
-  p
-    =link_to "GitHub", "http://github.com/"+@user.twitter
-  h4 Latest posts
-  ul
+section.user-page
+  h2 =@user.name
+  .user-info
+    =image_tag "authors/#{@user.twitter}.jpg", :width => 160, :height => 106
+    .user-description 
+      =@user.description.html_safe || ''
+  ul.user-links
+    li.twitter 
+      =link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
+    li.github 
+      =link_to "@#{@user.github}", "http://github.com/#{@user.github}"
+  h3 Latest posts
+  ul.user-posts
     -@user.posts.limit(5).each do |post|
       li
         =post_link(post)
