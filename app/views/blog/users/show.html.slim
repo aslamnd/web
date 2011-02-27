@@ -5,10 +5,15 @@ section.user-page
     .user-description 
       =@user.description.html_safe || ''
   ul.user-links
-    li.twitter 
-      =link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
-    li.github 
-      =link_to "github.com/#{@user.github}", "http://github.com/#{@user.github}"
+    -unless @user.twitter.empty?
+      li.twitter 
+        =link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
+    -unless @user.github.empty?
+      li.github 
+        =link_to "github.com/#{@user.github}", "http://github.com/#{@user.github}"
+    -unless @user.homepage.empty?
+      li.homepage
+        =link_to @user.homepage, @user.homepage
   h3 Latest posts
   ul.user-posts
     -@user.posts.limit(5).each do |post|
