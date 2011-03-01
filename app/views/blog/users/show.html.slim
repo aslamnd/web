@@ -3,15 +3,15 @@ section.user-page
   .user-info
     =image_tag "authors/#{@user.twitter}.jpg", :width => 160, :height => 106
     .user-description 
-      =@user.description.html_safe || ''
+      =(@user.description || '').html_safe
   ul.user-links
-    -unless @user.twitter.empty?
+    -if @user.twitter.present?
       li.twitter 
         =link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
-    -unless @user.github.empty?
+    -if @user.github.present?
       li.github 
         =link_to "github.com/#{@user.github}", "http://github.com/#{@user.github}"
-    -unless @user.homepage.empty?
+    -if @user.homepage.present?
       li.homepage
         =link_to @user.homepage, @user.homepage
   h3 Latest posts

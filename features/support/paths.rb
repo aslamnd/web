@@ -14,7 +14,8 @@ module NavigationHelpers
       new_user_session_path
     when /the admin dashboard/
       admin_path
-
+    when /the user's page/
+      blog_user_path(find_model(:user))
     when /the work page/
       work_path
     when /the project edit page/

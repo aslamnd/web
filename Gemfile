@@ -39,11 +39,11 @@ gem 'faker'
 group :development do
   gem 'sqlite3'
 end
-group :test, :development do
+group :test, :development, :cucumber do
   gem 'factory_girl_rails'
 end
 
-group :test do
+group :test, :cucumber do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'rspec-rails', '~> 2.4.0'
@@ -62,4 +62,6 @@ group :test do
   gem 'guard-cucumber'
   gem 'rb-fsevent'
   gem 'growl'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'guard-spork'
 end
