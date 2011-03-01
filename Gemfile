@@ -51,4 +51,15 @@ group :test do
   gem 'launchy'
   gem "database_cleaner", "~> 0.6.0"
   gem 'shoulda'
+  gem 'guard', '~> 0.3'
+  gem 'guard-ego'
+  gem 'guard-shell'
+  gem 'guard-bundler'
+  gem 'guard-compass'
+  gem 'guard-livereload'
+  gem 'guard-passenger'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'rb-fsevent'
+  gem 'growl'
 end
