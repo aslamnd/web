@@ -14,10 +14,11 @@ section.user-page
     -if @user.homepage.present?
       li.homepage
         =link_to @user.homepage, @user.homepage
-  h3 Latest posts
-  ul.user-posts
-    -@user.posts.limit(5).each do |post|
-      li
-        =post_link(post)
-        =' - '
-        =post.tagline
+  -unless @user.posts.empty?
+    h3 Latest posts
+    ul.user-posts
+      -@user.posts.limit(5).each do |post|
+        li
+          =post_link(post)
+          =' - '
+          =post.tagline

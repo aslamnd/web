@@ -15,15 +15,16 @@ Feature: Visitor views a particular user
     And the user has written the following posts:
       | title                      |
       | I copied Oliver Twist      |
-      | Poe was may better         |
+      | Poe was way better         |
       | Growing a beard            |
       | My signature is unreadable |
       | Too many children          |
       | Stop writing posts please  |
     When I visit "Charles Dickens" profile
     Then I should see the following within latest posts list
+      | title                      |
       | I copied Oliver Twist      |
-      | Poe was may better         |
+      | Poe was way better         |
       | Growing a beard            |
       | My signature is unreadable |
       | Too many children          |
@@ -34,10 +35,15 @@ Feature: Visitor views a particular user
       | title                      |
       | I copied Oliver Twist      |
     And I visit the blog subdomain
-    And I follow "I copied Olver Twist"
+    And I follow "I copied Oliver Twist"
     When I follow "Charles Dickens"
-    Then I should be on "Charles Dickens" profile
+    Then I should be on the user's page
 
   Scenario: Visitor gets a not found error when visiting an unexisting user profile
-    When I visit an unexsting user profile
+    When I visit an unexisting user profile
     Then I should get a 404 error
+
+  Scenario: Visitor views user profile
+    Given "Charles Dickens" exists as author
+    When I visit "Charles Dickens" profile
+    Then I should not see "Latest posts" in the user information

@@ -1,6 +1,7 @@
 {
   # Users
   'in the users list' => '#users',
+  'in the user information' => '.user-page',
   'in the first user' => '#users .user:nth-of-type(1)',
 
   # Posts
