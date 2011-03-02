@@ -77,12 +77,13 @@
     +button-codegram
     width: 128px 
   .latest ul
-    +no-bullets
     margin: 0px
     padding: 0px
+    margin-right: 15px
     li
       margin-bottom: 10px
       margin-top: 10px
+      font-size: 1em
       
   .tags ul
     padding-left: 5px
@@ -167,3 +168,33 @@
   background-color: #0f0
   textarea
     background-color: #0f0
+
+.user-page
+  .user-info
+    overflow: auto
+    img
+      float: left
+      padding-right: 10px
+  .user-links
+    clear: both
+    margin-top: 10px
+    margin-bottom: 10px
+  ul.user-links
+    +horizontal-list
+    +no-bullets
+    padding: 0px
+    margin-top: 10px
+    margin-bottom: 20px
+    li
+      margin-top: 5px
+      a
+        height: 25px
+        padding-left: 30px
+        display: block
+        background-position: left center
+        background-repeat: no-repeat
+      &.homepage a
+        background-image: url(/images/embed/homepage.png) 
+  ul.user-posts
+    +no-bullets
+    padding-left: 20px

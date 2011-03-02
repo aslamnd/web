@@ -11,9 +11,14 @@ Factory.define :project do |p|
   p.rubygem { %w(date_validator colorant colorblind lastfm).sample }
 
   p.category { ['open-source', 'products'].sample }
-  p.screenshots { [Factory(:screenshot)] }
+  p.after_create do |project|
+    project.screenshots << Factory(:screenshot) 
+  end
 end
 
 Factory.define :project_without_screenshot, parent: :project do |p|
   p.screenshots { [] }
+  p.after_create do |project|
+    project.screenshots.destroy_all  
+  end
 end

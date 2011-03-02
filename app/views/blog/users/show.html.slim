@@ -1,0 +1,24 @@
+section.user-page
+  h2 =@user.name
+  .user-info
+    =image_tag "authors/#{@user.twitter}.jpg", :width => 160, :height => 106
+    .user-description 
+      =(@user.description || '').html_safe
+  ul.user-links
+    -if @user.twitter.present?
+      li.twitter 
+        =link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
+    -if @user.github.present?
+      li.github 
+        =link_to "github.com/#{@user.github}", "http://github.com/#{@user.github}"
+    -if @user.homepage.present?
+      li.homepage
+        =link_to @user.homepage, @user.homepage
+  -unless @user.posts.empty?
+    h3 Latest posts
+    ul.user-posts
+      -@user.posts.limit(5).each do |post|
+        li
+          =post_link(post)
+          =' - '
+          =post.tagline

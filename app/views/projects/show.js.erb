@@ -53,6 +53,8 @@ if(History.firstCall == true){
         resetPosition(container);
       });
     <% end %>
+
+      _gaq.push(['_trackPageview', "<%=escape_javascript request.path%>"]);
   })();
 }
 

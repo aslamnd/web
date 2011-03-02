@@ -30,8 +30,11 @@ class Blog::PostsController < ApplicationController
 
   def collection
     validate_dates
-    (params[:year] ? end_of_association_chain.scoped.from_archive(params[:year],
-                                                          params[:month])
-                  : end_of_association_chain.scoped).ordered.paginate(page: params[:page], per_page: 5)
+    @posts = (params[:year] ? end_of_association_chain.from_archive(params[:year],params[:month])
+                  : end_of_association_chain).page(params[:page]).published.ordered
+    @posts.all
+    @posts
+
   end
+
 end

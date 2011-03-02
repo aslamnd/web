@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
 
   markdownize! :body, tab_width: 2, hierarchy: 2
 
+  paginates_per 5
+
   belongs_to :author, class_name: 'User'
   mount_uploader :picture, PictureUploader
   has_friendly_id :title, use_slug: true
@@ -14,7 +16,8 @@ class Post < ActiveRecord::Base
   delegate :month, to: :created_at
   delegate :name, to: :author, prefix: true
 
-  default_scope where(published: true)
+  scope :published, where(published: true)
+
   scope :ordered, order: 'created_at desc'
   scope :from_archive, ->(year, month = nil) do
     year = year.to_i
