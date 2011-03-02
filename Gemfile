@@ -11,7 +11,7 @@ gem 'friendly_id'
 
 gem 'slim', :require => 'slim/rails'
 
-gem "oa-oauth", :git => 'git://github.com/intridea/omniauth.git', :ref => '15a86b6d51db94a864be', :require => "omniauth/oauth"
+gem "oa-oauth", '~> 0.2.0.beta5'
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
 
 gem 'high_voltage'
@@ -55,4 +55,5 @@ group :test do
   gem 'launchy'
   gem "database_cleaner", "~> 0.6.0"
   gem 'shoulda'
+  gem 'akephalos', require: false
 end
