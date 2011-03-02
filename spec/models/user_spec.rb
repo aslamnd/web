@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  it { should respond_to(:email, :password, :password_confirmation) }
+  it { should respond_to(:email, :password, :password_confirmation, :description, :cached_slug) }
   it { should have_many(:posts) }
   it { should have_many(:user_tokens) }
 

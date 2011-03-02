@@ -1,0 +1,13 @@
+login: &login
+  username: user
+  password: password
+  adapter: postgresql
+  host: localhost
+
+development:
+  database: codegram_web_development
+  <<: *login
+
+test:
+  database: codegram_web_test
+  <<: *login
