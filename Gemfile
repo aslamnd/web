@@ -11,7 +11,7 @@ gem 'friendly_id'
 
 gem 'slim', :require => 'slim/rails'
 
-gem "oa-oauth", :git => 'git://github.com/intridea/omniauth.git', :ref => '15a86b6d51db94a864be', :require => "omniauth/oauth"
+gem "oa-oauth", '~> 0.2.0.beta5'
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
 
 gem 'high_voltage'
@@ -26,6 +26,8 @@ gem 'cells'
 gem 'markdownizer', '>= 0.3.6'
 gem 'heroku'
 gem 'kaminari'
+
+gem 'button_form'
 
 gem 'rest-client'
 gem 'crack'
@@ -43,11 +45,11 @@ group :development do
   gem 'taps'
 end
 
-group :test, :development do
+group :test, :development, :cucumber do
   gem 'factory_girl_rails'
 end
 
-group :test do
+group :test, :cucumber do
   gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'rspec-rails', '~> 2.4.0'
@@ -55,4 +57,18 @@ group :test do
   gem 'launchy'
   gem "database_cleaner", "~> 0.6.0"
   gem 'shoulda'
+  gem 'guard', '~> 0.3'
+  gem 'guard-ego'
+  gem 'guard-shell'
+  gem 'guard-bundler'
+  gem 'guard-compass'
+  gem 'guard-livereload'
+  gem 'guard-passenger'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'rb-fsevent'
+  gem 'growl'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'guard-spork'
+  gem 'akephalos', require: false
 end

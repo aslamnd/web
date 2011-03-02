@@ -21,5 +21,4 @@ class Admin::PostsController < Admin::ApplicationController
     @post = Post.find(params[:id])
     show!
   end
-
 end
