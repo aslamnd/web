@@ -47,3 +47,9 @@ Feature: Visitor views a particular user
     Given "Charles Dickens" exists as author
     When I visit "Charles Dickens" profile
     Then I should not see "Latest posts" in the user information
+
+  Scenario: Visitor views user profile
+    Given "Charles Dickens" exists as author
+    And the user has an unpublished post titled "Oh hai!!"
+    When I visit "Charles Dickens" profile
+    Then I should not see "Oh hai!!" in the user information

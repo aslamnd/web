@@ -36,3 +36,7 @@ When /^I visit an unexisting user profile$/ do
   visit "/users/fake-user"
 end
 
+Given /^the user has an unpublished post titled "([^"]*)"$/ do |post_title|
+  create_model(:post, title: post_title, author: find_model(:user), published: false)
+end
+
