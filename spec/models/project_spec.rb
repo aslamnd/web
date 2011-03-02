@@ -36,9 +36,10 @@ describe Project do
       end
     end
     describe ".promoted" do
-      it 'returns promoted projects' do
-        promoted_project = Factory.create :project, promoted: true
-        normal_project = Factory.create :project, promoted: false
+      it 'returns published and promoted projects' do
+        promoted_project = Factory.create :project, promoted: true, published: true
+        Factory.create :project, promoted: true, published: false
+        Factory.create :project, promoted: false, published: true
         Project.promoted.all.should == [promoted_project]
       end
     end

@@ -6,6 +6,7 @@
   # Posts
   'in the posts list' => '#posts',
   'in the first post' => '#posts .post:nth-of-type(1)',
+  'in the pagination' => '.pagination',
 
   # Projects
   'in the projects list' => '#projects',

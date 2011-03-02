@@ -26,6 +26,17 @@ describe User do
         end
       end
     end
-    
   end
+
+  describe "#assign_api_token" do
+    it 'assigns a generated API token to the user' do
+      subject.stub(:twitter).and_return 'mytwittername'
+      ENV.stub(:[]).with('TWITTER_SECRET').and_return "8724yth9b"
+
+      subject.assign_api_token
+
+      subject.api_token.should == Digest::SHA1.hexdigest("8724yth9bmytwittername")
+    end
+  end
+
 end

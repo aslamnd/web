@@ -3,6 +3,7 @@ Factory.define :user do |u|
   u.sequence(:email) { |n| "user#{n}@codegram.com" }
   u.password 'admin123'
   u.password_confirmation 'admin123'
+  u.twitter 'mytwitter'
   u.user_tokens {|n| n.user_tokens << Factory(:user_token) }
   u.description { Faker::Lorem.paragraphs.first }
 end

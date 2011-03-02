@@ -12,8 +12,8 @@ class Project < ActiveRecord::Base
   has_friendly_id :title, use_slug: true
 
   scope :open_source, where(category: 'open-source')
-  scope :promoted, where(promoted: true)
-  default_scope where(published: true)
+  scope :published, where(published: true)
+  scope :promoted, published.where(promoted: true)
 
   markdownize! :description, tab_width: 2, hierarchy: 1
   markdownize! :extended_description, tab_width: 2, hierarchy: 1

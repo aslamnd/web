@@ -1,4 +1,5 @@
 class Admin::PostsController < Admin::ApplicationController
+
   inherit_resources
 
   def create
@@ -7,23 +8,17 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def edit
-    @post = Post.unscoped.find(params[:id])
+    @post = Post.find(params[:id])
     edit!
   end
 
   def update
-    @post = Post.unscoped.find(params[:id])
+    @post = Post.find(params[:id])
     update! { admin_posts_path }
   end
 
   def show
-    @post = Post.unscoped.find(params[:id])
+    @post = Post.find(params[:id])
     show!
-  end
-
-  protected
-
-  def collection
-    Post.unscoped
   end
 end
