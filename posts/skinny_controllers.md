@@ -1,19 +1,21 @@
 ---
 title: Skinny controllers are not enough
-tagline: CRUD FTW
+tagline: Starve them to death
 ---
 
 At the end of the day, what do you really want? [Write less code](http://www.google.es/search?q=write%20less%20code). Less code means less bugs and better mantainability, among many other things. 
-Nothing new ATM. another best practice is to keep your models fat and your controllers skinny, it something almost everyone is (or should be doing) currently doing. But keeping your controllers skinny doesn't mean you are not repating yourself.
+Nothing new. Something else everyone should be doing (if not doing it already) is to keep fat models and skinny controllers, but keeping your controllers skinny doesn't mean you are not repating yourself. Thus, skinny controllers are not enough.
 
-Enter [Inherited resource](https://github.com/josevalim) and [Decent Exposure](https://github.com/voxdolo/decent_exposure). What they do is change a RESTful controller to just this:
-http://railscasts.com/episodes/230-inherited-resources
-
+Enter [Inherited resource](https://github.com/josevalim) ([corresponding Railscast](http://railscasts.com/episodes/230-inherited-resources)). In an ideal world, a typical RESTful post controller would become something like this:
 {% code ruby %}
 {% caption 'Inherited Resources controller' %}
 class PostsController < InheritedResources::Base  
 end 
 {% endcode %}
+
+This is controllers on diet. In the long run you'll probably need to change something and add some code, but it's definitely very hepful. If you're using Inherited Resources you should also look at [Responders documentation](https://github.com/plataformatec/responders) and then tweak you locales accordingly.
+
+I've always been a fan of Inherited Resources, but recently ([thanks to this tweet by @pat](https://twitter.com/oriolgual/status/40289136208384000)) I discovered [Decent Exposure](https://github.com/voxdolo/decent_exposure), and I really like it. Is a shift from what Inherited Resources does, tackling the problem with a different solution:
 
 {% code ruby %}
 {% caption 'Decent Exposure controller' %}
@@ -37,21 +39,6 @@ class PostsController < ApplicationController
 end 
 {% endcode %}
 
-At first glance, is obvious that with *Inherited Resources* you can avoid even writing a single line of code (although in the long run you'll probably need to), but it's normal, each one is a different solution (and not necessary to the same problem).
+It is not as DRY as Inherited Resources, but maybe this is a good thing: there's no hidden *voodoo* that magically does everything. It's not that Inherited Resources does something wrong, but sometimes you want more control on what is happening in your application or, due to the lack of knowledge, you're doing something wrong with it but you fail to realize it was due to all the magic happening behind the scenes.
 
-+ Skinny controllers, example PostsController
-+ inherited_resources controller
-+ decent_exposure controller
-
-+ Showdown
-+ Inherited resource more magical
-+ Comes with responders (bonus)
-+ Always fan of inherited resource, just discovered decent exposure and really
-like it
-+ Less magic an also be good
-+ resource, collection VS expose
-+ belongs_to VS associated
-+ With decent exposure you still need to define create, update and destroy
-
-+ Try to integrate decent exposure with responders (makes sense?)
-+ Feedback
+I'd really like to share some experiences about both Inherited Resources and Decent Exposure? Which one do you prefer? What has been your experience so far? Has anyone tried, if it makes sense, to use Decent Exposure together with Responders?
