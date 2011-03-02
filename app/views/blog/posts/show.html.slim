@@ -39,8 +39,7 @@ hr
         h4 #{resource.author_name}
         p
           =resource.author.position
-        p
-          a href="http://twitter.com/#{resource.author.twitter}" class="author-more"="Twitter"
-        p
-          a href="http://github.com/#{resource.author.github}" class="author-more"="GitHub"
-      hr
+        p.twitter
+          =link_to "@#{resource.author.twitter}", "http://twitter.com/#{resource.author.twitter}"
+        p.github
+          =link_to "github.com/#{resource.author.github}", "http://github.com/#{resource.author.github}"
