@@ -27,6 +27,8 @@ gem 'markdownizer', '>= 0.3.6'
 gem 'heroku'
 gem 'kaminari'
 
+gem 'button_form'
+
 gem 'rest-client'
 gem 'crack'
 
