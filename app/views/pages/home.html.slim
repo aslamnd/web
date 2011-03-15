@@ -34,14 +34,14 @@ section#home
     section.left.blog
       h3 Learn from our day-to-day
       =render_cell :blog, :home
-      aside.more
-        a href="http://blog.#{request.host_with_port + blog_posts_path}" Read our blog
+    aside.more.left.blog
+      a href="http://blog.#{request.host_with_port + blog_posts_path}" Read our blog
 
     section.right.twitter
       h3 What we're talking about
       #tweets
-      aside.more
-        a href='http://twitter.com/codegram' Follow us on Twitter
+    aside.more.right.twitter
+      a href='http://twitter.com/codegram' Follow us on Twitter
 
 javascript:
   $(function(){

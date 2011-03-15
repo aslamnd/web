@@ -56,7 +56,8 @@ html body
       &:hover
         text-decoration: underline
     section.blog, section.twitter
-      height: 330px
+      min-height: 300px
+      padding-bottom: 0px
     section.blog
       article
         overflow: hidden
@@ -89,6 +90,14 @@ html body
             color: #999
 
 
-      aside.more
+    aside.more
+      position: absolute
+      bottom: 0
+      left: 0
+      margin-top: 0px
+      margin-left: 0px
+      &.right
+        left: 50%
+      &.twitter
         a
           +button-codegram(#3BCEFF)
