@@ -37,6 +37,10 @@ html
           =render_cell :blog, :latest
           hr
           =link_to 'RSS Feed', '/feed.atom', class: 'rss'
+          hr
+          script type="text/javascript" src="http://www.google.com/reader/ui/publisher-en.js"
+          script type="text/javascript" src="http://www.google.com/reader/public/javascript-sub/user/09956358645504487988/bundle/Codegram?callback=GRC_p(%7Bc%3A%22gray%22%2Ct%3A%22Codegram%20feed%20bundle%22%2Cb%3A%22true%22%7D)%3Bnew%20GRC"
+
       = render :partial => 'layouts/blog_slideshow' 
       footer#footer
     = include_javascripts :application
