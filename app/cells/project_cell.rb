@@ -3,7 +3,7 @@ class ProjectCell < Cell::Rails
   helper ProjectsHelper
 
   def latest
-    @project = Project.promoted.last
+    @project = Project.promoted.first
     render
   end
 
