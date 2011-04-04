@@ -13,7 +13,7 @@ class Project < ActiveRecord::Base
 
   scope :open_source, where(category: 'open-source')
   scope :published, where(published: true)
-  scope :promoted, published.where(promoted: true)
+  scope :promoted, published.where(promoted: true).order(arel_table[:created_at].desc)
 
   markdownize! :description, tab_width: 2, hierarchy: 1
   markdownize! :extended_description, tab_width: 2, hierarchy: 1
