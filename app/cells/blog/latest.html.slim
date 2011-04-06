@@ -1,9 +1,8 @@
 aside.latest
   h3 Latest posts
   ul
-    -@posts.each do |post|
-      -if post.published
-        li
-          =post_link(post)
-          =" - "
-          =post.tagline
+    -@posts.published.limit(5).each do |post|
+      li
+        =post_link(post)
+        =" - "
+        =post.tagline

@@ -1,16 +1,27 @@
-article.post
+article.post.hentry
   headergroup.post-header
-    h2.post-title
+    h2.post-title.entry-title
       =post_link(post)
     h3.post-tagline
       = post.tagline
   span class="post-metadata"
-    .author-line
+    -if params[:action] == 'show'
+      #rdbWrapper
+      javascript: 
+        (function() {
+            var s     = document.getElementsByTagName('script')[0],
+                rdb   = document.createElement('script');
+            rdb.type  = 'text/javascript';
+            rdb.async = true;
+            rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
+            s.parentNode.insertBefore(rdb, s);
+        })();
+    .author-line.byline.author.vcard
       | posted by  
-      span.author = link_to post.author_name, blog_user_path(post.author)
+      span.author.fn = link_to post.author_name, blog_user_path(post.author)
     .date-line
       |  on 
-      span.date = post.created_at.to_s(:date)
-  .post-body
-    = image_tag(post.picture.thumb.url) if post.picture?
+      time.date.updated datetime=post.updated_at pubdate='' = post.created_at.to_s(:date)
+  .post-body.entry-content
+    = image_tag(post.picture.thumb.url, class: 'entry-content-asset') if post.picture?
     = post.rendered_body.html_safe

@@ -47,11 +47,6 @@ group 'frontend' do
     watch(%r{src/(.*)\.s[ac]ss})
   end
 
-  guard 'jammit' do
-    watch(%r{public/javascripts/(.*)\\\\.js})
-    watch(%r{public/stylesheets/(.*)\\\\.css})
-  end
-
   guard 'livereload' do
     watch(%r{app/.+\.(erb|haml)})
     watch(%r{app/helpers/.+\.rb})

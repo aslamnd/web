@@ -36,14 +36,15 @@
     &.blog
       .image
         float: left
-        margin-right: 15px
+        margin-right: 10px
       h4
         font-size: 1em
         margin: 0px
         padding: 0px
-      .date
+      .date, .author-line
         font-size: 0.8em
         margin-bottom: 5px
+        display: inline
       p
         color: $font-color + #333
 
@@ -55,8 +56,15 @@ html body
       &:hover
         text-decoration: underline
     section.blog, section.twitter
-      min-height: 330px
-      *height: 330px
+      height: 330px
+    section.blog
+      article
+        overflow: hidden
+        padding-top: 10px
+        margin-bottom: 10px
+        &.first
+          border-top: none
+          padding-top: 0px
     section.twitter
       ul
         +no-bullets

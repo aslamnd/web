@@ -33,12 +33,13 @@ nav#tabs
       margin: 0px
 
 #project_parent
-  overflow: hidden
+  // overflow: hidden
   position: relative
   +column(12, true)
   height: 500px
   margin-bottom: 20px
   font-size: 0.9em
+  width: 720px
   #projects
     .row
       margin-bottom: 0px
@@ -49,7 +50,7 @@ nav#tabs
     overflow: auto
     article.project
       height: 500px
-      overflow: hidden
+      // overflow: hidden
       float: left
       position: relative
       h2
@@ -60,6 +61,8 @@ nav#tabs
         font-weight: normal
     .snapshot
       height: 300px
+      img
+        width: 713px
     .visit-site 
       margin-top: 10px
       a

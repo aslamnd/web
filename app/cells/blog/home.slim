@@ -1,14 +1,18 @@
--@posts.each do |post|
-  article.post
+-@posts.each_with_index do |post, index|
+  article class="post #{(index == 0 ? 'first' : nil)}"
     .image
-      -if post.picture?
-        =image_tag post.picture_url, width: 60
-      -else
-        =image_tag "authors/#{post.author.twitter}.jpg", width: 60
+      a href="http://blog.codegram.com#{blog_user_path(post.author)}"
+        -if post.picture?
+          =image_tag post.picture_url, width: 60
+        -else
+          =image_tag "authors/#{post.author.twitter}.jpg", width: 60
     .content
       h4
         =post_link(post, host: true)
       .date
         = post.created_at.to_s(:date)
+      .author-line
+        |  by  
+        span.author = link_to post.author_name, "http://blog.codegram.com#{blog_user_path(post.author)}"
       p
         =post.tagline

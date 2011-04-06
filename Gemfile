@@ -43,6 +43,7 @@ group :development do
   gem 'sqlite3'
   gem 'heroku'
   gem 'taps'
+  gem 'passenger'
 end
 
 group :test, :development, :cucumber do
