@@ -15,7 +15,7 @@
       =render :partial => 'post', :object => post
       =comment_count(post)
       hr
-  = paginate collection
+  == paginate collection
 - else
   | Sorry, there are no posts to show.
 
