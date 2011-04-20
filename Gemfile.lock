@@ -8,13 +8,6 @@ GIT
       rack-test (>= 0.5.7)
 
 GIT
-  remote: git://github.com/codegram/rack-cache.git
-  revision: 151b02a2e1de8d175a445abfa5f8ccb732748207
-  specs:
-    rack-cache (1.0)
-      rack (>= 0.4)
-
-GIT
   remote: git://github.com/jnicklas/capybara.git
   revision: 218510e64f2fa8c2a2ccd3a709897be5dbfd1b93
   specs:
@@ -238,6 +231,8 @@ GEM
     polyglot (0.3.1)
     proxies (0.2.1)
     rack (1.2.2)
+    rack-cache (1.0.1)
+      rack (>= 0.4)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -366,7 +361,7 @@ DEPENDENCIES
   passenger
   pg
   pickle
-  rack-cache!
+  rack-cache
   rails (~> 3.0)
   rb-fsevent
   rest-client

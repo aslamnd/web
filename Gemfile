@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.0'
 gem 'arel'
-gem 'rack-cache', :git => 'git://github.com/codegram/rack-cache.git'
+gem 'rack-cache'
 gem 'pg'
 
 gem 'inherited_resources'
