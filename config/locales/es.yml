@@ -56,6 +56,21 @@ es:
       contact_form:
         create: Enviar
 
+  categories:
+    products: Productos
+    open-source: Open source
+
+  projects:
+    project_navigation:
+      previous: Anterior
+      next: Siguiente
+    projects:
+      visit_site: Visitar web del proyecto
+      what_we_did: Qué hemos hecho
+      view_at_rubygems: Ver proyecto a RubyGems
+      source_at_github: View código fuente en GitHub
+      downloads: descargas
+
   services:
     development: Desarrollo
     web_application: Aplicación web

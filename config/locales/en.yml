@@ -60,6 +60,21 @@ en:
         header: We use the best technology
         text: to achieve the best solution
 
+  categories:
+    products: Products
+    open-source: Open source
+
+  projects:
+    project_navigation:
+      previous: Previous
+      next: Next
+    projects:
+      visit_site: Visit project site
+      what_we_did: What we did
+      view_at_rubygems: View project at RubyGems
+      source_at_github: View source at GitHub
+      downloads: downloads
+
   helpers:
     submit:
       contact_form:

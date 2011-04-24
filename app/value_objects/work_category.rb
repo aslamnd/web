@@ -16,7 +16,7 @@ module WorkCategory
 
     def all
       names.map do |category|
-        OpenStruct.new({ name: self[category], id: category })
+        OpenStruct.new({ name: I18n.t("categories.#{category}"), id: category })
       end
     end
   end
