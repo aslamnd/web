@@ -2,7 +2,6 @@ class ProjectsController < ApplicationController
 
   before_filter :validate_category!
   before_filter :load_categories
-  before_filter :set_cache_control
 
   def show
     @projects = Project.where(category: params[:work_category_id]).order('created_at DESC').all

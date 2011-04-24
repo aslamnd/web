@@ -2,7 +2,7 @@ nav
   =render_navigation
 .vcard
   aside
-    h4 Call us
+    h4=t '.call_us'
     span.fn.hidden
       span.given-name Codegram
     span.tel 0034 937 872 194
@@ -10,7 +10,7 @@ nav
     | 0034 668 823 476 
   aside
     .adr
-      h4 Visit us 
+      h4=t '.visit_us'
       span.street-address Pl. d’Aurora Bertrana
       br
       span.extended-address Office 19 (2nd floor)
@@ -23,14 +23,14 @@ nav
       span.country-name Spain
       | )
       br
-    =link_to 'See a map', 'http://goo.gl/dIf4I'
+    =link_to t('.see_map'), 'http://goo.gl/dIf4I'
     =image_tag 'http://' + request.host_with_port + '/images/logo_hcard.png', :class => 'hidden photo'
   aside
-    h4 Contact us
+    h4=t '.contact_us'
     span.hidden.url http://codegram.com
     = link_to '<span class="email">info@codegram.com</span>'.html_safe, 'mailto:info@codegram.com'
 aside
-  h4 Follow us
+  h4=t('.follow_us')
   ul
     li=link_to '@codegram', 'http://twitter.com/codegram'
     li=link_to '@josepjaume', 'http://twitter.com/josepjaume'

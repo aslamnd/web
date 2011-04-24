@@ -1,0 +1,45 @@
+es:
+  menu:
+    home: Inicio
+    services: Servicios
+    work: Proyectos
+    about: Sobre nosotros
+    contact: Contacto
+    blog: blog
+  pages:
+    home:
+      meta_description: Somos un equipo de entusiastas desarrolladores de Barcelona y alrededores. Construimos aplicaciones en Ruby on Rails cuidando el detalle, la calidad del código y la experiencia de usuario.
+      motto: Somos un equipo de desarrolladores entusiastas
+      submotto: Construimos aplicaciones en Ruby on Rails poniendo especial detalle en la calidad del código y la experiencia de usuario.
+      what_can_we_do: Qué podemos hacer para tí?
+      what_text: "<p>Are you starting up a <strong>web-driven business</strong>? Are you working on a new awesome project and need <strong>consultancy</strong> or <strong>training</strong>? Are you stuck in the middle of your development process and having problems <strong>getting the work done</strong>?</p><p>We are a team of expert web developers specializing in <em>Ruby on Rails</em> and the <em>Ruby</em> ecosystem.</p>"
+      what_text: "<p>¿Estás empezando un <strong>negocio on-line</strong>? ¿Estás trabajando en un proyecto genial y necesitas <strong>consultoría</strong> o <strong>entrenamiento</strong>? ¿Te has quedado atascado en medio de tu proceso de desarrollo y tienes problemas para <strong>conseguir acabar el proyecto</strong>?</p><p>Somos un equipo de expertos especializados en <em>Ruby on Rails</em> y el ecosistema <em>Ruby</em>.</p>"
+      check_out_services: Nuestros servicios
+      recent_work: Nuestro trabajo reciente
+      explore_projects: Explora nuestros proyectos
+      blog: "Aprende de nuestro día a día"
+      read_blog: Lee nuestro blog
+      twitter: "De qué estamos hablando"
+      follow_twitter: Síguenos en Twitter
+
+  layouts:
+    main_sidebar:
+      call_us: Llámanos
+      visit_us: Visítanos
+      see_map: 'Ver un mapa'
+      contact_us: Contátanos
+      follow_us: Síguenos
+
+    slideshow:
+      slide1:
+        header: Nos implicamos en tu proyecto
+        text: Nos encanta trabajar con nuestros clientes
+      slide2:
+        header: Competimos
+        text: Nos encanta programar por diversión
+      slide3:
+        header: Nos encanta el café
+        text: Nos ayuda a mantener nuestras mentes afiladas
+      slide4:
+        header: Utilizamos la mejor tecnología
+        text: para conseguir las mejores soluciones
