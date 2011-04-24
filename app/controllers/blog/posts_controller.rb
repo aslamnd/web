@@ -3,6 +3,7 @@ class Blog::PostsController < ApplicationController
   actions :index, :show
 
   before_filter :validate_dates, only: 'show'
+  skip_before_filter :set_locale
   
   layout 'blog'
 

@@ -31,6 +31,13 @@ en:
       twitter: "What we're talking about"
       follow_twitter: Follow us on Twitter
 
+  contact_forms:
+    new:
+      details: Contact details
+      address: Address
+      see_map: See a map
+      phone: Phone
+
   layouts:
     main_sidebar:
       call_us: Call us
@@ -52,3 +59,37 @@ en:
       slide4:
         header: We use the best technology
         text: to achieve the best solution
+
+  helpers:
+    submit:
+      contact_form:
+        create: Submit
+
+  services:
+    development: Development
+    web_application: Web Application
+    kickstart: Kickstart
+    consultancy: Consultancy
+    training: Ruby on Rails training
+    rescue_mission: Rescue mission
+  start_times:
+    immediately: Immediately
+    month: Within 1 month
+    months: Within 3 months
+  budgets:
+    min: 'Less than 10.000 EUR'
+    medium: '10.000 to 25.000 EUR' 
+    high: '25.000 to 50.000 EUR'
+    more: 'More than 50.000 EUR'
+
+  simple_form:
+    placeholders:
+      contact_form:
+        name: Your name
+        email: your@email.com
+        message: Type your message here
+    prompts:
+      contact_form:
+        service: 'What service are you interested in?'
+        start_time: 'When do you plan to start your project?'
+        budget: 'Please select and estimated budget'

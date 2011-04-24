@@ -1,0 +1,19 @@
+-content_for :meta_description do
+  | If you are interested in hiring Codegram or just want to learn more about any of our services, please contact us
+-content_for :title do
+  | Contact us
+
+-content_for :slideshow do
+  li#contact_slide
+    =image_tag 'slides/business_cards.jpg'
+    headergroup
+      h2 These are our contact cards
+      h3 You can get one if you come visit us
+
+h2 Contact
+p
+  | If you are interested in hiring Codegram or just want to learn more about any of our 
+  = link_to 'services', services_path
+  | , please use the form below. We'll get back to you in our next 
+  = link_to 'pomodoro break', 'http://www.pomodorotechnique.com/'
+  | !
