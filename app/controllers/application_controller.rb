@@ -24,8 +24,8 @@ private
         request.headers['HTTP_ACCEPT_LANGUAGE'].split(',')[0].split('-')[0]
       end
 
-    if ['ca', 'es', 'en'].include? locale
-      I18n.locale = locale
+    if ['ca', 'es', 'eu', 'gl'].include? locale
+      I18n.locale = 'es'
     else
       I18n.locale = 'en'
     end
