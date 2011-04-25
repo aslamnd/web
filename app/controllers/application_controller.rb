@@ -29,11 +29,12 @@ private
     else
       I18n.locale = 'en'
     end
-    session[:locale]=I18n.locale.to_s
 
-    if request.path == '/' && session[:locale] && I18n.locale != I18n.default_locale
-      puts '---------------------------------'
-      puts "Redirecto to '#{I18n.locale}'"
+    if session[:locale] || I18n.locale != :en
+      session[:locale]=I18n.locale.to_s
+    end
+
+    if request.path == '/' && (I18n.locale != I18n.default_locale)
       redirect_to "/#{I18n.locale}"
       return false
     end
