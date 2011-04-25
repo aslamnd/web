@@ -1,17 +1,23 @@
-
 s3_bucket: codegram-web
 s3_access_key_id: <%= ENV['S3_KEY'] %>
 s3_secret_access_key: <%= ENV['S3_SECRET'] %>
 s3_cache_control: public, max-age=<%= 365 * 24 * 60 * 60 %>
 embed_assets: datauri
 
+javascript_compressor: closure
+compressor_options:
+  compilation_level: "WHITESPACE_ONLY"
+
 javascripts:
   workspace:
     - public/javascripts/workspace/jquery.min.js
     - public/javascripts/workspace/scrollable.js
+    - public/javascripts/workspace/scrollable.navigator.js
     - public/javascripts/workspace/**/*.js
+    - public/javascripts/workspace/*.js
   application:
     - public/javascripts/application/application.js
+
 stylesheets:
   common:
     - public/stylesheets/screen.css

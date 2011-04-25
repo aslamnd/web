@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
   validates :title, :url, :description, :extended_description, :category, presence: true
   validates :category, inclusion: WorkCategory.names
 
-  translates :description, :extended_description, :quote, :client_name
+  translates :description, :extended_description, :quote, :client_name, :rendered_description, :rendered_extended_description
 
   has_many :screenshots
 

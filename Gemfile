@@ -16,6 +16,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise'
 
 gem 'high_voltage'
 gem 'compass'
+gem 'jammit'
 gem 'jammit-s3'
 gem 'jquery-rails'
 gem 'mail_form'
@@ -25,6 +26,7 @@ gem 'flash_messages_helper'
 gem 'cells'
 gem 'markdownizer'
 gem 'kaminari', '0.10.4'
+gem 'closure-compiler'
 
 gem 'client_side_validations'
 
