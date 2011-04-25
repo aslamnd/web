@@ -10,12 +10,12 @@ es:
     home:
       meta_description: Somos un equipo de entusiastas desarrolladores de Barcelona y alrededores. Construimos aplicaciones en Ruby on Rails cuidando el detalle, la calidad del código y la experiencia de usuario.
       motto: Somos un equipo de entusiastas
-      submotto: Creamos aplicaciones en Ruby on Rails poniendo énfasis en la calidad del código y experiencia de usuario.
+      submotto: Creamos aplicaciones en Ruby on Rails priorizando la calidad del código y experiencia de usuario.
       what_can_we_do: Qué podemos hacer para tí?
       what_text: "<p>Are you starting up a <strong>web-driven business</strong>? Are you working on a new awesome project and need <strong>consultancy</strong> or <strong>training</strong>? Are you stuck in the middle of your development process and having problems <strong>getting the work done</strong>?</p><p>We are a team of expert web developers specializing in <em>Ruby on Rails</em> and the <em>Ruby</em> ecosystem.</p>"
       what_text: "<p>¿Estás empezando un <strong>negocio on-line</strong>? ¿Estás trabajando en un proyecto genial y necesitas <strong>consultoría</strong> o <strong>formación</strong>? ¿Te has quedado atascado en medio de tu proceso de desarrollo y tienes problemas para <strong>conseguir acabar el proyecto</strong>?</p><p>Somos un equipo de expertos especializados en <em>Ruby on Rails</em> y el ecosistema <em>Ruby</em>.</p>"
       check_out_services: Nuestros servicios
-      recent_work: Nuestro trabajo reciente
+      recent_work: Trabajo reciente
       explore_projects: Explora nuestros proyectos
       blog: "Aprende de nuestro día a día"
       read_blog: Lee nuestro blog

@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end 
 
   def assign_api_token
-    self.api_token = Digest::SHA1.hexdigest(ENV['TWITTER_SECRET'] + self.twitter)
+    self.api_token = Digest::SHA1.hexdigest(ENV['TWITTER_SECRET'].to_s + self.twitter)
   end
 
 end
