@@ -2,7 +2,7 @@ class Customer
 
   LIST = [
     ['Production Paradise', 'http://productionparadise.com'],
-    ['El Pulgar del Panda', 'http://epdp.com'],
+    ['El Pulgar del Panda', 'http://elpulgardelpanda.com'],
     ['I++', 'http://imesmes.com'],
     ['Justinmind', 'http://justinmind.com'],
     ['Teambox', 'http://teambox.com'],
