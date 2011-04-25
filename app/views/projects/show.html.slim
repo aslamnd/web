@@ -29,3 +29,10 @@ javascript:
         return false;
     });
   }
+
+hr
+#customers
+  h2=t '.customers'
+  ul
+    -Customer.all.each do |customer, url|
+      li=link_to customer, url

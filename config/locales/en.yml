@@ -74,6 +74,8 @@ en:
       view_at_rubygems: View project at RubyGems
       source_at_github: View source at GitHub
       downloads: downloads
+    show:
+      customers: Some of our customers
 
   helpers:
     submit:
