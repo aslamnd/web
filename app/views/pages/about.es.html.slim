@@ -1,5 +1,5 @@
 -content_for :meta_description do
-  | Somos un equipo de expertos desarrolladores web especializados en Ruby on Rails y el ecosistema Ruby de Terrassa (cerca de Barcelona).
+  | Somos un equipo de expertos desarrolladores web basados en Terrassa (cerca de Barcelona). Estamos especializados en Ruby on Rails y el ecosistema Ruby en general.
 
 -content_for :title do
   | Sobre nosotros
@@ -13,28 +13,28 @@
   li#contact_slide
     =image_tag 'slides/working_together.jpg'
     headergroup
-      h2 Nos gusta colaborar
-      h3 Es como nacen las mejores soluciones
+      h2 Nos gusta colaborar contigo
+      h3 Es así como nacen las mejores soluciones
 
 section#style
 
   h2 Nuestro estilo (<em>The Codegram Way</em>)
-  p A Codegram nos apasiona el software. Nos preocupamos a la vez de calidad y productivitat. Y creemos que desarrollar software es divertido cuando se hace correctamente.
+  p En Codegram nos apasiona el software. Nos preocupamos tanto de la calidad como de la productividad. Y creemos que desarrollar software es divertido cuando se hace correctamente.
   p A través de nuestra experiencia, podemos afirmar que las siguientes herramientas y estándares hacen a nuestros clientes (y a nosotros) más felices:
 
   article
     h3 Calidad del código
     = image_tag 'about/quality.jpg', :height => 160, :width => 160, :class => 'right'
     p 
-     | La única constante es el cambio y el software necessita responder bien ante él. Para garantizarlo, trabajamos con unos altos estándares de calidad de código. Y sabemos que el 100% de <em>test coverage</em> 
+     | La única constante es el cambio y el software necesita responder bien ante él. Para garantizarlo, trabajamos con unos altos estándares de calidad de código. Y sabemos que el 100% de <em>test coverage</em> 
      =link_to 'no es suficiente', 'http://www.exampler.com/testing-com/writings/coverage.pdf'
      |  &mdash; ¡aunque sí obligatorio!
     p 
      | A través de técnicas como el 
      = link_to 'refactoring', 'http://en.wikipedia.org/wiki/Code_refactoring'
-     | y mediante ordinarias
+     | y mediante periódicas
      = link_to 'revisiones de código', 'https://github.com/features/projects/codereview'
-     |  nuestra intención es producir software de la mejor calidad posible. Software que no solamente funciona aquí y ahora, sinó que además sea extensible, moldeable y mantenible en un futuro.
+     | nuestro objetivo es producir software de la mejor calidad posible. Software que no solamente funciona aquí y ahora, sinó que además es extensible, moldeable y mantenible en el futuro.
 
   article
     h3 Behavior Driven Development
@@ -46,19 +46,19 @@ section#style
       strong por qué
       |  &mdash; ¿por qué esta funcionalidad en concreto es del interés del cliente? ¿En qué exactamente va a mejorar la experiencia de usuario?
     p
-      | Procuramos centrarnos en el <strong>núcleo fuerte de funcionalidad</strong> de tu proyecto, desarrollando y entregando antes las funcionalidades más valuosas. Y empezamos por describir éstas funcionalidades, porque no queremos acabar implementando algo que nadie va a usar. De alguna forma, 
+      | Procuramos centrarnos en el <strong>núcleo duro de funcionalidad</strong> de tu proyecto, desarrollando y entregando antes las funcionalidades más valuosas. Y empezamos por describir estas funcionalidades, porque no queremos acabar implementando algo que nadie va a usar. De alguna forma, 
       = link_to 'el código sólo existe para hacer pasar los tests', 'http://japhr.blogspot.com/2010/07/code-should-only-exist-to-make-test.html'
       |  &mdash; programamos
       strong únicamente
       | lo necesario para que una determinada funcionalidad haga su cometido.
-    p Eso lleva a su vez a un mucho mejor diseño y a menos cantidad de código. Y menos código significa un software más seguro.
+    p Eso lleva a su vez a un mucho mejor diseño y a menos cantidad de código. Y menos código significa menos errores, software más seguro. En realidad, ojalá pudiéramos ayudarte sin escribir una sola línea de código!
 
   article
     h3 Desarrollo ágil
     = image_tag 'about/pivotal.jpg', :height => 160, :width => 160, :class => 'right'
-    p Llevamos el proyecto conjuntamente con el cliente. No creemos en documentos de especificaciones (en un sentido más amplio, incluso no creemos en el papel). Tampoco creemos en requisitos escritos &mdash; principalmente porque no existen.
+    p Gestionamos el proyecto conjuntamente con el cliente. No creemos en documentos de especificaciones (en un sentido más amplio, incluso no creemos en el papel). Tampoco creemos en requisitos escritos &mdash; principalmente porque no existen.
     p 
-      | Ty proyecto tiene que evolucionar conjuntamente con tus usuarios y lo que la contínuamente cambiante industria pida. Nos adaptamos a estas necesidades reduciendo el coste global, centråndonos on los funcionalidades que realmente importan. Esto significa que no solamente trabajamos <em>para</em> tí sino también <em>contigo</em>.
+      | Tu proyecto tiene que evolucionar conjuntamente con tus usuarios y los siempre cambiantes requisitos del mercado. Nos adaptamos a estas necesidades reduciendo el coste global, centråndonos on los funcionalidades que realmente importan. Esto significa que no solamente trabajamos <em>para</em> ti sino también <em>contigo</em>.
     p 
       | Para poder hacer todo esto posible, nuestro desarrollo es iterativo y entregamos pequeñas <em>releases</em> de forma frecuente. Éstas están dirigidas por 
       = link_to 'casos de uso', 'http://cuke4ninja.com/sec_cucumber_jargon.html#N10135'
@@ -66,33 +66,33 @@ section#style
 
     h4 Casos de uso
     p 
-      | Los casos de uso son la herramienta principal para traducir tus ideas a funcionalidades implementables. Uno expresa sus ideas en su propio lenguage &mdash; el <strong>dominio</strong> de tu negocio.
-      | Nosotros nos engargamos de asociar cada una de ellas a conceptos relacionades con el <em>software</em>, colaborando estrechamente contigo. De esta forma siempre trabajamos en funcionalidades de valor.
+      | Los casos de uso son la herramienta principal para traducir tus ideas a funcionalidades implementables. Uno expresa sus ideas en su propio lenguage &mdash; el <strong>dominio</strong> de su negocio.
+      | Nosotros nos encargamos de asociar cada una de ellas a conceptos relacionades con el <em>software</em>, colaborando estrechamente contigo. De esta forma siempre trabajamos en funcionalidades de valor.
     p Este estado preliminar nos ayuda a definir qué es lo que esperas realmente de tu proyecto, y también sirve de guía para realizar tests y código. Lo que es más, los casos de uso se acaban convirtiendo en la documentación del proyecto, y como están estrechamente relacionadas con el código, ¡siempre están actualizadas!  
 
   article
     h3 Programación en pareja
     = image_tag 'about/pair.jpg', :height => 160, :width => 160, :class => 'left'
     p
-      | También hemos puesto en práctica algunas ideas del 
+      | También hemos tomado prestadas algunas ideas del 
       =link_to 'movimiento Extreme Programming', 'http://www.extremeprogramming.org/'
       |  &mdash; desarrollar en parejas.
     p 
-      | Esta técnica es una de las principales claves para un software bien realizado. Dos desarrolladores que trabajen juntos producten código de más calidad y más seguro, en menos tiempo. A través del diálgo contínuo i codificación colaborativa, se llegan a mejores diseños y implementaciones.
+      | Esta técnica es una de las principales claves para un software bien construido. Dos desarrolladores que trabajan juntos producen código de más calidad y más seguro, en menos tiempo. A través del diálogo contínuo y la programación colaborativa se llega a mejores diseños e implementaciones.
 
   article
-    h3 Contribuyendo con la comunidad Open Source
+    h3 Contribuyendo a la comunidad Open Source
     = image_tag 'about/opensource.jpg', :height => 160, :width => 160, :class => 'right'
-    p Trabajamos en lo último de la comunidad de Ruby, mejorando contínuamente nuestras herramienta y prácticas de acuerdo al mercado y tecnología cambiantes.
+    p Trabajamos en lo último de la comunidad de Ruby, mejorando contínuamente nuestras herramienta y prácticas de acuerdo con el mercado y tecnología cambiantes.
     p
-      | Ya que todas las herramientas que usamos del universo de <em>Ruby</em> son open source, 
-      =link_to "contribuimos con la comunidad", 'http://railscasts.com/give_back'
-      |  periódicamente mediante con mejoras de las herramientas que usamos diariamente como Ruby, Rails y RSpec. También desarrollamos algunas herramientas propias.
+      | Puesto que todas las herramientas que usamos del universo de <em>Ruby</em> son open source, 
+      =link_to "contribuimos a la comunidad", 'http://railscasts.com/give_back'
+      |  periódicamente mejorando las herramientas que usamos diariamente como Ruby, Rails y RSpec. También desarrollamos algunas herramientas propias.
     p
       | Puedes ver algunos de nuestros trabajos open source en nuestra 
       =link_to 'sección de proyectos', work_path(work_category_id: 'open-source')
       | o directamente en nuestro 
-      =link_to 'perfil de github', 'http://github.com/codegram'
+      =link_to 'perfil de Github', 'http://github.com/codegram'
       | .
 hr 
 
@@ -105,7 +105,7 @@ article.founder
     | Design-pattern driven 
     = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
     | &trade;
-  p Especializado en Rails y Ruby, se encarga de diseñar y mejorar cualquier aplicación hasta que no haya más patrones de diseño que aplicar. Secretamente, también es un desarrollador <em>front-end</em> ninka, y le encantan Ajax y las transiciones CSS3.
+  p Especializado en Rails y Ruby, se encarga de diseñar y mejorar cualquier aplicación hasta que no haya más patrones de diseño que aplicar. Secretamente, también es un desarrollador <em>front-end</em> ninja, y le apasionan Ajax y las transiciones CSS3.
   ul
     li.twitter
       =link_to '@josepjaume', 'http://twitter.com/josepjaume'
@@ -132,8 +132,8 @@ article.founder.last
     = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
     | &trade;
   p 
-    | Un especialista de Ruby y Rails, también es un evangelista de Vim y BDD, y no te dejará llevar nada a producción asta que todo sea 
-    =link_to 'verde como las hojas', 'http://twitter.com/#!/drnic/status/27778376826'
+    | Un especialista de Ruby y Rails, también evangelista de Vim y BDD. No te dejará llevar nada a producción hasta que todos los tests estén 
+    =link_to 'verdes como las hojas', 'http://twitter.com/#!/drnic/status/27778376826'
     | . Es muy activo en la comunidad Ruby &dash; desarrollando una nueva gema casi cada fin de semana.
 
   ul
