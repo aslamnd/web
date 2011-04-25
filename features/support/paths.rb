@@ -23,7 +23,7 @@ module NavigationHelpers
       edit_admin_project_path(project)
     when /the project page/
       project = find_model(:project)
-      project_path(project.category, project)
+      project_path(project.category, project, :locale => (I18n.locale == I18n.default_locale ? nil : I18n.locale))
 
     # the following are examples using path_to_pickle
 
