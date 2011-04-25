@@ -15,7 +15,7 @@
     .row
       section.left
         h2 = @project.title
-        = @project.rendered_description.html_safe
+        = @project.rendered_description.to_s.html_safe
         -if @project.category != 'open-source'
           .visit-site
             =link_to t('.visit_site'), @project.url, class: 'visit-site'
@@ -32,4 +32,4 @@
                 =t('.source_at_github')
         -else
           h3=t '.what_we_did'
-          = @project.rendered_extended_description.html_safe
+          = @project.rendered_extended_description.to_s.html_safe
