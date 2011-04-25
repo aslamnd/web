@@ -4,6 +4,8 @@ class AddTranslatableProjects < ActiveRecord::Migration
       {
         :description => :text, 
         :extended_description => :text,
+        :rendered_description => :text, 
+        :rendered_extended_description => :text,
         :quote => :string,
         :client_name => :string
       }, {
