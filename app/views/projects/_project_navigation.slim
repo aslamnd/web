@@ -1,12 +1,12 @@
 nav.examples_nav
   .prev 
     -if @previous
-      =link_to t('.previous'), project_path(@previous.category, @previous.to_param), :rel => 'no-follow', :'data-direction' => 'left'
+      =link_to t('.previous'), project_path(@previous.category, @previous.to_param, :locale => params[:locale]), :rel => 'no-follow', :'data-direction' => 'left'
     -else
       span.disabled=t '.previous'
   .next
     -if @next
-      =link_to t('.next'), project_path(@next.category, @next.to_param), :rel => 'no-follow', :'data-direction' => 'right'
+      =link_to t('.next'), project_path(@next.category, @next.to_param, :locale => params[:locale]), :rel => 'no-follow', :'data-direction' => 'right'
     -else
       span.disabled=t '.next'
 
@@ -15,4 +15,4 @@ nav.examples_nav
       - direction = [(index > @index) ? 'right' : 'left']
       - classes = []
       - classes << 'active' if project == @project
-      = link_to "", project_path(project.category, project.to_param), :class => classes.join(" "), :'data-direction' => direction
+      = link_to "", project_path(project.category, project.to_param, :locale => params[:locale]), :class => classes.join(" "), :'data-direction' => direction

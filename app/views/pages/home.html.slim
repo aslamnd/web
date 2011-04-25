@@ -13,7 +13,7 @@ section#home
       p
         =t('.what_text').html_safe
       aside.more
-        =link_to t('.check_out_services'), '/services'
+        =link_to t('.check_out_services'), :controller => 'pages', :id => 'services', :action => 'show'
 
     section.right
       h3=t('.recent_work') 
@@ -21,8 +21,7 @@ section#home
         = render_cell :project, :latest
         
       aside.more
-        a href='/work' 
-          =t('.explore_projects')
+        =link_to t('.explore_projects'), :controller => 'projects', :action => 'show'
   .row
     .separator.left=image_tag 'separator1.jpg'
     .separator.right=image_tag 'separator2.jpg'
@@ -31,7 +30,7 @@ section#home
       h3=t('.blog')
       =render_cell :blog, :home
     aside.more.left.blog
-      a href="http://blog.#{request.host_with_port + blog_posts_path}"
+      a href="http://blog.#{request.host_with_port + blog_posts_path(:locale => nil)}"
         =t(".read_blog")
 
     section.right.twitter

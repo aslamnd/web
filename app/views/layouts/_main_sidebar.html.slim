@@ -1,8 +1,9 @@
 nav
   =render_navigation
   #language-switcher
-    -[['en', 'English'], ['es', "Español"]].each do |lang|
-      =link_to lang[1], {:locale => lang[0]}, :class => (lang[0] == I18n.locale.to_s ? 'active' : nil)
+    -[[:en, 'English'], [:es, "Español"]].each do |lang|
+      =link_to lang[1], {:locale => lang[0]}, :class => (lang[0] == I18n.locale ? 'active' : nil)
+
 .vcard
   aside
     h4=t '.call_us'

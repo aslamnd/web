@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
 
 private
 
+  def default_url_options(options={})
+    I18n.locale.to_s != 'en' ? { :locale => I18n.locale } : {}
+  end
+
   def set_locale
     locale =
       if !params[:locale].blank?
@@ -26,6 +30,13 @@ private
       I18n.locale = 'en'
     end
     session[:locale]=I18n.locale.to_s
+
+    if request.path == '/' && session[:locale] && I18n.locale != I18n.default_locale
+      puts '---------------------------------'
+      puts "Redirecto to '#{I18n.locale}'"
+      redirect_to "/#{I18n.locale}"
+      return false
+    end
   end
 
   def not_found(error)
