@@ -1,6 +1,6 @@
 -if @project
   -content_for :meta_description do
-    =@project.rendered_description.html_safe[0..160]
+    =@project.rendered_description
   -content_for :title do
     =@project.title
 
