@@ -9,17 +9,16 @@ es:
   pages:
     home:
       meta_description: Somos un equipo de entusiastas desarrolladores de Barcelona y alrededores. Construimos aplicaciones en Ruby on Rails cuidando el detalle, la calidad del código y la experiencia de usuario.
-      motto: Somos desarrolladores entusiastas
-      submotto: Creamos aplicaciones en Ruby on Rails priorizando la calidad del código y experiencia de usuario.
-      what_can_we_do: Qué podemos hacer para tí?
-      what_text: "<p>Are you starting up a <strong>web-driven business</strong>? Are you working on a new awesome project and need <strong>consultancy</strong> or <strong>training</strong>? Are you stuck in the middle of your development process and having problems <strong>getting the work done</strong>?</p><p>We are a team of expert web developers specializing in <em>Ruby on Rails</em> and the <em>Ruby</em> ecosystem.</p>"
+      motto: Somos entusiastas del código.
+      submotto: Construimos aplicaciones Ruby on Rails priorizando la calidad del código y experiencia de usuario.
+      what_can_we_do: ¿Qué podemos hacer por ti?
       what_text: "<p>¿Estás empezando un <strong>negocio on-line</strong>? ¿Estás trabajando en un proyecto genial y necesitas <strong>consultoría</strong> o <strong>formación</strong>? ¿Te has quedado atascado en medio de tu proceso de desarrollo y tienes problemas para <strong>conseguir acabar el proyecto</strong>?</p><p>Somos un equipo de expertos especializados en <em>Ruby on Rails</em> y el ecosistema <em>Ruby</em>.</p>"
       check_out_services: Nuestros servicios
       recent_work: Trabajo reciente
       explore_projects: Explora nuestros proyectos
       blog: "Aprende de nuestro día a día"
       read_blog: Lee nuestro blog
-      twitter: "De qué estamos hablando"
+      twitter: "De qué hablamos"
       follow_twitter: Síguenos en Twitter
 
   contact_forms:
@@ -68,7 +67,7 @@ es:
       visit_site: Visitar web del proyecto
       what_we_did: Qué hemos hecho
       view_at_rubygems: Ver proyecto a RubyGems
-      source_at_github: View código fuente en GitHub
+      source_at_github: Ver código fuente en GitHub
       downloads: descargas
     show:
       customers: Algunos de nuestros clientes
@@ -95,10 +94,10 @@ es:
       contact_form:
         name: Tu nombre
         email: tu@email.com
-        message: Escribe aquí su mensaje
+        message: Escribe aquí tu mensaje
     prompts:
       contact_form:
         service: '¿En qué servicio estás interesado?'
-        start_time: '¿En cuanto tiempo tienes pensado iniciar el proyecto?'
+        start_time: '¿Dentro de cuánto tiempo tienes pensado iniciar el proyecto?'
         budget: 'Por favor selecciona un presupuesto aproximado'
 
