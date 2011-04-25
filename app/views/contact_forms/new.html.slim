@@ -2,13 +2,13 @@
 hr
 #contact
   section#contact-form
-    =simple_form_for @contact_form, :url => new_contact_form_path do |f|
+    =simple_form_for @contact_form, :url => new_contact_form_path, :validate => true do |f|
       =f.input :name, :label => false
       =f.input :email, :as => :email, :label => false
       =f.input :service, :label => false do
-        =f.select :service, grouped_options_for_select(@contact_form.localized_services), :prompt => t('simple_form.prompts.contact_form.service')
-      =f.input :start_time, :as => :select, :collection => @contact_form.localized_start_times, :prompt => t('simple_form.prompts.contact_form.start_time') , :label => false
-      =f.input :budget, :as => :select, :collection => @contact_form.localized_budgets,  :prompt => t('simple_form.prompts.contact_form.budget'), :label => false
+        =f.select :service, grouped_options_for_select(@contact_form.class.localized_services), :prompt => t('simple_form.prompts.contact_form.service')
+      =f.input :start_time, :as => :select, :collection => @contact_form.class.localized_start_times, :prompt => t('simple_form.prompts.contact_form.start_time') , :label => false
+      =f.input :budget, :as => :select, :collection => @contact_form.class.localized_budgets,  :prompt => t('simple_form.prompts.contact_form.budget'), :label => false
       =f.input :message, :as => :text, :label => false
       =f.submit
   aside#contact-details
@@ -34,3 +34,4 @@ hr
 
 hr
 iframe#contact-map frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.com/maps?q=codegram&amp;sll=41.532274,2.034602&amp;sspn=0.071946,0.071946&amp;ie=UTF8&amp;hl=#{I18n.locale}&amp;view=map&amp;cid=1159346420148185036&amp;hq=codegram&amp;hnear=&amp;ll=41.534619,2.035711&amp;spn=0.005622,0.01502&amp;z=16&amp;iwloc=A&amp;output=embed"
+.clear

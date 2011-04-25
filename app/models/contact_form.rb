@@ -4,11 +4,9 @@ class ContactForm < MailForm::Base
   @@start_times = [ :immediately, :month, :months ]
   @@budgets = [:min, :medium, :high, :more]
 
+
   attribute :name,       validate: true
   attribute :email,      validate: /[^@]+@[^\.]+\.[\w\.\-]+/
-  attribute :service,    validate: @@services.map { |services| services.last }.flatten
-  attribute :start_time, validate: @@start_times
-  attribute :budget,     validate: @@budgets
   attribute :message,    validate: true
 
   append :remote_ip, :user_agent, :session
@@ -27,21 +25,20 @@ class ContactForm < MailForm::Base
     }
   end
 
-  def localized_services
-    localize_array(:services, self.services)
+
+  def self.localized_services
+    localize_array(:services, @@services)
   end
 
-  def localized_start_times
-    localize_array(:start_times, self.start_times)
+  def self.localized_start_times
+    localize_array(:start_times, @@start_times)
   end
 
-  def localized_budgets
-    localize_array(:budgets, self.budgets)
+  def self.localized_budgets
+    localize_array(:budgets, @@budgets)
   end
 
-  private
-
-  def localize_array(scope, array)
+  def self.localize_array(scope, array)
     array.collect do |e|
       if e.is_a? Array
         localize_array(scope, e)
@@ -50,5 +47,9 @@ class ContactForm < MailForm::Base
       end
     end
   end
+
+  attribute :service,    validate: localized_services.map { |services| services.last }.flatten
+  attribute :start_time, validate: localized_start_times
+  attribute :budget,     validate: localized_budgets
 
 end

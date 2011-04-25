@@ -24,8 +24,9 @@ gem 'simple-navigation'
 gem 'flash_messages_helper'
 gem 'cells'
 gem 'markdownizer'
-gem 'heroku'
 gem 'kaminari', '0.10.4'
+
+gem 'client_side_validations'
 
 gem 'globalize3'
 
