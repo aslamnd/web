@@ -8,3 +8,103 @@ en:
       next: "Past"
       truncate: "..."
 
+  menu:
+    home: Home
+    services: Services
+    work: Clients & Work
+    about: About us
+    contact: Contact
+    blog: Blog
+
+  pages:
+    home:
+      meta_description: We are a team of devoted developers from Barcelona. We build web Ruby on Rails applications emphasizing code quality and user experience. 
+      motto: We are a team of devoted developers.
+      submotto: We build Ruby on Rails web applications emphasizing code quality and user experience. 
+      what_can_we_do: What can we do for you?
+      what_text: "<p>Are you starting up a <strong>web-driven business</strong>? Are you working on a new awesome project and need <strong>consultancy</strong> or <strong>training</strong>? Are you stuck in the middle of your development process and having problems <strong>getting the work done</strong>?</p><p>We are a team of expert web developers specializing in <em>Ruby on Rails</em> and the <em>Ruby</em> ecosystem.</p>"
+      check_out_services: Check out our services
+      recent_work: Our recent work
+      explore_projects: Explore our projects
+      blog: "Learn from our day-to-day"
+      read_blog: Read our blog
+      twitter: "What we're talking about"
+      follow_twitter: Follow us on Twitter
+
+  contact_forms:
+    new:
+      details: Contact details
+      address: Address
+      see_map: See a map
+      phone: Phone
+
+  layouts:
+    main_sidebar:
+      call_us: Call us
+      visit_us: Visit us 
+      see_map: 'See a map'
+      contact_us: Contact us
+      follow_us: Follow us
+
+    slideshow:
+      slide1:
+        header: We care about your project
+        text: We love working with our clients
+      slide2:
+        header: We rumble
+        text: We like programming for fun
+      slide3:
+        header: We love coffee
+        text: It helps us keep our minds sharp
+      slide4:
+        header: We use the best technology
+        text: to achieve the best solution
+
+  categories:
+    products: Products
+    open-source: Open Source
+
+  projects:
+    project_navigation:
+      previous: Previous
+      next: Next
+    projects:
+      visit_site: Visit project site
+      what_we_did: What we did
+      view_at_rubygems: View project at RubyGems
+      source_at_github: View source at GitHub
+      downloads: downloads
+
+  helpers:
+    submit:
+      contact_form:
+        create: Submit
+
+  services:
+    development: Development
+    web_application: Web Application
+    kickstart: Kickstart
+    consultancy: Consultancy
+    training: Ruby on Rails training
+    rescue_mission: Rescue mission
+  start_times:
+    immediately: Immediately
+    month: Within 1 month
+    months: Within 3 months
+  budgets:
+    min: 'Less than 10.000 EUR'
+    medium: '10.000 to 25.000 EUR' 
+    high: '25.000 to 50.000 EUR'
+    more: 'More than 50.000 EUR'
+
+  simple_form:
+    placeholders:
+      contact_form:
+        name: Your name
+        email: your@email.com
+        message: Type your message here
+    prompts:
+      contact_form:
+        service: 'What service are you interested in?'
+        start_time: 'When do you plan to start your project?'
+        budget: 'Please select and estimated budget'

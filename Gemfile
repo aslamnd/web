@@ -27,6 +27,8 @@ gem 'markdownizer'
 gem 'heroku'
 gem 'kaminari', '0.10.4'
 
+gem 'globalize3'
+
 gem 'button_form'
 
 gem 'rest-client'

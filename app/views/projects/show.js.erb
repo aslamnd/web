@@ -1,7 +1,3 @@
-if(History.firstCall == true){
-  $("#content div#projects").first().html("<%=escape_javascript (render :partial => 'projects')%>");
-  History.firstCall = false;
-}else{
   (function(){
 
     function resetPosition(elem){
@@ -56,7 +52,6 @@ if(History.firstCall == true){
 
       _gaq.push(['_trackPageview', "<%=escape_javascript request.path%>"]);
   })();
-}
 
 $("#content #navigation").html("<%=escape_javascript (render :partial => 'project_navigation')%>");
 $("#content #tabs").html("<%=escape_javascript (render :partial => 'tabs')%>");

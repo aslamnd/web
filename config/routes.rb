@@ -28,29 +28,36 @@ CodegramWeb::Application.routes.draw do
     match '*path' => 'errors#not_found'
   end
 
+
   ## Base subdomain
   constraints BaseSubdomain do
-    scope '/api' do
-      scope '/posts' do
-        get "/" => "api/posts#index"
-        post "/" => "api/posts#create"
+
+    match '/:locale' => 'pages#show', :id => 'home', :locale => /es/
+
+    scope '(:locale)', :locale => /es/ do
+      scope '/api' do
+        scope '/posts' do
+          get "/" => "api/posts#index"
+          post "/" => "api/posts#create"
+        end
       end
+
+      resource :contact_form,
+        :path => 'contact',
+        :only => [:new, :create],
+        :path_names => {:new => '/'}
+
+      resources :projects, :only =>[:show], :path => '/work/:work_category_id'
+      match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'products', via: :get, as: :work
+      match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
+      match '/services', :controller => 'pages', :action => :show, :id => 'services'
+      match '/about', :controller => 'pages', :action => :show, :id => 'about'
+      match '/sitemap.xml' => 'sitemaps#show'
+      match '/what-we-do' => redirect('/services', status: 301)
+      match '*path' => 'errors#not_found'
     end
 
-    resource :contact_form,
-      :path => 'contact',
-      :only => [:new, :create],
-      :path_names => {:new => '/'}
-
-    resources :projects, :only =>[:show], :path => '/work/:work_category_id'
-    match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'products', via: :get, as: :work
-    match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
-    match '/services', :controller => 'pages', :action => :show, :id => 'services'
-    match '/about', :controller => 'pages', :action => :show, :id => 'about'
-    match '/sitemap.xml' => 'sitemaps#show'
-    match '/what-we-do' => redirect('/services', status: 301)
     root :to => "pages#show", :id => 'home'
-    match '*path' => 'errors#not_found'
   end
 
   match '*path' => redirect("http://codegram.com/%{path}", status: 301)

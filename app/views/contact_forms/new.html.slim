@@ -1,40 +1,20 @@
--content_for :meta_description do
-  | If you are interested in hiring Codegram or just want to learn more about any of our services, please contact us
-
--content_for :title do
-  | Contact us
-
--content_for :slideshow do
-  li#contact_slide
-    =image_tag 'slides/business_cards.jpg'
-    headergroup
-      h2 These are our contact cards
-      h3 You can get one if you come visit us
-
-h2 Contact
-p
-  | If you are interested in hiring Codegram or just want to learn more about any of our 
-  = link_to 'services', services_path
-  | , please use the form below. We'll get back to you in our next 
-  = link_to 'pomodoro break', 'http://www.pomodorotechnique.com/'
-  | !
-
+=render :partial => 'header'
 hr
 #contact
   section#contact-form
     =simple_form_for @contact_form, :url => new_contact_form_path do |f|
-      =f.input :name, :placeholder => 'Your name', :label => false
-      =f.input :email, :as => :email, :placeholder => 'your@email.com', :label => false
+      =f.input :name, :label => false
+      =f.input :email, :as => :email, :label => false
       =f.input :service, :label => false do
-        =f.select :service, grouped_options_for_select(@contact_form.services), :prompt => 'What service are you interested in?'
-      =f.input :start_time, :as => :select, :collection => @contact_form.start_times, :prompt => 'When do you plan to start your project?', :label => false
-      =f.input :budget, :as => :select, :collection => @contact_form.budgets,  :prompt => 'Please select and estimated budget', :label => false
-      =f.input :message, :as => :text, :label => false, :placeholder => 'Type your message here'
-      =f.submit 'Submit'
+        =f.select :service, grouped_options_for_select(@contact_form.localized_services), :prompt => t('simple_form.prompts.contact_form.service')
+      =f.input :start_time, :as => :select, :collection => @contact_form.localized_start_times, :prompt => t('simple_form.prompts.contact_form.start_time') , :label => false
+      =f.input :budget, :as => :select, :collection => @contact_form.localized_budgets,  :prompt => t('simple_form.prompts.contact_form.budget'), :label => false
+      =f.input :message, :as => :text, :label => false
+      =f.submit
   aside#contact-details
-    h3 Contact details
+    h3=t '.details'
     p
-      strong Address:
+      strong="#{t '.address'}:".html_safe
       br
       | Pl. d’Aurora Bertrana
       br
@@ -44,13 +24,13 @@ hr
       br
       | Barcelona (Spain)
       br
-      =link_to 'See a map', 'http://goo.gl/dIf4I'
+      =link_to t('.see_map').html_safe, 'http://goo.gl/dIf4I'
     p
-      strong Phone:
+      strong=t '.phone'
       br
       | 0034 937 872 194
       br
       | 0034 668 823 476 
 
 hr
-iframe#contact-map frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.com/maps?q=codegram&amp;sll=41.532274,2.034602&amp;sspn=0.071946,0.071946&amp;ie=UTF8&amp;hl=en&amp;view=map&amp;cid=1159346420148185036&amp;hq=codegram&amp;hnear=&amp;ll=41.534619,2.035711&amp;spn=0.005622,0.01502&amp;z=16&amp;iwloc=A&amp;output=embed"
+iframe#contact-map frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.com/maps?q=codegram&amp;sll=41.532274,2.034602&amp;sspn=0.071946,0.071946&amp;ie=UTF8&amp;hl=#{I18n.locale}&amp;view=map&amp;cid=1159346420148185036&amp;hq=codegram&amp;hnear=&amp;ll=41.534619,2.035711&amp;spn=0.005622,0.01502&amp;z=16&amp;iwloc=A&amp;output=embed"

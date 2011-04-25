@@ -1,0 +1,153 @@
+-content_for :meta_description do
+  | Somos un equipo de expertos desarrolladores web especializados en Ruby on Rails y el ecosistema Ruby de Terrassa (cerca de Barcelona).
+
+-content_for :title do
+  | Sobre nosotros
+
+-content_for :slideshow do
+  li#contact_slide
+    =image_tag 'slides/codegram_building.jpg'
+    headergroup
+      h2 Nuestro sitio de trabajo es luminoso
+      h3 Trabajamos en un entorno agradable
+  li#contact_slide
+    =image_tag 'slides/working_together.jpg'
+    headergroup
+      h2 Nos gusta colaborar
+      h3 Es como nacen las mejores soluciones
+
+section#style
+
+  h2 Nuestro estilo (<em>The Codegram Way</em>)
+  p A Codegram nos apasiona el software. Nos preocupamos a la vez de calidad y productivitat. Y creemos que desarrollar software es divertido cuando se hace correctamente.
+  p A través de nuestra experiencia, podemos afirmar que las siguientes herramientas y estándares hacen a nuestros clientes (y a nosotros) más felices:
+
+  article
+    h3 Calidad del código
+    = image_tag 'about/quality.jpg', :height => 160, :width => 160, :class => 'right'
+    p 
+     | La única constante es el cambio y el software necessita responder bien ante él. Para garantizarlo, trabajamos con unos altos estándares de calidad de código. Y sabemos que el 100% de <em>test coverage</em> 
+     =link_to 'no es suficiente', 'http://www.exampler.com/testing-com/writings/coverage.pdf'
+     |  &mdash; ¡aunque sí obligatorio!
+    p 
+     | A través de técnicas como el 
+     = link_to 'refactoring', 'http://en.wikipedia.org/wiki/Code_refactoring'
+     | y mediante ordinarias
+     = link_to 'revisiones de código', 'https://github.com/features/projects/codereview'
+     |  nuestra intención es producir software de la mejor calidad posible. Software que no solamente funciona aquí y ahora, sinó que además sea extensible, moldeable y mantenible en un futuro.
+
+  article
+    h3 Behavior Driven Development
+    = image_tag 'about/bdd.jpg', :height => 160, :width => 160, :class => 'left'
+    p 
+      | Qué es lo que lleva a un buen diseño de software? Creemos en el software dirigido por el <em>valor</em>, el llamado
+      = link_to 'desarrollo desde fuera hacia adentro', 'http://en.wikipedia.org/wiki/Behavior_Driven_Development#Outside-in'
+      | . Se centra en el
+      strong por qué
+      |  &mdash; ¿por qué esta funcionalidad en concreto es del interés del cliente? ¿En qué exactamente va a mejorar la experiencia de usuario?
+    p
+      | Procuramos centrarnos en el <strong>núcleo fuerte de funcionalidad</strong> de tu proyecto, desarrollando y entregando antes las funcionalidades más valuosas. Y empezamos por describir éstas funcionalidades, porque no queremos acabar implementando algo que nadie va a usar. De alguna forma, 
+      = link_to 'el código sólo existe para hacer pasar los tests', 'http://japhr.blogspot.com/2010/07/code-should-only-exist-to-make-test.html'
+      |  &mdash; programamos
+      strong únicamente
+      | lo necesario para que una determinada funcionalidad haga su cometido.
+    p Eso lleva a su vez a un mucho mejor diseño y a menos cantidad de código. Y menos código significa un software más seguro.
+
+  article
+    h3 Desarrollo ágil
+    = image_tag 'about/pivotal.jpg', :height => 160, :width => 160, :class => 'right'
+    p Llevamos el proyecto conjuntamente con el cliente. No creemos en documentos de especificaciones (en un sentido más amplio, incluso no creemos en el papel). Tampoco creemos en requisitos escritos &mdash; principalmente porque no existen.
+    p 
+      | Ty proyecto tiene que evolucionar conjuntamente con tus usuarios y lo que la contínuamente cambiante industria pida. Nos adaptamos a estas necesidades reduciendo el coste global, centråndonos on los funcionalidades que realmente importan. Esto significa que no solamente trabajamos <em>para</em> tí sino también <em>contigo</em>.
+    p 
+      | Para poder hacer todo esto posible, nuestro desarrollo es iterativo y entregamos pequeñas <em>releases</em> de forma frecuente. Éstas están dirigidas por 
+      = link_to 'casos de uso', 'http://cuke4ninja.com/sec_cucumber_jargon.html#N10135'
+      | , que nos sirven a su vez como documentación para el proyecto.
+
+    h4 Casos de uso
+    p 
+      | Los casos de uso son la herramienta principal para traducir tus ideas a funcionalidades implementables. Uno expresa sus ideas en su propio lenguage &mdash; el <strong>dominio</strong> de tu negocio.
+      | Nosotros nos engargamos de asociar cada una de ellas a conceptos relacionades con el <em>software</em>, colaborando estrechamente contigo. De esta forma siempre trabajamos en funcionalidades de valor.
+    p Este estado preliminar nos ayuda a definir qué es lo que esperas realmente de tu proyecto, y también sirve de guía para realizar tests y código. Lo que es más, los casos de uso se acaban convirtiendo en la documentación del proyecto, y como están estrechamente relacionadas con el código, ¡siempre están actualizadas!  
+
+  article
+    h3 Programación en pareja
+    = image_tag 'about/pair.jpg', :height => 160, :width => 160, :class => 'left'
+    p
+      | También hemos puesto en práctica algunas ideas del 
+      =link_to 'movimiento Extreme Programming', 'http://www.extremeprogramming.org/'
+      |  &mdash; desarrollar en parejas.
+    p 
+      | Esta técnica es una de las principales claves para un software bien realizado. Dos desarrolladores que trabajen juntos producten código de más calidad y más seguro, en menos tiempo. A través del diálgo contínuo i codificación colaborativa, se llegan a mejores diseños y implementaciones.
+
+  article
+    h3 Contribuyendo con la comunidad Open Source
+    = image_tag 'about/opensource.jpg', :height => 160, :width => 160, :class => 'right'
+    p Trabajamos en lo último de la comunidad de Ruby, mejorando contínuamente nuestras herramienta y prácticas de acuerdo al mercado y tecnología cambiantes.
+    p
+      | Ya que todas las herramientas que usamos del universo de <em>Ruby</em> son open source, 
+      =link_to "contribuimos con la comunidad", 'http://railscasts.com/give_back'
+      |  periódicamente mediante con mejoras de las herramientas que usamos diariamente como Ruby, Rails y RSpec. También desarrollamos algunas herramientas propias.
+    p
+      | Puedes ver algunos de nuestros trabajos open source en nuestra 
+      =link_to 'sección de proyectos', work_path(work_category_id: 'open-source')
+      | o directamente en nuestro 
+      =link_to 'perfil de github', 'http://github.com/codegram'
+      | .
+hr 
+
+h2 Fundadores
+
+article.founder
+  = image_tag 'founders/jj.jpg', :height => 150, :width => 225
+  h3 Josep Jaume Rey
+  h4
+    | Design-pattern driven 
+    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
+    | &trade;
+  p Especializado en Rails y Ruby, se encarga de diseñar y mejorar cualquier aplicación hasta que no haya más patrones de diseño que aplicar. Secretamente, también es un desarrollador <em>front-end</em> ninka, y le encantan Ajax y las transiciones CSS3.
+  ul
+    li.twitter
+      =link_to '@josepjaume', 'http://twitter.com/josepjaume'
+    li.github
+      =link_to 'github.com/josepjaume', 'http://github.com/josepjaume'
+article.founder
+  = image_tag 'founders/oriol.jpg', :height => 150, :width => 225
+  h3 Oriol Gual
+  h4
+    | Rational-oriented 
+    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
+    | &trade;
+  p Especializado en Rails y Ruby, refactorizaría incluso software hecho por Chuck Norris &mdash; siempre que tenga tests, claro. Además, mantiene el orden de nuestra empresa tan sólido como nuestro software.
+  ul
+    li.twitter
+      =link_to '@oriolgual', 'http://twitter.com/oriolgual'
+    li.github
+      =link_to 'github.com/oriolgual', 'http://github.com/oriolgual'
+article.founder.last
+  = image_tag 'founders/txus.jpg', :height => 150, :width => 225
+  h3 Josep M. Bach (Txus)
+  h4
+    | Bytecode-optimized 
+    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
+    | &trade;
+  p 
+    | Un especialista de Ruby y Rails, también es un evangelista de Vim y BDD, y no te dejará llevar nada a producción asta que todo sea 
+    =link_to 'verde como las hojas', 'http://twitter.com/#!/drnic/status/27778376826'
+    | . Es muy activo en la comunidad Ruby &dash; desarrollando una nueva gema casi cada fin de semana.
+
+  ul
+    li.twitter
+      =link_to '@txustice', 'http://twitter.com/txustice'
+    li.github
+      =link_to 'github.com/txus', 'http://github.com/txus'
+
+hr 
+
+h2 Offices
+article#offices
+  p Nuestras oficinas se encuentran en un sitio tranquilo y acogedor. Ven a vernos, ¡tenemos un café genial!
+  ul
+    li= image_tag 'offices/chairs.jpg', :height => 150, :width => 225
+    li= image_tag 'offices/outside.jpg', :height => 150, :width => 225
+    li.last= image_tag 'offices/workspace.jpg', :height => 150, :width => 225

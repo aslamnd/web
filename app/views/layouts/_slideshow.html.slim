@@ -7,24 +7,24 @@ figure#slideshow
         li#slide-1
           =image_tag 'slides/txus_typing.jpg', width: 1000, height: 280
           headergroup
-            h2 We care about your project
-            h3 We love working with our clients
+            h2= t '.slide1.header'
+            h3= t '.slide1.text'
         li#slide-2
           =image_tag 'slides/rails_rumble.jpg', width: 1000, height: 280 
           headergroup
             h2 
-              =link_to 'We rumble', 'http://railsrumble.com/' 
-            h3 We like programming for fun
+              =link_to t('.slide2.header'), 'http://railsrumble.com/' 
+            h3=t '.slide2.text'
         li#slide-4
           =image_tag 'slides/offices.jpg', width: 1000, height: 280
           headergroup
-            h2 We love coffee
-            h3 It helps us keep our minds sharp
+            h2=t '.slide3.header' 
+            h3=t '.slide3.text'
         li#slide-7
           =image_tag 'slides/ipad.jpg', width: 1000, height: 280
           headergroup
-            h2 We use the best technology
-            h3 to achieve the best solution
+            h2=t '.slide4.header'
+            h3=t '.slide4.text'
   nav.navi
 
 javascript:
