@@ -9,6 +9,7 @@ es:
   pages:
     home:
       meta_description: Somos un equipo de entusiastas desarrolladores de Barcelona y alrededores. Construimos aplicaciones en Ruby on Rails cuidando el detalle, la calidad del código y la experiencia de usuario.
+      meta_keywords: aplicaciones web barcelona, desarrollo web, ruby on rails, aplicaciones móvil, html5, cucumber, bdd, test
       motto: Somos desarrolladores entusiastas
       submotto: Creamos aplicaciones en Ruby on Rails priorizando la calidad del código y experiencia de usuario.
       what_can_we_do: Qué podemos hacer para tí?
