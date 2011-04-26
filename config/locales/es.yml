@@ -67,7 +67,7 @@ es:
     projects:
       visit_site: Visitar web del proyecto
       what_we_did: Qué hemos hecho
-      view_at_rubygems: Ver proyecto a RubyGems
+      view_at_rubygems: Ver proyecto en RubyGems
       source_at_github: Ver código fuente en GitHub
       downloads: descargas
     show:
