@@ -9,13 +9,14 @@ gem 'inherited_resources'
 gem 'escape_utils'
 gem 'friendly_id'
 
-gem 'slim', :require => 'slim/rails'
+gem 'slim'
 
 gem "oa-oauth", '~> 0.2.0.beta5'
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
 
 gem 'high_voltage'
 gem 'compass'
+gem 'jammit'
 gem 'jammit-s3'
 gem 'jquery-rails'
 gem 'mail_form'
@@ -23,9 +24,13 @@ gem 'simple_form'
 gem 'simple-navigation'
 gem 'flash_messages_helper'
 gem 'cells'
-gem 'markdownizer', '>= 0.3.6'
-gem 'heroku'
-gem 'kaminari'
+gem 'markdownizer'
+gem 'kaminari', '0.10.4'
+gem 'closure-compiler'
+
+gem 'client_side_validations'
+
+gem 'globalize3'
 
 gem 'button_form'
 
@@ -33,7 +38,7 @@ gem 'rest-client'
 gem 'crack'
 
 # Uploaders
-gem 'carrierwave', '~> 0.5.1'
+gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 
@@ -51,14 +56,14 @@ group :test, :development, :cucumber do
 end
 
 group :test, :cucumber do
-  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
-  gem 'rspec-rails', '~> 2.4.0'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'rspec-rails'
   gem 'pickle'
   gem 'launchy'
-  gem "database_cleaner", "~> 0.6.0"
+  gem "database_cleaner"
   gem 'shoulda'
-  gem 'guard', '~> 0.3'
+  gem 'guard'
   gem 'guard-ego'
   gem 'guard-shell'
   gem 'guard-bundler'
@@ -69,7 +74,7 @@ group :test, :cucumber do
   gem 'guard-cucumber'
   gem 'rb-fsevent'
   gem 'growl'
-  gem 'spork', '~> 0.9.0.rc'
+  gem 'spork'
   gem 'guard-spork'
   gem 'akephalos', require: false
 end

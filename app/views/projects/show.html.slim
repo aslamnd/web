@@ -4,8 +4,6 @@ nav#tabs=render :partial => 'tabs'
 hr.pagination-separator
 #navigation=render :partial => 'project_navigation'
 
-=javascript_include_tag 'history.js', 'history.adapter.jquery.js'
-
 javascript:
   if(!jQuery.browser.msie==true){
     (function(window, undefined){
@@ -29,3 +27,10 @@ javascript:
         return false;
     });
   }
+
+hr
+#customers
+  h2=t '.customers'
+  ul
+    -Customer.all.each do |customer, url|
+      li=link_to customer, url

@@ -5,6 +5,11 @@ class Project < ActiveRecord::Base
   validates :title, :url, :description, :extended_description, :category, presence: true
   validates :category, inclusion: WorkCategory.names
 
+  markdownize! :description, tab_width: 2, hierarchy: 1
+  markdownize! :extended_description, tab_width: 2, hierarchy: 1
+
+  translates :description, :extended_description, :quote, :client_name, :rendered_description, :rendered_extended_description
+
   has_many :screenshots
 
   accepts_nested_attributes_for :screenshots, allow_destroy: true, reject_if: :all_blank
@@ -15,8 +20,6 @@ class Project < ActiveRecord::Base
   scope :published, where(published: true)
   scope :promoted, published.where(promoted: true).order(arel_table[:created_at].desc)
 
-  markdownize! :description, tab_width: 2, hierarchy: 1
-  markdownize! :extended_description, tab_width: 2, hierarchy: 1
 
   def self.update_downloads!
     open_source.each do |open_source_project|

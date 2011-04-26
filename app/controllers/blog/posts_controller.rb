@@ -2,8 +2,8 @@ class Blog::PostsController < ApplicationController
   inherit_resources
   actions :index, :show
 
-  before_filter :set_cache_control, only: 'show'
   before_filter :validate_dates, only: 'show'
+  skip_before_filter :set_locale
   
   layout 'blog'
 

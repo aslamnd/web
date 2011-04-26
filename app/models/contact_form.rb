@@ -1,14 +1,12 @@
 class ContactForm < MailForm::Base
-  @@services = [ ['Development', ['Web Application', 'Kickstart']], 
-                 ['Consultancy', ['Ruby on Rails Training', 'Rescue Mission']] ]
-  @@start_times = [ 'Immediately', 'Within 1 month', 'Within 3 months' ]
-  @@budgets = ['Less than 10.000 EUR', '10.000 to 25.000 EUR', '25.000 EUR to 50.000 EUR', 'More than 50.000 EUR']
+  @@services = [ [:development, [:web_application, :kickstart]], 
+      [:consultancy, [:training, :rescue_mission]] ]
+  @@start_times = [ :immediately, :month, :months ]
+  @@budgets = [:min, :medium, :high, :more]
+
 
   attribute :name,       validate: true
   attribute :email,      validate: /[^@]+@[^\.]+\.[\w\.\-]+/
-  attribute :service,    validate: @@services.map { |services| services.last }.flatten
-  attribute :start_time, validate: @@start_times
-  attribute :budget,     validate: @@budgets
   attribute :message,    validate: true
 
   append :remote_ip, :user_agent, :session
@@ -26,5 +24,32 @@ class ContactForm < MailForm::Base
       :from => %("Codegram Mailer <info@codegram.com>)
     }
   end
+
+
+  def self.localized_services
+    localize_array(:services, @@services)
+  end
+
+  def self.localized_start_times
+    localize_array(:start_times, @@start_times)
+  end
+
+  def self.localized_budgets
+    localize_array(:budgets, @@budgets)
+  end
+
+  def self.localize_array(scope, array)
+    array.collect do |e|
+      if e.is_a? Array
+        localize_array(scope, e)
+      else
+        I18n.t("#{scope}.#{e}")
+      end
+    end
+  end
+
+  attribute :service,    validate: localized_services.map { |services| services.last }.flatten
+  attribute :start_time, validate: localized_start_times
+  attribute :budget,     validate: localized_budgets
 
 end

@@ -1,0 +1,59 @@
+-content_for :meta_description do
+  | ¿Estás empezando una empresa basada en Internet? ¿Estás trabajando en un nuevo proyecto y necesitas consultoría o training? ¿Estás atrapado en medio del proceso de desarrollo y tienes problemas sacando el trabajo adelante? Somos un equipo experto de edesarrolladores web especializados en Ruby on Rails y el ecosistema Ruby.
+
+-content_for :title do
+  | Servicios
+
+section.service#development
+  h2 Desarrollo
+  article.left#webapplication
+    h3 Aplicación web
+    h4 Sólamente construimos éxito
+    =image_tag 'services/webapp.png', height: 120, width: 120
+    p
+      | Desarrollamos aplicaciones web de alta calidad combinando tecnologías escalables con frameworks de última generación como 
+      = link_to 'Ruby on Rails', 'http://rubyonrails.org'
+      | , con front-ends con HTML5, CSS3 y JQuery, entre otros.
+    p 
+      | ¿Estás empezando un negocio online?
+      | ¿Necesitas una plataforma de venta online para ampliar el <em>target</em> de tu empresa? ¿O tal vez necesitas una aplicación de uso interno y prefieres dejar de lado lentas y complejas aplicaciones de escritorio? 
+      = link_to 'Contacta con nosotros', new_contact_form_path
+      | .
+
+  article.right#kickstart
+    h3 3... 2... 1... ¡Ignición!
+    h4 Nos encantan las start-ups
+    =image_tag 'services/kickstart.png', height: 120, width: 120
+    p 
+      | Te ayudamos a crear tu MVP (<em>mínimo producto viable</em>) para lanzar tu proyecto lo más rápidamente posible, aprovechándote así del <em>feedback</em> de tus usuarios desde el primer día. También te <strong>ayudamos a contratar</strong> tu futuro equipo de desarrollo, y lo formamos sobre la tecnología de tu proyecto. 
+    p 
+      strong Brutalmente rápido.
+      | . Desde la primera reunión hasta el lanzamiento de tu proyecto en 
+      strong 3 semanas
+      |  máximo (
+      =link_to 'de hecho ya lo hicimos en 48 horas', '/es/work/products/jamibia'
+      | !).
+
+section.service#help
+  h2 ¿Necesitas ayuda?
+  article.left#training
+    h3 Formación en Ruby on Rails
+    h4 Conocemos bien las tecnologías que usamos.
+    =image_tag 'services/training.png', height: 120, width: 120
+    p
+      | Tu equipo puede sacar partido de ello. Damos sesiones de formación <em>in situ</em> sobre 
+      = link_to 'todo lo que sabemos', about_path
+      |  y practicamos a diario. Con nosotros, tu equipo va a ser capaz de explorar y entender las tripas de Ruby on Rails y se van a familiarizar con el ecosistema de Ruby.
+    p
+      | Te enseñamos como integrar con éxito técnicas de <em>Desarrollo Ágil</em> en tu entorno de trabajo. Te enseñamos todo lo que necesitas saber para mejorar la calidad del trabajo de tus desarrolladores integrando eficiente y efectivamente <strong>Behaviour Driven Development</strong> en tu día a día.
+
+  article.right#rescuemission
+    h3 Misión de rescate
+    h4 
+      | Todo empieza con 
+      =link_to 'una ventana rota.', 'http://en.wikipedia.org/wiki/Broken_windows_theory'
+    =image_tag 'services/rescue_mission.png', height: 120, width: 120
+    p 
+      | Antiguas y desfasadas aplicaciones que con el tiempo se han ido oxidando y volviéndose inmantenibles, inusables e inseguras. Incluso proyectos de Ruby on Rails acabados de iniciar pero sin un correcto enfoque arquitectónico y que acaban convirtiéndose en un problema (y un <strong>coste real</strong>). Te podemos ayudar con ello.
+    p 
+      | Trabajando contigo y con tu equipo, detectamos debilidades y malas prácticas en tu aplicación y te ayudamos a refactorizar y ponerla de nuevo <em>sobre raíles</em> (no es una broma, lo prometemos). Ensuciarnos las manos y rehacer aplicaciones no es un problema para nosotros; el objetivo es conseguir que tu proyecto pueda satisfacer las necesidades de calidad y flexibilidad de hoy en día.

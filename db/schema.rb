@@ -10,7 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110302135254) do
+ActiveRecord::Schema.define(:version => 20110424195437) do
+
+  create_table "histories", :force => true do |t|
+    t.string   "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month"
+    t.integer  "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -28,6 +41,21 @@ ActiveRecord::Schema.define(:version => 20110302135254) do
   add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
   add_index "posts", ["tagline"], :name => "index_posts_on_tagline"
   add_index "posts", ["title"], :name => "index_posts_on_title"
+
+  create_table "project_translations", :force => true do |t|
+    t.integer  "project_id"
+    t.string   "locale"
+    t.text     "description"
+    t.text     "extended_description"
+    t.text     "rendered_description"
+    t.text     "rendered_extended_description"
+    t.string   "quote"
+    t.string   "client_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_translations", ["project_id"], :name => "index_project_translations_on_project_id"
 
   create_table "projects", :force => true do |t|
     t.string   "title"

@@ -4,7 +4,11 @@ title
   -else
     ="#{yield(:title)} - Codegram"
 
-meta name="description" content=yield(:meta_description)
+-if !(description=yield(:meta_description)).blank?
+  meta name="keywords" content=description
+-if !(keywords=yield(:meta_keywords)).blank?
+  meta name="keywords" content=keywords
+
 link rel="shortcut icon" href="http://codegram-web.s3.amazonaws.com/favicon.png"
 = include_stylesheets :common, :media => 'all'
 = include_stylesheets :print, :media => 'print'

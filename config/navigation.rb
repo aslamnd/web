@@ -40,12 +40,12 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.
     #
-    primary.item :home, 'Home', '/'
-    primary.item :services, 'Services', '/services'
-    primary.item :work, 'Work', '/work', highlights_on: /\/work/
-    primary.item :about, 'About', '/about'
-    primary.item :contact, 'Contact', new_contact_form_path 
-    primary.item :blog, 'Blog', "http://blog.#{request.host_with_port}" + blog_posts_path
+    primary.item :home, t('menu.home'), url_for(:controller => '/pages', :id => 'home', :action => 'show')
+    primary.item :services, t('menu.services'), url_for(:controller => '/pages', :id => 'services', :action => 'show')
+    primary.item :work, t('menu.work'), url_for(:controller => '/projects', :action => 'show'), highlights_on: /\/work/
+    primary.item :about, t('menu.about'), url_for(:controller => '/pages', :id => 'about', :action => 'show')
+    primary.item :contact, t('menu.contact'), new_contact_form_path 
+    primary.item :blog, t('menu.blog'), "http://blog.#{request.host_with_port}" + blog_posts_path(:locale => nil)
 
     primary.item :dashboard, 'Dashboard', admin_path, if: lambda { current_user } do |admin_nav|
       admin_nav.auto_highlight = false

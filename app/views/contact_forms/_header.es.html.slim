@@ -1,0 +1,19 @@
+-content_for :meta_description do
+  | Si estás interesado en contratar a Codegram o quieres conocer un poco más sobre alguno de nuestros servicios, por favor, contacta con nosotros.
+-content_for :title do
+  | Contacta con nosotros
+
+-content_for :slideshow do
+  li#contact_slide
+    =image_tag 'slides/business_cards.jpg'
+    headergroup
+      h2 Estas son nuestras tarjetas
+      h3 ¡Puedes conseguir una si vienes a vernos!
+
+h2 Contacta con nosotros
+p
+  | Si estás interesado en contratarnos o quieres saber más sobre alguno de nuestros 
+  = link_to 'servicios', services_path
+  | , por favor usa el formulario que hay a continuación. ¡Te atenderemos en nuestra próxima 
+  = link_to 'pausa pomodoro', 'http://www.pomodorotechnique.com/'
+  | !

@@ -8,8 +8,5 @@ describe Api::PostsController do
     it "recognizes and generates #index" do
       { get: '/api/posts' }.should route_to(controller: 'api/posts', action: 'index')
     end
-    it "does not recognize anything else" do
-      { get: '/api/posts' }.should route_to(controller: 'errors', action: 'not_found', path: 'api/posts')
-    end
   end
 end  
