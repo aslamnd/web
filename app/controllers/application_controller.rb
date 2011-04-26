@@ -34,8 +34,8 @@ private
       session[:locale]=I18n.locale.to_s
     end
 
-    if request.path == '/' && (I18n.locale != I18n.default_locale)
-      redirect_to "/#{I18n.locale}"
+    if (I18n.locale != I18n.default_locale && params[:locale].to_sym != I18n.locale)
+      redirect_to url_for(:locale => I18n.locale)
       return false
     end
   end
