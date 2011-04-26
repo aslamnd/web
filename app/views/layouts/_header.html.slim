@@ -14,6 +14,6 @@ link rel="shortcut icon" href="http://codegram-web.s3.amazonaws.com/favicon.png"
 = include_stylesheets :print, :media => 'print'
 = include_javascripts :workspace
 | <!--[if lt IE 9]>
-= javascript_include_tag 'html5'
+= include_javascripts 'ie'
 | <![endif]-->
 = csrf_meta_tag

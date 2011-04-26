@@ -10,13 +10,19 @@ compressor_options:
 
 javascripts:
   workspace:
-    - public/javascripts/workspace/jquery.min.js
+    - public/javascripts/workspace/jquery.js
     - public/javascripts/workspace/scrollable.js
     - public/javascripts/workspace/scrollable.navigator.js
-    - public/javascripts/workspace/**/*.js
+    - public/javascripts/workspace/scrollable.autoscroll.js
+    - public/javascripts/workspace/rails.js
+    - public/javascripts/workspace/rails.validations.js
+    - public/javascripts/workspace/json2.js
+    - public/javascripts/workspace/history.js
     - public/javascripts/workspace/*.js
   application:
     - public/javascripts/application/application.js
+  ie:
+    - public/javascripts/ie/*.js
 
 stylesheets:
   common:
