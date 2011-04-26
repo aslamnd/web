@@ -3,15 +3,17 @@ class Customer
   LIST = [
     ['Production Paradise', 'http://productionparadise.com'],
     ['El Pulgar del Panda', 'http://elpulgardelpanda.com'],
-    ['I++', 'http://imesmes.com'],
+    ['i++', 'http://imesmes.com'],
     ['Justinmind', 'http://justinmind.com'],
     ['Teambox', 'http://teambox.com'],
     ['Alma Branding', 'http://www.almabranding.com/'],
     ['Alisteo Operations Consulting', 'http://www.alisteo.com/'],
-    ["Tell's accuracy", 'http://tellsaccuracy.com/']
+    ["Tell's accuracy", 'http://tellsaccuracy.com/'],
+    ["Compartir", 'http://compartir.org/'],
+    ["CDL", 'http://cdl.cat/']
   ]
 
   def self.all
-    LIST.sort{|a, b| a[0] <=> b[0]}
+    LIST.sort{|a, b| a[0].downcase <=> b[0].downcase}
   end
 end
