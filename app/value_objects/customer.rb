@@ -10,7 +10,8 @@ class Customer
     ['Alisteo Operations Consulting', 'http://www.alisteo.com/'],
     ["Tell's accuracy", 'http://tellsaccuracy.com/'],
     ["Compartir", 'http://compartir.org/'],
-    ["CDL", 'http://cdl.cat/']
+    ["CDL", 'http://cdl.cat/'],
+    ["Usolab", 'http://usolab.com/']
   ]
 
   def self.all
