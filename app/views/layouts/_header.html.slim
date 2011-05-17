@@ -9,6 +9,9 @@ title
 -if !(keywords=yield(:meta_keywords)).blank?
   meta name="keywords" content=keywords
 
+meta http-equiv="content-language" content=I18n.locale
+meta http-equiv="content-type" content="text/html;charset=UTF-8"
+
 link rel="shortcut icon" href="http://codegram-web.s3.amazonaws.com/favicon.png"
 = include_stylesheets :common, :media => 'all'
 = include_stylesheets :print, :media => 'print'
