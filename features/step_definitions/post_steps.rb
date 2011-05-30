@@ -31,6 +31,6 @@ When /^I select "([^"]*)" from the projects list$/ do |project_name|
     pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should see "([^"]*)" in the Resort project page$/ do |post_title|
+Then /^I should see "([^"]*)" in the project page$/ do |post_title|
     pending # express the regexp above with the code you wish you had
 end

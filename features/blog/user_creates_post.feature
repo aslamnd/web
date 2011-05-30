@@ -30,4 +30,4 @@ Feature: User creates a post
     And I press "Create Post"
     Then I should see "Post was successfully created."
     And I should see "Our last gem: Resort" in the posts list
-    And I should see "Our last gem: Resort" in the Resort project page
+    And I should see "Our last gem: Resort" in the project page
