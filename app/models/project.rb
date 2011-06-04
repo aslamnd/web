@@ -8,6 +8,7 @@ class Project < ActiveRecord::Base
   translates :description, :extended_description, :quote, :client_name
 
   has_many :screenshots
+  has_and_belongs_to_many :posts
 
   accepts_nested_attributes_for :screenshots, allow_destroy: true, reject_if: :all_blank
 

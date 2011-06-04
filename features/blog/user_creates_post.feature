@@ -25,7 +25,7 @@ Feature: User creates a post
     When I fill in "Tagline" with "The best one so far"
     And I fill in "Body" with "We think you will enjoy this gem because it's us who made it"
     And I select "screenshot.png" from my computer to upload it to "Picture"
-    And I select "Resort" from the projects list
+    And I check "Resort" from the projects list
     And I check "Published"
     And I press "Create Post"
     Then I should see "Post was successfully created."

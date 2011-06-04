@@ -10,6 +10,8 @@ class Post < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   has_friendly_id :title, use_slug: true
 
+  has_and_belongs_to_many :projects
+
   validates :author, :title, :body, presence: true
 
   delegate :year, to: :created_at

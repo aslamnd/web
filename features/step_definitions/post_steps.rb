@@ -27,8 +27,8 @@ Then /^I should see a post$/ do
   page.should have_selector('article.post')
 end
 
-When /^I select "([^"]*)" from the projects list$/ do |project_name|
-    pending # express the regexp above with the code you wish you had
+When /^I check "([^"]*)" from the projects list$/ do |project_name|
+    check project_name
 end
 
 Then /^I should see "([^"]*)" in the project page$/ do |post_title|

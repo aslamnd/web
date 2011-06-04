@@ -5,4 +5,5 @@
   = form.input :body, as: :text
   = form.input :picture, as: :file, required: false
   = form.input :published, as: :boolean
+  = form.association :projects, as: :checkboxes, collection: Project.all(order: 'name')
   = form.submit
